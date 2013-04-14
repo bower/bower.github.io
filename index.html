@@ -69,7 +69,7 @@ is just enough to get you started.</p>
 
 <p>Bower offers several ways to install packages:</p>
 
-<pre><code># Using the dependencies listed in the current directory&#39;s component.json
+<pre><code># Using the dependencies listed in the current directory&#39;s bower.json
 bower install
 # Using a local or remote package
 bower install &lt;package&gt;
@@ -114,9 +114,9 @@ installed components manually using a <code>script</code> tag:</p>
 </code></pre>
 
 <p>For more complex projects, you&#39;ll probably want to concatenate your scripts or
-use a module loader. Bower is just a package manager, but there are plenty of other
-tools -- such as <a href="https://github.com/sstephenson/sprockets">Sprockets</a> and
-<a href="http://requirejs.org/">RequireJS</a> -- that will help you do this.</p>
+use a module loader. Bower is just a package manager, but there are plenty of
+other tools -- such as <a href="https://github.com/sstephenson/sprockets">Sprockets</a>
+and <a href="http://requirejs.org/">RequireJS</a> -- that will help you do this.</p>
 
 <h3>Registering packages</h3>
 
@@ -188,17 +188,17 @@ Server</a>.</p>
 
 <h2>Defining a package</h2>
 
-<p>You must create a JSON file -- <code>component.json</code> by default -- in your project&#39;s
+<p>You must create a JSON file -- <code>bower.json</code> by default -- in your project&#39;s
 root, and specify all of its dependencies. This is similar to Node&#39;s
 <code>package.json</code>, or Ruby&#39;s <code>Gemfile</code>, and is useful for locking down a project&#39;s
 dependencies.</p>
 
-<p>You can interactively create a <code>component.json</code> with the following command:</p>
+<p>You can interactively create a <code>bower.json</code> with the following command:</p>
 
 <pre><code>bower init
 </code></pre>
 
-<p>The <code>component.json</code> defines several options:</p>
+<p>The <code>bower.json</code> defines several options:</p>
 
 <ul><li><code>name</code> (required): The name of your package.</li><li><code>version</code>: A semantic version number (see <a href="http://semver.org/">semver</a>).</li><li><code>main</code> [string|array]: The primary endpoints of your package.</li><li><code>ignore</code> [array]: An array of paths not needed in production that you want
 Bower to ignore when installing your package.</li><li><code>dependencies</code> [hash]: Packages your package depends upon in production.</li><li><code>devDependencies</code> [hash]: Development dependencies.</li></ul>
@@ -292,6 +292,11 @@ not available for Windows users.</p>
 option shown below:</p>
 
 <p><img alt="msysgit" src="http://f.cl.ly/items/2V2O3i1p3R2F1r2v0a12/mysgit.png"/></p>
+
+<p>Note that if you use TortoiseGit and if Bower keeps asking for your SSH
+password, you should add the following environment variable: <code>GIT_SSH -
+C:\Program Files\TortoiseGit\bin\TortoisePlink.exe</code>. Adjust the <code>TortoisePlink</code>
+path if needed.</p>
 
 <h2>Contact</h2>
 
