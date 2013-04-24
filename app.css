@@ -1,3 +1,6 @@
+/* Base
+================================================== */
+
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -17,52 +20,6 @@ body {
   color: #222;
 }
 
-.logo {
-  font-family: Copperplate, Copperplate Gothic Light, sans-serif;
-  font-weight: lighter;
-  text-align: center;
-  margin: 100px 0;
-}
-
-.logo hr {
-  width: 134px;
-  border: none;
-  border-bottom: 2px dotted #000;
-}
-
-.logo .top {
-  margin-bottom: 7px;
-}
-
-.logo .bottom {
-  margin-bottom: 8px;
-}
-
-.logo h1, .logo h3 {
-  display: block;
-  font-weight: 100;
-  margin: 0;
-  margin-top: 0;
-}
-
-.logo h1 {
-  font-size: 200px;
-  line-height: 100px;
-  margin-bottom: 40px;
-  margin-top: 7px;
-  text-transform: uppercase;
-}
-
-.logo h3 {
-  font-size: 16px;
-  font-weight: normal;
-  text-transform: uppercase;
-}
-
-.logo .small {
-  margin-top: -8px;
-}
-
 h1 {
   display: none;
 }
@@ -79,31 +36,6 @@ h3 {
 
 a {
   color: purple;
-}
-
-#wrap {
-  border-top: 1px solid #eee;
-}
-
-#wrap-inner {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
-
-.hero {
-  display: block;
-  background-color: #fff;
-}
-
-.hero .hero-inner {
-  text-align: center;
-  position: absolute;
-  display: block;
-  top: 50%;
-  margin-top: -205px;
-  left: 50%;
-  margin-left:-307px;
 }
 
 pre, code {
@@ -132,7 +64,6 @@ pre:after {
   width: 100%;
   position: absolute;
   left: 0;
-
 }
 
 pre:before {
@@ -145,6 +76,93 @@ pre:after {
   bottom: 0px;
 }
 
+#content img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* wrap
+================================================== */
+
+.wrap {
+  padding: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Hero
+================================================== */
+
+#hero {
+  background: #FFCC2F;
+  line-height: 1.2;
+  color: #543729;
+  padding-bottom: 10px;
+}
+
+#hero .wrap {
+  position: relative;
+}
+
+#hero .brand {
+  text-align: center;
+}
+
+#hero h1 {
+  display: inline-block;
+  font-size: 66px;
+  margin: 0;
+  line-height: 80px;
+  color: #EF5734;
+}
+
+#hero h1,
+#hero h3 {
+  letter-spacing: -0.04em;
+}
+
+#hero .bower-logo {
+  display: inline-block;
+  width: 80px;
+  vertical-align: bottom;
+}
+
+#hero h3 {
+  margin: 0 0  10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#hero .tagline {
+  font-size: 22px;
+}
+
+#hero .button {
+  display: block;
+  background-color: #2BAF2B;
+  padding: 10px 15px;;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.4);
+  background-image: -webkit-linear-gradient(
+    hsla(0, 0%, 100%, 0.1),
+    hsla(0, 0%, 100%, 0.0) 50%,
+    hsla(0, 0%,   0%, 0.0) 50%,
+    hsla(0, 0%,   0%, 0.1)
+  );
+}
+
+#hero .button:hover {
+  background-color: #3C3;
+}
+
+/* Footer
+================================================== */
+
 .footer {
   display: block;
   text-align: center;
@@ -153,63 +171,72 @@ pre:after {
   padding: 50px 0;
 }
 
-.btn {
-  font: 14px/24px "Helvetica Neue", Helvetica, Arial, sans-serif;
-  display: inline-block;
-  margin-top: 10px;
-  padding: 0 34px;
-  margin-bottom: 20px;
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 46px;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  cursor: pointer;
-  background: #000;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  -moz-transition: background-color 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
-}
-.btn:hover {
-  background: purple;
-}
-
-/* #Media Queries
+/* Media Queries
 ================================================== */
 
-/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+/* tablet-ish */
+@media only screen and (min-width: 580px) {
 
-@media only screen and  (max-width: 767px) {
-  .hero {
-    position: relative;
-    height: auto;
-    min-height: auto;
-    min-height: 0;
+  #hero {
+    padding: 30px 0;
   }
 
-  .hero .logo {
-    margin-top: 50px;
-    margin-bottom: 50px;
+  #hero .wrap {
+    padding-left: 250px;
+    width: 540px;
   }
 
-  .hero .logo h1 {
-    font-size: 135px;
-    line-height: 70px;
-    margin-bottom: 20px;
-    margin-top: 0px;
+  #hero .bower-logo {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 240px;
   }
+
+  #hero .brand,
+  #hero h3 {
+    text-align: left;
+  }
+
+  #hero .button {
+    display: inline-block;
+    clear: both;
+  }
+
 }
 
-@media only screen and (max-width: 479px) {
-  .hero .logo h1 {
-    font-size: 98px;
-    font-weight: normal;
-    margin-bottom: 24px;
-    margin-top: 10px;
-    line-height: 44px;
+/* desktop-ish*/
+@media only screen and (min-width: 920px) {
+
+  #hero {
+    padding: 40px 0 60px;
   }
+
+  #hero .wrap {
+    padding-left: 350px;
+    width: auto;
+  }
+
+  #hero .bower-logo {
+    left: -20px;
+    top: 0px;
+    width: 360px;
+  }
+
+  #hero h1 {
+    font-size: 110px;
+    line-height: 1;
+  }
+
+  #hero h3 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  #hero .tagline {
+    font-size: 54px;
+    line-height: 1;
+  }
+
 }
