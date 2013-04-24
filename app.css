@@ -139,7 +139,7 @@ pre:after {
 
 #hero .button {
   display: block;
-  background-color: #00ACEE;
+  background-color: #2BAF2B;
   padding: 10px 15px;;
   font-weight: bold;
   text-decoration: none;
@@ -157,7 +157,7 @@ pre:after {
 }
 
 #hero .button:hover {
-  background-color: #0BF;
+  background-color: #3C3;
 }
 
 /* Footer
