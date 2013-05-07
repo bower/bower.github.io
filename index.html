@@ -96,7 +96,7 @@ packages into source control.</p>
 <p>The easiest approach is to use Bower statically, just reference the package&#39;s
 installed components manually using a <code>script</code> tag:</p>
 
-<pre><code>&lt;script src=&quot;components/jquery/index.js&quot;&gt;&lt;/script&gt;
+<pre><code>&lt;script src=&quot;/bower_components/jquery/index.js&quot;&gt;&lt;/script&gt;
 </code></pre>
 
 <p>For more complex projects, you&#39;ll probably want to concatenate your scripts or
@@ -169,7 +169,7 @@ package manifest, the following data can be referenced from within the
 <ul><li><code>endpoint</code>: <code>twitter/flight</code></li><li><code>organization</code>: <code>twitter</code></li><li><code>package</code>: <code>flight</code></li></ul>
 
 <p><strong>N.B.</strong> To run your own Bower Endpoint for custom packages that are behind a
-firewall, you can use a simple implementation of the <a href="https://github.com/twitter/bower-server">Bower
+firewall, you can use a simple implementation of the <a href="https://github.com/bower/bower-server">Bower
 Server</a>.</p>
 
 <h2>Defining a package</h2>
@@ -218,9 +218,9 @@ with dependency objects. Alternatively, you can pass the <code>--paths</code> op
 the <code>list</code> command to get a simple path-to-name mapping:</p>
 
 <pre><code>{
-  &quot;backbone&quot;: &quot;components/backbone/index.js&quot;,
-  &quot;jquery&quot;: &quot;components/jquery/index.js&quot;,
-  &quot;underscore&quot;: &quot;components/underscore/index.js&quot;
+  &quot;backbone&quot;: &quot;bower_components/backbone/index.js&quot;,
+  &quot;jquery&quot;: &quot;bower_components/jquery/index.js&quot;,
+  &quot;underscore&quot;: &quot;bower_components/underscore/index.js&quot;
 }
 </code></pre>
 
@@ -234,12 +234,14 @@ through the <code>bower.commands</code> object.</p>
 bower.commands
   .install(paths, options)
   .on(&#39;end&#39;, function (data) {
-    data &amp;&amp; console.log(data);
+    if (data) {
+      console.log(data);
+    }
   });
 
 bower.commands
   .search(&#39;jquery&#39;, {})
-  .on(&#39;packages&#39;, function(packages) {
+  .on(&#39;packages&#39;, function (packages) {
     // `packages` is a list of packages returned by searching for &#39;jquery&#39;
   });
 </code></pre>
@@ -296,7 +298,7 @@ path if needed.</p>
 
 <p>Thanks for assistance and contributions:</p>
 
-<ul><li><a href="https://github.com/addyosmani">@addyosmani</a></li><li><a href="https://github.com/angus-c">@angus-c</a></li><li><a href="https://github.com/borismus">@borismus</a></li><li><a href="https://github.com/chriseppstein">@chriseppstein</a></li><li><a href="https://github.com/danwrong">@danwrong</a></li><li><a href="https://github.com/desandro">@desandro</a></li><li><a href="https://github.com/hemanth">@hemanth</a></li><li><a href="https://github.com/isaacs">@isaacs</a></li><li><a href="https://github.com/josh">@josh</a></li><li><a href="https://github.com/jrburke">@jrburke</a></li><li><a href="https://github.com/marcelombc">@marcelombc</a></li><li><a href="https://github.com/mklabs">@mklabs</a></li><li><a href="https://github.com/paulirish">@paulirish</a></li><li><a href="https://github.com/richo">@richo</a></li><li><a href="https://github.com/rvagg">@rvagg</a></li><li><a href="https://github.com/sindresorhus">@sindresorhus</a></li><li><a href="https://github.com/SlexAxton">@SlexAxton</a></li><li><a href="https://github.com/sstephenson">@sstephenson</a></li><li><a href="https://github.com/tomdale">@tomdale</a></li><li><a href="https://github.com/uzquiano">@uzquiano</a></li><li><a href="https://github.com/visionmedia">@visionmedia</a></li><li><a href="https://github.com/wagenet">@wagenet</a></li><li><a href="https://github.com/wibblymat">@wibblymat</a></li><li><a href="https://github.com/wycats">@wycats</a></li></ul>
+<ul><li><a href="https://github.com/addyosmani">@addyosmani</a></li><li><a href="https://github.com/angus-c">@angus-c</a></li><li><a href="https://github.com/borismus">@borismus</a></li><li><a href="https://github/@carsonmcdonald">@carsonmcdonald</a></li><li><a href="https://github.com/chriseppstein">@chriseppstein</a></li><li><a href="https://github.com/danwrong">@danwrong</a></li><li><a href="https://github.com/desandro">@desandro</a></li><li><a href="https://github.com/hemanth">@hemanth</a></li><li><a href="https://github.com/isaacs">@isaacs</a></li><li><a href="https://github.com/josh">@josh</a></li><li><a href="https://github.com/jrburke">@jrburke</a></li><li><a href="https://github.com/marcelombc">@marcelombc</a></li><li><a href="https://github.com/mklabs">@mklabs</a></li><li><a href="https://github.com/paulirish">@paulirish</a></li><li><a href="https://github.com/richo">@richo</a></li><li><a href="https://github.com/rvagg">@rvagg</a></li><li><a href="https://github.com/sindresorhus">@sindresorhus</a></li><li><a href="https://github.com/SlexAxton">@SlexAxton</a></li><li><a href="https://github.com/sstephenson">@sstephenson</a></li><li><a href="https://github.com/tomdale">@tomdale</a></li><li><a href="https://github.com/uzquiano">@uzquiano</a></li><li><a href="https://github.com/visionmedia">@visionmedia</a></li><li><a href="https://github.com/wagenet">@wagenet</a></li><li><a href="https://github.com/wibblymat">@wibblymat</a></li><li><a href="https://github.com/wycats">@wycats</a></li></ul>
 
 <h2>License</h2>
 
