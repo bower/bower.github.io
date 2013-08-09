@@ -4,7 +4,8 @@ var path     = require('path');
 var markdown = require('markdown').markdown;
 var fs       = require('fs');
 // enable GitHub Flavored Markdown dialect
-require('./gfm-dialect.js')
+require('./gfm-dialect.js');
+require('./nav-dialect.js');
 var url      = "https://raw.github.com/bower/bower/master/README.md";
 var template = Hogan.compile(fs.readFileSync(path.join(__dirname,'./template.{'), 'utf-8'));
 
