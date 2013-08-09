@@ -23,7 +23,7 @@
 
     <div id="content">
       <div class="wrap">
-        <h1>BOWER</h1>
+        <h1 id="bower"><a href="#bower">AnchorLink</a>BOWER</h1>
 
 <p>Bower is a package manager for the web. It offers a generic, unopinionated
 solution to the problem of <strong>front-end package management</strong>, while exposing the
@@ -37,7 +37,7 @@ etc.).</p>
 
 <p><a href="http://sindresorhus.com/bower-components/">View all packages available through Bower&#39;s registry</a>.</p>
 
-<h2>Installing Bower</h2>
+<h2 id="installing-bower"><a href="#installing-bower">AnchorLink</a>Installing Bower</h2>
 
 <p>Bower depends on <a href="http://nodejs.org/">Node</a> and <a href="http://npmjs.org/">npm</a>. It&#39;s
 installed globally using npm:</p>
@@ -48,29 +48,47 @@ installed globally using npm:</p>
 <p>Also make sure that <a href="http://git-scm.com/">git</a> is installed as some bower
 packages require it to be fetched and installed.</p>
 
-<h2>Usage</h2>
+<h2 id="usage"><a href="#usage">AnchorLink</a>Usage</h2>
 
 <p>Much more information is available via <code>bower help</code> once it&#39;s installed. This
 is just enough to get you started.</p>
 
-<h3>Installing packages and dependencies</h3>
+<h4 id="warning">Warning</h4>
+
+<p>On <code>prezto</code> or <code>oh-my-zsh</code>, do not forget to <code>alias bower=&#39;noglob bower&#39;</code> or <code>bower install jquery\#1.9.1</code></p>
+
+<h4 id="running-commands-with-sudo">Running commands with sudo</h4>
+
+<p>Bower is a user command, there is no need to execute it with superuser permissions.
+However, if you still want to run commands with sudo, use <code>--allow-root</code> option.</p>
+
+<h3 id="installing-packages-and-dependencies"><a href="#installing-packages-and-dependencies">AnchorLink</a>Installing packages and dependencies</h3>
 
 <p>Bower offers several ways to install packages:</p>
 
-<pre><code># Using the dependencies listed in the current directory&#39;s bower.json
-bower install
-# Using a local or remote package
-bower install &lt;package&gt;
-# Using a specific version of a package
-bower install &lt;package&gt;#&lt;version&gt;
-# Using a different name and a specific version of a package
-bower install &lt;name&gt;=&lt;package&gt;#&lt;version&gt;
-</code></pre>
+<p><code></code>`bash</p>
+
+<h1 id="using-the-dependencies-listed-in-the-current-directorys-bowerjson"><a href="#using-the-dependencies-listed-in-the-current-directorys-bowerjson">AnchorLink</a>Using the dependencies listed in the current directory&#39;s bower.json</h1>
+
+<p>bower install</p>
+
+<h1 id="using-a-local-or-remote-package"><a href="#using-a-local-or-remote-package">AnchorLink</a>Using a local or remote package</h1>
+
+<p>bower install &lt;package&gt;</p>
+
+<h1 id="using-a-specific-version-of-a-package"><a href="#using-a-specific-version-of-a-package">AnchorLink</a>Using a specific version of a package</h1>
+
+<p>bower install &lt;package&gt;#&lt;version&gt;</p>
+
+<h1 id="using-a-different-name-and-a-specific-version-of-a-package"><a href="#using-a-different-name-and-a-specific-version-of-a-package">AnchorLink</a>Using a different name and a specific version of a package</h1>
+
+<p>bower install &lt;name&gt;=&lt;package&gt;#&lt;version&gt;
+<code></code>`</p>
 
 <p>Where <code>&lt;package&gt;</code> can be any one of the following:</p>
 
 <ul><li>A name that maps to a package registered with Bower, e.g, <code>jquery</code>. ‡</li><li>A remote Git endpoint, e.g., <code>git://github.com/someone/some-package.git</code>. Can be
-public or private. ‡</li><li>A local endpoint, i.e., a folder that&#39;s a Git repository. ‡</li><li>A shorthand endpoint, e.g., <code>someone/some-package</code> (defaults to GitHub). ‡</li><li>A URL to a file, including <code>zip</code> and <code>tar</code> files. It&#39;s contents will be
+public or private. ‡</li><li>A local endpoint, i.e., a folder that&#39;s a Git repository. ‡</li><li>A shorthand endpoint, e.g., <code>someone/some-package</code> (defaults to GitHub). ‡</li><li>A URL to a file, including <code>zip</code> and <code>tar</code> files. Its contents will be
 extracted.</li></ul>
 
 <p>‡ These types of <code>&lt;package&gt;</code> might have versions available. You can specify a
@@ -86,7 +104,7 @@ You should <strong>never</strong> directly modify the contents of this directory
 others (e.g., you&#39;re building a web app), you should always check installed
 packages into source control.</p>
 
-<h3>Finding packages</h3>
+<h3 id="finding-packages"><a href="#finding-packages">AnchorLink</a>Finding packages</h3>
 
 <p>To search for packages registered with Bower:</p>
 
@@ -95,7 +113,7 @@ packages into source control.</p>
 
 <p>Using just <code>bower search</code> will list all packages in the registry.</p>
 
-<h3>Using packages</h3>
+<h3 id="using-packages"><a href="#using-packages">AnchorLink</a>Using packages</h3>
 
 <p>The easiest approach is to use Bower statically, just reference the package&#39;s
 installed components manually using a <code>script</code> tag:</p>
@@ -108,7 +126,7 @@ use a module loader. Bower is just a package manager, but there are plenty of
 other tools -- such as <a href="https://github.com/sstephenson/sprockets">Sprockets</a>
 and <a href="http://requirejs.org/">RequireJS</a> -- that will help you do this.</p>
 
-<h3>Registering packages</h3>
+<h3 id="registering-packages"><a href="#registering-packages">AnchorLink</a>Registering packages</h3>
 
 <p>To register a new package:</p>
 
@@ -128,14 +146,14 @@ library installed.</p>
 <p>There is no direct way to unregister a package yet. For now, you can <a href="https://github.com/bower/bower/issues/120">request a
 package be unregistered</a>.</p>
 
-<h3>Uninstalling packages</h3>
+<h3 id="uninstalling-packages"><a href="#uninstalling-packages">AnchorLink</a>Uninstalling packages</h3>
 
 <p>To uninstall a locally installed package:</p>
 
 <pre><code>bower uninstall &lt;package-name&gt;
 </code></pre>
 
-<h2>Configuration</h2>
+<h2 id="configuration"><a href="#configuration">AnchorLink</a>Configuration</h2>
 
 <p>Bower can be configured using JSON in a <code>.bowerrc</code> file.</p>
 
@@ -143,7 +161,7 @@ package be unregistered</a>.</p>
 <a href="https://docs.google.com/document/d/1APq7oA9tNao1UYWyOm8dKqlRP2blVkROYLZ2fLIjtWc/edit#heading=h.4pzytc1f9j8k">here</a>
 in the <code>Configuration</code> section.</p>
 
-<h2>Defining a package</h2>
+<h2 id="defining-a-package"><a href="#defining-a-package">AnchorLink</a>Defining a package</h2>
 
 <p>You must create a <code>bower.json</code> in your project&#39;s root, and specify all of its
 dependencies. This is similar to Node&#39;s <code>package.json</code>, or Ruby&#39;s <code>Gemfile</code>,
@@ -163,7 +181,8 @@ release.</p>
 <p>The <code>bower.json</code> defines several options:</p>
 
 <ul><li><code>name</code> (required): The name of your package.</li><li><code>version</code>: A semantic version number (see <a href="http://semver.org/">semver</a>).</li><li><code>main</code> [string|array]: The primary endpoints of your package.</li><li><code>ignore</code> [array]: An array of paths not needed in production that you want
-Bower to ignore when installing your package.</li><li><code>dependencies</code> [hash]: Packages your package depends upon in production.</li><li><code>devDependencies</code> [hash]: Development dependencies.</li></ul>
+Bower to ignore when installing your package.</li><li><code>dependencies</code> [hash]: Packages your package depends upon in production.</li><li><code>devDependencies</code> [hash]: Development dependencies.</li><li><code>private</code> [boolean]: Set to true if you want to keep the package private and 
+do not want to register the package in future.</li></ul>
 
 <pre><code>{
   &quot;name&quot;: &quot;my-project&quot;,
@@ -184,7 +203,7 @@ Bower to ignore when installing your package.</li><li><code>dependencies</code> 
 }
 </code></pre>
 
-<h2>Consuming a package</h2>
+<h2 id="consuming-a-package"><a href="#consuming-a-package">AnchorLink</a>Consuming a package</h2>
 
 <p>Bower also makes available a source mapping. This can be used by build tools to
 easily consume Bower packages.</p>
@@ -203,7 +222,7 @@ simple path-to-name mapping:</p>
 output JSON. Command result is outputted to <code>stdout</code> and error/logs to
 <code>stderr</code>.</p>
 
-<h2>Programmatic API</h2>
+<h2 id="programmatic-api"><a href="#programmatic-api">AnchorLink</a>Programmatic API</h2>
 
 <p>Bower provides a powerful, programmatic API. All commands can be accessed
 through the <code>bower.commands</code> object.</p>
@@ -227,10 +246,10 @@ bower.commands
 
 <ul><li><code>log</code> is emitted to report the state/progress of the command.</li><li><code>error</code> will only be emitted if something goes wrong.</li><li><code>end</code> is emitted when the command successfully ends.</li></ul>
 
-<p>For a better of idea how this works, you may want to check out <a href="https://github.com/bower/bower/blob/rewrite/bin/bower">our bin
+<p>For a better of idea how this works, you may want to check out <a href="https://github.com/bower/bower/blob/master/bin/bower">our bin
 file</a>.</p>
 
-<h2>Completion (experimental)</h2>
+<h2 id="completion-experimental"><a href="#completion-experimental">AnchorLink</a>Completion (experimental)</h2>
 
 <p><em>NOTE</em>: Completion is still not implemented for the 1.0.0 release</p>
 
@@ -244,7 +263,7 @@ not available for Windows users.</p>
 <pre><code>bower completion &gt;&gt; ~/.bash_profile
 </code></pre>
 
-<h2>A note for Windows users</h2>
+<h2 id="a-note-for-windows-users"><a href="#a-note-for-windows-users">AnchorLink</a>A note for Windows users</h2>
 
 <p>To use Bower on Windows, you must install
 <a href="http://code.google.com/p/msysgit/">msysgit</a> correctly. Be sure to check the
@@ -257,20 +276,20 @@ password, you should add the following environment variable: <code>GIT_SSH -
 C:\Program Files\TortoiseGit\bin\TortoisePlink.exe</code>. Adjust the <code>TortoisePlink</code>
 path if needed.</p>
 
-<h2>Contact</h2>
+<h2 id="contact"><a href="#contact">AnchorLink</a>Contact</h2>
 
 <p>Have a question?</p>
 
 <ul><li><a href="http://stackoverflow.com/questions/tagged/bower">StackOverflow</a></li><li><a href="http://groups.google.com/group/twitter-bower">Mailinglist</a> - twitter-bower@googlegroups.com</li><li><a href="http://webchat.freenode.net/?channels=bower">#bower</a> on Freenode</li></ul>
 
-<h2>Contributing to this project</h2>
+<h2 id="contributing-to-this-project"><a href="#contributing-to-this-project">AnchorLink</a>Contributing to this project</h2>
 
 <p>Anyone and everyone is welcome to contribute. Please take a moment to
 review the <a href="CONTRIBUTING.md">guidelines for contributing</a>.</p>
 
 <ul><li><a href="CONTRIBUTING.md#bugs">Bug reports</a></li><li><a href="CONTRIBUTING.md#features">Feature requests</a></li><li><a href="CONTRIBUTING.md#pull-requests">Pull requests</a></li></ul>
 
-<h2>Authors</h2>
+<h2 id="authors"><a href="#authors">AnchorLink</a>Authors</h2>
 
 <ul><li><a href="https://github.com/fat">@fat</a></li><li><a href="https://github.com/maccman">@maccman</a></li><li><a href="https://github.com/satazor">@satazor</a></li></ul>
 
@@ -306,7 +325,7 @@ review the <a href="CONTRIBUTING.md">guidelines for contributing</a>.</p>
 <a href="https://github.com/wibblymat">@wibblymat</a>,
 <a href="https://github.com/wycats">@wycats</a></p>
 
-<h2>License</h2>
+<h2 id="license"><a href="#license">AnchorLink</a>License</h2>
 
 <p>Copyright 2012 Twitter, Inc.</p>
 
@@ -353,7 +372,9 @@ review the <a href="CONTRIBUTING.md">guidelines for contributing</a>.</p>
           }, 0);
         });
       }
+
     }(this));
+
     </script>
   </body>
 </html>

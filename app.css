@@ -239,4 +239,30 @@ pre:after {
     line-height: 1;
   }
 
+  h1,
+  h2,
+  h3 {
+    position: relative;
+  }
+  h1 > a,
+  h2 > a,
+  h3 > a {
+    display:none;
+  }
+
+  h1:hover > a,
+  h2:hover > a,
+  h3:hover > a {
+    background: url('img/link.png') no-repeat;
+    display:block;
+    position:absolute;
+    top: 0.2em;
+    left: -50px;
+    height: 40px;
+    min-width:50px;
+    overflow: hidden;
+    text-indent: 999em;
+    opacity: 0.6;
+  }
+
 }
