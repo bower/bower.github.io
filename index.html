@@ -66,24 +66,15 @@ However, if you still want to run commands with sudo, use <code>--allow-root</co
 
 <p>Bower offers several ways to install packages:</p>
 
-<p><code></code>`bash</p>
-
-<h1 id="using-the-dependencies-listed-in-the-current-directorys-bowerjson"><a href="#using-the-dependencies-listed-in-the-current-directorys-bowerjson">AnchorLink</a>Using the dependencies listed in the current directory&#39;s bower.json</h1>
-
-<p>bower install</p>
-
-<h1 id="using-a-local-or-remote-package"><a href="#using-a-local-or-remote-package">AnchorLink</a>Using a local or remote package</h1>
-
-<p>bower install &lt;package&gt;</p>
-
-<h1 id="using-a-specific-version-of-a-package"><a href="#using-a-specific-version-of-a-package">AnchorLink</a>Using a specific version of a package</h1>
-
-<p>bower install &lt;package&gt;#&lt;version&gt;</p>
-
-<h1 id="using-a-different-name-and-a-specific-version-of-a-package"><a href="#using-a-different-name-and-a-specific-version-of-a-package">AnchorLink</a>Using a different name and a specific version of a package</h1>
-
-<p>bower install &lt;name&gt;=&lt;package&gt;#&lt;version&gt;
-<code></code>`</p>
+<pre><code># Using the dependencies listed in the current directory&#39;s bower.json
+bower install
+# Using a local or remote package
+bower install &lt;package&gt;
+# Using a specific version of a package
+bower install &lt;package&gt;#&lt;version&gt;
+# Using a different name and a specific version of a package
+bower install &lt;name&gt;=&lt;package&gt;#&lt;version&gt;
+</code></pre>
 
 <p>Where <code>&lt;package&gt;</code> can be any one of the following:</p>
 
@@ -230,7 +221,7 @@ through the <code>bower.commands</code> object.</p>
 <pre><code>var bower = require(&#39;bower&#39;);
 
 bower.commands
-.install(paths, options)
+.install([&#39;jquery&#39;], { save: true }, { /* custom config */ })
 .on(&#39;end&#39;, function (installed) {
     console.log(installed);
 });
@@ -242,12 +233,25 @@ bower.commands
 });
 </code></pre>
 
-<p>Commands emit three types of events: <code>log</code>, <code>end</code>, and <code>error</code>.</p>
+<p>Commands emit four types of events: <code>log</code>, <code>prompt</code>, <code>end</code>, <code>error</code>.</p>
 
-<ul><li><code>log</code> is emitted to report the state/progress of the command.</li><li><code>error</code> will only be emitted if something goes wrong.</li><li><code>end</code> is emitted when the command successfully ends.</li></ul>
+<ul><li><code>log</code> is emitted to report the state/progress of the command.</li><li><code>prompt</code> is emitted whenever the user needs to be prompted.</li><li><code>error</code> will only be emitted if something goes wrong.</li><li><code>end</code> is emitted when the command successfully ends.</li></ul>
 
 <p>For a better of idea how this works, you may want to check out <a href="https://github.com/bower/bower/blob/master/bin/bower">our bin
 file</a>.</p>
+
+<p>When using bower programmatically, prompting is disabled by default. Though you can enable it when calling commands with <code>interactive: true</code> in the config.
+This requires you to listen for the <code>prompt</code> event and handle the prompting yourself. The easiest way is to use the <a href="https://npmjs.org/package/inquirer">inquirer</a> npm module like so:</p>
+
+<pre><code>var inquirer =  require(&#39;inquirer&#39;);
+
+bower.commands
+.install([&#39;jquery&#39;], { save: true }, { interactive: true })
+// ..
+.on(&#39;prompt&#39;, function (prompts, callback) {
+    inquirer.prompt(prompts, callback);
+});
+</code></pre>
 
 <h2 id="completion-experimental"><a href="#completion-experimental">AnchorLink</a>Completion (experimental)</h2>
 
@@ -285,9 +289,9 @@ path if needed.</p>
 <h2 id="contributing-to-this-project"><a href="#contributing-to-this-project">AnchorLink</a>Contributing to this project</h2>
 
 <p>Anyone and everyone is welcome to contribute. Please take a moment to
-review the <a href="CONTRIBUTING.md">guidelines for contributing</a>.</p>
+review the <a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md">guidelines for contributing</a>.</p>
 
-<ul><li><a href="CONTRIBUTING.md#bugs">Bug reports</a></li><li><a href="CONTRIBUTING.md#features">Feature requests</a></li><li><a href="CONTRIBUTING.md#pull-requests">Pull requests</a></li></ul>
+<ul><li><a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md#bugs">Bug reports</a></li><li><a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md#features">Feature requests</a></li><li><a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md#pull-requests">Pull requests</a></li></ul>
 
 <h2 id="authors"><a href="#authors">AnchorLink</a>Authors</h2>
 
@@ -310,6 +314,7 @@ review the <a href="CONTRIBUTING.md">guidelines for contributing</a>.</p>
 <a href="https://github.com/marcelombc">@marcelombc</a>,
 <a href="https://github.com/marcooliveira">@marcooliveira</a>,
 <a href="https://github.com/mklabs">@mklabs</a>,
+<a href="https://github.com/MrDHat">@MrDHat</a>,
 <a href="https://github.com/necolas">@necolas</a>,
 <a href="https://github.com/paulirish">@paulirish</a>,
 <a href="https://github.com/richo">@richo</a>,
@@ -372,9 +377,7 @@ review the <a href="CONTRIBUTING.md">guidelines for contributing</a>.</p>
           }, 0);
         });
       }
-
     }(this));
-
     </script>
   </body>
 </html>
