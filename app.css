@@ -29,6 +29,12 @@ h2 {
   margin-top: 3em;
 }
 
+h1 > a,
+h2 > a,
+h3 > a {
+  display: none;
+}
+
 h3 {
   font-size: 1.4em;
   margin-top: 2em;
@@ -244,11 +250,6 @@ pre:after {
   h3 {
     position: relative;
   }
-  h1 > a,
-  h2 > a,
-  h3 > a {
-    display:none;
-  }
 
   h1:hover > a,
   h2:hover > a,
@@ -261,7 +262,7 @@ pre:after {
     height: 40px;
     min-width:50px;
     overflow: hidden;
-    text-indent: 999em;
+    text-indent: -999em;
     opacity: 0.6;
   }
 
