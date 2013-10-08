@@ -160,6 +160,54 @@ pre:after {
   background-color: #3C3;
 }
 
+/* Navigation
+================================================== */
+#navigation {
+  background: #fff;
+  border: 1px solid #2BAF2B;
+  border-radius: 0 0 10px 10px;
+  height: 30px;
+  overflow: hidden;
+  position: fixed;
+  right: 20px;
+  top: 0;
+  z-index: 100;
+}
+
+#navigation:hover {
+  height: auto;
+}
+
+#navigation span {
+  display: block;
+  text-align: center;
+}
+
+#navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation li {
+  display: block;
+}
+
+#navigation a {
+  display: block;
+  padding: 4px 6px;
+}
+
+#navigation a:hover {
+  background: hsl(300, 100%, 30%);
+  color: #fff;
+}
+
+.back-to-top {
+  float: right;
+  font-size: 90%;
+}
+
 /* Footer
 ================================================== */
 
