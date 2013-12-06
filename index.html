@@ -53,28 +53,26 @@ packages require it to be fetched and installed.</p>
 <p>Much more information is available via <code>bower help</code> once it&#39;s installed. This
 is just enough to get you started.</p>
 
-<h4 id="warning">Warning</h4>
-
-<p>On <code>prezto</code> or <code>oh-my-zsh</code>, do not forget to <code>alias bower=&#39;noglob bower&#39;</code> or <code>bower install jquery\#1.9.1</code></p>
-
-<h4 id="running-commands-with-sudo">Running commands with sudo</h4>
-
-<p>Bower is a user command, there is no need to execute it with superuser permissions.
-However, if you still want to run commands with sudo, use <code>--allow-root</code> option.</p>
-
 <h3 id="installing-packages-and-dependencies"><a href="#installing-packages-and-dependencies">AnchorLink</a>Installing packages and dependencies</h3>
 
 <p>Bower offers several ways to install packages:</p>
 
-<pre><code># Using the dependencies listed in the current directory&#39;s bower.json
-bower install
-# Using a local or remote package
+<h5 id="using-the-dependencies-listed-in-the-current-directorys-bowerjson">Using the dependencies listed in the current directory&#39;s bower.json</h5>
+
+<pre><code>bower install
+
+##### Using a local or remote package
+```
 bower install &lt;package&gt;
-# Using a specific version of a package
+```
+##### Using a specific version of a package
+```
 bower install &lt;package&gt;#&lt;version&gt;
-# Using a different name and a specific version of a package
+```
+##### Using a different name and a specific version of a package
+```
 bower install &lt;name&gt;=&lt;package&gt;#&lt;version&gt;
-</code></pre>
+```</code></pre>
 
 <p>Where <code>&lt;package&gt;</code> can be any one of the following:</p>
 
@@ -117,32 +115,34 @@ use a module loader. Bower is just a package manager, but there are plenty of
 other tools -- such as <a href="https://github.com/sstephenson/sprockets">Sprockets</a>
 and <a href="http://requirejs.org/">RequireJS</a> -- that will help you do this.</p>
 
-<h3 id="registering-packages"><a href="#registering-packages">AnchorLink</a>Registering packages</h3>
-
-<p>To register a new package:</p>
-
-<ul><li>There <strong>must</strong> be a valid manifest JSON in the current working directory.</li><li>Your package should use <a href="http://semver.org/">semver</a> Git tags.</li><li>Your package <strong>must</strong> be available at a Git endpoint (e.g., GitHub); remember
-to push your Git tags!</li></ul>
-
-<p>Then use the following command:</p>
-
-<pre><code>bower register &lt;my-package-name&gt; &lt;git-endpoint&gt;
-</code></pre>
-
-<p>The Bower registry does not have authentication or user management at this point
-in time. It&#39;s on a first come, first served basis. Think of it like a URL
-shortener. Now anyone can run <code>bower install &lt;my-package-name&gt;</code>, and get your
-library installed.</p>
-
-<p>There is no direct way to unregister a package yet. For now, you can <a href="https://github.com/bower/bower/issues/120">request a
-package be unregistered</a>.</p>
-
 <h3 id="uninstalling-packages"><a href="#uninstalling-packages">AnchorLink</a>Uninstalling packages</h3>
 
 <p>To uninstall a locally installed package:</p>
 
 <pre><code>bower uninstall &lt;package-name&gt;
 </code></pre>
+
+<h4 id="warning">Warning</h4>
+
+<p>On <code>prezto</code> or <code>oh-my-zsh</code>, do not forget to <code>alias bower=&#39;noglob bower&#39;</code> or <code>bower install jquery\#1.9.1</code></p>
+
+<h4 id="running-commands-with-sudo">Running commands with sudo</h4>
+
+<p>Bower is a user command, there is no need to execute it with superuser permissions.
+However, if you still want to run commands with sudo, use <code>--allow-root</code> option.</p>
+
+<h4 id="a-note-for-windows-users">A note for Windows users</h4>
+
+<p>To use Bower on Windows, you must install
+<a href="http://code.google.com/p/msysgit/">msysgit</a> correctly. Be sure to check the
+option shown below:</p>
+
+<p><img alt="msysgit" src="http://f.cl.ly/items/2V2O3i1p3R2F1r2v0a12/mysgit.png"/></p>
+
+<p>Note that if you use TortoiseGit and if Bower keeps asking for your SSH
+password, you should add the following environment variable: <code>GIT_SSH -
+C:\Program Files\TortoiseGit\bin\TortoisePlink.exe</code>. Adjust the <code>TortoisePlink</code>
+path if needed.</p>
 
 <h2 id="configuration"><a href="#configuration">AnchorLink</a>Configuration</h2>
 
@@ -193,6 +193,26 @@ do not want to register the package in future.</li></ul>
   }
 }
 </code></pre>
+
+<h3 id="registering-packages"><a href="#registering-packages">AnchorLink</a>Registering packages</h3>
+
+<p>To register a new package:</p>
+
+<ul><li>There <strong>must</strong> be a valid manifest JSON in the current working directory.</li><li>Your package should use <a href="http://semver.org/">semver</a> Git tags.</li><li>Your package <strong>must</strong> be available at a Git endpoint (e.g., GitHub); remember
+to push your Git tags!</li></ul>
+
+<p>Then use the following command:</p>
+
+<pre><code>bower register &lt;my-package-name&gt; &lt;git-endpoint&gt;
+</code></pre>
+
+<p>The Bower registry does not have authentication or user management at this point
+in time. It&#39;s on a first come, first served basis. Think of it like a URL
+shortener. Now anyone can run <code>bower install &lt;my-package-name&gt;</code>, and get your
+library installed.</p>
+
+<p>There is no direct way to unregister a package yet. For now, you can <a href="https://github.com/bower/bower/issues/120">request a
+package be unregistered</a>.</p>
 
 <h2 id="consuming-a-package"><a href="#consuming-a-package">AnchorLink</a>Consuming a package</h2>
 
@@ -266,19 +286,6 @@ not available for Windows users.</p>
 
 <pre><code>bower completion &gt;&gt; ~/.bash_profile
 </code></pre>
-
-<h2 id="a-note-for-windows-users"><a href="#a-note-for-windows-users">AnchorLink</a>A note for Windows users</h2>
-
-<p>To use Bower on Windows, you must install
-<a href="http://code.google.com/p/msysgit/">msysgit</a> correctly. Be sure to check the
-option shown below:</p>
-
-<p><img alt="msysgit" src="http://f.cl.ly/items/2V2O3i1p3R2F1r2v0a12/mysgit.png"/></p>
-
-<p>Note that if you use TortoiseGit and if Bower keeps asking for your SSH
-password, you should add the following environment variable: <code>GIT_SSH -
-C:\Program Files\TortoiseGit\bin\TortoisePlink.exe</code>. Adjust the <code>TortoisePlink</code>
-path if needed.</p>
 
 <h2 id="contact"><a href="#contact">AnchorLink</a>Contact</h2>
 
