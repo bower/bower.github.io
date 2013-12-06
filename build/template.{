@@ -21,6 +21,13 @@
       </div>
     </div>
 
+    <div id="navigation">
+      <span class="title">Navigation</span>
+      <ul>
+        {{{navigation}}}
+      </ul>
+    </div>
+
     <div id="content">
       <div class="wrap">
         {{{body}}}

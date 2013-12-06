@@ -21,9 +21,28 @@
       </div>
     </div>
 
+    <div id="navigation">
+      <span class="title">Navigation</span>
+      <ul>
+        <li><a href="#section-bower">Home</a></li>
+<li><a href="#section-installing-bower">Installing Bower</a></li>
+<li><a href="#section-usage">Usage</a></li>
+<li><a href="#section-configuration">Configuration</a></li>
+<li><a href="#section-defining-a-package">Defining a package</a></li>
+<li><a href="#section-consuming-a-package">Consuming a package</a></li>
+<li><a href="#section-programmatic-api">Programmatic API</a></li>
+<li><a href="#section-completion-experimental">Completion (experimental)</a></li>
+<li><a href="#section-a-note-for-windows-users">A note for Windows users</a></li>
+<li><a href="#section-contact">Contact</a></li>
+<li><a href="#section-contributing-to-this-project">Contributing to this project</a></li>
+<li><a href="#section-authors">Authors</a></li>
+<li><a href="#section-license">License</a></li>
+      </ul>
+    </div>
+
     <div id="content">
       <div class="wrap">
-        <h1 id="bower"><a href="#bower">AnchorLink</a>BOWER</h1>
+        <div id="section-bower"><h1 id="bower"><a href="#bower">AnchorLink</a>BOWER</h1>
 
 <p>Bower is a package manager for the web. It offers a generic, unopinionated
 solution to the problem of <strong>front-end package management</strong>, while exposing the
@@ -37,7 +56,8 @@ etc.).</p>
 
 <p><a href="http://sindresorhus.com/bower-components/">View all packages available through Bower&#39;s registry</a>.</p>
 
-<h2 id="installing-bower"><a href="#installing-bower">AnchorLink</a>Installing Bower</h2>
+<a class="back-to-top" href="#hero">Back to the top</a></div>
+<div id="section-installing-bower"><h2 id="installing-bower"><a href="#installing-bower">AnchorLink</a>Installing Bower</h2>
 
 <p>Bower depends on <a href="http://nodejs.org/">Node</a> and <a href="http://npmjs.org/">npm</a>. It&#39;s
 installed globally using npm:</p>
@@ -48,7 +68,8 @@ installed globally using npm:</p>
 <p>Also make sure that <a href="http://git-scm.com/">git</a> is installed as some bower
 packages require it to be fetched and installed.</p>
 
-<h2 id="usage"><a href="#usage">AnchorLink</a>Usage</h2>
+<a class="back-to-top" href="#hero">Back to the top</a></div>
+<div id="section-usage"><h2 id="usage"><a href="#usage">AnchorLink</a>Usage</h2>
 
 <p>Much more information is available via <code>bower help</code> once it&#39;s installed. This
 is just enough to get you started.</p>
@@ -144,7 +165,8 @@ package be unregistered</a>.</p>
 <pre><code>bower uninstall &lt;package-name&gt;
 </code></pre>
 
-<h2 id="configuration"><a href="#configuration">AnchorLink</a>Configuration</h2>
+<a class="back-to-top" href="#hero">Back to the top</a></div>
+<div id="section-configuration"><h2 id="configuration"><a href="#configuration">AnchorLink</a>Configuration</h2>
 
 <p>Bower can be configured using JSON in a <code>.bowerrc</code> file.</p>
 
@@ -152,7 +174,8 @@ package be unregistered</a>.</p>
 <a href="https://docs.google.com/document/d/1APq7oA9tNao1UYWyOm8dKqlRP2blVkROYLZ2fLIjtWc/edit#heading=h.4pzytc1f9j8k">here</a>
 in the <code>Configuration</code> section.</p>
 
-<h2 id="defining-a-package"><a href="#defining-a-package">AnchorLink</a>Defining a package</h2>
+<a class="back-to-top" href="#hero">Back to the top</a></div>
+<div id="section-defining-a-package"><h2 id="defining-a-package"><a href="#defining-a-package">AnchorLink</a>Defining a package</h2>
 
 <p>You must create a <code>bower.json</code> in your project&#39;s root, and specify all of its
 dependencies. This is similar to Node&#39;s <code>package.json</code>, or Ruby&#39;s <code>Gemfile</code>,
@@ -194,7 +217,8 @@ do not want to register the package in future.</li></ul>
 }
 </code></pre>
 
-<h2 id="consuming-a-package"><a href="#consuming-a-package">AnchorLink</a>Consuming a package</h2>
+<a class="back-to-top" href="#hero">Back to the top</a></div>
+<div id="section-consuming-a-package"><h2 id="consuming-a-package"><a href="#consuming-a-package">AnchorLink</a>Consuming a package</h2>
 
 <p>Bower also makes available a source mapping. This can be used by build tools to
 easily consume Bower packages.</p>
@@ -213,7 +237,8 @@ simple path-to-name mapping:</p>
 output JSON. Command result is outputted to <code>stdout</code> and error/logs to
 <code>stderr</code>.</p>
 
-<h2 id="programmatic-api"><a href="#programmatic-api">AnchorLink</a>Programmatic API</h2>
+<a class="back-to-top" href="#hero">Back to the top</a></div>
+<div id="section-programmatic-api"><h2 id="programmatic-api"><a href="#programmatic-api">AnchorLink</a>Programmatic API</h2>
 
 <p>Bower provides a powerful, programmatic API. All commands can be accessed
 through the <code>bower.commands</code> object.</p>
@@ -253,7 +278,8 @@ bower.commands
 });
 </code></pre>
 
-<h2 id="completion-experimental"><a href="#completion-experimental">AnchorLink</a>Completion (experimental)</h2>
+<a class="back-to-top" href="#hero">Back to the top</a></div>
+<div id="section-completion-experimental"><h2 id="completion-experimental"><a href="#completion-experimental">AnchorLink</a>Completion (experimental)</h2>
 
 <p><em>NOTE</em>: Completion is still not implemented for the 1.0.0 release</p>
 
@@ -267,7 +293,8 @@ not available for Windows users.</p>
 <pre><code>bower completion &gt;&gt; ~/.bash_profile
 </code></pre>
 
-<h2 id="a-note-for-windows-users"><a href="#a-note-for-windows-users">AnchorLink</a>A note for Windows users</h2>
+<a class="back-to-top" href="#hero">Back to the top</a></div>
+<div id="section-a-note-for-windows-users"><h2 id="a-note-for-windows-users"><a href="#a-note-for-windows-users">AnchorLink</a>A note for Windows users</h2>
 
 <p>To use Bower on Windows, you must install
 <a href="http://code.google.com/p/msysgit/">msysgit</a> correctly. Be sure to check the
@@ -280,20 +307,23 @@ password, you should add the following environment variable: <code>GIT_SSH -
 C:\Program Files\TortoiseGit\bin\TortoisePlink.exe</code>. Adjust the <code>TortoisePlink</code>
 path if needed.</p>
 
-<h2 id="contact"><a href="#contact">AnchorLink</a>Contact</h2>
+<a class="back-to-top" href="#hero">Back to the top</a></div>
+<div id="section-contact"><h2 id="contact"><a href="#contact">AnchorLink</a>Contact</h2>
 
 <p>Have a question?</p>
 
 <ul><li><a href="http://stackoverflow.com/questions/tagged/bower">StackOverflow</a></li><li><a href="http://groups.google.com/group/twitter-bower">Mailinglist</a> - twitter-bower@googlegroups.com</li><li><a href="http://webchat.freenode.net/?channels=bower">#bower</a> on Freenode</li></ul>
 
-<h2 id="contributing-to-this-project"><a href="#contributing-to-this-project">AnchorLink</a>Contributing to this project</h2>
+<a class="back-to-top" href="#hero">Back to the top</a></div>
+<div id="section-contributing-to-this-project"><h2 id="contributing-to-this-project"><a href="#contributing-to-this-project">AnchorLink</a>Contributing to this project</h2>
 
 <p>Anyone and everyone is welcome to contribute. Please take a moment to
 review the <a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md">guidelines for contributing</a>.</p>
 
 <ul><li><a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md#bugs">Bug reports</a></li><li><a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md#features">Feature requests</a></li><li><a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md#pull-requests">Pull requests</a></li></ul>
 
-<h2 id="authors"><a href="#authors">AnchorLink</a>Authors</h2>
+<a class="back-to-top" href="#hero">Back to the top</a></div>
+<div id="section-authors"><h2 id="authors"><a href="#authors">AnchorLink</a>Authors</h2>
 
 <ul><li><a href="https://github.com/fat">@fat</a></li><li><a href="https://github.com/maccman">@maccman</a></li><li><a href="https://github.com/satazor">@satazor</a></li></ul>
 
@@ -330,11 +360,12 @@ review the <a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md">
 <a href="https://github.com/wibblymat">@wibblymat</a>,
 <a href="https://github.com/wycats">@wycats</a></p>
 
-<h2 id="license"><a href="#license">AnchorLink</a>License</h2>
+<a class="back-to-top" href="#hero">Back to the top</a></div>
+<div id="section-license"><h2 id="license"><a href="#license">AnchorLink</a>License</h2>
 
 <p>Copyright 2012 Twitter, Inc.</p>
 
-<p>Licensed under the MIT License</p>
+<p>Licensed under the MIT License</p><a class="back-to-top" href="#hero">Back to the top</a></div>
       </div>
     </div>
 
