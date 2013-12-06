@@ -10,9 +10,11 @@ var url      = "https://raw.github.com/bower/bower/master/README.md";
 var template = Hogan.compile(fs.readFileSync(path.join(__dirname,'./template.{'), 'utf-8'));
 
 request(url, function (error, response, body) {
-  body = body.replace(/ \[\!\[Build Status\].+$/m, '')
+  body = body.replace(/ \[\!\[Build Status\].+$/m, '');
   //assuming that links not containing http are relative to bower main repo
-  body = body.replace(/\[(.*)\]\((?!http)(.*)\)/g, '\[\$1\](https://github.com/bower/bower/blob/master/\$2\)')
+  body = body.replace(/\[(.*)\]\((?!http)(.*)\)/g, '\[\$1\](https://github.com/bower/bower/blob/master/\$2\)');
+  // remove header image
+  body = body.replace('<img align="right" height="300" src="http://bower.io/img/bower-logo.png">', '');
   var bodyHTML = markdown.toHTML(body, 'GitHub');
   fs.writeFileSync(path.join(__dirname, '../index.html'), template.render({ body: bodyHTML }));
 });
