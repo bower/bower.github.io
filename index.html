@@ -25,7 +25,7 @@
       <div class="wrap">
         <h1 id="bower"><a href="#bower">AnchorLink</a>Bower</h1>
 
-<p><a href="http://travis-ci.org/bower/bower"><img alt="Build Status" src="https://secure.travis-ci.org/bower/bower.png?branch=master"/></a> <a href="https://sourcegraph.com/github.com/bower/bower"><img alt="Views in the last 24 hours" src="https://sourcegraph.com/api/repos/github.com/bower/bower/counters/views-24h.png"/></a></p>
+<p><a href="http://travis-ci.org/bower/bower"><img alt="Build Status" src="https://secure.travis-ci.org/bower/bower.png?branch=master"/></a></p>
 
 <p>Bower is a package manager for the web. It offers a generic, unopinionated
 solution to the problem of <strong>front-end package management</strong>, while exposing the
@@ -37,7 +37,7 @@ between different apps, and the dependency tree is flat.</p>
 up of any type of asset, and use any type of transport (e.g., AMD, CommonJS,
 etc.).</p>
 
-<p><a href="http://sindresorhus.com/bower-components/">View all packages available through Bower&#39;s registry</a>.</p>
+<p><a href="http://bower.io/search/">View all packages available through Bower&#39;s registry</a>.</p>
 
 <h2 id="installing-bower"><a href="#installing-bower">AnchorLink</a>Installing Bower</h2>
 
@@ -81,13 +81,15 @@ is just enough to get you started.</p>
 
 <p>Where <code>&lt;package&gt;</code> can be any one of the following:</p>
 
-<ul><li>A name that maps to a package registered with Bower, e.g, <code>jquery</code>. ‡</li><li>A remote Git endpoint, e.g., <code>git://github.com/someone/some-package.git</code>. Can be
-public or private. ‡</li><li>A local endpoint, i.e., a folder that&#39;s a Git repository. ‡</li><li>A shorthand endpoint, e.g., <code>someone/some-package</code> (defaults to GitHub). ‡</li><li>A URL to a file, including <code>zip</code> and <code>tar</code> files. Its contents will be
+<ul><li>A name that maps to a package registered with Bower, e.g, <code>jquery</code>. ‡</li><li>A public remote Git endpoint, e.g., <code>git://github.com/someone/some-package.git</code>. ‡</li><li>A private Git repository, e.g., <code>https://github.com/someone/some-package.git</code>. If the protocol is https, a prompt will ask for the credentials. ssh can also be used, e.g., <code>git@github.com:someone/some-package.git</code> and can authenticate with the user&#39;s ssh public/private keys. ‡</li><li>A local endpoint, i.e., a folder that&#39;s a Git repository. ‡</li><li>A shorthand endpoint, e.g., <code>someone/some-package</code> (defaults to GitHub). ‡</li><li>A URL to a file, including <code>zip</code> and <code>tar</code> files. Its contents will be
 extracted.</li></ul>
 
 <p>‡ These types of <code>&lt;package&gt;</code> might have versions available. You can specify a
 <a href="http://semver.org/">semver</a> compatible version to fetch a specific release, and lock the
-package to that version. You can also use ranges to specify a range of versions.</p>
+package to that version. You can also use ranges to specify a range of versions.
+If you are using a package that is a git endpoint, you may use any tag, commit SHA,
+or branch name as a version. For example: <code>&lt;package&gt;#&lt;sha&gt;</code>. Using branches is not
+recommended because the HEAD does not reference a fixed commit SHA.</p>
 
 <p>All package contents are installed in the <code>bower_components</code> directory by default.
 You should <strong>never</strong> directly modify the contents of this directory.</p>
@@ -97,6 +99,15 @@ You should <strong>never</strong> directly modify the contents of this directory
 <p><strong>N.B.</strong> If you aren&#39;t authoring a package that is intended to be consumed by
 others (e.g., you&#39;re building a web app), you should always <a href="http://addyosmani.com/blog/checking-in-front-end-dependencies/">check installed
 packages into source control</a>.</p>
+
+<h3 id="custom-install-directory"><a href="#custom-install-directory">AnchorLink</a>Custom install directory</h3>
+
+<p>A custom install location can be set in a .bowerrc file using the <code>directory</code> property. The .bowerrc file should be a sibling of your project&#39;s bower.json.</p>
+
+<pre><code>{
+  &quot;directory&quot;: &quot;public/bower_components&quot;
+}
+</code></pre>
 
 <h3 id="finding-packages"><a href="#finding-packages">AnchorLink</a>Finding packages</h3>
 
@@ -112,7 +123,7 @@ packages into source control</a>.</p>
 <p>The easiest approach is to use Bower statically, just reference the package&#39;s
 installed components manually using a <code>script</code> tag:</p>
 
-<pre><code>&lt;script src=&quot;/bower_components/jquery/index.js&quot;&gt;&lt;/script&gt;
+<pre><code>&lt;script src=&quot;/bower_components/jquery/jquery.js&quot;&gt;&lt;/script&gt;
 </code></pre>
 
 <p>For more complex projects, you&#39;ll probably want to concatenate your scripts or
@@ -320,9 +331,11 @@ review the <a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md">
 
 <ul><li><a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md#bugs">Bug reports</a></li><li><a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md#features">Feature requests</a></li><li><a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md#pull-requests">Pull requests</a></li></ul>
 
-<h2 id="authors"><a href="#authors">AnchorLink</a>Authors</h2>
+<h2 id="bower-team"><a href="#bower-team">AnchorLink</a>Bower Team</h2>
 
-<ul><li><a href="https://github.com/fat">@fat</a></li><li><a href="https://github.com/maccman">@maccman</a></li><li><a href="https://github.com/satazor">@satazor</a></li></ul>
+<h3 id="core-team"><a href="#core-team">AnchorLink</a>Core team</h3>
+
+<ul><li><a href="https://github.com/satazor">@satazor</a></li><li><a href="https://github.com/wibblymat">@wibblymat</a></li><li><a href="https://github.com/necolas">@necolas</a></li><li><a href="https://github.com/paulirish">@paulirish</a></li><li><a href="https://github.com/benschwarz">@benschwarz</a></li><li><a href="https://github.com/sindresorhus">@sindresorhus</a></li><li><a href="https://github.com/svnlto">@svnlto</a></li></ul>
 
 <p>Thanks for assistance and contributions:</p>
 
@@ -342,24 +355,24 @@ review the <a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md">
 <a href="https://github.com/marcooliveira">@marcooliveira</a>,
 <a href="https://github.com/mklabs">@mklabs</a>,
 <a href="https://github.com/MrDHat">@MrDHat</a>,
-<a href="https://github.com/necolas">@necolas</a>,
-<a href="https://github.com/paulirish">@paulirish</a>,
 <a href="https://github.com/richo">@richo</a>,
 <a href="https://github.com/rvagg">@rvagg</a>,
-<a href="https://github.com/sindresorhus">@sindresorhus</a>,
+<a href="https://github.com/ryanflorence">@ryanflorence</a>,
 <a href="https://github.com/SlexAxton">@SlexAxton</a>,
 <a href="https://github.com/sstephenson">@sstephenson</a>,
-<a href="https://github.com/svnlto">@svnlto</a>,
 <a href="https://github.com/tomdale">@tomdale</a>,
 <a href="https://github.com/uzquiano">@uzquiano</a>,
 <a href="https://github.com/visionmedia">@visionmedia</a>,
 <a href="https://github.com/wagenet">@wagenet</a>,
-<a href="https://github.com/wibblymat">@wibblymat</a>,
 <a href="https://github.com/wycats">@wycats</a></p>
+
+<h3 id="bower-alumni"><a href="#bower-alumni">AnchorLink</a>Bower Alumni</h3>
+
+<ul><li><a href="https://github.com/fat">@fat</a></li><li><a href="https://github.com/maccman">@maccman</a></li></ul>
 
 <h2 id="license"><a href="#license">AnchorLink</a>License</h2>
 
-<p>Copyright 2012 Twitter, Inc.</p>
+<p>Copyright (c) 2014 Twitter and other contributors</p>
 
 <p>Licensed under the MIT License</p>
       </div>
