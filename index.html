@@ -82,15 +82,19 @@ is just enough to get you started.</p>
 
 <p>Where <code>&lt;package&gt;</code> can be any one of the following:</p>
 
-<ul><li>A name that maps to a package registered with Bower, e.g, <code>jquery</code>. ‡</li><li>A public remote Git endpoint, e.g., <code>git://github.com/someone/some-package.git</code>. ‡</li><li>A private Git repository, e.g., <code>https://github.com/someone/some-package.git</code>. If the protocol is https, a prompt will ask for the credentials. ssh can also be used, e.g., <code>git@github.com:someone/some-package.git</code> and can authenticate with the user&#39;s ssh public/private keys. ‡</li><li>A local endpoint, i.e., a folder that&#39;s a Git repository. ‡</li><li>A shorthand endpoint, e.g., <code>someone/some-package</code> (defaults to GitHub). ‡</li><li>A URL to a file, including <code>zip</code> and <code>tar</code> files. Its contents will be
+<ul><li>A name that maps to a package registered with Bower, e.g, <code>jquery</code>. ‡</li><li>A public remote Git endpoint, e.g., <code>git://github.com/someone/some-package.git</code>. ‡</li><li>A private Git repository, e.g., <code>https://github.com/someone/some-package.git</code>. If the protocol is https, a prompt will ask for the credentials. ssh can also be used, e.g., <code>git@github.com:someone/some-package.git</code> and can authenticate with the user&#39;s ssh public/private keys. ‡</li><li>A local endpoint, i.e., a folder that&#39;s a Git repository. ‡</li><li>A public remote Subversion endpoint, e.g., <code>svn+http://package.googlecode.com/svn/</code>. ‡</li><li>A private Subversion repository, e.g., <code>svn+ssh://package.googlecode.com/svn/</code>. ‡</li><li>A local endpoint, i.e., a folder that&#39;s an Subversion repository, e.g., <code>svn+file:///path/to/svn/</code>. ‡</li><li>A shorthand endpoint, e.g., <code>someone/some-package</code> (defaults to GitHub). ‡</li><li>A URL to a file, including <code>zip</code> and <code>tar</code> files. Its contents will be
 extracted.</li></ul>
 
 <p>‡ These types of <code>&lt;package&gt;</code> might have versions available. You can specify a
 <a href="http://semver.org/">semver</a> compatible version to fetch a specific release, and lock the
-package to that version. You can also use ranges to specify a range of versions.
-If you are using a package that is a git endpoint, you may use any tag, commit SHA,
+package to that version. You can also use ranges to specify a range of versions.</p>
+
+<p>If you are using a package that is a git endpoint, you may use any tag, commit SHA,
 or branch name as a version. For example: <code>&lt;package&gt;#&lt;sha&gt;</code>. Using branches is not
 recommended because the HEAD does not reference a fixed commit SHA.</p>
+
+<p>If you are using a package that is a subversion endpoint, you may use any tag, revision number,
+or branch name as a version. For example: <code>&lt;package&gt;#&lt;revision&gt;</code>.</p>
 
 <p>All package contents are installed in the <code>bower_components</code> directory by default.
 You should <strong>never</strong> directly modify the contents of this directory.</p>
@@ -103,7 +107,7 @@ packages into source control</a>.</p>
 
 <h3 id="custom-install-directory"><a href="#custom-install-directory">AnchorLink</a>Custom install directory</h3>
 
-<p>A custom install location can be set in a .bowerrc file using the <code>directory</code> property. The .bowerrc file should be a sibling of your project&#39;s bower.json.</p>
+<p>A custom install location can be set in a <code>.bowerrc</code> file using the <code>directory</code> property. The .bowerrc file should be a sibling of your project&#39;s bower.json.</p>
 
 <pre><code>{
   &quot;directory&quot;: &quot;public/bower_components&quot;
@@ -204,7 +208,7 @@ release.</p>
 <p>The <code>bower.json</code> defines several options:</p>
 
 <ul><li><code>name</code> (required): The name of your package.</li><li><code>version</code>: A semantic version number (see <a href="http://semver.org/">semver</a>).</li><li><code>main</code> [string|array]: The primary endpoints of your package.</li><li><code>ignore</code> [array]: An array of paths not needed in production that you want
-Bower to ignore when installing your package.</li><li><code>dependencies</code> [hash]: Packages your package depends upon in production.</li><li><code>devDependencies</code> [hash]: Development dependencies.</li><li><code>private</code> [boolean]: Set to true if you want to keep the package private and 
+Bower to ignore when installing your package.</li><li><code>dependencies</code> [hash]: Packages your package depends upon in production.</li><li><code>devDependencies</code> [hash]: Development dependencies.</li><li><code>private</code> [boolean]: Set to true if you want to keep the package private and
 do not want to register the package in future.</li></ul>
 
 <pre><code>{
@@ -336,11 +340,12 @@ review the <a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md">
 
 <h3 id="core-team"><a href="#core-team">AnchorLink</a>Core team</h3>
 
-<ul><li><a href="https://github.com/satazor">@satazor</a></li><li><a href="https://github.com/wibblymat">@wibblymat</a></li><li><a href="https://github.com/necolas">@necolas</a></li><li><a href="https://github.com/paulirish">@paulirish</a></li><li><a href="https://github.com/benschwarz">@benschwarz</a></li><li><a href="https://github.com/sindresorhus">@sindresorhus</a></li><li><a href="https://github.com/svnlto">@svnlto</a></li></ul>
+<ul><li><a href="https://github.com/satazor">@satazor</a></li><li><a href="https://github.com/wibblymat">@wibblymat</a></li><li><a href="https://github.com/paulirish">@paulirish</a></li><li><a href="https://github.com/benschwarz">@benschwarz</a></li><li><a href="https://github.com/sindresorhus">@sindresorhus</a></li><li><a href="https://github.com/svnlto">@svnlto</a></li></ul>
 
 <p>Thanks for assistance and contributions:</p>
 
 <p><a href="https://github.com/addyosmani">@addyosmani</a>,
+<a href="https://github.com/ahmadnassri">@ahmadnassri</a>,
 <a href="https://github.com/angus-c">@angus-c</a>,
 <a href="https://github.com/borismus">@borismus</a>,
 <a href="https://github.com/carsonmcdonald">@carsonmcdonald</a>,
@@ -352,10 +357,12 @@ review the <a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md">
 <a href="https://github.com/isaacs">@isaacs</a>,
 <a href="https://github.com/josh">@josh</a>,
 <a href="https://github.com/jrburke">@jrburke</a>,
+<a href="https://github.com/kennethklee">@kennethklee</a>,
 <a href="https://github.com/marcelombc">@marcelombc</a>,
 <a href="https://github.com/marcooliveira">@marcooliveira</a>,
 <a href="https://github.com/mklabs">@mklabs</a>,
 <a href="https://github.com/MrDHat">@MrDHat</a>,
+<a href="https://github.com/necolas">@necolas</a>,
 <a href="https://github.com/richo">@richo</a>,
 <a href="https://github.com/rvagg">@rvagg</a>,
 <a href="https://github.com/ryanflorence">@ryanflorence</a>,
