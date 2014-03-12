@@ -19,6 +19,7 @@
         <h3 class="tagline">A package manager for the web</h3>
         <h3 class="by-twitter">By Twitter</h3>
         <a href="https://github.com/bower/bower" target="_blank" class="button github-button">View on GitHub</a>
+        <a href="http://bower.io/search/" class="button">Search Packages</a>
       </div>
     </div>
 
@@ -187,6 +188,16 @@ bower cache clean
 <p>The current spec can be read
 <a href="https://docs.google.com/document/d/1APq7oA9tNao1UYWyOm8dKqlRP2blVkROYLZ2fLIjtWc/edit#heading=h.4pzytc1f9j8k">here</a>
 in the <code>Configuration</code> section.</p>
+
+<h2 id="running-on-a-continuous-integration-server"><a href="#running-on-a-continuous-integration-server">AnchorLink</a>Running on a continuous integration server</h2>
+
+<p>Bower will skip some interactive and analytics operations if it finds a <code>CI</code> environmental variable set to <code>true</code>. You will find that the <code>CI</code> variable is already set for you on many continuous integration servers, e.g., <a href="https://circleci.com/docs/environment-variables#basics">CircleCI</a> and <a href="http://docs.travis-ci.com/user/ci-environment/#Environment-variables">Travis-CI</a>.</p>
+
+<p>You may try to set manually set <code>CI</code> variable manually before running your Bower commands. On Mac or Linux, <code>export CI=true</code> and on Windows <code>set CI=true</code></p>
+
+<h3 id="interactive-configuration"><a href="#interactive-configuration">AnchorLink</a>Interactive configuration</h3>
+
+<p>If for some reason you are unable to set the <code>CI</code> environment variable, you can alternately use the <code>--config.interactive=false</code> flag. (<code>bower install --config.interactive=false</code>)</p>
 
 <h2 id="defining-a-package"><a href="#defining-a-package">AnchorLink</a>Defining a package</h2>
 
