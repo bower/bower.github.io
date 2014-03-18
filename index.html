@@ -10,7 +10,7 @@
   </head>
   <body>
 
-    <div id="hero">
+    <header id="hero">
       <div class="wrap">
         <div class="brand">
           <img src="img/bower-logo.png" class="bower-logo" alt="Bower logo" />
@@ -21,9 +21,9 @@
         <a href="https://github.com/bower/bower" target="_blank" class="button github-button">View on GitHub</a>
         <a href="http://bower.io/search/" class="button">Search Packages</a>
       </div>
-    </div>
+    </header>
 
-    <div id="content">
+    <main id="content">
       <div class="wrap">
         <h1 id="bower"><a href="#bower">AnchorLink</a>Bower</h1>
 
@@ -88,7 +88,7 @@ extracted.</li></ul>
 
 <p>‡ These types of <code>&lt;package&gt;</code> might have versions available. You can specify a
 <a href="http://semver.org/">semver</a> compatible version to fetch a specific release, and lock the
-package to that version. You can also use ranges to specify a range of versions.</p>
+package to that version. You can also specify a <a href="https://github.com/isaacs/node-semver#ranges">range</a> of versions.</p>
 
 <p>If you are using a package that is a git endpoint, you may use any tag, commit SHA,
 or branch name as a version. For example: <code>&lt;package&gt;#&lt;sha&gt;</code>. Using branches is not
@@ -219,7 +219,9 @@ release.</p>
 <p>The <code>bower.json</code> defines several options:</p>
 
 <ul><li><code>name</code> (required): The name of your package.</li><li><code>version</code>: A semantic version number (see <a href="http://semver.org/">semver</a>).</li><li><code>main</code> [string|array]: The primary endpoints of your package.</li><li><code>ignore</code> [array]: An array of paths not needed in production that you want
-Bower to ignore when installing your package.</li><li><code>dependencies</code> [hash]: Packages your package depends upon in production.</li><li><code>devDependencies</code> [hash]: Development dependencies.</li><li><code>private</code> [boolean]: Set to true if you want to keep the package private and
+Bower to ignore when installing your package.</li><li><code>dependencies</code> [hash]: Packages your package depends upon in production.
+Note that you can specify <a href="https://github.com/isaacs/node-semver#ranges">ranges</a>
+of versions for your dependencies.</li><li><code>devDependencies</code> [hash]: Development dependencies.</li><li><code>private</code> [boolean]: Set to true if you want to keep the package private and
 do not want to register the package in future.</li></ul>
 
 <pre><code>{
@@ -395,13 +397,13 @@ review the <a href="https://github.com/bower/bower/blob/master/CONTRIBUTING.md">
 
 <p>Licensed under the MIT License</p>
       </div>
-    </div>
+    </main>
 
-    <div id="footer">
+    <footer id="footer">
       <div class="wrap">
         <p class="license">Code licensed under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License</a>. Documentation licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
       </div>
-    </div>
+    </footer>
 
     <script>
     /*! Normalized address bar hiding for iOS & Android (c) @scottjehl MIT License */
