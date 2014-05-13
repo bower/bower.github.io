@@ -6,16 +6,38 @@
   <title>{{ page.title }}</title>
 
   <link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/modules.css">
+  <link rel="stylesheet" type="text/css" href="css/masthead.css">
 
 </head>
 <body>
 
+  <header id="masthead">
+    <div class="container">
+
+      <img class="logo" src="img/bower-logo.png" />
+
+      <ul class="site-nav nav">
+        <li class="nav-home"><a href="./">Bower</a></li>
+        <li class="nav-creating"><a href="creating-packages">Creating packages</a></li>
+        <li class="nav-config"><a href="config">Configuration</a></li>
+        <li class="nav-tools"><a href="tools">Tools</a></li>
+        <li class="nav-about"><a href="about">About</a></li>
+      </ul>
+
+      <h1 class="page-title">{{ page.title }}</h1>
+
+    </div>
+  </header>
 
   <div id="content">
 
-    <h1>{{ page.title }}</h1>
+    <div class="container">
 
-    {{ content }}
+      {{ content }}
+
+    </div>
+
 
   </div>
 

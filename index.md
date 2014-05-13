@@ -1,11 +1,9 @@
 ---
-
 title: Bower
 layout: default
-
 ---
 
-Web sites are made of lots of things: frameworks, libraries, assets, utlities, and rainbows. Bower manages all these things for you.
+Web sites are made of lots of things -- frameworks, libraries, assets, utlities, and rainbows. Bower manages all these things for you.
 
 ## Install Bower
 

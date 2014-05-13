@@ -1,0 +1,38 @@
+#masthead {
+  background: #FFCC2F;
+  color: #543729;
+  padding: 10px 0;
+  min-height: 180px;
+}
+
+.logo {
+  display: block;
+  width: 160px;
+  position: absolute;
+}
+
+#masthead .site-nav,
+#masthead .page-title {
+  position: relative;
+  left: 180px;
+}
+
+.site-nav li {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.site-nav a {
+  color: #2baf2b;
+  display: block;
+  padding: 0.5em;
+}
+
+.page-title {
+  font-size: 64px;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  margin: 0;
+  padding: 0;
+}
+
