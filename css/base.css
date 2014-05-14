@@ -44,13 +44,14 @@ td {
 /* ---- code ---- */
 
 pre, code {
-  font-family: Consolas, Courier, monospace;
+  font-family: Consolas, Menlo, Courier, monospace;
 }
 
 code {
   padding: 0.1em 0.2em;
   background: #EEE;
   border-radius: 3px;
+  font-size: 0.95em;
 }
 
 pre {
