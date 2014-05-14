@@ -40,3 +40,58 @@ td {
   border-top: 1px solid #DDD;
   padding: 0.2em 0.4em 0.3em 0;
 }
+
+/* ---- code ---- */
+
+pre, code {
+  font-family: Consolas, Courier, monospace;
+}
+
+code {
+  padding: 0.1em 0.2em;
+  background: #EEE;
+  border-radius: 3px;
+}
+
+pre {
+  padding: 0.5em;
+  color: white;
+  background: #222;
+  border-radius: 5px;
+}
+
+pre code {
+  color: inherit;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+
+/* ---- syntax highlighting ---- */
+
+/* via Pygments */
+
+code .s1,
+code .s2,
+code .s { color: #78BD55; } /* string */
+code .mi, /* integer */
+code .cp, /* doctype */
+code .kc { color: #5298D4; } /*boolean*/
+code .k { color: #E39B79; } /* keyword */
+code .kd, /* storage */
+code .na { color: #A9D866; } /* markup attribute */
+code .p  { color: #EDB; } /* punctuation */
+code .o  { color: #F63; }   /* operator */
+code .nb { color: #AA97AC;} /* support */
+
+/* comment */
+code .c,
+code .c1 { color: #666; font-style: italic; }
+
+code .nt { color: #A0C8FC; } /* Markup open tag */
+
+code .nf { color: #9EA8B8; } /* css id */
+code .nc { color: #A78352; }  /* CSS class */
+code .m  { color: #DE8E50; } /* CSS value */
+code .nd { color: #9FAD7E; } /* CSS pseudo selector */
