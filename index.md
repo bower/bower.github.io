@@ -1,6 +1,7 @@
 ---
 title: Bower
 layout: default
+is_home: true
 ---
 
 <p class="lead">Web sites are made of lots of things -- frameworks, libraries, assets, utilities, and rainbows. Bower manages all these things for you.</p>

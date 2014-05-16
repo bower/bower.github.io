@@ -16,7 +16,13 @@
   <header id="masthead">
     <div class="container">
 
-      <img class="logo" src="img/bower-logo.png" />
+      {% if page.is_home %}
+        <div class="brand">
+          <img src="img/bower-logo.png" class="logo" alt="Bower logo" />
+          <h1>Bower</h1>
+          <h3 class="tagline">A package manager for the web</h3>
+        </div>
+      {% endif %}
 
       <ul class="site-nav nav">
         <li class="nav-home"><a href="./">Bower</a></li>
@@ -24,10 +30,16 @@
         <li class="nav-api"><a href="api">API</a></li>
         <li class="nav-config"><a href="config">Configuration</a></li>
         <li class="nav-tools"><a href="tools">Tools</a></li>
+        <li class="nav-search"><a href="search">Search packages</a></li>
         <li class="nav-about"><a href="about">About</a></li>
       </ul>
 
+      {% unless page.is_home %}
+      <img class="logo" src="img/bower-logo.png" alt="Bower logo" />
+
       <h1 class="page-title">{{ page.title }}</h1>
+      {% endunless %}
+
 
     </div>
   </header>
