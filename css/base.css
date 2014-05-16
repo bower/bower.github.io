@@ -74,7 +74,7 @@ code {
 }
 
 pre {
-  padding: 0.5em;
+  padding: 1.0em;
   color: white;
   background: #222;
   border-radius: 5px;
@@ -85,6 +85,7 @@ pre code {
   background: none;
   padding: 0;
   border-radius: 0;
+  font-size: 1.2em;
 }
 
 
@@ -100,7 +101,8 @@ code .cp, /* doctype */
 code .kc { color: #5298D4; } /*boolean*/
 code .k { color: #E39B79; } /* keyword */
 code .kd, /* storage */
-code .na { color: #A9D866; } /* markup attribute */
+code .na, /* markup attribute */
+code .nv { color: #A9D866; } /* bash leading $ */
 code .p  { color: #EDB; } /* punctuation */
 code .o  { color: #F63; }   /* operator */
 code .nb { color: #AA97AC;} /* support */
@@ -115,3 +117,12 @@ code .nf { color: #9EA8B8; } /* css id */
 code .nc { color: #A78352; }  /* CSS class */
 code .m  { color: #DE8E50; } /* CSS value */
 code .nd { color: #9FAD7E; } /* CSS pseudo selector */
+
+/* bash leading $ */
+code .nv {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}

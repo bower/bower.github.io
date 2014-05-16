@@ -3,7 +3,9 @@ title: Bower
 layout: default
 ---
 
-Web sites are made of lots of things -- frameworks, libraries, assets, utlities, and rainbows. Bower manages all these things for you.
+<p class="lead">Web sites are made of lots of things -- frameworks, libraries, assets, utilities, and rainbows. Bower manages all these things for you.</p>
+
+Bower works by fetching and installing packages from all over, taking care of hunting, finding, downloading, and saving the stuff you're looking for. Packages are kept track in a manifest file, `bower.json`. How you use packages is up to you. Bower provides hooks to facilitate using packages in your tools and workflows.
 
 ## Install Bower
 
@@ -18,13 +20,15 @@ Bower has a couple requirements.
 
 ## Install packages
 
-Bower fetches and installs packages from all over, taking care of hunting, finding, downloading, and saving the stuff you're looking for.
+Bower installs packages to `bower_components/`.
 
-    bower install <package>
-    # for example
-    bower install normalize.css
+{% highlight sh %}
+bower install <package>
+# for example
+bower install normalize.css
+{% endhighlight %}
 
-Where `<package>` can be any one of the following:
+`<package>` can be any one of the following:
 
 <table>
   <tr>
@@ -76,9 +80,11 @@ Where `<package>` can be any one of the following:
 Some packages have versions. Specify a version to fetch a specific release and lock the
 package to that version.
 
-    bower install <package>#<version>
-    # for example
-    bower install normalize.css#3.0
+{% highlight sh %}
+$ bower install <package>#<version>
+# for example
+$ bower install normalize.css#3.0
+{% endhighlight %}
 
 A version can be
 

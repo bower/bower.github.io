@@ -23,3 +23,11 @@
   margin: 0 auto;
   padding: 0 10px;
 }
+
+
+/* ---- lead ---- */
+
+.lead {
+  font-size: 1.6em;
+  line-height: 1.25;
+}
