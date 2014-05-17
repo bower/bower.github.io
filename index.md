@@ -12,7 +12,9 @@ Bower works by fetching and installing packages from all over, taking care of hu
 
 Bower is a command line utility. Install it with npm.
 
-    npm install -g bower
+{% highlight bash %}
+$ npm install -g bower
+{% endhighlight %}
 
 Bower has a couple requirements.
 
@@ -24,9 +26,9 @@ Bower has a couple requirements.
 Bower installs packages to `bower_components/`.
 
 {% highlight sh %}
-bower install <package>
+$ bower install <package>
 # for example
-bower install normalize.css
+$ bower install normalize.css
 {% endhighlight %}
 
 `<package>` can be any one of the following:
