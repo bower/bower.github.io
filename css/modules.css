@@ -6,24 +6,24 @@
   margin: 0;
 }
 
-.nav:after {
-  content: ' ';
-  display: block;
-  clear: both;
-}
-
-.nav li {
-  float: left;
-}
-
 /* ---- container ---- */
 
 .container {
-  max-width: 840px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
+#content .main > *:first-child { margin-top: 0; }
+
+#content .container {
+  position: relative;
+}
+
+.main {
+  margin-left: 230px;
+  padding-bottom: 60px;
+}
 
 /* ---- lead ---- */
 
@@ -31,3 +31,5 @@
   font-size: 1.6em;
   line-height: 1.25;
 }
+
+

@@ -24,15 +24,6 @@
         </div>
       {% endif %}
 
-      <ul class="site-nav nav">
-        <li class="nav-home"><a href="./">Bower</a></li>
-        <li class="nav-creating"><a href="creating-packages">Creating packages</a></li>
-        <li class="nav-api"><a href="api">API</a></li>
-        <li class="nav-config"><a href="config">Configuration</a></li>
-        <li class="nav-tools"><a href="tools">Tools</a></li>
-        <li class="nav-search"><a href="search">Search packages</a></li>
-        <li class="nav-about"><a href="about">About</a></li>
-      </ul>
 
       {% unless page.is_home %}
       <img class="logo" src="img/bower-logo.png" alt="Bower logo" />
@@ -48,7 +39,19 @@
 
     <div class="container">
 
-      {{ content }}
+      <ul class="site-nav nav">
+        <li class="nav-home"><a href="./">Home</a></li>
+        <li class="nav-creating"><a href="creating-packages">Creating packages</a></li>
+        <li class="nav-api"><a href="api">API</a></li>
+        <li class="nav-config"><a href="config">Configuration</a></li>
+        <li class="nav-tools"><a href="tools">Tools</a></li>
+        <li class="nav-search"><a href="search">Search packages</a></li>
+        <li class="nav-about"><a href="about">About</a></li>
+      </ul>
+
+      <div class="main">
+        {{ content }}
+      </div>
 
     </div>
 
