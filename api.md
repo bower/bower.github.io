@@ -8,7 +8,7 @@ layout: default
 ### cache
 
 {% highlight sh %}
-bower cache <command> [<args>]
+$ bower cache <command> [<args>]
 {% endhighlight %}
 
 
@@ -17,9 +17,9 @@ Manage bower cache
 #### cache clean
 
 {% highlight sh %}
-bower cache clean
-bower cache clean <name> [<name> ...]
-bower cache clean <name>#<version> [<name>#<version> ..]
+$ bower cache clean
+$ bower cache clean <name> [<name> ...]
+$ bower cache clean <name>#<version> [<name>#<version> ..]
 {% endhighlight %}
 
 Cleans cached packages
@@ -27,8 +27,8 @@ Cleans cached packages
 #### cache list
 
 {% highlight sh %}
-bower cache list
-bower cache list <name> [<name> ...]
+$ bower cache list
+$ bower cache list <name> [<name> ...]
 {% endhighlight %}
 
 Lists cached packages
@@ -36,7 +36,7 @@ Lists cached packages
 ### help
 
 {% highlight sh %}
-bower help <command>
+$ bower help <command>
 {% endhighlight %}
 
 Display help information about Bower
@@ -44,9 +44,9 @@ Display help information about Bower
 ### home
 
 {% highlight sh %}
-bower home
-bower home <package>
-bower home <package>#<version>
+$ bower home
+$ bower home <package>
+$ bower home <package>#<version>
 {% endhighlight %}
 
 Opens a package homepage into your favorite browser.
@@ -56,9 +56,9 @@ If no `<package>` is passed, opens the homepage of the local package.
 ### info
 
 {% highlight sh %}
-bower info <package>
-bower info <package> [<property>]
-bower info <package>#<version> [<property>]
+$ bower info <package>
+$ bower info <package> [<property>]
+$ bower info <package>#<version> [<property>]
 {% endhighlight %}
 
 Displays overall information of a package or of a particular version.
@@ -66,7 +66,7 @@ Displays overall information of a package or of a particular version.
 ### init
 
 {% highlight sh %}
-bower init
+$ bower init
 {% endhighlight %}
 
 Interactively create a bower.json file
@@ -74,8 +74,8 @@ Interactively create a bower.json file
 ### install
 
 {% highlight sh %}
-bower install [<options>]
-bower install <endpoint> [<endpoint> ..] [<options>]
+$ bower install [<options>]
+$ bower install <endpoint> [<endpoint> ..] [<options>]
 {% endhighlight %}
 
 Installs the project dependencies or a specific set of endpoints.
@@ -139,8 +139,8 @@ A version can be:
 ### link
 
 {% highlight sh %}
-bower link
-bower link <name> [<local name>]
+$ bower link
+$ bower link <name> [<local name>]
 {% endhighlight %}
 
 The link functionality allows developers to easily test their packages. Linking is a two-step process.
@@ -152,7 +152,7 @@ This allows to easily test a package because changes will be reflected immediate
 ### list
 
 {% highlight sh %}
-bower list [<options>]
+$ bower list [<options>]
 {% endhighlight %}
 
 List local packages and possible updates.
@@ -165,7 +165,7 @@ List local packages and possible updates.
 ### lookup
 
 {% highlight sh %}
-bower lookup <name>
+$ bower lookup <name>
 {% endhighlight %}
 
 Look up a package URL by name
@@ -173,7 +173,7 @@ Look up a package URL by name
 ### prune
 
 {% highlight sh %}
-bower prune
+$ bower prune
 {% endhighlight %}
 
 Uninstalls local extraneous packages
@@ -181,7 +181,7 @@ Uninstalls local extraneous packages
 ### register
 
 {% highlight sh %}
-bower register <name> <url>
+$ bower register <name> <url>
 {% endhighlight %}
 
 Register a package
@@ -189,8 +189,8 @@ Register a package
 ### search
 
 {% highlight sh %}
-bower search
-bower search <name>
+$ bower search
+$ bower search <name>
 {% endhighlight %}
 
 Finds all packages or a specific package.
@@ -198,7 +198,7 @@ Finds all packages or a specific package.
 ### update
 
 {% highlight sh %}
-bower update <name> [<name> ..] [<options>]
+$ bower update <name> [<name> ..] [<options>]
 {% endhighlight %}
 
 Updates installed packages to their newest version according to bower.json.
@@ -211,7 +211,7 @@ Updates installed packages to their newest version according to bower.json.
 ### uninstall
 
 {% highlight sh %}
-bower uninstall <name> [<name> ..] [<options>]
+$ bower uninstall <name> [<name> ..] [<options>]
 {% endhighlight %}
 
 Uninstalls a package locally from your bower_components directory
@@ -224,7 +224,7 @@ Uninstalls a package locally from your bower_components directory
 ### version
 
 {% highlight sh %}
-bower version [<newversion> | major | minor | patch]
+$ bower version [<newversion> | major | minor | patch]
 {% endhighlight %}
 
 Run this in a package directory to bump the version and write the new data back to the bower.json file.
@@ -240,5 +240,50 @@ If run in a git repo, it will also create a version commit and tag, and fail if 
 If supplied with `--message` (shorthand: `-m`) config option, bower will use it as a commit message when creating a version commit. If the message config contains %s then that will be replaced with the resulting version number. For example:
 
 {% highlight sh %}
-bower version patch -m "Upgrade to %s for reasons"
+$ bower version patch -m "Upgrade to %s for reasons"
+{% endhighlight %}
+
+## Programmatic API
+
+Bower provides a powerful, programmatic API. All commands can be accessed
+through the `bower.commands` object.
+
+{% highlight js %}
+var bower = require('bower');
+
+bower.commands
+.install(['jquery'], { save: true }, { /* custom config */ })
+.on('end', function (installed) {
+    console.log(installed);
+});
+
+bower.commands
+.search('jquery', {})
+.on('end', function (results) {
+    console.log(results);
+});
+{% endhighlight %}
+
+Commands emit four types of events: `log`, `prompt`, `end`, `error`.
+
+* `log` is emitted to report the state/progress of the command.
+* `prompt` is emitted whenever the user needs to be prompted.
+* `error` will only be emitted if something goes wrong.
+* `end` is emitted when the command successfully ends.
+
+For a better of idea how this works, you may want to check out [our bin
+file](https://github.com/bower/bower/blob/master/bin/bower).
+
+When using bower programmatically, prompting is disabled by default. Though you can enable it when calling commands with `interactive: true` in the config.
+This requires you to listen for the `prompt` event and handle the prompting yourself. The easiest way is to use the [inquirer](https://npmjs.org/package/inquirer) npm module like so:
+
+{% highlight js %}
+var inquirer =  require('inquirer');
+
+bower.commands
+.install(['jquery'], { save: true }, { interactive: true })
+// ..
+.on('prompt', function (prompts, callback) {
+    inquirer.prompt(prompts, callback);
+});
 {% endhighlight %}
