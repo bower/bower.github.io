@@ -58,25 +58,27 @@ To register a new package:
 * Your package should use [semver](http://semver.org/) Git tags.
 * Your package **must** be available at a Git endpoint (e.g., GitHub); remember to push your Git tags!
 
-Then use the following command:
+Then use the [register command](api#register):
 
-    bower register <my-package-name> <git-endpoint>
+{% highlight bash %}
+bower register <my-package-name> <git-endpoint>
+# for example
+bower register example git://github.com/user/example.git
+{% endhighlight %}
 
 The Bower registry does not have authentication or user management at this point in time. It's on a first come, first served basis. Now anyone can run `bower install <my-package-name>`, and get your library installed.
-
-There is no direct way to unregister a package yet. For now, you can [request a package be unregistered](https://github.com/bower/bower/issues/120).
 
 ### Unregister
 
 Package unregistering will be available via `bower unregister <package>` soon, but for now, you can unregister packages yourself using curl, if the package is hosted on GitHub and you're an owner or collaborator.
 
 {% highlight sh %}
-curl -X DELETE "https://bower.herokuapp.com/packages/<package>?auth_token=<token>"
+curl -X DELETE "https://bower.herokuapp.com/packages/<package>?access_token=<token>"
 {% endhighlight %}
 
-* Where `<package>` is the package name you want to delete and `<token>` is GitHub's Personal Access Token that you can fetch from  [github.com/settings/applications](https://github.com/settings/applications)
+* Where `<package>` is the package name you want to delete and `<token>` is GitHub's Personal Access Token that you can fetch from  [GitHub settings for ](https://github.com/settings/applications)
+* A default GitHub Personal Access Token will work -- no permissions necessary
 * You need to be an owner or collaborator of the repo and URL needs to be OK.
-* You'll likely want to bower cache clean after your change.
-* Please remember it is generally considered bad behavior to remove versions of a library that others are depending on. Think twice :)
 
-If the above doesn't work for you, you can you can [request a package be unregistered manually](https://github.com/bower/bower/issues/120).
+
+You'll likely want to [`bower cache clean`](api#cache-clean) after your change. Please remember it is generally considered bad behavior to remove versions of a library that others are depending on. Think twice :) If the above doesn't work for you, you can you can [request a package be unregistered manually](https://github.com/bower/bower/issues/120).
