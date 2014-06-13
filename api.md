@@ -83,14 +83,51 @@ Installs the project dependencies or a specific set of endpoints.
 Endpoints can have multiple forms:
 
 * `<source>`
-* `<source>#<target>`
-* `<name>=<source>#<target>`
+* `<source>#<version>`
+* `<name>=<source>#<version>`
 
 Where:
 
 * `<source>` is a package URL, physical location or registry name
-* `<target>` is a valid range, commit, branch, etc.
+* `<version>` is a valid range, commit, branch, etc.
 * `<name>` is the name it should have locally.
+
+A version can be:
+
+<table>
+  <tr>
+    <td>semver version</td>
+    <td>
+      <code>#1.2.3</code>
+    </td>
+  </tr>
+  <tr>
+    <td>version range</td>
+    <td>
+      <code>#1.2</code><br>
+      <code>#~1.2.3</code><br>
+      <code>#^1.2.3</code><br>
+      <code>#>=1.2.3 &lt;2.0</code><br>
+    </td>
+  </tr>
+  <tr>
+    <td>Git tag</td>
+    <td><code>#&lt;revision&gt;</code></td>
+  </tr>
+  <tr>
+    <td>Git commit SHA</td>
+    <td><code>#&lt;sha&gt;</code></td>
+  </tr>
+  <tr>
+    <td>Git branch</td>
+    <td><code>#&lt;branch&gt;</code></td>
+  </tr>
+  <tr>
+    <td>Subversion revision</td>
+    <td><code>#&lt;revision&gt;</code></td>
+  </tr>
+</table>
+
 
 #### install options
 

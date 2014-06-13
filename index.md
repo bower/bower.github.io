@@ -25,7 +25,7 @@ Bower has a couple requirements.
 
 Bower installs packages to `bower_components/`.
 
-{% highlight sh %}
+{% highlight bash %}
 $ bower install <package>
 # for example
 $ bower install normalize.css
@@ -78,49 +78,4 @@ $ bower install normalize.css
   </tr>
 </table>
 
-### Install package versions
-
-Some packages have versions. Specify a version to fetch a specific release and lock the
-package to that version.
-
-{% highlight sh %}
-$ bower install <package>#<version>
-# for example
-$ bower install normalize.css#3.0
-{% endhighlight %}
-
-A version can be
-
-<table>
-  <tr>
-    <td>semver version</td>
-    <td>
-      <code>#1.2.3</code>
-    </td>
-  </tr>
-  <tr>
-    <td>version range</td>
-    <td>
-      <code>#1.2</code><br>
-      <code>#~1.2.3</code><br>
-      <code>#^1.2.3</code><br>
-      <code>#>=1.2.3 &lt;2.0</code><br>
-    </td>
-  </tr>
-  <tr>
-    <td>Git tag</td>
-    <td><code>#&lt;revision&gt;</code></td>
-  </tr>
-  <tr>
-    <td>Git commit SHA</td>
-    <td><code>#&lt;sha&gt;</code></td>
-  </tr>
-  <tr>
-    <td>Git branch</td>
-    <td><code>#&lt;branch&gt;</code></td>
-  </tr>
-  <tr>
-    <td>Subversion revision</td>
-    <td><code>#&lt;revision&gt;</code></td>
-  </tr>
-</table>
+Read more about [`bower install`](api#install)
