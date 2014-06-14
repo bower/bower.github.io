@@ -4,9 +4,9 @@ layout: default
 is_home: true
 ---
 
-<p class="lead">Web sites are made of lots of things -- frameworks, libraries, assets, utilities, and rainbows. Bower manages all these things for you.</p>
+<p class="lead">Web sites are made of lots of things &mdash; frameworks, libraries, assets, utilities, and rainbows. Bower manages all these things for you.</p>
 
-Bower works by fetching and installing packages from all over, taking care of hunting, finding, downloading, and saving the stuff you're looking for. Packages are kept track in a manifest file, `bower.json`. How you use packages is up to you. Bower provides hooks to facilitate using packages in your tools and workflows.
+Bower works by fetching and installing packages from all over, taking care of hunting, finding, downloading, and saving the stuff you're looking for. Bower keeps track of these packages in a manifest file, [`bower.json`](creating-packages#bowerjson). How you use packages is up to you. Bower provides hooks to facilitate using packages in your [tools and workflows](tools).
 
 ## Install Bower
 
@@ -16,10 +16,7 @@ Bower is a command line utility. Install it with npm.
 $ npm install -g bower
 {% endhighlight %}
 
-Bower has a couple requirements.
-
-+ [Node and npm](http://nodejs.org/)
-+ [Git](http://git-scm.org)
+Bower requires [Node and npm](http://nodejs.org/) and [Git](http://git-scm.org).
 
 ## Install packages
 

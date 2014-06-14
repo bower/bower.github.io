@@ -22,7 +22,7 @@
 
 .main {
   margin-left: 230px;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 
 /* ---- lead ---- */
@@ -32,4 +32,12 @@
   line-height: 1.25;
 }
 
+/* ---- site-footer ---- */
 
+
+.site-footer {
+  padding-top: 10px;
+  border-top: 1px solid #DDD;
+  margin-top: 40px;
+  font-size: 0.9em;
+}

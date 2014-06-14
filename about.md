@@ -1,3 +1,8 @@
+---
+title: About
+layout: default
+---
+
 Bower was created at Twitter by [@fat](https://github.com/fat) and [@maccman](https://github.com/maccman), originally released as part of [Twitter's open source effort](https://engineering.twitter.com/opensource) in 2012. Since its release, [numerous individuals have made contributions](https://github.com/bower/bower/graphs/contributors). Bower is a team effort.
 
 ## Core team
@@ -17,3 +22,9 @@ Help make Bower better. We welcome contributions of all kinds. Please take a mom
 * [Bug reports](https://github.com/bower/bower/blob/master/CONTRIBUTING.md#bugs)
 * [Feature requests](https://github.com/bower/bower/blob/master/CONTRIBUTING.md#features)
 * [Pull requests](https://github.com/bower/bower/blob/master/CONTRIBUTING.md#pull-requests)
+
+## Support
+
+* [StackOverflow](http://stackoverflow.com/questions/tagged/bower)
+* [Mailing list](http://groups.google.com/group/twitter-bower) - twitter-bower@googlegroups.com
+* [\#bower](http://webchat.freenode.net/?channels=bower) on Freenode

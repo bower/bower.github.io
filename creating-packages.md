@@ -7,15 +7,17 @@ layout: default
 
 Packages are defined by a manifest file `bower.json`. This is similar to Node's `package.json` or Ruby's `Gemfile`.
 
-Interactively create a `bower.json` with:
+Interactively create a `bower.json` with [`bower init`](api#init)
 
-    bower init
+{% highlight bash %}
+$ bower init
+{% endhighlight %}
 
 The [`bower.json` spec](https://github.com/bower/bower.json-spec) defines several options, including:
 
 * `name` (required): The name of your package.
 * `version`: A semantic version number (see [semver](http://semver.org/)).
-* `main` _string|array_: The primary endpoints of your package.
+* `main` _string_ or _array_: The primary endpoints of your package.
 * `ignore` _array_: An array of paths not needed in production that you want
   Bower to ignore when installing your package.
 * `dependencies` _hash_: Packages your package depends upon in production.
@@ -61,12 +63,12 @@ To register a new package:
 Then use the [register command](api#register):
 
 {% highlight bash %}
-bower register <my-package-name> <git-endpoint>
+$ bower register <my-package-name> <git-endpoint>
 # for example
-bower register example git://github.com/user/example.git
+$ bower register example git://github.com/user/example.git
 {% endhighlight %}
 
-The Bower registry does not have authentication or user management at this point in time. It's on a first come, first served basis. Now anyone can run `bower install <my-package-name>`, and get your library installed.
+Now anyone can run `bower install <my-package-name>`, and get your library installed. The Bower registry does not have authentication or user management at this point in time. It's on a first come, first served basis.
 
 ### Unregister
 
