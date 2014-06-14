@@ -3,6 +3,8 @@ title: About
 layout: default
 ---
 
+<p class="lead">Bower is made by lots of people across the globe, contributions large and small. Be a part of it.</p>
+
 Bower was created at Twitter by [@fat](https://github.com/fat) and [@maccman](https://github.com/maccman), originally released as part of [Twitter's open source effort](https://engineering.twitter.com/opensource) in 2012. Since its release, [numerous individuals have made contributions](https://github.com/bower/bower/graphs/contributors). Bower is a team effort.
 
 ## Core team

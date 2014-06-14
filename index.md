@@ -8,6 +8,8 @@ is_home: true
 
 Bower works by fetching and installing packages from all over, taking care of hunting, finding, downloading, and saving the stuff you're looking for. Bower keeps track of these packages in a manifest file, [`bower.json`](creating-packages#bowerjson). How you use packages is up to you. Bower provides hooks to facilitate using packages in your [tools and workflows](tools).
 
+Bower is optimized for the front-end. Bower uses a flat dependency tree, requiring only one version for each package, reducing page load to a minimum.
+
 ## Install Bower
 
 Bower is a command line utility. Install it with npm.

@@ -3,7 +3,7 @@ title: Tools
 layout: default
 ---
 
-Bower is used together with other tools to integrate with all sorts of setups and workflows.
+<p class="lead">Bower is used together with other tools to integrate with all sorts of setups and workflows.</p>
 
 ## Grunt
 

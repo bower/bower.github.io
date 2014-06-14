@@ -5,6 +5,8 @@ layout: default
 
 ## Commands
 
+Command line reference
+
 ### cache
 
 {% highlight sh %}
@@ -243,6 +245,26 @@ If supplied with `--message` (shorthand: `-m`) config option, bower will use it 
 $ bower version patch -m "Upgrade to %s for reasons"
 {% endhighlight %}
 
+## Consuming a package
+
+Bower makes available source mapping. This can be used by [build tools](tools) to
+easily consume Bower packages.
+
+If you pass the `--paths` option to the [`list` command](#list), you will get a
+simple name-to-path mapping:
+
+{% highlight json %}
+{
+  "backbone": "bower_components/backbone/index.js",
+  "jquery": "bower_components/jquery/index.js",
+  "underscore": "bower_components/underscore/index.js"
+}
+{% endhighlight %}
+
+Alternatively, every command supports the `--json` option that makes Bower
+output JSON. Command result is outputted to `stdout` and error/logs to
+`stderr`.
+
 ## Programmatic API
 
 Bower provides a powerful, programmatic API. All commands can be accessed
@@ -287,3 +309,4 @@ bower.commands
     inquirer.prompt(prompts, callback);
 });
 {% endhighlight %}
+
