@@ -1,3 +1,12 @@
+/*
+colors
+
+dark brown #543729
+orange #FFCC2F
+(old) Twitter blue #00ACEE
+
+*/
+
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -77,8 +86,9 @@ code {
 pre {
   padding: 1.0em;
   color: white;
-  background: #222;
+  background: #543729;
   border-radius: 5px;
+  white-space: pre-wrap;
 }
 
 pre code {
@@ -110,7 +120,8 @@ code .nb { color: #AA97AC;} /* support */
 
 /* comment */
 code .c,
-code .c1 { color: #666; font-style: italic; }
+code .c1,
+code .cm { color: #666; font-style: italic; }
 
 code .nt { color: #A0C8FC; } /* Markup open tag */
 
