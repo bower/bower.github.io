@@ -5,10 +5,10 @@
 
   <title>{{ page.title }}</title>
 
-  <link rel="stylesheet" type="text/css" href="bower_components/normalize.css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/base.css">
-  <link rel="stylesheet" type="text/css" href="css/modules.css">
-  <link rel="stylesheet" type="text/css" href="css/masthead.css">
+  <link rel="stylesheet" type="text/css" href="/bower_components/normalize.css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/base.css">
+  <link rel="stylesheet" type="text/css" href="/css/modules.css">
+  <link rel="stylesheet" type="text/css" href="/css/masthead.css">
 
 </head>
 <body>
@@ -18,7 +18,7 @@
 
       {% if page.is_home %}
         <div class="brand">
-          <img src="img/bower-logo.png" class="logo" alt="Bower logo" />
+          <img src="/img/bower-logo.png" class="logo" alt="Bower logo" />
           <h1>Bower</h1>
           <h3 class="tagline">A package manager for the web</h3>
         </div>
@@ -26,8 +26,8 @@
 
 
       {% unless page.is_home %}
-      <a href="./">
-        <img class="logo" src="img/bower-logo.png" alt="Bower logo" />
+      <a href="/">
+        <img class="logo" src="/img/bower-logo.png" alt="Bower logo" />
       </a>
 
       <h1 class="page-title">{{ page.title }}</h1>
@@ -43,13 +43,13 @@
 
       <ul class="site-nav nav">
         {% unless page.is_home %}
-          <li class="nav-home"><a href="./">Home</a></li>
+          <li class="nav-home"><a href="/">Home</a></li>
         {% endunless %}
-        <li class="nav-creating"><a href="creating-packages">Creating packages</a></li>
-        <li class="nav-api"><a href="api">API</a></li>
-        <li class="nav-config"><a href="config">Configuration</a></li>
-        <li class="nav-tools"><a href="tools">Tools</a></li>
-        <li class="nav-about"><a href="about">About</a></li>
+        <li class="nav-creating"><a href="/docs/creating-packages">Creating packages</a></li>
+        <li class="nav-api"><a href="/docs/api">API</a></li>
+        <li class="nav-config"><a href="/docs/config">Configuration</a></li>
+        <li class="nav-tools"><a href="/docs/tools">Tools</a></li>
+        <li class="nav-about"><a href="/docs/about">About</a></li>
         <li class="nav-search"><a href="/search">Search packages</a></li>
         <li class="nav-stats"><a href="http://stats.bower.io">Stats</a></li>
         <li class="nav-github"><a href="https://github.com/bower/bower">Bower on GitHub</a></li>

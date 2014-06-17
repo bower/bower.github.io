@@ -247,7 +247,7 @@ $ bower version patch -m "Upgrade to %s for reasons"
 
 ## Consuming a package
 
-Bower makes available source mapping. This can be used by [build tools](tools) to
+Bower makes available source mapping. This can be used by [build tools](/docs/tools) to
 easily consume Bower packages.
 
 If you pass the `--paths` option to the [`list` command](#list), you will get a
