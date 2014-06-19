@@ -12,6 +12,41 @@
   position: absolute;
 }
 
+/* ---- network-nav ---- */
+
+#masthead .container { position: relative; }
+
+.network-nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2; /* on top of brand */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.network-nav li {
+  float: left;
+}
+
+.network-nav a {
+  color: #2baf2b;
+  display: block;
+  padding: 0.2em 15px;
+  border-radius: 4px;
+}
+
+.network-nav .nav-docs a {
+  color: #00ACEE;
+}
+
+.network-nav a:hover {
+  text-decoration: none;
+  background: white;
+}
+
+/* ---- site-nav ---- */
+
 .site-nav {
   position: absolute;
   left: 10px;
