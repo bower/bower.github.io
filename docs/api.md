@@ -84,15 +84,63 @@ Installs the project dependencies or a specific set of endpoints.
 
 Endpoints can have multiple forms:
 
-* `<source>`
-* `<source>#<version>`
-* `<name>=<source>#<version>`
+* `<package>`
+* `<package>#<version>`
+* `<name>=<package>#<version>`
 
 Where:
 
-* `<source>` is a package URL, physical location or registry name
+* `<package>` is a package URL, physical location or registry name
 * `<version>` is a valid range, commit, branch, etc.
 * `<name>` is the name it should have locally.
+
+`<package>` can be any one of the following:
+
+<table>
+  <tr>
+    <td>Registered package name</td>
+    <td>
+      <code>jquery</code><br>
+      <code>normalize.css</code>
+    </td>
+  </tr>
+  <tr>
+    <td>Git endpoint</td>
+    <td>
+      <code>https://github.com/user/package.git</code><br>
+      <code>git@github.com:user/package.git</code>
+    </td>
+  </tr>
+  <tr>
+    <td>Local folder</td>
+    <td><code>my/local/folder/</code></td>
+  </tr>
+  <tr>
+    <td>Public Subversion endpoint</td>
+    <td><code>svn+http://package.googlecode.com/svn/</code></td>
+  </tr>
+  <tr>
+    <td>Private Subversion endpoint</td>
+    <td>
+      <code>svn+ssh://package.googlecode.com/svn/</code><br>
+      <code>svn+https://package.googlecode.com/svn/</code>
+    </td>
+  </tr>
+  <tr>
+    <td>Shorthand (defaults to GitHub)</td>
+    <td><code>user/package</code></td>
+  </tr>
+  <tr>
+    <td>URL</td>
+    <td>
+      <code>http://example.com/script.js</code><br>
+      <code>http://example.com/style.css</code><br>
+      <code>http://example.com/package.zip</code> (contents will be extracted)<br>
+      <code>http://example.com/package.tar</code> (contents will be extracted)
+    </td>
+  </tr>
+</table>
+
 
 A version can be:
 
@@ -310,3 +358,8 @@ bower.commands
 });
 {% endhighlight %}
 
+## Running on a continuous integration server
+
+Bower will skip some interactive and analytics operations if it finds a `CI` environmental variable set to `true`. You will find that the `CI` variable is already set for you on many continuous integration servers, e.g., [CircleCI](https://circleci.com/docs/environment-variables#basics) and [Travis-CI](http://docs.travis-ci.com/user/ci-environment/#Environment-variables).
+
+You may try to set the `CI` variable manually before running your Bower commands. On Mac or Linux, `export CI=true` and on Windows `set CI=true`

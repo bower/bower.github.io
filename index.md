@@ -6,7 +6,7 @@ is_home: true
 
 <p class="lead">Web sites are made of lots of things &mdash; frameworks, libraries, assets, utilities, and rainbows. Bower manages all these things for you.</p>
 
-Bower works by fetching and installing packages from all over, taking care of hunting, finding, downloading, and saving the stuff you're looking for. Bower keeps track of these packages in a manifest file, [`bower.json`](/docs/creating-packages#bowerjson). How you use packages is up to you. Bower provides hooks to facilitate using packages in your [tools and workflows](/docs/tools).
+Bower works by fetching and installing packages from all over, taking care of hunting, finding, downloading, and saving the stuff you're looking for. Bower keeps track of these packages in a manifest file, [`bower.json`](/docs/creating-packages/#bowerjson). How you use packages is up to you. Bower provides hooks to facilitate using packages in your [tools and workflows](/docs/tools).
 
 Bower is optimized for the front-end. Bower uses a flat dependency tree, requiring only one version for each package, reducing page load to a minimum.
 
@@ -20,61 +20,39 @@ $ npm install -g bower
 
 Bower requires [Node and npm](http://nodejs.org/) and [Git](http://git-scm.org).
 
-## Install packages
+## Getting started
 
-Bower installs packages to `bower_components/`.
+### Install packages
+
+Install packages with [`bower install`](/docs/api#install). Bower installs packages to `bower_components/`.
 
 {% highlight bash %}
 $ bower install <package>
-# for example
-$ bower install normalize.css
 {% endhighlight %}
 
-`<package>` can be any one of the following:
+A package can be a GitHub shorthand, a Git endpoint, a URL, and more. Read more about [`bower install`](/docs/api/#install).
 
-<table>
-  <tr>
-    <td>Registered package name</td>
-    <td>
-      <code>jquery</code><br>
-      <code>normalize.css</code>
-    </td>
-  </tr>
-  <tr>
-    <td>Git endpoint</td>
-    <td>
-      <code>https://github.com/user/package.git</code><br>
-      <code>git@github.com:user/package.git</code>
-    </td>
-  </tr>
-  <tr>
-    <td>Local folder</td>
-    <td><code>my/local/folder/</code></td>
-  </tr>
-  <tr>
-    <td>Public Subversion endpoint</td>
-    <td><code>svn+http://package.googlecode.com/svn/</code></td>
-  </tr>
-  <tr>
-    <td>Private Subversion endpoint</td>
-    <td>
-      <code>svn+ssh://package.googlecode.com/svn/</code><br>
-      <code>svn+https://package.googlecode.com/svn/</code>
-    </td>
-  </tr>
-  <tr>
-    <td>Shorthand (defaults to GitHub)</td>
-    <td><code>user/package</code></td>
-  </tr>
-  <tr>
-    <td>URL</td>
-    <td>
-      <code>http://example.com/script.js</code><br>
-      <code>http://example.com/style.css</code><br>
-      <code>http://example.com/package.zip</code> (contents will be extracted)<br>
-      <code>http://example.com/package.tar</code> (contents will be extracted)
-    </td>
-  </tr>
-</table>
+{% highlight bash %}
+# registered package
+$ bower install jquery
+# GitHub shorthand
+$ bower install desandro/masonry
+# Git endpoint
+$ bower install git://github.com/user/package.git
+# URL
+$ bower install http://example.com/script.js
+{% endhighlight %}
 
-Read more about [`bower install`](/docs/api#install)
+Read more about [`bower install`](/docs/api/#install)
+
+### Search packages
+
+[Search Bower packages](http://bower.io/search) and find the registered package names for your favorite projects.
+
+### Save packages
+
+Save your packages to [`bower.json` with `bower init`](/docs/creating-packages/#bowerjson).
+
+### Use packages
+
+How you use packages is up to you. Use Bower together with [Grunt, RequireJS, Yeoman, and lots of other tools](/docs/tools/) or build your our workflow with [the API](/docs/api/).
