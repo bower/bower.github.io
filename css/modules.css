@@ -32,8 +32,14 @@
   line-height: 1.25;
 }
 
-/* ---- site-footer ---- */
+/* ---- download-logo ---- */
 
+.download-logo {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ---- site-footer ---- */
 
 .site-footer {
   padding-top: 10px;
@@ -41,3 +47,30 @@
   margin-top: 40px;
   font-size: 0.9em;
 }
+
+/* ---- color-palette ---- */
+
+.color-palette {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  font-size: 0.9em;
+  color: white;
+  margin-bottom: 4px;
+  border-radius: 4px;
+}
+
+.color-palette.color-dark-brown { background: #543729; }
+.color-palette.color-red { background: #EF5734; }
+.color-palette.color-gold { background: #FFCC2F; }
+.color-palette.color-green { background: #2BAF2B; }
+.color-palette.color-blue { background: #00ACEE; }
+.color-palette.color-light-gray { background: #CECECE; }
+
+.color-palette.color-gold,
+.color-palette.color-light-gray { color: #543729; }
+
+
+.color-palette .color-name { display: block; }
+.color-palette .color-hex { display: block; }

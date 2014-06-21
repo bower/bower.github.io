@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>{{ page.title }}</title>
+  <title>{% unless page.is_home %}{{ page.title }} &middot; {% endunless %}Bower</title>
 
   <link rel="stylesheet" type="text/css" href="/bower_components/normalize.css/normalize.css">
   <link rel="stylesheet" type="text/css" href="/css/base.css">

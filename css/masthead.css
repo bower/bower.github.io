@@ -10,6 +10,8 @@
   display: block;
   width: 160px;
   position: absolute;
+  left: 10px;
+  top: 10px;
 }
 
 /* ---- network-nav ---- */
@@ -104,7 +106,7 @@
   display: block;
   position: absolute;
   left: -20px;
-  top: 0px;
+  top: 20px;
   width: 340px;
 }
 
