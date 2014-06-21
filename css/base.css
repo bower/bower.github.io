@@ -121,7 +121,7 @@ code .nb { color: #AA97AC;} /* support */
 /* comment */
 code .c,
 code .c1,
-code .cm { color: #666; font-style: italic; }
+code .cm { color: #876; font-style: italic; }
 
 code .nt { color: #A0C8FC; } /* Markup open tag */
 
