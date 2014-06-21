@@ -31,7 +31,7 @@ Help make Bower better. We welcome contributions of all kinds. Please take a mom
 * [Mailing list](http://groups.google.com/group/twitter-bower) - twitter-bower@googlegroups.com
 * [\#bower](http://webchat.freenode.net/?channels=bower) on Freenode
 
-## Bower
+## Brand
 
 Bower is **Bower** with a capital B.
 
@@ -41,7 +41,7 @@ Bower is **Bower** with a capital B.
 
 Download [**PNG**](/img/bower-logo.png) · [**SVG**](/img/bower-logo.svg) · [**EPS**](/img/bower-logo.eps)
 
-The Bower logo was designed by [Dave DeSandro](http://desandro.com) and [Isaac Durazo](http://www.isaacdurazo.com/).
+The Bower logo [was designed]() by [Dave DeSandro](http://desandro.com) and [Isaac Durazo](http://www.isaacdurazo.com/). It illustrates a [flame bowerbird performing its sultry mating dance](https://www.youtube.com/watch?v=wCzZj21Gs4U&t=24s).
 
 ### Colors
 
@@ -71,3 +71,7 @@ The Bower logo was designed by [Dave DeSandro](http://desandro.com) and [Isaac D
     <span class="color-hex">#CECECE</span>
   </span>
 </p>
+
+### The bowerbird
+
+Bower is named after the [bowerbird](http://en.wikipedia.org/wiki/Bowerbird), a [family of birds](https://www.youtube.com/watch?v=E1zmfTr2d4c) where _males build a structure [the bower] and decorate it with sticks and brightly coloured objects in an attempt to attract a mate_. Bower does just that. Bower brings together bits and pieces from across the forest so you can build your structure.
