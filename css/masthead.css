@@ -62,7 +62,7 @@
 }
 
 .site-nav a {
-  color: #2baf2b;
+  color: #00acee;
   display: block;
   padding: 0.2em 0;
 }
@@ -111,10 +111,9 @@
 }
 
 .brand .tagline {
-  margin: 0 0  10px;
+  margin: 0 0 30px;
   font-size: 18px;
-/*  text-align: center;*/
   font-size: 48px;
   line-height: 1;
-  margin-bottom: 30px;
+  color: #543729;
 }

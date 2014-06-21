@@ -43,8 +43,6 @@ $ bower install git://github.com/user/package.git
 $ bower install http://example.com/script.js
 {% endhighlight %}
 
-Read more about [`bower install`](/docs/api/#install)
-
 ### Search packages
 
 [Search Bower packages](http://bower.io/search) and find the registered package names for your favorite projects.
