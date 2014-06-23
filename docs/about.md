@@ -41,7 +41,7 @@ Bower is **Bower** with a capital B.
 
 Download [**PNG**](/img/bower-logo.png) · [**SVG**](/img/bower-logo.svg) · [**EPS**](/img/bower-logo.eps)
 
-The Bower logo [was designed]() by [Dave DeSandro](http://desandro.com) and [Isaac Durazo](http://www.isaacdurazo.com/). It illustrates a [flame bowerbird performing its sultry mating dance](https://www.youtube.com/watch?v=wCzZj21Gs4U&t=24s).
+The Bower logo [was designed](https://gist.github.com/desandro/1c50118441f703f3f6e1) by [Dave DeSandro](http://desandro.com) and [Isaac Durazo](http://www.isaacdurazo.com/). It illustrates a [flame bowerbird performing its sultry mating dance](https://www.youtube.com/watch?v=wCzZj21Gs4U&t=24s).
 
 ### Colors
 
