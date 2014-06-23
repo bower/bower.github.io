@@ -47,14 +47,25 @@
   background: white;
 }
 
-/* ---- site-nav ---- */
+/* ---- sidebar ---- */
 
-.site-nav {
+.sidebar {
   position: absolute;
   left: 10px;
   top: 0;
   width: 200px;
 }
+
+.sidebar .nav {
+  margin-bottom: 20px;
+}
+
+.sidebar .nav a {
+  display: block;
+  padding: 0.2em 0;
+}
+
+/* ---- site-nav ---- */
 
 .site-nav li {
   font-size: 17px;
@@ -63,9 +74,13 @@
 
 .site-nav a {
   color: #00acee;
-  display: block;
-  padding: 0.2em 0;
 }
+
+.extra-nav li {
+  font-size: 14px;
+}
+
+/* ---- page-title ---- */
 
 .page-title {
   font-size: 64px;
