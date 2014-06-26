@@ -293,6 +293,72 @@ If supplied with `--message` (shorthand: `-m`) config option, bower will use it 
 $ bower version patch -m "Upgrade to %s for reasons"
 {% endhighlight %}
 
+## Options
+
+### force
+
+{% highlight sh %}
+-f, --force
+{% endhighlight %}
+
+Makes various commands more forceful
+
+### json
+
+{% highlight sh %}
+-j, --json
+{% endhighlight %}
+
+Output consumable JSON
+
+### log-level
+
+{% highlight sh %}
+-l, --log-level
+{% endhighlight %}
+
+What level of logs to report
+
+### offline
+
+{% highlight sh %}
+-o, --offline
+{% endhighlight %}
+
+Do not use network connection
+
+### quiet
+
+{% highlight sh %}
+-q, --quiet
+{% endhighlight %}
+
+Only output important information
+
+### silent
+
+{% highlight sh %}
+-s, --silent
+{% endhighlight %}
+
+Do not output anything, besides errors
+
+### verbose
+
+{% highlight sh %}
+-V, --verbose
+{% endhighlight %}
+
+Makes output more verbose
+
+### allow-root
+
+{% highlight sh %}
+--allow-root
+{% endhighlight %}
+
+Allows running commands as root. Bower is a user command, there is no need to execute it with superuser permissions. However, if you still want to run commands with sudo, use `--allow-root` option.
+
 ## Consuming a package
 
 Bower makes available source mapping. This can be used by [build tools](/docs/tools) to
@@ -363,3 +429,23 @@ bower.commands
 Bower will skip some interactive and analytics operations if it finds a `CI` environmental variable set to `true`. You will find that the `CI` variable is already set for you on many continuous integration servers, e.g., [CircleCI](https://circleci.com/docs/environment-variables#basics) and [Travis-CI](http://docs.travis-ci.com/user/ci-environment/#Environment-variables).
 
 You may try to set the `CI` variable manually before running your Bower commands. On Mac or Linux, `export CI=true` and on Windows `set CI=true`
+
+## Using local cache
+
+Bower supports installing packages from its local cache -- without internet connection -- if the packages were installed before.
+
+{% highlight sh %}
+$ bower install <package> --offline
+{% endhighlight %}
+
+The content of the cache can be listed with [`bower cache list`](#cache-list):
+
+{% highlight sh %}
+$ bower cache list
+{% endhighlight %}
+
+The cache can be cleaned with [`bower cache clean`](#cache-clean):
+
+{% highlight sh %}
+$ bower cache clean
+{% endhighlight %}
