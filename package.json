@@ -1,0 +1,29 @@
+{
+  "name": "bower.github.io",
+  "version": "0.2.0",
+  "description": "Bower site",
+  "main": "index.md",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bower/bower.github.io.git"
+  },
+  "keywords": [
+    "bower"
+  ],
+  "author": "",
+  "license": "CC-BY",
+  "bugs": {
+    "url": "https://github.com/bower/bower.github.io/issues"
+  },
+  "homepage": "http://bower.io",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.4.0"
+  }
+}

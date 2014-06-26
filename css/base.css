@@ -1,0 +1,141 @@
+/*
+colors
+
+dark brown #543729
+orange #FFCC2F
+(old) Twitter blue #00ACEE
+
+*/
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: #fff;
+}
+
+body {
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  color: #543729;
+}
+
+/* ---- a ---- */
+
+a {
+  text-decoration: none;
+  color: #008ec4;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---- h1-h6 ---- */
+
+
+h2, h3 {
+  margin: 2.4em 0 0.8em;
+  color: #2BAF2B;
+}
+
+h2 {
+  font-size: 2.0em;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+/* ---- table ---- */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+td {
+  vertical-align: top;
+  border-top: 1px solid #DDD;
+  padding: 0.2em 0.4em 0.3em 0;
+}
+
+/* ---- code ---- */
+
+pre, code {
+  font-family: Consolas, Menlo, Courier, monospace;
+}
+
+code {
+  padding: 0.1em 0.2em;
+  background: #EEE;
+  border-radius: 3px;
+  font-size: 0.95em;
+}
+
+pre {
+  padding: 1.0em;
+  color: white;
+  background: #543729;
+  border-radius: 5px;
+  white-space: pre-wrap;
+}
+
+pre code {
+  color: inherit;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 1.1em;
+}
+
+
+/* ---- syntax highlighting ---- */
+
+/* via Pygments */
+
+code .s1,
+code .s2,
+code .s { color: #78BD55; } /* string */
+code .mi, /* integer */
+code .cp, /* doctype */
+code .kc { color: #5298D4; } /*boolean*/
+code .k { color: #E39B79; } /* keyword */
+code .kd, /* storage */
+code .na, /* markup attribute */
+code .nv { color: #A9D866; } /* bash leading $ */
+code .p  { color: #EDB; } /* punctuation */
+code .o  { color: #F63; }   /* operator */
+code .nb { color: #AA97AC;} /* support */
+
+/* comment */
+code .c,
+code .c1,
+code .cm { color: #876; font-style: italic; }
+
+code .nt { color: #A0C8FC; } /* Markup open tag */
+
+code .nf { color: #9EA8B8; } /* css id */
+code .nc { color: #A78352; }  /* CSS class */
+code .m  { color: #DE8E50; } /* CSS value */
+code .nd { color: #9FAD7E; } /* CSS pseudo selector */
+
+/* bash leading $ */
+code .nv {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}

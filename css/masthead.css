@@ -1,0 +1,134 @@
+#masthead {
+  background: #FFCC2F;
+  color: #543729;
+  padding: 10px 0;
+  min-height: 180px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  display: block;
+  width: 160px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+/* ---- network-nav ---- */
+
+#masthead .container { position: relative; }
+
+.network-nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2; /* on top of brand */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.network-nav li {
+  float: left;
+}
+
+.network-nav a {
+  color: #2baf2b;
+  display: block;
+  padding: 0.2em 15px;
+  border-radius: 4px;
+}
+
+.network-nav .nav-docs a {
+  color: #00ACEE;
+}
+
+.network-nav a:hover {
+  text-decoration: none;
+  background: white;
+}
+
+/* ---- sidebar ---- */
+
+.sidebar {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 200px;
+}
+
+.sidebar .nav {
+  margin-bottom: 20px;
+}
+
+.sidebar .nav a {
+  display: block;
+  padding: 0.2em 0;
+}
+
+/* ---- site-nav ---- */
+
+.site-nav li {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.site-nav a {
+  color: #00acee;
+}
+
+.extra-nav li {
+  font-size: 14px;
+}
+
+/* ---- page-title ---- */
+
+.page-title {
+  font-size: 64px;
+  font-weight: bold;
+  letter-spacing: -0.025em;
+  margin: 0;
+  padding: 0;
+  padding-top: 30px;
+  padding-left: 220px;
+}
+
+
+/* ---- brand ---- */
+
+.brand {
+  position: relative;
+  padding-left: 360px;
+  min-height: 310px;
+}
+
+.brand h1 {
+  display: inline-block;
+  font-size: 66px;
+  margin: 0;
+  line-height: 80px;
+  color: #EF5734;
+  font-size: 100px;
+  line-height: 1;
+  padding-top: 60px;
+}
+
+.brand h1,
+.brand h3 {
+  letter-spacing: -0.04em;
+}
+
+.brand .logo {
+  display: block;
+  position: absolute;
+  left: -20px;
+  top: 20px;
+  width: 340px;
+}
+
+.brand .tagline {
+  margin: 0 0 30px;
+  font-size: 18px;
+  font-size: 48px;
+  line-height: 1;
+  color: #543729;
+}

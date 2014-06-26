@@ -1,0 +1,6 @@
+markdown: kramdown
+permalink: pretty
+exclude:
+  - bower.json
+  - package.json
+  - Gruntfile.js
