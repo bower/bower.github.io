@@ -53,6 +53,9 @@ A collection of Alfred workflows that includes Bower integration.
 [**cakephp-bower**](https://github.com/fahad19/cakephp-bower) <br>
 CakePHP Plugin for Bower
 
+[**ck86/gulp-bower-files**](https://github.com/ck86/gulp-bower-files) <br>
+Build gulp.src() of your bower packages main files.
+
 [**kooshy-fe**](https://github.com/aroemen/kooshy-fe) <br>
 Integrates a web-based interface for Bower
 
