@@ -7,6 +7,14 @@ layout: default
 
 ## .bowerrc specification
 
+### analytics
+
+_Boolean_
+
+Bower can collect anonymous usage statistics. This allows the community to improve Bower and publicly display insights into CLI usage and packages at [stats.bower.io](http://stats.bower.io).
+
+Data is tracked using Google Analytics and instrumented via [Insight](https://github.com/yeoman/insight). It is made available to all bower team members. Tracking is opt-in upon initial usage. If you'd prefer to disable analytics altogether, set `"analytics": false`
+
 ### cwd
 
 _String_
