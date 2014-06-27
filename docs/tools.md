@@ -47,7 +47,7 @@ With integrated Bower package manager, you’ll be able to search for, install a
 
 ## Everything else
 
-[**alfred-workflow**](https://github.com/willfarrell/alfredworkflow) <br>
+[**alfred-workflows**](https://github.com/willfarrell/alfred-workflows) <br>
 A collection of Alfred workflows that includes Bower integration.
 
 [**cakephp-bower**](https://github.com/fahad19/cakephp-bower) <br>
