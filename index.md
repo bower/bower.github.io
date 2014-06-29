@@ -53,7 +53,7 @@ Save your packages to [`bower.json` with `bower init`](/docs/creating-packages/#
 
 ### Use packages
 
-How you use packages is up to you. Use Bower together with [Grunt, RequireJS, Yeoman, and lots of other tools](/docs/tools/) or build your our workflow with [the API](/docs/api/).
+How you use packages is up to you. Use Bower together with [Grunt, RequireJS, Yeoman, and lots of other tools](/docs/tools/) or build your own workflow with [the API](/docs/api/).
 
 ## Twitter updates from [@bower](https://twitter.com/bower)
 
