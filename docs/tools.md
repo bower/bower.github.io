@@ -10,7 +10,7 @@ layout: default
 [**grunt-bower-concat**](https://github.com/sapegin/grunt-bower-concat) <br>
 Grunt task for automatically concat all installed Bower components.
 
-[**grunt-bower-install**](https://github.com/stephenplusplus/grunt-bower-install) <br>
+[**grunt-wiredep**](https://github.com/stephenplusplus/grunt-wiredep) <br>
 Inject your Bower components right into your HTML using Grunt.
 
 [**grunt-bower-requirejs**](https://github.com/yeoman/grunt-bower-requirejs) <br>
