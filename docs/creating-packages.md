@@ -83,4 +83,4 @@ curl -X DELETE "https://bower.herokuapp.com/packages/<package>?access_token=<tok
 * You need to be an owner or collaborator of the repo and URL needs to be OK.
 
 
-You'll likely want to [`bower cache clean`](/docs/api#cache-clean) after your change. Please remember it is generally considered bad behavior to remove versions of a library that others are depending on. Think twice :) If the above doesn't work for you, you can you can [request a package be unregistered manually](https://github.com/bower/bower/issues/120).
+You'll likely want to [`bower cache clean`](/docs/api#cache-clean) after your change. Please remember it is generally considered bad behavior to remove versions of a library that others are depending on. Think twice :) If the above doesn't work for you, you can [request a package be unregistered manually](https://github.com/bower/bower/issues/120).
