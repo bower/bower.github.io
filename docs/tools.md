@@ -19,6 +19,14 @@ Automagically wire-up installed Bower components into your RequireJS config.
 [**grunt bower-task**](https://github.com/yatskevich/grunt-bower-task) <br>
 Grunt plugin to automate Bower commands; allow the configuration of the files needed allowing to filter out the minimal in the project.
 
+## Gulp
+
+[**gulp-bower-files**](https://npmjs.org/package/gulp-bower-files) <br>
+Build gulp.src() of your bower packages main files.
+
+[**gulp-google-cdn**](https://npmjs.org/package/gulp-google-cdn/) <br>
+Replaces script references with Google CDN ones
+
 ## Rails & Ruby
 
 [**bower-rails**](https://github.com/rharriso/bower-rails/) <br>
