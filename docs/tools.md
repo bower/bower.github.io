@@ -19,6 +19,14 @@ Automagically wire-up installed Bower components into your RequireJS config.
 [**grunt bower-task**](https://github.com/yatskevich/grunt-bower-task) <br>
 Grunt plugin to automate Bower commands; allow the configuration of the files needed allowing to filter out the minimal in the project.
 
+## Gulp
+
+[**gulp-bower-files**](https://npmjs.org/package/gulp-bower-files) <br>
+Build gulp.src() of your bower packages main files.
+
+[**gulp-google-cdn**](https://npmjs.org/package/gulp-google-cdn/) <br>
+Replaces script references with Google CDN ones, based on bower.json
+
 ## Rails & Ruby
 
 [**bower-rails**](https://github.com/rharriso/bower-rails/) <br>
@@ -52,9 +60,6 @@ A collection of Alfred workflows that includes Bower integration.
 
 [**cakephp-bower**](https://github.com/fahad19/cakephp-bower) <br>
 CakePHP Plugin for Bower
-
-[**ck86/gulp-bower-files**](https://github.com/ck86/gulp-bower-files) <br>
-Build gulp.src() of your bower packages main files.
 
 [**kooshy-fe**](https://github.com/aroemen/kooshy-fe) <br>
 Integrates a web-based interface for Bower
