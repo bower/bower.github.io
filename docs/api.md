@@ -162,7 +162,7 @@ A version can be:
   </tr>
   <tr>
     <td>Git tag</td>
-    <td><code>#&lt;revision&gt;</code></td>
+    <td><code>#&lt;tag&gt;</code></td>
   </tr>
   <tr>
     <td>Git commit SHA</td>
