@@ -21,10 +21,10 @@ Grunt plugin to automate Bower commands; allow the configuration of the files ne
 
 ## Gulp
 
-[**gulp-bower-files**](https://npmjs.org/package/gulp-bower-files) <br>
+[**gulp-bower-files**](https://github.com/ck86/gulp-bower-files) <br>
 Build gulp.src() of your bower packages main files.
 
-[**gulp-google-cdn**](https://npmjs.org/package/gulp-google-cdn/) <br>
+[**gulp-google-cdn**](https://github.com/sindresorhus/gulp-google-cdn) <br>
 Replaces script references with Google CDN ones, based on bower.json
 
 ## Rails & Ruby
