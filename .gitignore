@@ -3,3 +3,4 @@ browser_modules
 .DS_Store
 bower_components/
 _site/
+.idea
