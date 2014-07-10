@@ -58,6 +58,9 @@ With integrated Bower package manager, you’ll be able to search for, install a
 [**alfred-workflows**](https://github.com/willfarrell/alfred-workflows) <br>
 A collection of Alfred workflows that includes Bower integration.
 
+[**BowerStatic**](http://bowerstatic.readthedocs.org/) <br>
+Serve Bower-managed static resources using Python WSGI
+
 [**cakephp-bower**](https://github.com/fahad19/cakephp-bower) <br>
 CakePHP Plugin for Bower
 
