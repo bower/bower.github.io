@@ -47,12 +47,27 @@ The [`bower.json` spec](https://github.com/bower/bower.json-spec) defines severa
 }
 {% endhighlight %}
 
+## Maintaining dependencies
+
+Using `bower install <package> --save` will add `<package>` to your project's
+bower.json `dependencies` array.
+
+{% highlight bash %}
+# install package and add it to bower.json dependencies
+$ bower install <package> --save
+{% endhighlight %}
+
+Similarly, using `bower install <package> --save-dev` will add `<package>` to your
+project's bower.json `devDependencies` array.
+
+{% highlight bash %}
+# install package and add it to bower.json devDependencies
+$ bower install <package> --save-dev
+{% endhighlight %}
 
 ## Register
 
 Registering your package allows others to install it with a short name, like `bower install <my-package-name>`.
-
-    
 
 To register a new package:
 
@@ -60,7 +75,7 @@ To register a new package:
 * Your package should use [semver](http://semver.org/) Git tags.
 * Your package **must** be available at a Git endpoint (e.g., GitHub); remember to push your Git tags!
 
-Then use the [register command](/docs/api#register):
+Then use [`bower register`](/docs/api#register):
 
 {% highlight bash %}
 $ bower register <my-package-name> <git-endpoint>
