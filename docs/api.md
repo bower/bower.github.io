@@ -430,6 +430,12 @@ Bower will skip some interactive and analytics operations if it finds a `CI` env
 
 You may try to set the `CI` variable manually before running your Bower commands. On Mac or Linux, `export CI=true` and on Windows `set CI=true`
 
+If for some reason you are unable to set the `CI` environment variable, you can alternately use the `--config.interactive=false` flag.
+
+{% highlight sh %}
+$ bower install --config.interactive=false`
+{% endhighlight %}
+
 ## Using local cache
 
 Bower supports installing packages from its local cache -- without internet connection -- if the packages were installed before.
