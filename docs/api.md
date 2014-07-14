@@ -364,8 +364,13 @@ Allows running commands as root. Bower is a user command, there is no need to ex
 Bower makes available source mapping. This can be used by [build tools](/docs/tools) to
 easily consume Bower packages.
 
-If you pass the `--paths` option to the [`list` command](#list), you will get a
-simple name-to-path mapping:
+If you use [`bower list --paths`](#list) or `bower list --json`, you will get a simple name-to-path mapping:
+
+{% highlight sh %}
+$ bower list --paths
+# or
+$ bower list --json
+{% endhighlight %}
 
 {% highlight json %}
 {
@@ -375,9 +380,7 @@ simple name-to-path mapping:
 }
 {% endhighlight %}
 
-Alternatively, every command supports the `--json` option that makes Bower
-output JSON. Command result is outputted to `stdout` and error/logs to
-`stderr`.
+Every command supports the [`--json` option](#json) that makes Bower output JSON. Command result is outputted to `stdout` and error/logs to `stderr`.
 
 ## Programmatic API
 
