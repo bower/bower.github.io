@@ -268,8 +268,8 @@ Uninstalls a package locally from your bower_components directory
 
 #### uninstall options
 
-* `-S`, `--save`: Save installed packages into the project's bower.json dependencies
-* `-D`, `--save-dev`: Save installed packages into the project's bower.json devDependencies
+* `-S`, `--save`: Remove uninstalled packages from the project's bower.json dependencies
+* `-D`, `--save-dev`: Remove uninstalled packages from the project's bower.json devDependencies
 
 ### version
 

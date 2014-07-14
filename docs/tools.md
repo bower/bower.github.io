@@ -16,8 +16,11 @@ Inject your Bower components right into your HTML using Grunt.
 [**grunt-bower-requirejs**](https://github.com/yeoman/grunt-bower-requirejs) <br>
 Automagically wire-up installed Bower components into your RequireJS config.
 
-[**grunt bower-task**](https://github.com/yatskevich/grunt-bower-task) <br>
+[**grunt-bower-task**](https://github.com/yatskevich/grunt-bower-task) <br>
 Grunt plugin to automate Bower commands; allow the configuration of the files needed allowing to filter out the minimal in the project.
+
+[**grunt-preen**](https://github.com/BradDenver/grunt-preen) <br>
+A Grunt plugin to preen unwanted files and folders from packages installed via Bower.
 
 ## Gulp
 
@@ -26,6 +29,9 @@ Build gulp.src() of your bower packages main files.
 
 [**gulp-google-cdn**](https://github.com/sindresorhus/gulp-google-cdn) <br>
 Replaces script references with Google CDN ones, based on bower.json
+
+[**preen**](https://github.com/braddenver/preen) <br>
+A Node.js module to preen unwanted files and folders from packages installed via Bower. Preen can also be used via the CLI.
 
 ## Rails & Ruby
 
@@ -53,7 +59,7 @@ CodeKit is a Mac app that helps you build websites faster and better.
 [**Webstorm 8**](http://www.jetbrains.com/webstorm/whatsnew/) <br>
 With integrated Bower package manager, you’ll be able to search for, install and manage client-side libraries and frameworks for your project with ease, right in the IDE.
 
-## Everything else
+## Everything Else
 
 [**alfred-workflows**](https://github.com/willfarrell/alfred-workflows) <br>
 A collection of Alfred workflows that includes Bower integration.
