@@ -70,6 +70,9 @@ Integrates a web-based interface for Bower
 [**paulmillr/read-components**](https://github.com/paulmillr/read-components) <br>
 reads root bower.json, opens bower.json of all packages and their dependencies and auto-calculates concatenation order.
 
+[**preen**](https://github.com/braddenver/preen) <br>
+A Node.js module to preen unwanted files and folders from packages installed via Bower.
+
 [**SpBowerBundle**](https://github.com/Spea/SpBowerBundle) <br>
 Bower integration with symfony2.
 
