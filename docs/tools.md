@@ -14,7 +14,7 @@ Grunt task for automatically concat all installed Bower components.
 Inject your Bower components right into your HTML using Grunt.
 
 [**grunt-bower-requirejs**](https://github.com/yeoman/grunt-bower-requirejs) <br>
-Automagically wire-up installed Bower components into your RequireJS config.
+Automagically wire-up installed Bower components into your RequireJS config. Also available as a [standalone CLI tool](https://github.com/yeoman/bower-requirejs).
 
 [**grunt-bower-task**](https://github.com/yatskevich/grunt-bower-task) <br>
 Grunt plugin to automate Bower commands; allow the configuration of the files needed allowing to filter out the minimal in the project.
