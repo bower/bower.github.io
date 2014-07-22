@@ -4,3 +4,4 @@ exclude:
   - bower.json
   - package.json
   - Gruntfile.js
+  - vendor
