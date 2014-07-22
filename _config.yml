@@ -3,5 +3,6 @@ permalink: pretty
 exclude:
   - bower.json
   - package.json
+  - Gemfile
   - Gruntfile.js
   - vendor
