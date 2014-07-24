@@ -1,0 +1,68 @@
+/* ---- medias ---- */
+
+@media only screen and (max-width: 680px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        margin-left: -10px;
+        text-align: center;
+    }
+
+    .site-nav li {
+        padding: 5px 10px;
+        margin: 3px;
+        display: inline-block;
+    }
+
+    .site-nav li:nth-child(even) {
+        background: #543729;
+    }
+
+    .site-nav li:nth-child(odd) {
+        background: #2BAF2B;
+    }
+
+    .site-nav li a {
+        color: #FFF;
+    }
+
+    .main {
+        margin-left: 0px;
+        padding: 5px;
+    }
+
+    .page-title, .brand {
+        font-size: 34px;
+        padding: 15px 0px 0px 5px;
+        width: 100%;
+        padding-top: 15px;
+        text-align: center;
+    }
+
+    .brand {
+        min-height: 165px;
+    }
+
+    .brand h1 {
+        font-size: 60px;
+        padding-top: 0px;
+    }
+
+    .brand .tagline {
+        font-size: 30px;
+    }
+
+    #masthead {
+        padding: 0px;
+        min-height: 80px;
+    }
+
+    #masthead .container {
+        width: 100%;
+    }
+
+    .network-nav, .brand>.logo, .logo, .extra-nav {
+        display: none;
+    }
+
+}
