@@ -8,7 +8,8 @@ module.exports = function( grunt ) {
           'bower_components/normalize.css/normalize.css',
           'css/base.css',
           'css/masthead.css',
-          'css/modules.css'
+          'css/modules.css',
+          'css/medias.css',
         ],
         dest: 'css/styles.css'
       }
