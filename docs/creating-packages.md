@@ -71,6 +71,7 @@ Registering your package allows others to install it with a short name, like `bo
 
 To register a new package:
 
+* The package name **must** adhere to the [bower.json spec](https://github.com/bower/bower.json-spec#name).
 * There **must** be a valid manifest JSON in the current working directory.
 * Your package should use [semver](http://semver.org/) Git tags.
 * Your package **must** be available at a Git endpoint (e.g., GitHub); remember to push your Git tags!
