@@ -24,11 +24,11 @@ A Grunt plugin to preen unwanted files and folders from packages installed via B
 
 ## Gulp
 
-[**gulp-bower-files**](https://github.com/ck86/gulp-bower-files) <br>
-Build gulp.src() of your bower packages main files.
-
 [**gulp-google-cdn**](https://github.com/sindresorhus/gulp-google-cdn) <br>
 Replaces script references with Google CDN ones, based on bower.json
+
+[**main-bower-files**](https://github.com/ck86/main-bower-files) <br>
+Iterates through dependencies and returns an array of files defined in the main property of the packages `bower.json`.
 
 [**preen**](https://github.com/braddenver/preen) <br>
 A Node.js module to preen unwanted files and folders from packages installed via Bower. Preen can also be used via the CLI.
