@@ -436,7 +436,7 @@ You may try to set the `CI` variable manually before running your Bower commands
 If for some reason you are unable to set the `CI` environment variable, you can alternately use the `--config.interactive=false` flag.
 
 {% highlight sh %}
-$ bower install --config.interactive=false`
+$ bower install --config.interactive=false
 {% endhighlight %}
 
 ## Using local cache
