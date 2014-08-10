@@ -5,6 +5,23 @@ layout: default
 
 <p class="lead">Bower can be configured using JSON in a `.bowerrc` file.</p>
 
+## Placement & Order
+
+The config is obtained by merging multiple configurations by this order of 
+importance:
+
+* CLI args via --config.
+* Environment variables
+* Local `.bowerrc `located in the current working directory
+* All `.bowerrc `files upwards the directory tree
+* `.bowerrc` file located in user's home folder (`~`)
+* `.bowerrc` file located in the global folder (`/`)
+
+Example of valid environment variables:
+
+* `bower_endpoint_parser` is evaluated as `endpoint-parser`
+* `bower_storage__cache` is evaluated as `storage.cache`
+
 ## .bowerrc specification
 
 ### analytics
@@ -19,7 +36,7 @@ Data is tracked using Google Analytics and instrumented via [Insight](https://gi
 
 _String_
 
-The directory from which bower should run. All relative paths will be calculated 
+Current working directory - the directory from which bower should run. All relative paths will be calculated 
 according to this setting.  
 
 ### directory
@@ -152,20 +169,3 @@ _Boolean_
 
 Makes bower interactive, prompting whenever necessary. Defaults to `null` which 
 means `auto`.
-
-## Order
-
-The config is obtained by merging multiple configurations by this order of 
-importance:
-
-* cli args via --config.
-* environment variables
-* local bowerrc located in the cwd
-* all bowerrc files upwards the directory tree
-* bowerrc file located in the home folder
-* bowerrc file located in the global folder
-
-Example of valid environment variables:
-
-* `bower_endpoint_parser` is evaluated as `endpoint-parser`
-* `bower_storage__cache` is evaluated as `storage.cache`
