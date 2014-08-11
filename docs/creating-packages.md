@@ -20,6 +20,7 @@ The [`bower.json` spec](https://github.com/bower/bower.json-spec) defines severa
 * `main` _string_ or _array_: The primary endpoints of your package.
 * `ignore` _array_: An array of paths not needed in production that you want
   Bower to ignore when installing your package.
+* `keywords` _array_ of _string_: (recommended) helps make your package easier to discover
 * `dependencies` _hash_: Packages your package depends upon in production.
   Note that you can specify [ranges](https://github.com/isaacs/node-semver#ranges)
   of versions for your dependencies.
