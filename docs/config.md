@@ -3,7 +3,7 @@ title: Configuration
 layout: default
 ---
 
-<p class="lead">Bower can be configured using JSON in a `.bowerrc` file.</p>
+<p class="lead">Bower can be configured using JSON in a .bowerrc file.</p>
 
 ## Placement & Order
 
@@ -28,9 +28,9 @@ Example of valid environment variables:
 
 _Boolean_
 
-Bower can collect anonymous usage statistics. This allows the community to improve Bower and publicly display insights into CLI usage and packages at [stats.bower.io](http://stats.bower.io).
+Bower can collect anonymous usage statistics. This allows the community to improve Bower and publicly display insights into CLI usage and packages at [bower.io/stats](http://bower.io/stats).
 
-Data is tracked using Google Analytics and instrumented via [Insight](https://github.com/yeoman/insight). It is made available to all bower team members. Tracking is opt-in upon initial usage. If you'd prefer to disable analytics altogether, set `"analytics": false`
+Data is tracked using Google Analytics and instrumented via [Insight](https://github.com/yeoman/insight). It is made available to all Bower team members. Tracking is opt-in upon initial usage. If you'd prefer to disable analytics altogether, set `"analytics": false` in your `.bowerrc` file. Details on exactly what's tracked is available [here](https://github.com/yeoman/insight#collected-data).
 
 ### cwd
 
