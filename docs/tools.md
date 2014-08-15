@@ -71,10 +71,10 @@ A collection of Alfred workflows that includes Bower integration.
 Serve Bower-managed static resources using Python WSGI
 
 [**cakephp-bower**](https://github.com/fahad19/cakephp-bower) <br>
-CakePHP Plugin for Bower
+CakePHP Plugin for Bower.
 
 [**kooshy-fe**](https://github.com/aroemen/kooshy-fe) <br>
-Integrates a web-based interface for Bower
+Integrates a web-based interface for Bower.
 
 [**paulmillr/read-components**](https://github.com/paulmillr/read-components) <br>
 reads root bower.json, opens bower.json of all packages and their dependencies and auto-calculates concatenation order.
@@ -83,7 +83,13 @@ reads root bower.json, opens bower.json of all packages and their dependencies a
 Bower integration with symfony2.
 
 [**stefanbuck/github-linker**](https://github.com/stefanbuck/github-linker) <br>
-Google Chrome Extension which links dependencies listed bower.json on GitHub to their project's pages
+Google Chrome Extension which links dependencies listed bower.json on GitHub to their project's pages.
 
 [**sublime-bower**](https://github.com/benschwarz/sublime-bower) <br>
 A Sublime text-editor plugin for Bower.
+
+[**atom-bower-install**](https://github.com/gdi2290/atom-bower-install) <br>
+Automatically install and save any missing bower components being used in the current bower.json file.
+
+[**broccoli-bower**](https://github.com/joliss/broccoli-bower) <br>
+Load Bower packages into Broccoli.
