@@ -17,7 +17,7 @@ The [`bower.json` spec](https://github.com/bower/bower.json-spec) defines severa
 
 * `name` (required): The name of your package.
 * `version`: A semantic version number (see [semver](http://semver.org/)).
-* `main` _string_ or _array_: The primary endpoints of your package.
+* `main` _string_ or _array_: The primary acting files necessary to use your package.
 * `ignore` _array_: An array of paths not needed in production that you want
   Bower to ignore when installing your package.
 * `keywords` _array_ of _string_: (recommended) helps make your package easier to discover
