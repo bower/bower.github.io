@@ -44,7 +44,7 @@ according to this setting.
 _String_
 
 The path in which installed components should be saved. If not specified this 
-defaults to `bower_components`.  
+defaults to `components`.  
 
 ### registry 
 
