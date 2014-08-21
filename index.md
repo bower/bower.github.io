@@ -24,7 +24,7 @@ Bower requires [Node and npm](http://nodejs.org/) and [Git](http://git-scm.org).
 
 ### Install packages
 
-Install packages with [`bower install`](/docs/api#install). Bower installs packages to `bower_components/`.
+Install packages with [`bower install`](/docs/api#install). Bower installs packages to `components/`.
 
 {% highlight bash %}
 $ bower install <package>
