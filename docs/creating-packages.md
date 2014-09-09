@@ -15,7 +15,7 @@ $ bower init
 
 The [`bower.json` spec](https://github.com/bower/bower.json-spec) defines several options, including:
 
-* `name` (required): The name of your package.
+* `name` (required): The name of your package; please see [Register](/docs/creating-packages/#register) section for how to name your package.
 * `version`: A semantic version number (see [semver](http://semver.org/)).
 * `main` _string_ or _array_: The primary acting files necessary to use your package.
 * `ignore` _array_: An array of paths not needed in production that you want
@@ -87,6 +87,12 @@ $ bower register example git://github.com/user/example.git
 {% endhighlight %}
 
 Now anyone can run `bower install <my-package-name>`, and get your library installed. The Bower registry does not have authentication or user management at this point in time. It's on a first come, first served basis.
+
+Bower doesn't support GitHub-style namespacing (`org/repo`), however you're are encouraged to namespace related packages with `-`, for example, `angular-` and `paper-`.
+
+Please do not squat on package names. Register your package and claim your name after you have a valid public repo with working code.
+
+For package name transfers, intellectual property and other disputes, please try to resolve with the owner first. If no resolution, please submit a ticket in the [Bower Registry repo](https://github.com/bower/registry) and the Bower Core Team will assist.
 
 ### Unregister
 
