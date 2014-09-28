@@ -3,9 +3,26 @@ title: API
 layout: default
 ---
 
+
 ## Commands
 
 Command line reference
+
+* [cache](#cache)
+* [help](#help)
+* [home](#home)
+* [info](#info)
+* [init](#init)
+* [install](#install)
+* [link](#link)
+* [list](#list)
+* [lookup](#lookup)
+* [prune](#prune)
+* [register](#register)
+* [search](#search)
+* [update](#update)
+* [uninstall](#uninstall)
+* [version](#version)
 
 ### cache
 
@@ -294,6 +311,15 @@ $ bower version patch -m "Upgrade to %s for reasons"
 {% endhighlight %}
 
 ## Options
+
+* [force](#force)
+* [json](#json)
+* [log-level](#log-level)
+* [offline](#offline)
+* [quiet](#quiet)
+* [silent](#silent)
+* [verbose](#verbose)
+* [allow-root](#allow-root)
 
 ### force
 

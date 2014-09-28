@@ -644,6 +644,18 @@ code .nv {
   color: #00acee;
 }
 
+.site-nav ul {
+  padding-left: 15px;
+}
+
+.site-nav ul li {
+  list-style-type: none;
+}
+
+.site-nav ul li a {
+  font-size: 15px;
+}
+
 .extra-nav li {
   font-size: 14px;
 }

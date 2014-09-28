@@ -24,6 +24,22 @@ Example of valid environment variables:
 
 ## .bowerrc specification
 
+* [analytics](#analytics)
+* [cwd](#cwd)
+* [directory](#directory)
+* [registry](#registry)
+* [shorthand-resolver](#shorthand-resolver)
+* [proxy](#proxy)
+* [https-proxy](#https-proxy)
+* [user-agent](#user-agent)
+* [timeout](#timeout)
+* [strict-ssl](#strict-ssl)
+* [cs](#cs)
+* [color](#color)
+* [storage](#storage)
+* [tmp](#tmp)
+* [interactive](#interactive)
+
 ### analytics
 
 _Boolean_
