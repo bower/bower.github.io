@@ -67,6 +67,9 @@ With integrated Bower package manager, you’ll be able to search for, install a
 [**alfred-workflows**](https://github.com/willfarrell/alfred-workflows) <br>
 A collection of Alfred workflows that includes Bower integration.
 
+[**bowcat**](https://www.npmjs.org/package/bowcat) <br>
+npm package. Quickly concatenate your project's bower dependencies. Like grunt-bower-concat but without the weight and complexity of grunt.
+
 [**BowerStatic**](http://bowerstatic.readthedocs.org/) <br>
 Serve Bower-managed static resources using Python WSGI
 
