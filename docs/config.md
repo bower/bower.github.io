@@ -3,7 +3,12 @@ title: Configuration
 layout: default
 ---
 
-<p class="lead">Bower can be configured using JSON in a .bowerrc file.</p>
+<p class="lead">Bower can be configured using JSON in a .bowerrc file. For example:</p>
+
+    {
+    "directory": "app/components/"
+    "analytics": false
+    }
 
 ## Placement & Order
 
