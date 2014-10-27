@@ -96,3 +96,6 @@ Automatically install and save any missing bower components being used in the cu
 
 [**broccoli-bower**](https://github.com/joliss/broccoli-bower) <br>
 Load Bower packages into Broccoli.
+
+[**less-plugin-bower-resolve**](https://github.com/Mercateo/less-plugin-bower-resolve) <br>
+Import Less files from Bower packages.
