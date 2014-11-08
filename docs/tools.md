@@ -73,6 +73,9 @@ npm package. Quickly concatenate your project's bower dependencies. Like grunt-b
 [**BowerStatic**](http://bowerstatic.readthedocs.org/) <br>
 Serve Bower-managed static resources using Python WSGI
 
+[**Pyramid_BowerStatic**](https://github.com/mrijken/pyramid_bowerstatic) <br>
+Use Bower via BowerStatic with the Pyramid framework
+
 [**cakephp-bower**](https://github.com/fahad19/cakephp-bower) <br>
 CakePHP Plugin for Bower.
 
