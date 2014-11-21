@@ -39,7 +39,7 @@ Example of valid environment variables:
 * [user-agent](#user-agent)
 * [timeout](#timeout)
 * [strict-ssl](#strict-ssl)
-* [cs](#cs)
+* [ca](#ca)
 * [color](#color)
 * [storage](#storage)
 * [tmp](#tmp)
