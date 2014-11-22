@@ -34,7 +34,7 @@ Iterates through dependencies and returns an array of files defined in the main 
 A Node.js module to preen unwanted files and folders from packages installed via Bower. Preen can also be used via the CLI.
 
 [**gulp-bower-normalize**](https://github.com/cthrax/gulp-bower-normalize) <br>
-A gulp plugin to copy files out of bower_components and normalize the file structure by asset type.
+A gulp plugin to copy files into a normalized file structure, arranged by package name and asset type.
 
 ## Rails & Ruby
 
