@@ -53,7 +53,6 @@ Ruby binding for Bower commands (Uses node/execjs instead of shelling out)
 [**spagalloco/bower**](https://github.com/spagalloco/bower) <br>
 Bower integration for your Ruby apps (sprockets).
 
-
 ## Apps & IDEs
 
 [**CodeKit**](https://incident57.com/codekit/) <br>
@@ -62,8 +61,11 @@ CodeKit is a Mac app that helps you build websites faster and better.
 [**Telerik AppBuilder**](http://www.telerik.com/appbuilder) <br>
 Build iOS, Android and Windows Phone 8 hybrid apps using a single pure HTML5, CSS and JavaScript codebase. [See blog post](http://blogs.telerik.com/appbuilder/posts/14-07-31/telerik-appbuilder-7-31-14-release-native-emulator-support-bower-package-manager-and-new-project-templates).
 
-[**Webstorm 8**](http://www.jetbrains.com/webstorm/whatsnew/) <br>
+[**Webstorm**](https://www.jetbrains.com/webstorm) <br>
 With integrated Bower package manager, you’ll be able to search for, install and manage client-side libraries and frameworks for your project with ease, right in the IDE.
+
+[**Package Intellisense**](https://www.jetbrains.com/webstorm) for Visual Studio <br>
+NPM and Bower package Intellisense directly in the Visual Studio JSON editor. [See blog post](http://www.hanselman.com/blog/IntroducingGulpGruntBowerAndNpmSupportForVisualStudio.aspx).
 
 ## Everything Else
 
