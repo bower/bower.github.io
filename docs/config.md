@@ -44,6 +44,7 @@ Example of valid environment variables:
 * [storage](#storage)
 * [tmp](#tmp)
 * [interactive](#interactive)
+* [hosts](#hosts)
 
 ### analytics
 
@@ -190,3 +191,34 @@ _Boolean_
 
 Makes bower interactive, prompting whenever necessary. Defaults to `null` which 
 means `auto`.
+
+### hosts
+
+_Array_
+
+Allows to configure settings per host, e.g. support for _shallow cloning_. Each
+entry consists of the below attributes.
+
+Example:
+
+```
+"hosts": [
+  {
+    "name": "git.myservice.com",
+    "shallowClone": true
+  }
+]
+```
+
+#### name
+
+_String_
+
+The host name of the Git repo.
+
+#### shallowClone
+
+_Boolean_
+
+Whether or not to allow shallow cloning for the specified host. Defaults to 
+`false`.
