@@ -53,6 +53,12 @@ Bower can collect anonymous usage statistics. This allows the community to impro
 
 Data is tracked using Google Analytics and instrumented via [Insight](https://github.com/yeoman/insight). It is made available to all Bower team members. Tracking is opt-in upon initial usage. If you'd prefer to disable analytics altogether, set `"analytics": false` in your `.bowerrc` file. Details on exactly what's tracked is available [here](https://github.com/yeoman/insight#collected-data).
 
+Example: 
+
+	{
+		"analytics": true
+	}
+
 ### cwd
 
 _String_
@@ -60,12 +66,24 @@ _String_
 Current working directory - the directory from which bower should run. All relative paths will be calculated 
 according to this setting.  
 
+Example: 
+
+	{
+		"cwd": "~/my-project"
+	}
+
 ### directory
 
 _String_
 
 The path in which installed components should be saved. If not specified this 
 defaults to `bower_components`.  
+
+Example: 
+
+	{
+		"cwd": "~/my-project/vendor"
+	}
 
 ### registry 
 
@@ -77,6 +95,12 @@ property values bellow will have its value. Defaults to the bower registry URL.
 If your organization wishes to maintain a private registry, you may change the 
 values below.
 
+Example: 
+
+	{
+		"registry": "http://localhost:8000"
+	}
+
 #### registry.search 
 
 _Array_ or _String_
@@ -85,18 +109,49 @@ An array of URLs pointing to read-only Bower registries. A string means only
 one. When looking into the registry for an endpoint, Bower will query these 
 registries by the specified order.
 
+Example:
+
+	{
+  		"registry": {
+    		"search": [
+      			"http://localhost:8000",
+      			"https://bower.herokuapp.com"
+    		]
+  		}
+	}
+
 #### registry.register
 
 _String_
 
 The URL to use when registering packages. 
 
+Example:
+
+	{
+  		"registry": {
+    		"register": [
+      			"http://localhost:8000",
+    		]
+  		}
+	}
+	
 #### registry.publish
 
 _String_
 
 The URL to use when publish packages.  
 
+Example:
+
+	{
+  		"registry": {
+    		"publish": [
+      			"http://localhost:8000",
+    		]
+  		}
+	}
+	
 ### shorthand-resolver
 
 _String_
@@ -125,11 +180,23 @@ _String_
 
 The proxy to use for http requests.
 
+Example:
+
+    {
+    	"proxy":"http://<host>:<port>"
+    }
+
 ### https-proxy
 
 _String_
 
 The proxy to use for https requests.
+
+Example:
+
+    {
+    	"https-proxy":"http://<host>:<port>"
+    }
 
 ### user-agent
 
@@ -138,6 +205,12 @@ _String_
 Sets the User-Agent for each request made.  
 Defaults to: `node/<process.version> <process.platform> <process.arch>`
 
+Example:
+
+    {
+    	"user-agent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"
+    }
+
 ### timeout
 
 _Number_
@@ -145,11 +218,23 @@ _Number_
 The timeout to be used when making requests in milliseconds, defaults to 
 `60000` ms.
 
+Example:
+
+    {
+    	"user-agent": "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"
+    }
+
 ### strict-ssl
 
 _Boolean_
 
 Whether or not to do SSL key validation when making requests via https.
+
+Example:
+
+    {
+    	"strict-ssl": false
+    }
 
 ### ca
 
@@ -163,11 +248,23 @@ connections to the registry.
 Set to null to only allow "known" registrars, or to a specific CA cert to trust 
 only that specific signing authority.
 
+Example:
+
+	{
+    	"ca": "/etc/ssl/cert.pem"
+    }
+
 ### color
 
 _Boolean_
 
 Enable or disable use of colors in the CLI output. Defaults to true.
+
+Example: 
+
+	{
+		"color": true
+	}
 
 ### storage
 
@@ -177,6 +274,15 @@ Where to store persistent data, such as cache, needed by bower. Defaults to
 paths that suite the OS/platform. Valid keys are `cache`, `registry`, `links`, 
 `completion`.
 
+Example:
+
+	{
+		"storage" : {
+        	"packages" : "~/.bower/cache",
+        	"registry" : "~/.bower/registry"
+    	}
+    }
+
 ### tmp
 
 _String_
@@ -184,9 +290,22 @@ _String_
 Where to store temporary files and folders. Defaults to the system temporary 
 directory suffixed with /bower.
 
+Example: 
+
+	{
+		"tmp": "~/.bower/tmp"
+	}
+	
 ### interactive
 
 _Boolean_
 
 Makes bower interactive, prompting whenever necessary. Defaults to `null` which 
 means `auto`.
+
+Example: 
+
+	{
+		"interactive": true
+	}
+	
