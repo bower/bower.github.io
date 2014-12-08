@@ -816,29 +816,3 @@ h4:hover .header-anchor {
 
 .color-palette .color-name { display: block; }
 .color-palette .color-hex { display: block; }
-
-/* ---- shirts ---- */
-
-#shirts:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-#shirts > a { display: block; }
-
-#shirts figure {
-  width: 50%;
-  float: left;
-  margin: 0;
-  text-align: center;
-}
-
-#shirts figcaption {
-  font-size: 0.95em;
-}
-
-#shirts img {
-  display: block;
-  width: 100%;
-}

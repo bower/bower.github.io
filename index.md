@@ -55,23 +55,6 @@ Save your packages to [`bower.json` with `bower init`](/docs/creating-packages/#
 
 How you use packages is up to you. Use Bower together with [Grunt, RequireJS, Yeoman, and lots of other tools](/docs/tools/) or build your own workflow with [the API](/docs/api/).
 
-## Bower shirts
-
-We've teamed up with [Cotton Bureau to make some lovely Bower shirts](https://cottonbureau.com/products/bower). These beauties are printed on American Apparel mens and women's sized shirts. These are only available for a limited time, so [order them before December 8](https://cottonbureau.com/products/bower) to get yours!
-
-<div id="shirts">
-  <a href="https://cottonbureau.com/products/bower">
-    <figure>
-      <img src="http://i.imgur.com/es28uOx.jpg" alt="Bower shirt in 100% Cotton Gold" />
-      <figcaption>100% Cotton Gold</figcaption>
-    </figure>
-    <figure>
-      <img src="http://i.imgur.com/Qp1I4yj.jpg" alt="Bower shirt in Tri-blend Tri-oatmeal" />
-      <figcaption>Super-soft Tri-blend Tri-Oatmeal</figcaption>
-    </figure>
-  </a>
-</div>
-
 ## Twitter updates from [@bower](https://twitter.com/bower)
 
 <a class="twitter-timeline" href="https://twitter.com/bower" data-widget-id="480377291369754625">Tweets by @bower</a>
