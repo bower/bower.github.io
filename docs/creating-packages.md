@@ -88,7 +88,7 @@ $ bower register example git://github.com/user/example.git
 
 Now anyone can run `bower install <my-package-name>`, and get your library installed. The Bower registry does not have authentication or user management at this point in time. It's on a first come, first served basis.
 
-Bower doesn't support GitHub-style namespacing (`org/repo`), however you're are encouraged to namespace related packages with `-`, for example, `angular-` and `paper-`.
+Bower doesn't support GitHub-style namespacing (`org/repo`), however you are encouraged to namespace related packages with `-`, for example, `angular-` and `paper-`.
 
 Please do not squat on package names. Register your package and claim your name after you have a valid public repo with working code.
 
