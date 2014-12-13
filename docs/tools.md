@@ -64,7 +64,10 @@ Build iOS, Android and Windows Phone 8 hybrid apps using a single pure HTML5, CS
 [**Webstorm**](https://www.jetbrains.com/webstorm) <br>
 With integrated Bower package manager, you’ll be able to search for, install and manage client-side libraries and frameworks for your project with ease, right in the IDE.
 
-[**Package Intellisense**](https://www.jetbrains.com/webstorm) for Visual Studio <br>
+[**Visual Studio 2015**](https://visualstudio.com/free) <br>
+Visual Studio has built-in support for searching, installation and managing of Bower packages. This includes rich auto-completion in `bower.json` to Bower specific commands and UI elemnents in Solution Explorer.
+
+[**Package Intellisense**](https://visualstudiogallery.msdn.microsoft.com/65748cdb-4087-497e-a394-2e3449c8e61e) for Visual Studio 2013 <br>
 NPM and Bower package Intellisense directly in the Visual Studio JSON editor. [See blog post](http://www.hanselman.com/blog/IntroducingGulpGruntBowerAndNpmSupportForVisualStudio.aspx).
 
 ## Everything Else
