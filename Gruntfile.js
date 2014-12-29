@@ -16,7 +16,7 @@ module.exports = function( grunt ) {
     cssmin: {
       target: {
         files: {
-          'css/styles.css': ['css/styles.css']
+          'css/styles.min.css': ['css/styles.css']
         }
       }
     }
