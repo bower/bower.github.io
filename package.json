@@ -24,6 +24,7 @@
   "homepage": "http://bower.io",
   "dependencies": {
     "grunt": "^0.4.5",
-    "grunt-contrib-concat": "^0.4.0"
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-cssmin": "^0.11.0"
   }
 }

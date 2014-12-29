@@ -12,13 +12,22 @@ module.exports = function( grunt ) {
         ],
         dest: 'css/styles.css'
       }
+    },
+    cssmin: {
+      target: {
+        files: {
+          'css/styles.css': ['css/styles.css']
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   grunt.registerTask( 'default', [
-    'concat'
+    'concat',
+    'cssmin'
   ]);
 
 };
