@@ -19,15 +19,24 @@ module.exports = function( grunt ) {
           'css/styles.min.css': ['css/styles.css']
         }
       }
+    },
+    uglify: {
+      target: {
+        files: {
+          'js/scripts.min.js': ['js/scripts.js']
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask( 'default', [
     'concat',
-    'cssmin'
+    'cssmin',
+    'uglify'
   ]);
 
 };
