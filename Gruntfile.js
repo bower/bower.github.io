@@ -12,13 +12,22 @@ module.exports = function( grunt ) {
         ],
         dest: 'css/styles.css'
       }
+    },
+    uglify: {
+      target: {
+        files: {
+          'js/scripts.min.js': ['js/scripts.js']
+        }
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask( 'default', [
-    'concat'
+    'concat',
+    'uglify'
   ]);
 
 };
