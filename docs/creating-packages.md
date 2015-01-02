@@ -26,7 +26,7 @@ The [`bower.json` spec](https://github.com/bower/bower.json-spec) defines severa
   of versions for your dependencies.
 * `devDependencies` _hash_: Development dependencies.
 * `private` _boolean_: Set to true if you want to keep the package private and
-  do not want to register the package in future.
+  do not want to register the package in the future.
 
 {% highlight json %}
 {
