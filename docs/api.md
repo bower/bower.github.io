@@ -400,9 +400,9 @@ $ bower list --json
 
 {% highlight json %}
 {
-  "backbone": "bower_components/backbone/index.js",
-  "jquery": "bower_components/jquery/index.js",
-  "underscore": "bower_components/underscore/index.js"
+  "backbone": "bower_components/backbone/backbone.js",
+  "jquery": "bower_components/jquery/dist/jquery.js",
+  "underscore": "bower_components/underscore/underscore.js"
 }
 {% endhighlight %}
 
