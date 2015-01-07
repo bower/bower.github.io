@@ -1,16 +1,18 @@
 module.exports = function( grunt ) {
 
   grunt.initConfig({
-    concat: {
-      // build styles.css
-      css: {
+    cssmin: {
+      options: {
+        sourceMap: true
+      },
+      files: {
         src: [
           'bower_components/normalize.css/normalize.css',
           'css/base.css',
           'css/masthead.css',
           'css/modules.css'
         ],
-        dest: 'css/styles.css'
+        dest: 'css/styles.min.css'
       }
     },
     uglify: {
@@ -22,11 +24,11 @@ module.exports = function( grunt ) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask( 'default', [
-    'concat',
+    'cssmin',
     'uglify'
   ]);
 
