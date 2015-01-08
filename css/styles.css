@@ -502,7 +502,7 @@ td {
 /* ---- code ---- */
 
 pre, code {
-  font-family: Consolas, Menlo, Courier, monospace;
+  font-family: Consolas, Menlo, "Liberation Mono", monospace;
 }
 
 code {
