@@ -136,7 +136,7 @@ The URL to use when registering packages.
 
 _String_
 
-The URL to use when publish packages.
+The URL to use when publishing packages.
 
 {% highlight json %}
 "registry": {
