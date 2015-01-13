@@ -110,3 +110,6 @@ Load Bower packages into Broccoli.
 
 [**less-plugin-bower-resolve**](https://github.com/Mercateo/less-plugin-bower-resolve) <br>
 Import Less files from Bower packages.
+
+[**requirejs-plugin-bower**](https://github.com/RodneyEbanks/requirejs-plugin-bower) <br>
+Requirejs plugin for creating & loading Path/Shim configurations automatically from bower.json dependencies (InBrowser & InBuild)
