@@ -93,7 +93,7 @@ defaults to `bower_components`.
 _Object_ or _String_
 
 The registry config. Can be an object or a string. If a string is used, all the
-property values bellow will have its value. Defaults to the bower registry URL.
+property values below will have its value. Defaults to the bower registry URL.
 
 If your organization wishes to maintain a private registry, you may change the
 values below.
