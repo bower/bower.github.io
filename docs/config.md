@@ -24,7 +24,7 @@ layout: default
 The config is obtained by merging multiple configurations by this order of
 importance:
 
-* CLI args via --config.
+* CLI args via `--config`.
 * Environment variables
 * Local `.bowerrc `located in the current working directory
 * All `.bowerrc `files upwards the directory tree
