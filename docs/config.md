@@ -24,12 +24,17 @@ layout: default
 The config is obtained by merging multiple configurations by this order of
 importance:
 
-* CLI args via `--config`.
+* CLI arguments via `--config`
 * Environment variables
 * Local `.bowerrc `located in the current working directory
 * All `.bowerrc `files upwards the directory tree
 * `.bowerrc` file located in user's home folder (`~`)
 * `.bowerrc` file located in the global folder (`/`)
+
+Example of CLI arguments:
+
+* `--config.endpoint-parser=<parser>`
+* `--config.storage.cache=<cache>`
 
 Example of valid environment variables:
 
