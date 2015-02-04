@@ -113,3 +113,6 @@ Import Less files from Bower packages.
 
 [**requirejs-plugin-bower**](https://github.com/RodneyEbanks/requirejs-plugin-bower) <br>
 Requirejs plugin for creating & loading Path/Shim configurations automatically from bower.json dependencies (InBrowser & InBuild)
+
+[**flask-bower**](https://pypi.python.org/pypi/Flask-Bower/) <br>
+Flask-Bower is a flask extension to serve bower installed packages - also on [Github](https://github.com/lobeck/flask-bower)
