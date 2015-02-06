@@ -129,6 +129,13 @@ Where:
     </td>
   </tr>
   <tr>
+    <td>Git endpoint without .git</td>
+    <td>
+      <code>git+https://github.com/user/package</code><br>
+      <code>git+ssh://git@github.com/user/package</code>
+    </td>
+  </tr>
+  <tr>
     <td>Local folder</td>
     <td><code>my/local/folder/</code></td>
   </tr>
