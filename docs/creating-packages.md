@@ -83,8 +83,10 @@ Then use [`bower register`](/docs/api#register):
 {% highlight bash %}
 $ bower register <my-package-name> <git-endpoint>
 # for example
-$ bower register example git://github.com/user/example.git
+$ bower register example https://github.com/user/example.git
 {% endhighlight %}
+
+For packages hosted on GitHub, you can use the HTTPS clone url from the repository's main page as your git endpoint.
 
 Now anyone can run `bower install <my-package-name>`, and get your library installed. The Bower registry does not have authentication or user management at this point in time. It's on a first come, first served basis.
 
