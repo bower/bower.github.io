@@ -102,7 +102,7 @@ Package unregistering will be available via `bower unregister <package>` soon, b
 curl -X DELETE "https://bower.herokuapp.com/packages/<package>?access_token=<token>"
 {% endhighlight %}
 
-* Where `<package>` is the package name you want to delete and `<token>` is GitHub's Personal Access Token that you can fetch from  [GitHub settings for ](https://github.com/settings/applications).
+* Where `<package>` is the package name you want to delete and `<token>` is GitHub's Personal Access Token that you can fetch from  [GitHub settings for applications](https://github.com/settings/applications).
 * A default GitHub Personal Access Token will work -- no permissions necessary.
 * You need to be an owner or collaborator of the repo and URL needs to be OK.
 
