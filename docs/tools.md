@@ -116,3 +116,6 @@ Requirejs plugin for creating & loading Path/Shim configurations automatically f
 
 [**flask-bower**](https://pypi.python.org/pypi/Flask-Bower/) <br>
 Flask-Bower is a flask extension to serve bower installed packages - also on [Github](https://github.com/lobeck/flask-bower)
+
+[**brackets-bower**](https://github.com/albertinad/brackets-bower) <br>
+Bower extension for Brackets. It let's you manage your application's dependencies: search, install, update, remove and more. Support for bower.json and .bowerrc files.
