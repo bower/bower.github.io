@@ -16,12 +16,14 @@ Command line reference
 * [install](#install)
 * [link](#link)
 * [list](#list)
+* [login](#login)
 * [lookup](#lookup)
 * [prune](#prune)
 * [register](#register)
 * [search](#search)
 * [update](#update)
 * [uninstall](#uninstall)
+* [unregister](#unregister)
 * [version](#version)
 
 ### cache
@@ -244,6 +246,18 @@ $ bower lookup <name>
 
 Look up a package URL by name
 
+### login
+
+{% highlight sh %}
+$ bower login
+{% endhighlight %}
+
+Authenticate with GitHub and store credentials. Required to unregister packages.
+
+#### login options
+
+* `-t`, `--token`: Pass an existing GitHub auth token rather than prompting for username and password
+
 ### prune
 
 {% highlight sh %}
@@ -294,6 +308,14 @@ Uninstalls a package locally from your bower_components directory
 
 * `-S`, `--save`: Remove uninstalled packages from the project's bower.json dependencies
 * `-D`, `--save-dev`: Remove uninstalled packages from the project's bower.json devDependencies
+
+### unregister
+
+{% highlight sh %}
+$ bower unregister <package>
+{% endhighlight %}
+
+Unregisters a package.
 
 ### version
 
