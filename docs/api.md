@@ -211,6 +211,7 @@ A version can be:
 * `-p`, `--production`: Do not install project devDependencies
 * `-S`, `--save`: Save installed packages into the project's bower.json dependencies
 * `-D`, `--save-dev`: Save installed packages into the project's bower.json devDependencies
+* `-E`,` --save-exact`: Configure installed packages with an exact version rather than semver
 
 ### link
 
