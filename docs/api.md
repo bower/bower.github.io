@@ -495,6 +495,25 @@ If for some reason you are unable to set the `CI` environment variable, you can 
 $ bower install --config.interactive=false
 {% endhighlight %}
 
+## Non-interactive mode
+
+Bower works by default in interactive mode. There are few ways of disabling it:
+
+- passing `CI=false` in environment
+- passing `--config.interactive=false` to bower command
+- attaching a pipe to bower (e.g. `bower install | cat`)
+- redirecting output to file (e.g. `bower install > logs.txt`)
+- running bower through its (Programmatic API)[#programmatic-api]
+
+When interactive mode is disabled:
+
+- `bower init` does not work
+- `bower register` and `bower unregister` bypass confirmation
+- `bower login` fails unless `--token` parameter is provided
+- `bower install` fails on resolution conflicts, instead of asking for choice
+- `bower uninstall` doesn't ask for confirmation if dependency is to be removed
+- Analytics is disabled by default (equivalent to passing `--config.analytics=false`)
+
 ## Using local cache
 
 Bower supports installing packages from its local cache -- without internet connection -- if the packages were installed before.
