@@ -499,7 +499,7 @@ $ bower install --config.interactive=false
 
 Bower works by default in interactive mode. There are few ways of disabling it:
 
-- passing `CI=false` in environment
+- passing `CI=true` in environment
 - passing `--config.interactive=false` to bower command
 - attaching a pipe to bower (e.g. `bower install | cat`)
 - redirecting output to file (e.g. `bower install > logs.txt`)
