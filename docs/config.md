@@ -262,12 +262,12 @@ Enable or disable use of colors in the CLI output. Defaults to true.
 _Object_
 
 Where to store persistent data, such as cache, needed by bower. Defaults to
-paths that suit the OS/platform. Valid keys are `cache`, `registry`, `links`,
+paths that suit the OS/platform. Valid keys are `packages`, `registry`, `links`,
 `completion`.
 
 {% highlight json %}
 "storage": {
-  "cache" : "~/.bower/cache",
+  "packages" : "~/.bower/packages",
   "registry" : "~/.bower/registry"
 }
 {% endhighlight %}
