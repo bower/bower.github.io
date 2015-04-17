@@ -39,7 +39,7 @@ Example of CLI arguments:
 Example of valid environment variables:
 
 * `bower_endpoint_parser` is evaluated as `endpoint-parser`
-* `bower_storage__cache` is evaluated as `storage.cache`
+* `bower_storage_cache` is evaluated as `storage.cache`
 
 ## .bowerrc specification
 
