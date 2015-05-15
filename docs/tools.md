@@ -119,3 +119,6 @@ Flask-Bower is a flask extension to serve bower installed packages - also on [Gi
 
 [**brackets-bower**](https://github.com/albertinad/brackets-bower) <br>
 Bower extension for Brackets. It lets you manage your application's dependencies: search, install, update, remove and more. Support for bower.json and .bowerrc files.
+
+[**Django-bower**](https://github.com/nvbn/django-bower) <br>
+Easy way to use bower with your [Django](https://www.djangoproject.com/) project
