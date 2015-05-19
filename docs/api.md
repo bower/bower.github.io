@@ -503,7 +503,7 @@ Bower works by default in interactive mode. There are few ways of disabling it:
 - passing `--config.interactive=false` to bower command
 - attaching a pipe to bower (e.g. `bower install | cat`)
 - redirecting output to file (e.g. `bower install > logs.txt`)
-- running bower through its (Programmatic API)[#programmatic-api]
+- running bower through its [Programmatic API](#programmatic-api)
 
 When interactive mode is disabled:
 
