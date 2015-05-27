@@ -8,10 +8,23 @@
 
 .logo {
   display: block;
-  width: 160px;
+  width: 140px;
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 30px;
+  top: 15px;
+}
+
+/* ----- Nice logo hover on subpages ---- */
+
+a img.logo {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+a:hover img.logo {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* ---- network-nav ---- */
@@ -143,4 +156,79 @@
   font-size: 48px;
   line-height: 1;
   color: #543729;
+}
+
+/* ---- Responsive styles ---- */
+
+@media screen and (max-width: 667px) {
+  #masthead {
+    margin-bottom: 10px;
+  }
+  .network-nav {
+    display: table;
+    font-size: 14px;
+    left: auto;
+    position: relative;
+    top: auto;
+    width: 100%;
+  }
+  .network-nav.nav {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1c03e;
+  }
+  .network-nav:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .network-nav li {
+    float: none;
+    text-align: center;
+    display: table-cell;
+    margin-bottom: 10px;
+    valign: bottom;
+  }
+  .brand {
+    padding-left: 0;
+    min-height: 0;
+    text-align: center
+  }
+  .logo, .brand .logo {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100px;
+    margin: 12px auto 0;
+  }
+  .page-title {
+    font-size: 32px;
+    padding: 7px 0 5px 0;
+    text-align: center;
+  }
+  .brand h1 {
+    padding-top: 0;
+    font-size: 48px;
+  }
+  .brand .tagline {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+  .sidebar {
+    left: auto;
+    position: relative;
+    top: auto;
+    width: 100%;
+  }
+  .sidebar .nav a {
+    padding: 0.4em 0;
+  }
+  .container .main {
+    margin-left: 0;
+  }
+  .site-nav li {
+    border-bottom: 1px solid #eee;
+  }
+  .site-nav li ul li:last-child {
+    border-bottom: none;
+  }
 }

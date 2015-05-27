@@ -1,9 +1,9 @@
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 /**
  * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
  */
 
 html {
@@ -71,7 +71,7 @@ audio:not([controls]) {
 
 /**
  * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
  */
 
 [hidden],
@@ -91,7 +91,8 @@ a {
 }
 
 /**
- * Improve readability when focused and also mouse hovered in all browsers.
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
  */
 
 a:active,
@@ -209,7 +210,6 @@ figure {
  */
 
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -350,15 +350,12 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
 
 input[type="search"] {
   -webkit-appearance: textfield; /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box; /* 2 */
-  box-sizing: content-box;
+  box-sizing: content-box; /* 2 */
 }
 
 /**
@@ -502,7 +499,7 @@ td {
 /* ---- code ---- */
 
 pre, code {
-  font-family: Consolas, Menlo, "Liberation Mono", monospace;
+  font-family: Consolas, Menlo, Courier, monospace;
 }
 
 code {
@@ -578,10 +575,23 @@ code .nv {
 
 .logo {
   display: block;
-  width: 160px;
+  width: 140px;
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 30px;
+  top: 15px;
+}
+
+/* ----- Nice logo hover on subpages ---- */
+
+a img.logo {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+a:hover img.logo {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* ---- network-nav ---- */
@@ -713,6 +723,81 @@ code .nv {
   font-size: 48px;
   line-height: 1;
   color: #543729;
+}
+
+/* ---- Responsive styles ---- */
+
+@media screen and (max-width: 667px) {
+  #masthead {
+    margin-bottom: 10px;
+  }
+  .network-nav {
+    display: table;
+    font-size: 14px;
+    left: auto;
+    position: relative;
+    top: auto;
+    width: 100%;
+  }
+  .network-nav.nav {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f1c03e;
+  }
+  .network-nav:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .network-nav li {
+    float: none;
+    text-align: center;
+    display: table-cell;
+    margin-bottom: 10px;
+    valign: bottom;
+  }
+  .brand {
+    padding-left: 0;
+    min-height: 0;
+    text-align: center
+  }
+  .logo, .brand .logo {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100px;
+    margin: 12px auto 0;
+  }
+  .page-title {
+    font-size: 32px;
+    padding: 7px 0 5px 0;
+    text-align: center;
+  }
+  .brand h1 {
+    padding-top: 0;
+    font-size: 48px;
+  }
+  .brand .tagline {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+  .sidebar {
+    left: auto;
+    position: relative;
+    top: auto;
+    width: 100%;
+  }
+  .sidebar .nav a {
+    padding: 0.4em 0;
+  }
+  .container .main {
+    margin-left: 0;
+  }
+  .site-nav li {
+    border-bottom: 1px solid #eee;
+  }
+  .site-nav li ul li:last-child {
+    border-bottom: none;
+  }
 }
 
 /* ---- nav ---- */
