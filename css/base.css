@@ -139,3 +139,15 @@ code .nv {
        -o-user-select: none;
           user-select: none;
 }
+
+
+/* ---- Responsive styles ---- */
+
+pre {
+  font-size: 0.8em;
+  padding: 0.8em;
+  border-radius: 3px;
+}
+td {
+  font-size: 0.65em;
+}
