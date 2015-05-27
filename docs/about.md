@@ -43,6 +43,16 @@ Download [**PNG**](/img/bower-logo.png) · [**SVG**](/img/bower-logo.svg) · [**
 
 The Bower logo [was designed](https://gist.github.com/desandro/1c50118441f703f3f6e1) by [Dave DeSandro](http://desandro.com) and [Isaac Durazo](http://www.isaacdurazo.com/). It illustrates a [flame bowerbird performing its sultry mating dance](https://www.youtube.com/watch?v=wCzZj21Gs4U&t=24s).
 
+### Swag
+
+[Bower t-shirts are available on Cotton Bureau](https://cottonbureau.com/products/bower). T-shirts get printed every couple of months.
+
+<p><a href="https://cottonbureau.com/products/bower"><img class="content-img" src="/img/bower-shirts.jpg" alt="Bower shirts"></a></p>
+
+[Bower stickers are available on Sticker Mule](https://www.stickermule.com/marketplace/3758-bower) and [Unixstickers](http://www.unixstickers.com/stickers/coding_stickers/bower-web-package-manager-shaped-sticker).
+
+<p><a href="https://www.stickermule.com/marketplace/3758-bower"><img class="content-img" src="/img/bower-stickers.jpg" alt="Bower shirts"></a></p>
+
 ### Colors
 
 <p>

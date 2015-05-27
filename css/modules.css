@@ -59,11 +59,15 @@ h4:hover .header-anchor {
   line-height: 1.25;
 }
 
-/* ---- download-logo ---- */
+/* ---- about imgs ---- */
 
 .download-logo {
   width: 100%;
   max-width: 400px;
+}
+
+.content-img {
+  max-width: 100%;
 }
 
 /* ---- site-footer ---- */
