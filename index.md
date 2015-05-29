@@ -53,7 +53,11 @@ Save your packages to [`bower.json` with `bower init`](/docs/creating-packages/#
 
 ### Use packages
 
-How you use packages is up to you. Use Bower together with [Grunt, RequireJS, Yeoman, and lots of other tools](/docs/tools/) or build your own workflow with [the API](/docs/api/).
+How you use packages is up to you. We recommend you use Bower together with [Grunt, RequireJS, Yeoman, and lots of other tools](/docs/tools/) or build your own workflow with [the API](/docs/api/). You can also use the installed packages directly, like this, in the case of `jquery`:
+
+{% highlight html %}
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+{% endhighlight %}
 
 ## Twitter updates from [@bower](https://twitter.com/bower)
 
