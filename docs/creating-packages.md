@@ -16,7 +16,6 @@ $ bower init
 The [`bower.json` spec](https://github.com/bower/bower.json-spec) defines several options, including:
 
 * `name` (required): The name of your package; please see [Register](/docs/creating-packages/#register) section for how to name your package.
-* `version`: A semantic version number (see [semver](http://semver.org/)).
 * `main` _string_ or _array_: The primary acting files necessary to use your package.
 * `ignore` _array_: An array of paths not needed in production that you want
   Bower to ignore when installing your package.
@@ -31,7 +30,6 @@ The [`bower.json` spec](https://github.com/bower/bower.json-spec) defines severa
 {% highlight json %}
 {
   "name": "my-project",
-  "version": "1.0.0",
   "main": "path/to/main.css",
   "ignore": [
     ".jshintrc",
