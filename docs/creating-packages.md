@@ -13,40 +13,262 @@ Interactively create a `bower.json` with [`bower init`](/docs/api#init)
 $ bower init
 {% endhighlight %}
 
-The [`bower.json` spec](https://github.com/bower/bower.json-spec) defines several options, including:
+### bower.json example
 
-* `name` (required): The name of your package; please see [Register](/docs/creating-packages/#register) section for how to name your package.
-* `version`: A semantic version number (see [semver](http://semver.org/)).
-* `main` _string_ or _array_: The primary acting files necessary to use your package.
-* `ignore` _array_: An array of paths not needed in production that you want
-  Bower to ignore when installing your package.
-* `keywords` _array_ of _string_: (recommended) helps make your package easier to discover
-* `dependencies` _hash_: Packages your package depends upon in production.
-  Note that you can specify [ranges](https://github.com/isaacs/node-semver#ranges)
-  of versions for your dependencies.
-* `devDependencies` _hash_: Development dependencies.
-* `private` _boolean_: Set to true if you want to keep the package private and
-  do not want to register the package in the future.
+<pre><code>{
+  <a href="#name"><span class="nt">"name"</span>: "blue-leaf"</a>,
+  <a href="#version"><span class="nt">"version"</span>: "1.2.3"</a>,
+  <a href="#description"><span class="nt">"description"</span>: "Physics-like animations for pretty particles"</a>,
+  <a href="#main"><span class="nt">"main"</span>: [
+    "js/motion.js",
+    "sass/motion.scss",
+  ]</a>,
+  <a href="#dependencies"><span class="nt">"dependencies"</span>: {
+    "get-size": "~1.2.2",
+    "eventEmitter": "~4.2.11"
+  }</a>,
+  <a href="#devdependencies"><span class="nt">"devDependencies"</span>: {
+    "qunit": "~1.16.0"
+  }</a>,
+  <a href="#moduletype"><span class="nt">"moduleType"</span>: [
+    "amd",
+    "globals",
+    "node"
+  ]</a>,
+  <a href="#keywords"><span class="nt">"keywords"</span>: [
+    "motion",
+    "physics",
+    "particles"
+  ]</a>,
+  <a href="#authors"><span class="nt">"authors"</span>: [
+    "Betty Beta <bbeta@example.com>"
+  ]</a>,
+  <a href="#license"><span class="nt">"license"</span>: "MIT",</a>
+  <a href="#ignore"><span class="nt">"ignore"</span>: [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]</a>
+}</code></pre>
+
+
+## bower.json specification
+
+### name
+
+`String`
+
+**Required**
+
+The name of the package as stored in the registry.
+
+* Must be unique.
+* Should be slug style for simplicity, consistency and compatibility. Example: `unicorn-cake`
+* Lowercase, a-z, can contain digits, 0-9, can contain dash or dot but not start/end with them.
+* Consecutive dashes or dots not allowed.
+* 50 characters or less.
+
+### version
+
+`String`
+
+**Ignored by Bower as git tags are used instead.**
+
+*Intended to be used in the future when Bower gets a real registry where you can publish actual packages, but for now just leave it out.*
+
+The package's semantic version number.
+
+* Must be a [semantic version](http://semver.org) parseable by [node-semver](https://github.com/isaacs/node-semver).
+* If publishing a folder, the version must be higher than the version stored in the registry, when republishing.
+* Version should only be required if you are not using git tags.
+
+### description
+
+`String`
+
+*Recommended*
+
+Help users identify and search for your package with a brief description. Describe what your package does, rather than what it's made of. Will be displayed in search/lookup results on the CLI and the website that can be used to search for packages. Max 140 characters.
+
+### main
+
+`String` or `Array` of `String`s
+
+*Recommended*
+
+The entry-point files necessary to use your package. Only one file per filetype.
+
+Entry-point files have module exports and may use module imports. While Bower does not directly use `main` files, they are listed with the commands `bower list --json` and `bower list --paths`, so they can be used by build tools.
+
+Let's say your package looks like this:
+
+    package
+      js/
+        motion.js
+        run.js
+        walk.js
+      sass/
+        motion.scss
+        run.scss
+        walk.scss
+      img/
+        motion.png
+        walk.png
+        run.png
+      fonts/
+        icons.woff2
+        icons.woff
+      dist/
+        movement.js
+        movement.min.js
+        movement.css
+        movement.min.css
+
+`motion.js` has module imports for `run.js` and `walk.js`. `motion.scss` has module imports for `run.scss` and `walk.scss`. `main` would be
 
 {% highlight json %}
-{
-  "name": "my-project",
-  "version": "1.0.0",
-  "main": "path/to/main.css",
-  "ignore": [
-    ".jshintrc",
-    "**/*.txt"
-  ],
-  "dependencies": {
-    "<name>": "<version>",
-    "<name>": "<folder>",
-    "<name>": "<package>"
-  },
-  "devDependencies": {
-    "<test-framework-name>": "<version>"
-  }
+"main": [
+  "js/motion.js",
+  "sass/motion.scss",
+]
+{% endhighlight %}
+
+Image and font files may be used or referenced within the JS or Sass files, but are not `main` files as they are not entry-points.
+
+* Use source files with module exports and imports over pre-built distribution files.
+* Do not include minified files.
+* Filenames should not be versioned (Bad: `package.1.1.0.js`; Good: `package.js`).
+* Globs like `js/*.js` are not allowed.
+
+### dependencies
+
+`Object`
+
+Dependencies are specified with a simple hash of package name to a semver compatible identifier or URL.
+
+* Key must be a valid [name](#name).
+* Value must be a valid [version](#version), a Git URL, or a URL (inc. tarball and zipball).
+* Git URLs can be restricted to a reference (revision SHA, branch, or tag) by appending it after a hash, e.g. `https://github.com/owner/package.git#branch`.
+* Value can be an owner/package shorthand, i.e. owner/package. By default, the shorthand resolves to GitHub -> git://github.com/{{owner}}/{{package}}.git. This may be changed in `.bowerrc` [shorthand_resolver](http://bower.io/docs/config/#shorthand-resolver).
+* Local paths may be used as values for local development, but they will be disallowed when registering.
+
+### devDependencies
+
+`Object`
+
+Same rules as `dependencies`.
+
+Dependencies that are only needed for development of the package, e.g., test framework or building documentation.
+
+### moduleType
+
+`String` or `Array` of `String`s
+
+The type of module defined in the `main` JavaScript file. Can be one or an array of the following strings:
+
++ `globals`: JavaScript module that adds to global namespace, using `window.namespace` or `this.namespace` syntax
++ `amd`: JavaScript module compatible with AMD, like [RequireJS](http://requirejs.org/), using `define()` syntax
++ `node`: JavaScript module compatible with [node](https://nodejs.org/) and [CommonJS](https://nodejs.org/docs/latest/api/modules.html) using `module.exports` syntax
++ `es6`: JavaScript module compatible with [ECMAScript 6 modules](http://www.2ality.com/2014/09/es6-modules-final.html), using `export` and `import` syntax
++ `yui`: JavaScript module compatible with [YUI Modules](http://yuilibrary.com/yui/docs/yui/create.html), using `YUI.add()` syntax
+
+### keywords
+
+`Array` of `String`s
+
+*Recommended*
+
+Same format requirements as [name](#name).
+
+Used for search by keyword. Helps make your package easier to discover without people needing to know its name.
+
+### authors
+
+`Array` of (`String` or `Object`)
+
+A list of people that authored the contents of the package.
+
+Using `String`s:
+
+{% highlight json %}
+"authors": [
+  "Betty Beta",
+  "Betty Beta <bbeta@example.com>",
+  "Betty Beta <bbeta@example.com> (http://example.com)"
+]
+{% endhighlight %}
+
+or using `Object`s:
+
+{% highlight json %}
+"authors": [
+  { "name": "Betty Beta" },
+  { "name": "Betty Beta", "email": "bbeta@example.com" },
+  { "name": "Betty Beta", "email": "bbeta@example.com", "homepage": "http://example.com" }
+]
+{% endhighlight %}
+
+### homepage
+
+`String`
+
+URL to learn more about the package. Falls back to GitHub project if not specified and it’s a GitHub endpoint.
+
+### repository
+
+`Object`
+
+The repository in which the source code can be found.
+
+{% highlight json %}
+"repository": {
+  "type": "git",
+  "url": "git://github.com/username/project.git"
 }
 {% endhighlight %}
+
+### license
+
+`String` or `Array` of `String`s
+
+*Recommended* 
+
+[SPDX license identifier](https://spdx.org/licenses/) or path/url to a license.
+
+### ignore
+
+`Array` of `String`s
+
+*Recommended*  
+
+A list of files for Bower to ignore when installing your package.
+
+Note: symbolic links will always be ignored. However `bower.json` will never be ignored.
+
+The ignore rules follow the same rules specified in the [gitignore pattern spec](http://git-scm.com/docs/gitignore).
+
+### resolutions
+
+`Object`
+
+Dependency versions to automatically resolve with if conflicts occur between packages.
+
+Example:
+
+{% highlight json %}
+"resolutions": {
+  "angular": "1.3.0-beta.16"
+}
+{% endhighlight %}
+
+
+### private
+
+`Boolean`
+
+If you set it to `true` it will refuse to publish it. This is a way to prevent accidental publication of private repositories.
 
 ## Maintaining dependencies
 

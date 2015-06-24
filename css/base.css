@@ -100,6 +100,16 @@ pre code {
   font-size: 1.1em;
 }
 
+pre a,
+code a {
+  color: #0AF;
+}
+
+pre a:hover,
+code a:hover {
+  text-decoration: none;
+  background: hsla(0, 0%, 100%, 0.1);
+}
 
 /* ---- syntax highlighting ---- */
 
