@@ -61,7 +61,7 @@ Example of valid environment variables:
 
 ### analytics
 
-_Boolean_
+`Boolean`
 
 Bower can collect anonymous usage statistics. This allows the community to improve Bower and publicly display insights into CLI usage and packages at [bower.io/stats](http://bower.io/stats).
 
@@ -73,7 +73,7 @@ Data is tracked using Google Analytics and instrumented via [Insight](https://gi
 
 ### cwd
 
-_String_
+`String`
 
 Current working directory - the directory from which bower should run. All relative paths will be calculated
 according to this setting.
@@ -84,7 +84,7 @@ according to this setting.
 
 ### directory
 
-_String_
+`String`
 
 The path in which installed components should be saved. If not specified this
 defaults to `bower_components`.
@@ -95,7 +95,7 @@ defaults to `bower_components`.
 
 ### registry
 
-_Object_ or _String_
+`Object` or `String`
 
 The registry config. Can be an object or a string. If a string is used, all the
 property values below will have its value. Defaults to the bower registry URL.
@@ -109,7 +109,7 @@ values below.
 
 #### registry.search
 
-_Array_ or _String_
+`Array` or `String`
 
 An array of URLs pointing to read-only Bower registries. A string means only
 one. When looking into the registry for an endpoint, Bower will query these
@@ -126,7 +126,7 @@ registries by the specified order.
 
 #### registry.register
 
-_String_
+`String`
 
 The URL to use when registering packages.
 
@@ -139,7 +139,7 @@ The URL to use when registering packages.
 
 #### registry.publish
 
-_String_
+`String`
 
 The URL to use when publishing packages.
 
@@ -151,7 +151,7 @@ The URL to use when publishing packages.
 
 ### shorthand-resolver
 
-_String_
+`String`
 
 Define a custom template for shorthand package names.
 Defaults to {% raw %}`git://github.com/{{owner}}/{{package}}.git`{% endraw %}
@@ -180,7 +180,7 @@ within the `shorthand-resolver` template:
 
 ### proxy
 
-_String_
+`String`
 
 The proxy to use for http requests.
 
@@ -191,7 +191,7 @@ The proxy to use for http requests.
 
 ### https-proxy
 
-_String_
+`String`
 
 The proxy to use for https requests.
 
@@ -201,7 +201,7 @@ The proxy to use for https requests.
 
 ### user-agent
 
-_String_
+`String`
 
 Sets the User-Agent for each request made.
 Defaults to: `node/<process.version> <process.platform> <process.arch>`
@@ -212,7 +212,7 @@ Defaults to: `node/<process.version> <process.platform> <process.arch>`
 
 ### timeout
 
-_Number_
+`Number`
 
 The timeout to be used when making requests in milliseconds, defaults to
 `60000` ms.
@@ -223,7 +223,7 @@ The timeout to be used when making requests in milliseconds, defaults to
 
 ### strict-ssl
 
-_Boolean_
+`Boolean`
 
 Whether or not to do SSL key validation when making requests via https.
 
@@ -233,7 +233,7 @@ Whether or not to do SSL key validation when making requests via https.
 
 ### ca
 
-_Object_ or _String_
+`Object` or `String`
 
 The CA certificates to be used, defaults to null. This is similar to the
 registry key, specifying each CA to use for each registry endpoint.
@@ -249,7 +249,7 @@ only that specific signing authority.
 
 ### color
 
-_Boolean_
+`Boolean`
 
 Enable or disable use of colors in the CLI output. Defaults to true.
 
@@ -259,7 +259,7 @@ Enable or disable use of colors in the CLI output. Defaults to true.
 
 ### storage
 
-_Object_
+`Object`
 
 Where to store persistent data, such as cache, needed by bower. Defaults to
 paths that suit the OS/platform. Valid keys are `packages`, `registry`, `links`,
@@ -274,7 +274,7 @@ paths that suit the OS/platform. Valid keys are `packages`, `registry`, `links`,
 
 ### tmp
 
-_String_
+`String`
 
 Where to store temporary files and folders. Defaults to the system temporary
 directory suffixed with /bower.
@@ -285,7 +285,7 @@ directory suffixed with /bower.
 
 ### interactive
 
-_Boolean_
+`Boolean`
 
 Makes bower interactive, prompting whenever necessary. Defaults to `null` which
 means `auto`.
