@@ -21,7 +21,7 @@ $ bower init
   <a href="#description"><span class="nt">"description"</span>: "Physics-like animations for pretty particles"</a>,
   <a href="#main"><span class="nt">"main"</span>: [
     "js/motion.js",
-    "sass/motion.scss",
+    "sass/motion.scss"
   ]</a>,
   <a href="#dependencies"><span class="nt">"dependencies"</span>: {
     "get-size": "~1.2.2",
