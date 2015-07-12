@@ -131,7 +131,7 @@ Let's say your package looks like this:
 {% highlight json %}
 "main": [
   "js/motion.js",
-  "sass/motion.scss",
+  "sass/motion.scss"
 ]
 {% endhighlight %}
 
