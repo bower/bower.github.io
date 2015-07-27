@@ -53,6 +53,11 @@ Ruby binding for Bower commands (Uses node/execjs instead of shelling out)
 [**spagalloco/bower**](https://github.com/spagalloco/bower) <br>
 Bower integration for your Ruby apps (sprockets).
 
+## Java
+
+[**Dandelion**](http://dandelion.github.io/) <br>
+Dandelion provides an integration with Bower. All Bower components are scanned and automatically converted into vendor bundles. [See blog post](http://dandelion.github.io/blog/2015/07/26/dandelion-core-1.1.0-releases).
+
 ## Apps & IDEs
 
 [**CodeKit**](https://incident57.com/codekit/) <br>
