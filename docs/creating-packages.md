@@ -17,7 +17,6 @@ $ bower init
 
 <pre><code>{
   <a href="#name"><span class="nt">"name"</span>: "blue-leaf"</a>,
-  <a href="#version"><span class="nt">"version"</span>: "1.2.3"</a>,
   <a href="#description"><span class="nt">"description"</span>: "Physics-like animations for pretty particles"</a>,
   <a href="#main"><span class="nt">"main"</span>: [
     "js/motion.js",
@@ -74,15 +73,7 @@ The name of the package as stored in the registry.
 
 `String`
 
-**Ignored by Bower as git tags are used instead.**
-
-*Intended to be used in the future when Bower gets a real registry where you can publish actual packages, but for now just leave it out.*
-
-The package's semantic version number.
-
-* Must be a [semantic version](http://semver.org) parseable by [node-semver](https://github.com/isaacs/node-semver).
-* If publishing a folder, the version must be higher than the version stored in the registry, when republishing.
-* Version should only be required if you are not using git tags.
+**Deprecated. Use git or svn tags instead.** This field is ignored by Bower.
 
 ### description
 
