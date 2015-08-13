@@ -288,7 +288,7 @@ To register a new package:
 
 * The package name **must** adhere to the [bower.json spec](https://github.com/bower/bower.json-spec#name).
 * There **must** be a valid `bower.json` in the project's root directory.
-* Your package should use [semver](http://semver.org/) Git tags.
+* Your package should use [semver](http://semver.org/) Git tags. The `v` prefix is allowed.
 * Your package **must** be publically available at a Git endpoint (e.g., GitHub). Remember to push your Git tags!
 * For private packages (e.g. GitHub Enterprise), please consider running a private [Bower registry](https://github.com/bower/registry).
 
