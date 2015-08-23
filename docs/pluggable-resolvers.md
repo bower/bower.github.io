@@ -15,7 +15,7 @@ Pluggable Resolvers allow you to use resolvers created by 3rd party JavaScript d
 * Handling [Mercurial](https://mercurial.selenic.com/) or [Bazaar](http://bazaar.canonical.com/en/) repositories
 * Speeding up checkouts of services like [GitLab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/)
 * Allowing to use packages from [npm](https://www.npmjs.com/) or [component.io](https://github.com/component/component.github.io)
-* Proxying downloads through 3rd party service like [Artifactory](http://www.jfrog.com/open-source/#os-arti)
+* Proxying downloads through 3rd party service like [Artifactory](http://www.jfrog.com/artifactory/)
 * Implementing custom private registry (hosted on GitHub?)
 * Adding authentication support for private [GitHub Enterprise](https://enterprise.github.com/) instances
 
@@ -60,7 +60,7 @@ Here is how example `package.json` of custom resolver can look like:
 }
 {% endhighlight %}
 
-The `index.js` should exportk factory for resolver and few other functions, as follows:
+The `index.js` should export factory for resolver, as follows:
 
 {% highlight javascript %}
 var tmp = require('tmp');
