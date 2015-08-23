@@ -6,24 +6,24 @@ is_home: true
 
 # Pluggable Resolvers
 
-> This feature has been introduced in Bower 1.5, please make sure your Bower version is correct (`bower --version`)
+> This feature has been introduced in Bower 1.5
+>
+> Please make sure your Bower version is correct (`bower --version`)
 
-Custom Resolvers feature allows you to use resolvers created by 3rd party JavaScript developers (including overriding default resolvers used by Bower). To give few ides, it means anyone is able to write resolver:
+Pluggable Resolvers allow you to use resolvers created by 3rd party JavaScript developers (including overriding default resolvers used by Bower). To give few ides, it means anyone is able to write resolver:
 
 * Handling [Mercurial](https://mercurial.selenic.com/) or [Bazaar](http://bazaar.canonical.com/en/) repositories
 * Speeding up checkouts of services like [GitLab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/)
 * Allowing to use packages from [npm](https://www.npmjs.com/) or [component.io](https://github.com/component/component.github.io)
 * Proxying downloads through 3rd party service like [Artifactory](http://www.jfrog.com/open-source/#os-arti)
-* Implement custom private registry (hosted on GitHub?)
-* Add authentication support for private [GitHub Enterprise](https://enterprise.github.com/) instances
-* Postprocessing downloaded packages in some way (building them)
-* Overriding entries in `bower.json` or validating checksums
+* Implementing custom private registry (hosted on GitHub?)
+* Adding authentication support for private [GitHub Enterprise](https://enterprise.github.com/) instances
 
-## Usage
+## Using
 
-Custom Resolver is just an npm package that you install as `devDependency` in package.json of your repository, or install globally with `npm install -g`.
+Pluggable Resolver is just an npm package that you install as `devDependency` in package.json of your repository, or install globally with `npm install -g`.
 
-Them, you need to declare what custom resolver your project uses, by adding entries to `resolvers` section of [.bowerrc](/docs/config). For example:
+Them, you need to declare what Pluggable Resolvers your project uses, by adding entries to the `resolvers` section of [.bowerrc](/docs/config). To give an example:
 
 {% highlight json %}
 {
@@ -34,7 +34,7 @@ Them, you need to declare what custom resolver your project uses, by adding entr
 }
 {% endhighlight %}
 
-Bower tries to use resolver in order specified. If no custom resolver matches processed source, we fallback to default resolvers.
+Bower tries to use resolvers in the order specified. If no custom resolver matches source being processed, Bower fallbacks to default resolvers (git, github, filesystem, svn, registry).
 
 You can find list of available Bower resolvers on [npm website](https://www.npmjs.com/search?q=bower-resolver).
 
@@ -42,7 +42,7 @@ You can find list of available Bower resolvers on [npm website](https://www.npmj
 
 As mentioned, custom resolvers are just [npm](https://www.npmjs.com/) packages with specific API described below.
 
-The `package.json` should not list `bower` as a `dependency` or `peerDependency` (both have undesired behavior in npm 2.x, and we don't wan't you to use bower internals). Instead, you can check for proper environment in resolver's factory by reading provided `options.version` parameter and use any other packages on npm (like [request](https://www.npmjs.com/package/request)).
+The `package.json` should not list `bower` as a `dependency` or `peerDependency` (both have undesired behavior in npm 2.x, and we don't wan't you to use bower internals). Instead, you can check for proper environment in resolver's factory by reading provided `bower.version` parameter and use any other packages on npm (like [request](https://www.npmjs.com/package/request)).
 
 Packages should list `bower-resolver` as one of the `keywords` in `package.json`. Resolvers should also follow [semver](http://semver.org/) specification.
 
@@ -70,7 +70,7 @@ var tmp = require('tmp');
  * It is called only one time by Bower, to instantiate resolver.
  * You can instantiate here any caches or create helper functions.
  */
-module.exports = function resolver (options) {
+module.exports = function resolver (bower) {
 
   // Resolver factory returns an instance of resolver
   return {
@@ -122,11 +122,12 @@ module.exports = function resolver (options) {
 
 ## Resolver API
 
-### resolver(options: object): object
+### resolver(bower: object): object
 
 *Parameters:*
 
-  * `options: object`:
+  * `bower: object`:
+    * `version: string` - Bower's version that instantiates resolver. You can validate it.
     * `config: object` - Bower's [config](/docs/config/). You can ask authors to put extra configuration in it.
     * `logger: object` - Bower's [logger](https://github.com/bower/logger). Use it to output important warnings / information.
 
@@ -202,8 +203,8 @@ Downloads given endpoint and returns path to temporary directory.
 
   * `tempPath: string` - path to teporary directory with downloaded resource
   * `removeIgnores: boolean` - tells whether bower should remove files ignores in bower.json.
-  * `resolution: object` - tells whether bower should remove files ignores in bower.json. Defaults to true
+  * `resolution: object` - extra object that is saved in `.bower.json` and passed in `cached` field to the next `fetch` call. It can be used e.g. to download resources conditionally, for example by storing e-tag or last-modified time.
 
-The "resolution" field can be used e.g. to download resources conditionally, for example by storing e-tag or last-modified time.
+Method can also return a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) of the result.
 
-Don't forget to `npm publish` your package!
+**If method returns `undefined`, then Bower re-uses cached package.**
