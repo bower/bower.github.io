@@ -10,7 +10,7 @@ is_home: true
 >
 > Please make sure your Bower version is correct (`bower --version`)
 
-Pluggable Resolvers allow you to use resolvers created by 3rd party JavaScript developers (including overriding default resolvers used by Bower). To give few ides, it means anyone is able to write resolver:
+Pluggable Resolvers allow you to use resolvers created by 3rd party JavaScript developers (including overriding default resolvers used by Bower). To give a few ideas, it means anyone is able to write resolver for the following scenarios:
 
 * Handling [Mercurial](https://mercurial.selenic.com/) or [Bazaar](http://bazaar.canonical.com/en/) repositories
 * Speeding up checkouts of services like [GitLab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/)
@@ -21,9 +21,9 @@ Pluggable Resolvers allow you to use resolvers created by 3rd party JavaScript d
 
 ## Using
 
-Pluggable Resolver is just an npm package that you install as `devDependency` in package.json of your repository, or install globally with `npm install -g`.
+A Pluggable Resolver is just an npm package that you install as `devDependency` in the `package.json` of your repository, or install globally with `npm install -g`.
 
-Them, you need to declare what Pluggable Resolvers your project uses, by adding entries to the `resolvers` section of [.bowerrc](/docs/config). To give an example:
+Then, you need to declare what Pluggable Resolvers your project uses, by adding entries to the `resolvers` section of [.bowerrc](/docs/config). To give an example:
 
 {% highlight json %}
 {
@@ -34,19 +34,19 @@ Them, you need to declare what Pluggable Resolvers your project uses, by adding 
 }
 {% endhighlight %}
 
-Bower tries to use resolvers in the order specified. If no custom resolver matches source being processed, Bower fallbacks to default resolvers (git, github, filesystem, svn, registry).
+Bower tries to use resolvers in the order specified. If no custom resolver matches the source being processed, Bower fallbacks to default resolvers (git, github, filesystem, svn, registry).
 
-You can find list of available Bower resolvers on [npm website](https://www.npmjs.com/search?q=bower-resolver).
+You can find the list of available Bower resolvers on [npm website](https://www.npmjs.com/search?q=bower-resolver).
 
 ## Creating
 
-As mentioned, custom resolvers are just [npm](https://www.npmjs.com/) packages with specific API described below.
+As mentioned, custom resolvers are just [npm](https://www.npmjs.com/) packages with a specific API described below.
 
 The `package.json` should not list `bower` as a `dependency` or `peerDependency` (both have undesired behavior in npm 2.x, and we don't wan't you to use bower internals). Instead, you can check for proper environment in resolver's factory by reading provided `bower.version` parameter and use any other packages on npm (like [request](https://www.npmjs.com/package/request)).
 
 Packages should list `bower-resolver` as one of the `keywords` in `package.json`. Resolvers should also follow [semver](http://semver.org/) specification.
 
-Here is how example `package.json` of custom resolver can look like:
+Here is how an example `package.json` of a custom resolver can look like:
 
 {% highlight json %}
 {
