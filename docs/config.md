@@ -58,6 +58,7 @@ Example of valid environment variables:
 * [storage](#storage)
 * [tmp](#tmp)
 * [interactive](#interactive)
+* [shallow-clone-hosts](#shallow-clone-hosts)
 
 ### analytics
 
@@ -292,4 +293,14 @@ means `auto`.
 
 {% highlight json %}
 "interactive": true
+{% endhighlight %}
+
+### shallow-clone-hosts
+
+`Array`
+
+Works since Bower 1.5.2. It tells Bower what hosts can support git's shallow cloning (it works faster than full cloning). Whitelisting is needed, because [many hosts implement this feature incorrectly](https://github.com/bower/bower/issues/1764#issuecomment-88982826), and as a result Bower blocks indefinitely when installing git packages from them.
+
+{% highlight json %}
+  "shallow-clone-hosts": [ "bitbucket.org" ]
 {% endhighlight %}
