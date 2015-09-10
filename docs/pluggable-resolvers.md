@@ -170,6 +170,10 @@ Method can also return a [Promise](https://developer.mozilla.org/en-US/docs/Web/
 
 Bower selects one matching `version` from the result and passes matching `target` field to `fetch` method.
 
+Bower executes `releases` method only if user provides a range like `*` (the default) or `^1.2.3`. If user provides non-semver target, like `master`, bower skips directly to the `fetch` method of custom resolver.
+
+If package doesn't have any versions and you want to support default `*` range, you can return something like `[{ version: '0.0.0', target: 'master' }]`. Be sure to skip caching for such targets in the `fetch` method.
+
 *Parameters:*
 
   * `source: string` - source from bower.json, like `git://github.com/jquery/jquery.git`
