@@ -226,7 +226,7 @@ The timeout to be used when making requests in milliseconds, defaults to
 
 `Boolean`
 
-Whether or not to do SSL key validation when making requests via https.
+Whether or not to do SSL key validation when making requests via https, defaults to true.
 
 {% highlight json %}
 "strict-ssl": false
