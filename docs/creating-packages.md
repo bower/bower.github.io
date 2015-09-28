@@ -15,7 +15,7 @@ $ bower init
 
 ## Specification
 
-Detailed specification of `bower.json` file can be found in [bower/spec](https://github.com/bower/spec/blob/develop/json.md) repository.
+Detailed specification of `bower.json` file can be found in [bower/spec](https://github.com/bower/spec/blob/master/json.md) repository.
 
 ## Maintaining dependencies
 
