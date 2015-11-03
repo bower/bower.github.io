@@ -102,12 +102,12 @@ module.exports = function resolver (bower) {
     // You can use npm's "tmp" package to tmp directories
     // See the "Resolver API" section for details on this method
     fetch: function (endpoint, cached) {
-      var tempDir = tmp.dirSync();
-
       // If cached version of package exists, re-use it
       if (cached && cached.version) {
         return;
       }
+
+      var tempDir = tmp.dirSync();
 
       // ... download package to tempDir
 
