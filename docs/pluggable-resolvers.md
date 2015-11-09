@@ -38,13 +38,9 @@ Then, you need to declare what Pluggable Resolvers your project uses. There are 
 
 * pass the pluggable resolver via CLI in the form of
 
-    ```
-    bower install --config.resolvers="My-resolver1"
-    //or
-    bower install --config.resolvers="/Users/anypath/pkg"
-    //or
-    bower install --config.resolvers="/Users/path-without-comma/pkg, other-resolver-pkg-in-require-range"
-    ```
+   * `bower install --config.resolvers="My-resolver1"`  
+   * `bower install --config.resolvers="/Users/anypath/pkg"`  
+   * `bower install --config.resolvers="/Users/path-without-comma/pkg,other-resolver-pkg-in-require-range"`  
 
 Bower tries to use resolvers in the order specified. If no custom resolver matches the source being processed, Bower fallbacks to default resolvers (git, github, filesystem, svn, registry).
 
