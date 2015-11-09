@@ -41,6 +41,11 @@ Example of valid environment variables:
 * `bower_endpoint_parser` is evaluated as `endpoint-parser`
 * `bower_storage__cache` is evaluated as `storage.cache`
 
+Example of valid enviroment variables with Array convention:
+
+* `export bower_registry__search="[[http://localhost:8080(,)http://bower.herokuapp.com]]"; bower install`
+
+
 ## .bowerrc specification
 
 Detailed description of available configuration variables can be found in [bower/spec](https://github.com/bower/spec/blob/master/config.md) repository.
