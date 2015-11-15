@@ -158,6 +158,27 @@ a:hover img.logo {
   color: #543729;
 }
 
+/* ---- callout ---- */
+
+.callout {
+    background-color: #EF5734;
+    padding: 0.1em;
+    text-align: center;
+    font-size: 4vmin;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.35em;
+    border: 0.2em solid #543729;
+}
+
+.callout p {
+    margin: 0;
+}
+
+.callout a {
+    color: #FFCC2F;
+}
+
 /* ---- Responsive styles ---- */
 
 @media screen and (max-width: 667px) {
