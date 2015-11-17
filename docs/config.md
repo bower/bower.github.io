@@ -34,12 +34,12 @@ importance:
 Example of CLI arguments:
 
 * `--config.endpoint-parser=<parser>`
-* `--config.storage.cache=<cache>`
+* `--config.storage.packages=<packages_cache_dir>`
 
 Example of valid environment variables:
 
 * `bower_endpoint_parser` is evaluated as `endpoint-parser`
-* `bower_storage__cache` is evaluated as `storage.cache`
+* `bower_storage__packages` is evaluated as `storage.packages`
 
 ## .bowerrc specification
 
