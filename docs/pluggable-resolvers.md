@@ -50,7 +50,7 @@ You can find the list of available Bower resolvers on [npm website](https://www.
 
 As mentioned, custom resolvers are just [npm](https://www.npmjs.com/) packages with a specific API described below.
 
-The `package.json` should not list `bower` as a `dependency` or `peerDependency` (both have undesired behavior in npm 2.x, and we don't wan't you to use bower internals). Instead, you can check for proper environment in resolver's factory by reading provided `bower.version` parameter and use any other packages on npm (like [request](https://www.npmjs.com/package/request)).
+The `package.json` should not list `bower` as a `dependency` or `peerDependency` (both have undesired behavior in npm 2.x, and we don't want you to use bower internals). Instead, you can check for proper environment in resolver's factory by reading provided `bower.version` parameter and use any other packages on npm (like [request](https://www.npmjs.com/package/request)).
 
 Packages should list `bower-resolver` as one of the `keywords` in `package.json`. Resolvers should also follow [semver](http://semver.org/) specification.
 
