@@ -1,6 +1,19 @@
 markdown: kramdown
-permalink: pretty
+permalink: /:categories/:year/:title/
+paginate: 5
+paginate_path: /blog/page:num/
 exclude:
   - bower.json
   - package.json
   - Gruntfile.js
+
+defaults:
+  -
+    scope:
+      type: posts
+    values:
+      layout: blog
+      categories: blog
+
+github_avatars:
+  desandro: "https://avatars.githubusercontent.com/u/85566?v=3"

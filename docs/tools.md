@@ -1,6 +1,7 @@
 ---
 title: Tools
-layout: default
+layout: docs
+permalink: /docs/tools/
 ---
 
 <p class="lead">Bower is used together with other tools to integrate with all sorts of setups and workflows.</p>

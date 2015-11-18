@@ -9,6 +9,7 @@ module.exports = function( grunt ) {
           'css/base.css',
           'css/masthead.css',
           'css/modules.css',
+          'css/blog-post.css',
           'css/medias.css',
         ],
         dest: 'css/styles.css'

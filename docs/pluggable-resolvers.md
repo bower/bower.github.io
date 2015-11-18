@@ -1,7 +1,8 @@
 ---
 title: Bower
-layout: default
+layout: docs
 is_home: true
+permalink: /docs/pluggable-resolvers/
 ---
 
 # Pluggable Resolvers

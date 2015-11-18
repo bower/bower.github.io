@@ -641,7 +641,8 @@ a:hover img.logo {
   border-radius: 4px;
 }
 
-.network-nav .nav-docs a {
+.docs-page .network-nav .nav-docs a,
+.blog-page .network-nav .nav-blog a {
   color: #00ACEE;
 }
 
@@ -668,26 +669,26 @@ a:hover img.logo {
   padding: 0.2em 0;
 }
 
-/* ---- site-nav ---- */
+/* ---- docs-nav ---- */
 
-.site-nav li {
+.docs-nav li {
   font-size: 17px;
   font-weight: bold;
 }
 
-.site-nav a {
+.docs-nav a {
   color: #00acee;
 }
 
-.site-nav ul {
+.docs-nav ul {
   padding-left: 15px;
 }
 
-.site-nav ul li {
+.docs-nav ul li {
   list-style-type: none;
 }
 
-.site-nav ul li a {
+.docs-nav ul li a {
   font-size: 15px;
 }
 
@@ -815,10 +816,10 @@ a:hover img.logo {
   .container .main {
     margin-left: 0;
   }
-  .site-nav li {
+  .docs-nav li {
     border-bottom: 1px solid #eee;
   }
-  .site-nav li ul li:last-child {
+  .docs-nav li ul li:last-child {
     border-bottom: none;
   }
 }
@@ -931,31 +932,58 @@ h4:hover .header-anchor {
 .color-palette .color-name { display: block; }
 .color-palette .color-hex { display: block; }
 
+.blog-post {
+  position: relative;
+}
+
+.blog-post-author-avatar {
+  display: block;
+  border-radius: 4px;
+  max-width: 120px;
+}
+
+.blog-post-author-name {
+  margin-top: 4px;
+}
+
+@media only screen and (max-width: 680px) {
+  .blog-post-date,
+  .blog-post-author-avatar,
+  .blog-post-author-name {
+    display: inline-block;
+  }
+
+  .blog-post-author-avatar {
+    max-width: auto;
+    max-height: 50px;
+    margin: 0 5px;
+  }
+}
+
 /* ---- medias ---- */
 
 @media only screen and (max-width: 680px) {
     .sidebar {
         position: relative;
         width: 100%;
-        margin-left: -10px;
         text-align: center;
     }
 
-    .site-nav li {
+    .docs-nav li {
         padding: 5px 10px;
         margin: 3px;
         display: inline-block;
     }
 
-    .site-nav li:nth-child(even) {
+    .docs-nav li:nth-child(even) {
         background: #543729;
     }
 
-    .site-nav li:nth-child(odd) {
+    .docs-nav li:nth-child(odd) {
         background: #2BAF2B;
     }
 
-    .site-nav li a {
+    .docs-nav li a {
         color: #FFF;
     }
 

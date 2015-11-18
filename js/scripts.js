@@ -1,8 +1,10 @@
+/* jshint browser: true, undef: true, unused: true */
+
 document.addEventListener( 'DOMContentLoaded', domReady, false );
 
 function domReady() {
-  addAnchors()
-  addGlobalToc()
+  addAnchors();
+  addGlobalToc();
 }
 
 // create anchor links for headers
@@ -21,9 +23,12 @@ function addAnchors() {
 
 // insert TOC to sidebar
 function addGlobalToc() {
+  var docsNav = document.querySelector('.docs-nav');
+  if ( !docsNav ) {
+    return;
+  }
   var headers = document.querySelectorAll('.main h2');
-  var selector = '.site-nav a[href="' + window.location.pathname + '"]';
-  var currentNav = document.querySelector(selector).parentNode;
+  var currentNav = docsNav.querySelector('a[href="' + window.location.pathname + '"]').parentNode;
 
   var ul = document.createElement('ul');
   for ( var i=0, len = headers.length; i < len; i++ ) {
