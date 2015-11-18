@@ -1,6 +1,7 @@
 ---
 title: Configuration
-layout: default
+layout: docs
+permalink: /docs/config/
 ---
 
 <p class="lead">Bower can be configured using JSON in a .bowerrc file. For example:</p>

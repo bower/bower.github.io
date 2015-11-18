@@ -1,0 +1,27 @@
+.blog-post {
+  position: relative;
+}
+
+.blog-post-author-avatar {
+  display: block;
+  border-radius: 4px;
+  max-width: 120px;
+}
+
+.blog-post-author-name {
+  margin-top: 4px;
+}
+
+@media only screen and (max-width: 680px) {
+  .blog-post-date,
+  .blog-post-author-avatar,
+  .blog-post-author-name {
+    display: inline-block;
+  }
+
+  .blog-post-author-avatar {
+    max-width: auto;
+    max-height: 50px;
+    margin: 0 5px;
+  }
+}

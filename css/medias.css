@@ -4,25 +4,24 @@
     .sidebar {
         position: relative;
         width: 100%;
-        margin-left: -10px;
         text-align: center;
     }
 
-    .site-nav li {
+    .docs-nav li {
         padding: 5px 10px;
         margin: 3px;
         display: inline-block;
     }
 
-    .site-nav li:nth-child(even) {
+    .docs-nav li:nth-child(even) {
         background: #543729;
     }
 
-    .site-nav li:nth-child(odd) {
+    .docs-nav li:nth-child(odd) {
         background: #2BAF2B;
     }
 
-    .site-nav li a {
+    .docs-nav li a {
         color: #FFF;
     }
 
