@@ -18,32 +18,35 @@ Pluggable resolvers were introduced in Bower 1.5. Please make sure your Bower ve
 
 ## Using
 
-A Pluggable resolver is just an npm package that you install as `devDependency` in package.json of your repository, or install globally with `npm install -g`.
+
+A Pluggable Resolver is just an npm package that you install as `devDependency` in the `package.json` of your repository, or install globally with `npm install -g`.
 
 Declare what Pluggable resolvers your project uses by adding entries to the `resolvers` section of [.bowerrc](/docs/config).
 
-{% highlight json %}
-{
-  "resolvers": [
-    "bitbucket-resolver",
-    "github-enterprise-resolver"
-  ]
-}
-{% endhighlight %}
 
-Bower tries to use resolvers in the order specified. If no custom resolver matches source being processed, Bower fallbacks to default resolvers (git, github, filesystem, svn, registry).
+    {% highlight json %}
+    {
+      "resolvers": [
+        "bitbucket-resolver",
+        "github-enterprise-resolver"
+      ]
+    }
+    {% endhighlight %}
 
-You can find list of available Bower resolvers on [npm website](https://www.npmjs.com/search?q=bower-resolver).
+
+Bower tries to use resolvers in the order specified. If no custom resolver matches the source being processed, Bower fallbacks to default resolvers (git, github, filesystem, svn, registry).
+
+You can find the list of available Bower resolvers on [npm website](https://www.npmjs.com/search?q=bower-resolver).
 
 ## Creating
 
-As mentioned, custom resolvers are [npm](https://www.npmjs.com/) packages with specific API described below.
+As mentioned, custom resolvers are [npm](https://www.npmjs.com/) packages with specific a API described below.
 
-The `package.json` should not list `bower` as a `dependency` or `peerDependency` (both have undesired behavior in npm 2.x, and we don't wan't you to use bower internals). Instead, you can check for proper environment in resolver's factory by reading provided `bower.version` parameter and use any other packages on npm (like [request](https://www.npmjs.com/package/request)).
+The `package.json` should not list `bower` as a `dependency` or `peerDependency` (both have undesired behavior in npm 2.x, and we don't want you to use bower internals). Instead, you can check for proper environment in resolver's factory by reading provided `bower.version` parameter and use any other packages on npm (like [request](https://www.npmjs.com/package/request)).
 
 Packages should list `bower-resolver` as one of the `keywords` in `package.json`. Resolvers should also follow [semver](http://semver.org/) specification.
 
-Here is how example `package.json` of custom resolver can look like:
+Here is how an example `package.json` of a custom resolver can look like:
 
 {% highlight json %}
 {
@@ -99,12 +102,12 @@ module.exports = function resolver (bower) {
     // You can use npm's "tmp" package to tmp directories
     // See the "Resolver API" section for details on this method
     fetch: function (endpoint, cached) {
-      var tempDir = tmp.dirSync();
-
       // If cached version of package exists, re-use it
       if (cached && cached.version) {
         return;
       }
+
+      var tempDir = tmp.dirSync();
 
       // ... download package to tempDir
 
