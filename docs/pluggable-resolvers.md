@@ -1,7 +1,6 @@
 ---
 title: Pluggable Resolvers
 layout: docs
-is_home: true
 permalink: /docs/pluggable-resolvers/
 ---
 
