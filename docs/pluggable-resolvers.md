@@ -23,16 +23,14 @@ A Pluggable Resolver is just an npm package that you install as `devDependency` 
 
 Declare what Pluggable resolvers your project uses by adding entries to the `resolvers` section of [.bowerrc](/docs/config).
 
-
-    {% highlight json %}
-    {
-      "resolvers": [
-        "bitbucket-resolver",
-        "github-enterprise-resolver"
-      ]
-    }
-    {% endhighlight %}
-
+{% highlight json %}
+{
+  "resolvers": [
+    "bitbucket-resolver",
+    "github-enterprise-resolver"
+  ]
+}
+{% endhighlight %}
 
 Bower tries to use resolvers in the order specified. If no custom resolver matches the source being processed, Bower fallbacks to default resolvers (git, github, filesystem, svn, registry).
 
