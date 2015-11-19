@@ -1,5 +1,5 @@
 ---
-title: Creating packages
+title: Creating Packages
 layout: docs
 permalink: /docs/creating-packages/
 ---
