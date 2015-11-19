@@ -118,7 +118,7 @@ module.exports = function resolver (bower) {
 }
 {% endhighlight %}
 
-If you need something more solid, see this real world example: [Mercurial Resolver](https://github.com/phenomnomnominal/mercurial-bower-resolver).
+If you need something more solid, see this real world example: [Mercurial Resolver](https://github.com/phenomnomnominal/mercurial-bower-resolver){:target="_blank"}.
 
 ## Resolver API
 
