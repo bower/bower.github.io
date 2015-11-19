@@ -1,6 +1,7 @@
 ---
 title: API
-layout: default
+layout: docs
+permalink: /docs/api/
 ---
 
 

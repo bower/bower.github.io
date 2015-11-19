@@ -1,6 +1,8 @@
 ---
-title: Pluggable resolvers
-layout: default
+title: Pluggable Resolvers
+layout: docs
+is_home: true
+permalink: /docs/pluggable-resolvers/
 ---
 
 <p class="lead">Pluggable resolvers allow you to use resolvers created by 3rd party JavaScript developers — including overriding default resolvers used by Bower.</p>

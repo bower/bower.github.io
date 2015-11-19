@@ -1,0 +1,42 @@
+{% include html-head.html %}
+
+  <title>{{ page.title }} &middot; Bower blog</title>
+  <meta property="og:title" content="{{ page.title }} &middot; Bower blog">
+</head>
+<body class="blog-page">
+
+  <header id="masthead">
+    <div class="container">
+
+      {% include network-nav.html %}
+
+      <a href="/">
+        <img class="logo" src="/img/bower-logo.png" alt="Bower logo" />
+      </a>
+
+      <h1 class="page-title">Blog</h1>
+
+    </div>
+  </header>
+
+  <div id="content">
+
+    <div class="container">
+
+      {% assign post = page %}
+      {% include blog-post.html %}
+
+    </div>
+
+    <div class="container">
+      <div class="sidebar"></div>
+      <div class="main">
+        <footer class="site-footer">
+          <p class="issue"><a href="https://github.com/bower/bower.github.io/issues">Help improve this post. Open an issue or pull request.</a></p>
+        </footer>
+      </div>
+    </div>
+
+  </div>
+
+{% include html-foot.html %}

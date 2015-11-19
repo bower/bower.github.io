@@ -1,0 +1,48 @@
+---
+title: Blog
+is_blog_index: true
+---
+
+{% include html-head.html %}
+
+  <title>Bower blog</title>
+  <meta property="og:title" content="Bower blog">
+</head>
+<body class="blog-page">
+
+  <header id="masthead">
+    <div class="container">
+
+      {% include network-nav.html %}
+
+      <a href="/">
+        <img class="logo" src="/img/bower-logo.png" alt="Bower logo" />
+      </a>
+
+      <h1 class="page-title">Blog</h1>
+
+    </div>
+  </header>
+
+  <div id="content">
+
+    <div class="container">
+
+      {% for post in paginator.posts %}
+        {% include blog-post.html %}
+      {% endfor %}
+
+    </div>
+
+    <div class="container">
+      <div class="sidebar"></div>
+      <div class="main">
+        <footer class="site-footer">
+          <p class="issue"><a href="https://github.com/bower/bower.github.io/issues">Help improve the blog. Open an issue or pull request.</a></p>
+        </footer>
+      </div>
+    </div>
+
+  </div>
+
+{% include html-foot.html %}

@@ -1,0 +1,66 @@
+{% include html-head.html %}
+
+  <title>{% unless page.is_home %}{{ page.title }} &middot; {% endunless %}Bower</title>
+  <meta property="og:title" content="{% unless page.is_home %}{{ page.title }} &middot; {% endunless %}Bower">
+</head>
+<body class="docs-page">
+
+  <header id="masthead">
+    <div class="container">
+
+      {% include network-nav.html %}
+
+      {% if page.is_home %}
+        <div class="brand">
+          <img src="/img/bower-logo.png" class="logo" alt="Bower logo" />
+          <h1>Bower</h1>
+          <h3 class="tagline">A package manager for the&nbsp;web</h3>
+        </div>
+      {% else %}
+        <a href="/">
+          <img class="logo" src="/img/bower-logo.png" alt="Bower logo" />
+        </a>
+
+        <h1 class="page-title">{{ page.title }}</h1>
+      {% endif %}
+
+    </div>
+  </header>
+
+  <div id="content">
+
+    <div class="container">
+
+      <div class="sidebar">
+        <ul class="docs-nav nav">
+          <li class="nav-home"><a href="/">Home</a></li>
+          <li class="nav-creating"><a href="/docs/creating-packages/">Creating Packages</a></li>
+          <li class="nav-api"><a href="/docs/api/">API</a></li>
+          <li class="nav-config"><a href="/docs/config/">Configuration</a></li>
+          <li class="nav-config"><a href="/docs/pluggable-resolvers/">Pluggable Resolvers</a></li>
+          <li class="nav-tools"><a href="/docs/tools/">Tools</a></li>
+          <li class="nav-about"><a href="/docs/about/">About</a></li>
+        </ul>
+
+        <ul class="extra-nav nav">
+          <li class="nav-github"><a href="https://github.com/bower/bower">Bower on GitHub</a></li>
+          <li class="nav-bountysource"><a href="https://salt.bountysource.com/teams/bower">Support Bower</a></li>
+        </ul>
+      </div>
+
+      <div class="main">
+        {{ content }}
+
+
+        <footer class="site-footer">
+          <p class="issue"><a href="https://github.com/bower/bower.github.io/issues">Help improve these docs. Open an issue or pull request.</a></p>
+        </footer>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+{% include html-foot.html %}

@@ -1,6 +1,7 @@
 ---
-title: Creating packages
-layout: default
+title: Creating Packages
+layout: docs
+permalink: /docs/creating-packages/
 ---
 
 ## bower.json
