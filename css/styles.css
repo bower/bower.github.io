@@ -622,12 +622,16 @@ a:hover img.logo {
 #masthead .container { position: relative; }
 
 .network-nav {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 2; /* on top of brand */
+  float: right;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 15px;
+  z-index: 2; /* on top of brand */
+}
+
+.network-nav::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 .network-nav li {
@@ -635,7 +639,7 @@ a:hover img.logo {
 }
 
 .network-nav a {
-  color: #2baf2b;
+  color: #FFCC2F;
   display: block;
   padding: 0.2em 15px;
   border-radius: 4px;
@@ -643,12 +647,12 @@ a:hover img.logo {
 
 .docs-page .network-nav .nav-docs a,
 .blog-page .network-nav .nav-blog a {
-  color: #00ACEE;
+  color: #CECECE;
 }
 
 .network-nav a:hover {
+  background: #2BAF2B;
   text-decoration: none;
-  background: white;
 }
 
 /* ---- sidebar ---- */
@@ -737,8 +741,9 @@ a:hover img.logo {
   display: block;
   position: absolute;
   left: -20px;
-  top: 20px;
+  top: 0;
   width: 340px;
+  z-index: 2;
 }
 
 .brand .tagline {
@@ -825,6 +830,14 @@ a:hover img.logo {
 }
 
 /* ---- nav ---- */
+.nav-container {
+  background: rgb(239, 87, 52);
+  border-bottom: 1px solid #543729;
+  padding: 5px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
 
 .nav {
   list-style: none;
