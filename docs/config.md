@@ -43,7 +43,7 @@ Example of valid environment variables:
 
 Example of valid enviroment variables with Array convention:
 
-* `export bower_registry__search="[[http://localhost:8080(,)http://bower.herokuapp.com]]"; bower install`
+* `export bower_registry__search='["http://localhost:8080", "http://bower.herokuapp.com"]'; bower install`
 
 
 ## .bowerrc specification
