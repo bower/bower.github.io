@@ -4,7 +4,7 @@ layout: docs
 is_home: true
 ---
 
-<p class="lead">Web apps are made of lots of things &mdash; frameworks, libraries, assets, utilities, and rainbows. Bower works with you to manage all these things -- except for the rainbows (Bower will do that for you).</p>
+<p class="lead">Web sites are made of lots of things — frameworks, libraries, assets, and utilities. Bower manages all these things for you.</p>
 
 To [get started](#getting-started), Bower works by fetching and installing [packages](/search) from all over, taking care of hunting, finding, downloading, and saving the stuff you're looking for. Bower keeps track of these packages in a manifest file, [`bower.json`](/docs/creating-packages/#bowerjson). How you use [packages](/search) is up to you. Bower provides hooks to facilitate using packages in your [tools and workflows](/docs/tools).
 
