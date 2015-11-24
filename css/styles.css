@@ -202,7 +202,7 @@ svg:not(:root) {
  */
 
 figure {
-  margin: 1em 40px;
+  margin: 0;
 }
 
 /**
@@ -444,7 +444,7 @@ html, body {
 }
 
 body {
-  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 16px "Droid Sans", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   padding: 0;
   margin: 0;
@@ -591,7 +591,7 @@ code .nv {
 #masthead {
   background: #FFCC2F;
   color: #543729;
-  padding: 10px 0;
+  padding: 0;
   min-height: 180px;
   margin-bottom: 20px;
 }
@@ -619,15 +619,24 @@ a:hover img.logo {
 
 /* ---- network-nav ---- */
 
+.nav-container {
+  background: #543729;
+  padding: 1em;
+  width: 100%;
+}
+ .nav-container {
+    clear: both;
+    content: "";
+    display: table
+ }
+
 #masthead .container { position: relative; }
 
 .network-nav {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 2; /* on top of brand */
+  float: right;
   font-weight: bold;
   font-size: 16px;
+  z-index: 2; /* on top of brand */
 }
 
 .network-nav li {
@@ -654,9 +663,9 @@ a:hover img.logo {
 /* ---- sidebar ---- */
 
 .sidebar {
-  position: absolute;
   left: 10px;
-  top: 0;
+  position: absolute;
+  top: 140px;
   width: 200px;
 }
 
@@ -719,12 +728,11 @@ a:hover img.logo {
 
 .brand h1 {
   display: inline-block;
-  font-size: 66px;
-  margin: 0;
-  line-height: 80px;
   color: #EF5734;
+  font-family: "Anton", sans-serif;
   font-size: 100px;
   line-height: 1;
+  margin: 0;
   padding-top: 60px;
 }
 
@@ -737,7 +745,7 @@ a:hover img.logo {
   display: block;
   position: absolute;
   left: -20px;
-  top: 20px;
+  top: -40px;
   width: 340px;
 }
 
@@ -881,8 +889,11 @@ h4:hover .header-anchor {
 /* ---- lead ---- */
 
 .lead {
+  background: #F5F5F5;
+  border: 1px solid #D8D8D8;
   font-size: 1.6em;
   line-height: 1.25;
+  padding: 1em;
 }
 
 /* ---- about imgs ---- */
