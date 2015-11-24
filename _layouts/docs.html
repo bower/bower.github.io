@@ -5,10 +5,11 @@
 </head>
 <body class="docs-page">
 
+  {% include navigation.html %}
+
   <header id="masthead">
     <div class="container">
 
-      {% include network-nav.html %}
 
       {% if page.is_home %}
         <div class="brand">
@@ -48,6 +49,8 @@
         </ul>
       </div>
 
+      <p class="lead">Web sites are made of lots of things — frameworks, libraries, assets, and utilities. Bower manages all these things for you.</p>
+
       <div class="main">
         {{ content }}
 
@@ -59,8 +62,6 @@
       </div>
 
     </div>
-
-
   </div>
 
 {% include html-foot.html %}
