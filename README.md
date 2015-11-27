@@ -11,6 +11,8 @@ bower install
 npm install
 # run any tasks
 grunt
+# install jekyll (You may need sudo here)
+gem install jekyll
 # serve site to view locally
 jekyll serve
 ```
