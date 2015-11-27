@@ -70,6 +70,9 @@ Build iOS, Android and Windows Phone 8 hybrid apps using a single pure HTML5, CS
 [**Webstorm**](https://www.jetbrains.com/webstorm) <br>
 With integrated Bower package manager, you’ll be able to search for, install and manage client-side libraries and frameworks for your project with ease, right in the IDE.
 
+[**NetBeans**](https://netbeans.org/) <br>
+Netbeans can resolve Bower dependencies for you from within the IDE. [See blog post](https://blogs.oracle.com/geertjan/entry/bower_and_node_js_in)
+
 [**Visual Studio 2015**](https://visualstudio.com/free) <br>
 Visual Studio has built-in support for searching, installation and managing of Bower packages. This includes rich auto-completion in `bower.json` to Bower specific commands and UI elements in Solution Explorer.
 
