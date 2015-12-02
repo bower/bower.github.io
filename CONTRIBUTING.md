@@ -1,6 +1,6 @@
 # Contributing
 
-If you want to contribute to the bower website, [fill out the support declaration](http://goo.gl/forms/P1ndzCNoiG) to gain access to the repository. Alternatively, you can just fork the repository and submit pull requests. There are a two things you can do:
+If you want to contribute to the bower website, [fill out the support declaration](http://goo.gl/forms/P1ndzCNoiG) to gain access to the repository. Alternatively, you can just fork the repository and submit pull requests. There are a few things that you can do:
 
 * [Write documentation](https://github.com/bower/bower.github.io/blob/master/CONTRIBUTING.md#writing-documentation)
 * [Improve the website design](https://github.com/bower/bower.github.io/blob/master/CONTRIBUTING.md#improving-the-website-design)
