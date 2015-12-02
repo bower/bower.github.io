@@ -2,8 +2,8 @@
 
 If you want to contribute to the bower website, [fill out the support declaration](http://goo.gl/forms/P1ndzCNoiG) to gain access to the repository. Alternatively, you can just fork the repository and submit pull requests. There are a two things you can do:
 
-* [Write documentation](https://github.com/bower/bower.github.io/blob/master/CONTRIBUTING.md#writingdocumentation)
-* [Improve the website design](https://github.com/bower/bower.github.io/blob/master/CONTRIBUTING.md#improvingthewebsitedesign)
+* [Write documentation](https://github.com/bower/bower.github.io/blob/master/CONTRIBUTING.md#writing-documentation)
+* [Improve the website design](https://github.com/bower/bower.github.io/blob/master/CONTRIBUTING.md#improving-the-website-design)
 
 ## Writing Documentation
 
@@ -36,8 +36,8 @@ When improving the design, keep this in mind:
 
 * Keep the page simple
 * Don't add too many pictures (it makes the place look ugly)
-* Stick with the [bower color palette](https://github.com/bower/bower.github.io/blob/master/CONTRIBUTING.md#bowercolorpalette)
-* It's a good idea to follow the [commit rules](https://github.com/bower/bower.github.io/blob/master/CONTRIBUTING.md#commitrules)
+* Stick with the [bower color palette](https://github.com/bower/bower.github.io/blob/master/CONTRIBUTING.md#bower-color-palette)
+* It's a good idea to follow the [commit rules](https://github.com/bower/bower.github.io/blob/master/CONTRIBUTING.md#commit-rules)
 
 ## Bower Color Palette
 
