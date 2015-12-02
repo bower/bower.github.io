@@ -4,6 +4,7 @@ If you want to contribute to the bower website, [fill out the support declaratio
 
 * [Write documentation](https://github.com/bower/bower.github.io/blob/master/CONTRIBUTING.md#writing-documentation)
 * [Improve the website design](https://github.com/bower/bower.github.io/blob/master/CONTRIBUTING.md#improving-the-website-design)
+* [Report website bugs or errors](https://github.com/bower/bower.github.io/blob/master/CONTRIBUTING.md#reporting-website-bugs-or-errors)
 
 ## Writing Documentation
 
@@ -62,3 +63,17 @@ Small changes | Grammar fixes, adding documentation | Direct commit
 Bigger changes | Website redesign, changing the front page | Pull request, discussion about pros/cons, and then merge
 
 If you're unsure, submit a pull request.
+
+## Reporting Website Bugs or Errors
+
+Please open an [issue](https://github.com/bower/bower.github.io/issues) if you find any bugs.
+
+Example issue:
+
+```
+I need help with blah blah blah.
+The command `blah` isn't working! Here is my command-line output:
+
+> NPM ERR! blah blah blah blah
+> NPM ERR! blah blah blah blah
+```
