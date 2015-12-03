@@ -24,4 +24,4 @@ This site has two main audiences:
 1. New users who are using Bower for the first time
 2. Returning users who are learning more
 
-Focus on clarity and brievity. Be direct. Help users find their solutions fast.
+Focus on clarity and brievity. Be direct. Help users find their solutions fast. Refer to [CONTRIBUTING.md](https://github.com/bower/bower.github.io/blob/master/CONTRIBUTING.md) for more information.
