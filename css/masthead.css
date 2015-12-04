@@ -106,6 +106,13 @@ a:hover img.logo {
   font-size: 14px;
 }
 
+.extra-nav-icon {
+  width: 1.4em;
+  height: 1.4em;
+  fill: #008ec4;
+  vertical-align: middle;
+}
+
 /* ---- page-title ---- */
 
 .page-title {

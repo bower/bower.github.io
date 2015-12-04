@@ -5,6 +5,20 @@
 </head>
 <body class="docs-page">
 
+{% comment %} SVG symbols for inline SVG icons {% endcomment %}
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">
+  <symbol id="symbol-twitter-logo" viewBox="0 0 512 512">
+    <path d="M512 97c-19 8-39 14-60 16 22-13 38-34 46-58-20 12-43 21-67 25-19-19-46-32-77-32-58 0-117 52-102 129-87-4-165-46-216-110-24 40-19 107 32 140-17 0-33-5-48-13v1c0 51 36 93 84 103-15 4-34 5-47 2 13 42 52 72 98 73-47 36-96 49-155 44 46 30 102 47 161 47 197 0 306-168 299-312 20-15 38-34 52-55z"/>
+  </symbol>
+  <symbol id="symbol-github-logo" viewBox="0 0 512 512">
+    <path d="M256 0C115 0 0 115 0 256c0 113 73 209 175 243 13 2 18-5 18-12v-48c-64 12-81-16-86-30-3-7-15-30-26-36-9-5-22-17 0-17 20 0 35 19 39 26 23 39 60 28 75 21 2-17 9-28 16-34-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-33 3-68 0 0 21-7 70 26 20-6 42-9 64-9s43 3 64 9c49-33 70-26 70-26 14 35 5 61 3 68 16 18 26 41 26 69 0 98-60 120-117 126 9 8 17 23 17 47v70c0 7 5 15 18 12 100-33 173-129 173-242C512 115 397 0 256 0z"/>
+  </symbol>
+  <symbol id="symbol-bountysource-icon" viewBox="0 0 512 512">
+    <path d="M442 465h-371C58 464 48 454 48 442v-371C48 58 58 48 71 48h371c12 0 23 10 23 23v371c0 13-10 23-22 23zm-272-56c12 5 56 19 91 19 53 0 85-19 102-58 14-31 5-70-21-87-12-8-11-7 1-15 28-17 51-34 51-81 0-52-58-100-143-100-82 0-133 46-133 83 0 3 1 12 4 12 16 0 40-62 123-62 44 0 113 18 113 65 0 43-76 61-98 72-12 6-11 18 0 25 10 6 74 6 74 50 0 32-19 64-78 64-43 0-49-13-49-21 0-11-.5-48 6-85 6-36 17-69 26-90 4-9-2-19-20-19-13 0-17 9-26 26-17 33-32 76-32 179 0 12 3 21 8 23z"/>
+  </symbol>
+</svg>
+
+
   <header id="masthead">
     <div class="container">
 
@@ -43,8 +57,24 @@
         </ul>
 
         <ul class="extra-nav nav">
-          <li class="nav-github"><a href="https://github.com/bower/bower">Bower on GitHub</a></li>
-          <li class="nav-bountysource"><a href="https://salt.bountysource.com/teams/bower">Support Bower</a></li>
+          <li><a href="https://github.com/bower/bower">
+            <svg class="extra-nav-icon">
+              <use xlink:href="#symbol-github-logo"></use>
+            </svg>
+            Bower on GitHub
+          </a></li>
+          <li><a href="https://twitter.com/bower">
+            <svg class="extra-nav-icon">
+              <use xlink:href="#symbol-twitter-logo"></use>
+            </svg>
+            @bower
+          </a></li>
+          <li><a href="https://salt.bountysource.com/teams/bower">
+            <svg class="extra-nav-icon">
+              <use xlink:href="#symbol-bountysource-icon"></use>
+            </svg>
+            Support on Bountysource
+          </a></li>
         </ul>
       </div>
 
