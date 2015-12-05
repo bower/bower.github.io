@@ -166,9 +166,29 @@ a:hover img.logo {
   color: #543729;
 }
 
+.btn {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00ACEE;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn:hover {
+  border-color: #EF5734;
+}
+
+.menu-btn{
+  display: none;
+}
+
+
 /* ---- Responsive styles ---- */
 
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 680px) {
   #masthead {
     margin-bottom: 10px;
   }
@@ -226,6 +246,15 @@ a:hover img.logo {
     position: relative;
     top: auto;
     width: 100%;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+  }
+  .sidebar.extended{
+    height: 630px;
+  }
+  .blog-page .sidebar{
+    height: auto;
   }
   .sidebar .nav a {
     padding: 0.4em 0;
@@ -235,8 +264,19 @@ a:hover img.logo {
   }
   .docs-nav li {
     border-bottom: 1px solid #eee;
+    padding: 5px 0;
   }
   .docs-nav li ul li:last-child {
     border-bottom: none;
+  }
+  .menu-btn{
+    display: block;
+    max-width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    text-align: center;
+    height: 45px;
+    padding: 8px 20px 0 20px;
+    margin: 20px auto;
   }
 }
