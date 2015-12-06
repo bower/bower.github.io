@@ -12,7 +12,7 @@ Bower can manage components that contain HTML, CSS, JavaScript, fonts or even im
 
 To [get started](#getting-started), Bower works by fetching and installing [packages](/search) from all over, taking care of hunting, finding, downloading, and saving the stuff you're looking for. Bower keeps track of these packages in a manifest file, [`bower.json`](/docs/creating-packages/#bowerjson). How you use [packages](/search) is up to you. Bower provides hooks to facilitate using packages in your [tools and workflows](/docs/tools).
 
-Bower is optimized for the front-end. If a package (let's use jQuery as an example) has multiple packages depending on it, Bower will download jQuery just once. This is known as a flat dependency graph and it helps reduce page load. (In this case, NPM would download multiple versions of jQuery).
+Bower is optimized for the front-end. If a package (let's use jQuery as an example) has multiple packages depending on it, Bower will download jQuery just once. This is known as a flat dependency graph and it helps reduce page load. (NPM, on the other hand, will download a version of jQuery for every package that depends on it).
 
 ## Install Bower
 
