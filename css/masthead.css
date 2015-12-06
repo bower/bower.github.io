@@ -191,6 +191,7 @@ a:hover img.logo {
 @media screen and (max-width: 680px) {
   #masthead {
     margin-bottom: 10px;
+    min-height: auto;
   }
   .network-nav {
     display: table;
@@ -221,7 +222,15 @@ a:hover img.logo {
     min-height: 0;
     text-align: center
   }
-  .logo, .brand .logo {
+  .logo {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    left: auto;
+    top: 5px;
+  }
+  .brand .logo {
+    display: block;
     position: relative;
     left: auto;
     top: auto;
@@ -231,9 +240,11 @@ a:hover img.logo {
   .page-title {
     font-size: 32px;
     padding: 7px 0 5px 0;
-    text-align: center;
+    display: inline-block;
   }
+
   .brand h1 {
+    display: block;
     padding-top: 0;
     font-size: 48px;
   }
