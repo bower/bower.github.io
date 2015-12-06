@@ -7,7 +7,10 @@ permalink: /docs/api/
 
 ## Commands
 
-Command line reference
+Command line reference. [API Reference Cheat Sheet
+PDF](../img/bower-api-cheat-sheet.pdf)
+
+---
 
 * [cache](#cache)
 * [help](#help)
