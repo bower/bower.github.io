@@ -418,7 +418,7 @@ Allows running commands as root. Bower is a user command, there is no need to ex
 
 ## Consuming a package
 
-Bower makes source mapping available. This can be used by [build tools](/docs/tools) to
+You can use [build tools](/docs/tools) to
 easily consume Bower packages.
 
 If you use [`bower list --paths`](#list) or `bower list --paths --json`, you will get a simple name-to-path mapping:
