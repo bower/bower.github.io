@@ -6,7 +6,7 @@ is_home: true
 
 <p class="lead">Web sites are made of lots of things — frameworks, libraries, assets, and utilities. Bower manages all these things for you.</p>
 
-Keeping track of all these packages and making sure they are up to date (or set to the specific verions you need) is tricky. Bower to the rescue! 
+Keeping track of all these packages and making sure they are up to date (or set to the specific versions you need) is trick. Bower to the rescue!
 
 Bower isn't limited to JavaScript libraries and can manage any front-end components, including CSS (e.g. Bootstrap), HTML or static assets like images. Bower doesn't concatenate or minify code or do anything else. All Bower does is install the right versions of the packages you need and their dependencies. It's completely dedicated to managing your packages.
 
