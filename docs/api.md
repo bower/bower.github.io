@@ -225,7 +225,7 @@ The link functionality allows developers to easily test their packages. Linking 
 
 Using 'bower link' in a project folder will create a global link. Then, in some other package, `bower link <name>` will create a link in the components folder pointing to the previously created link.
 
-This allows to easily test a package because changes will be reflected immediately. When the link is no longer necessary, simply remove it with `bower uninstall <name>`.
+This allows you to easily test a package because changes will be reflected immediately. When the link is no longer necessary, simply remove it with `bower uninstall <name>`.
 
 ### list
 
@@ -418,7 +418,7 @@ Allows running commands as root. Bower is a user command, there is no need to ex
 
 ## Consuming a package
 
-Bower makes available source mapping. This can be used by [build tools](/docs/tools) to
+Bower makes source mapping available. This can be used by [build tools](/docs/tools) to
 easily consume Bower packages.
 
 If you use [`bower list --paths`](#list) or `bower list --paths --json`, you will get a simple name-to-path mapping:
@@ -470,7 +470,7 @@ Commands emit four types of events: `log`, `prompt`, `end`, `error`.
 For a better idea of how this works, you may want to check out [our bin
 file](https://github.com/bower/bower/blob/master/bin/bower).
 
-When using bower programmatically, prompting is disabled by default. Though you can enable it when calling commands with `interactive: true` in the config.
+When using Bower programmatically, prompting is disabled by default. You can enable it when calling commands with `interactive: true` in the config.
 This requires you to listen for the `prompt` event and handle the prompting yourself. The easiest way is to use the [inquirer](https://npmjs.org/package/inquirer) npm module like so:
 
 {% highlight js %}
@@ -501,10 +501,10 @@ $ bower install --config.interactive=false
 Bower works by default in interactive mode. There are few ways of disabling it:
 
 - passing `CI=true` in environment
-- passing `--config.interactive=false` to bower command
-- attaching a pipe to bower (e.g. `bower install | cat`)
+- passing `--config.interactive=false` to Bower command
+- attaching a pipe to Bower (e.g. `bower install | cat`)
 - redirecting output to file (e.g. `bower install > logs.txt`)
-- running bower through its [Programmatic API](#programmatic-api)
+- running Bower through its [Programmatic API](#programmatic-api)
 
 When interactive mode is disabled:
 
@@ -517,7 +517,7 @@ When interactive mode is disabled:
 
 ## Using local cache
 
-Bower supports installing packages from its local cache -- without internet connection -- if the packages were installed before.
+Bower supports installing packages from its local cache -- without an internet connection -- if the packages were installed before.
 
 {% highlight sh %}
 $ bower install <package> --offline
