@@ -42,3 +42,13 @@ function addGlobalToc() {
   }
   currentNav.insertBefore( ul, null );
 }
+
+// extend/collapse .sidebar on small screens
+var sidebar = document.getElementsByClassName('sidebar')[0];
+document.getElementsByClassName('menu-btn')[0].addEventListener('click', function () {
+  if (sidebar.classList.contains('extended')) {
+   sidebar.classList.remove('extended');
+  } else {
+    sidebar.classList.add('extended');
+  }
+});
