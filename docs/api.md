@@ -297,6 +297,8 @@ Updates installed packages to their newest version according to bower.json.
 
 * `-F`, `--force-latest`: Force latest version on conflict
 * `-p`, `--production`: Do not install project devDependencies
+* `-S`, `--save`: Update `dependencies` in bower.json
+* `-D`, `--save-dev`: Update `devDependencies` in bower.json
 
 ### uninstall
 
