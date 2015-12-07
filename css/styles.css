@@ -852,7 +852,7 @@ a:hover img.logo {
     overflow: hidden;
   }
   .sidebar.extended{
-    height: 630px;
+    height: auto;
   }
   .blog-page .sidebar{
     height: auto;
