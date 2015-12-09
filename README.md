@@ -2,7 +2,7 @@
 
 Documentation for [Bower](http://bower.io)
 
-Site is built with [Jekyll](http://jekyllrb.com) and served with GitHub Pages.
+Site is built with [Jekyll](http://jekyllrb.com) 2.x and served with GitHub Pages.
 
 ``` bash
 # install Bower packages
