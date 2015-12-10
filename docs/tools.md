@@ -105,7 +105,7 @@ reads root bower.json, opens bower.json of all packages and their dependencies a
 [**SpBowerBundle**](https://github.com/Spea/SpBowerBundle) <br>
 Bower integration with symfony2.
 
-[**stefanbuck/github-linker**](https://github.com/stefanbuck/github-linker) <br>
+[**octo-linker/github-linker**](https://github.com/octo-linker/chrome-extension) <br>
 Google Chrome Extension which links dependencies listed bower.json on GitHub to their project's pages.
 
 [**sublime-bower**](https://github.com/benschwarz/sublime-bower) <br>
