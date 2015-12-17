@@ -100,7 +100,17 @@ $ bower install [<options>]
 $ bower install <endpoint> [<endpoint> ..] [<options>]
 {% endhighlight %}
 
-Installs the project dependencies or a specific set of endpoints.
+Installs project dependencies recursively.
+
+Project dependencies consist of:
+
+1. `dependencies` specified in `bower.json` of project
+2. All "external" dependencies not specified in `bower.json`, but present in `bower_components`
+3. Any additional `<endpoint>` passed as an argument to this command
+
+When `--save` flag is used, all additional endpoint are saved to `dependencies` in `bower.json`.
+
+Bower recommends to always use `--save` flag to achieve reproducible installs between machines.
 
 Endpoints can have multiple forms:
 
