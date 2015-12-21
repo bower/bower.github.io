@@ -357,7 +357,7 @@ $ bower version patch -m "Upgrade to %s for reasons"
 
 * [force](#force)
 * [json](#json)
-* [log-level](#log-level)
+* [loglevel](#loglevel)
 * [offline](#offline)
 * [quiet](#quiet)
 * [silent](#silent)
@@ -380,13 +380,13 @@ Makes various commands more forceful
 
 Output consumable JSON
 
-### log-level
+### loglevel
 
 {% highlight sh %}
--l, --log-level
+-l, --loglevel
 {% endhighlight %}
 
-What level of logs to report
+What level of logs to report. Possible values: error, conflict, warn, action, info, debug
 
 ### offline
 
@@ -402,7 +402,7 @@ Do not use network connection
 -q, --quiet
 {% endhighlight %}
 
-Only output important information
+Only output important information. It is an alias for `--loglevel=warn`.
 
 ### silent
 
@@ -410,7 +410,7 @@ Only output important information
 -s, --silent
 {% endhighlight %}
 
-Do not output anything, besides errors
+Do not output anything, besides errors. It is an alias for `--loglevel=error`.
 
 ### verbose
 
@@ -418,7 +418,7 @@ Do not output anything, besides errors
 -V, --verbose
 {% endhighlight %}
 
-Makes output more verbose
+Makes output more verbose. It is an alias for `--loglevel=debug`.
 
 ### allow-root
 
