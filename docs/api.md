@@ -374,7 +374,7 @@ Makes various commands more forceful
 
 - `bower install --force` re-installs all installed components. It also forces installation even when there are non-bower directories with the same name in the components directory. Adding `--force` also bypasses the cache, and writes to the cache anyway.
 - `bower uninstall <package> --force` continues uninstallation even after a dependency conflict
-- `bower unregister <package> --force` bypasses confirmation
+- `bower register <package> --force` and `bower unregister <package> --force` bypasses confirmation. Login is still needed.
 
 ### json
 
