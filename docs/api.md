@@ -9,23 +9,11 @@ permalink: /docs/api/
 
 Command line reference
 
-* [cache](#cache)
-* [help](#help)
-* [home](#home)
-* [info](#info)
-* [init](#init)
-* [install](#install)
-* [link](#link)
-* [list](#list)
-* [login](#login)
-* [lookup](#lookup)
-* [prune](#prune)
-* [register](#register)
-* [search](#search)
-* [update](#update)
-* [uninstall](#uninstall)
-* [unregister](#unregister)
-* [version](#version)
+|                 |               |                |                 |               |                |
+| --------------- | ------------- | -------------- | --------------- | ------------- | -------------- |
+| [cache](#cache) | [help](#help) | [home](#home)  | [info](#info)   | [init](#init) | [install](#install) |
+| [link](#link)   | [list](#list) | [login](#login)| [lookup](#lookup) | [prune](#prune) | [register](#register)
+| [search](#search) | [update](#update) | [uninstall](#uninstall) | [unregister](#unregister) | [version](#version)
 
 ### cache
 
