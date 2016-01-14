@@ -44,4 +44,43 @@ Example of valid environment variables:
 
 ## .bowerrc specification
 
-Detailed description of available configuration variables can be found in [bower/spec](https://github.com/bower/spec/blob/master/config.md) repository.
+Available configuration variables, in `.bowerrc` format:
+
+{% highlight json %}
+{
+  "analytics": true,
+  "cwd": "~/.my-project",
+  "directory": "bower_components",
+  "registry": "https://bower.herokuapp.com",
+  "shorthand-resolver": "git://github.com/{{owner}}/{{package}}.git",
+  "proxy": "http://proxy.local",
+  "https-proxy": "https://proxy.local",
+  "ca": "/var/certificate.pem",
+  "color": true,
+  "timeout": 60000,
+  "storage": {
+    "packages" : "~/.bower/packages",
+    "registry" : "~/.bower/registry",
+    "links" : "~/.bower/links"
+  },
+  "interactive": true,
+  "resolvers": [
+    "mercurial-bower-resolver"
+  ],
+  "shallowCloneHosts": [
+    "myGitHost.example.com"
+  ]
+}
+{% endhighlight %}
+
+A detailed description of available configuration variables can be found in [bower/spec](https://github.com/bower/spec/blob/master/config.md) repository.
+
+## Environment variables in .bowerrc
+
+One can use environment variables in `.bowerrc`, using the following syntax `${ENV_VAR}`.
+
+{% highlight json %}
+"storage" : {
+  "packages": "/path/to/${USER}/packages"
+}
+{% endhighlight %}
