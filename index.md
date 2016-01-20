@@ -57,7 +57,9 @@ $ bower install http://example.com/script.js
 
 ### Save packages
 
-Save your packages to [`bower.json` with `bower init`](/docs/creating-packages/#bowerjson).
+Create a `bower.json` file for your package with [`bower init`](/docs/creating-packages/#bowerjson).
+
+Then save new dependencies to your `bower.json` with `bower install PACKAGE --save` 
 
 ### Use packages
 
