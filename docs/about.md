@@ -75,4 +75,4 @@ The Bower logo [was designed](https://gist.github.com/desandro/1c50118441f703f3f
 
 ### The bowerbird
 
-Bower is named after the [bowerbird](http://en.wikipedia.org/wiki/Bowerbird), a [family of birds](https://www.youtube.com/watch?v=T7wOrpeJD8g) where _males build a structure [the bower] and decorate it with sticks and brightly coloured objects in an attempt to attract a mate_. Bower does just that. Bower brings together bits and pieces from across the forest so you can build your structure.
+Bower is named after the [bowerbird](http://en.wikipedia.org/wiki/Bowerbird), a [family of birds](https://www.youtube.com/watch?v=1XkPeN3AWIE) where _males build a structure [the bower] and decorate it with sticks and brightly coloured objects in an attempt to attract a mate_. Bower does just that. Bower brings together bits and pieces from across the forest so you can build your structure.
