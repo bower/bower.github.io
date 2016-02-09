@@ -41,6 +41,8 @@ $ bower install <package>
 A package can be a GitHub shorthand, a Git endpoint, a URL, and more. Read more about [`bower install`](/docs/api/#install).
 
 {% highlight bash %}
+# installs the project dependencies listed in bower.json
+$ bower install
 # registered package
 $ bower install jquery
 # GitHub shorthand
@@ -59,7 +61,7 @@ $ bower install http://example.com/script.js
 
 Create a `bower.json` file for your package with [`bower init`](/docs/creating-packages/#bowerjson).
 
-Then save new dependencies to your `bower.json` with `bower install PACKAGE --save` 
+Then save new dependencies to your `bower.json` with `bower install PACKAGE --save`
 
 ### Use packages
 
