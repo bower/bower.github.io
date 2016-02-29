@@ -69,6 +69,14 @@ Available configuration variables, in `.bowerrc` format:
   ],
   "shallowCloneHosts": [
     "myGitHost.example.com"
+  ],
+  "scripts": {
+    "preinstall": "",
+    "postinstall": "",
+    "preuninstall": ""
+  },
+  "ignoredDependencies": [
+    "jquery"   
   ]
 }
 {% endhighlight %}
