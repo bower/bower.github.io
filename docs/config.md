@@ -58,6 +58,7 @@ Available configuration variables, in `.bowerrc` format:
   "ca": "/var/certificate.pem",
   "color": true,
   "timeout": 60000,
+  "strict-ssl": true,
   "storage": {
     "packages" : "~/.bower/packages",
     "registry" : "~/.bower/registry",
