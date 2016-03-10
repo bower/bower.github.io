@@ -16,6 +16,6 @@ Paths in the .bowerrc configuration can now be absolute instead of only relative
 We also learned that people are requiring files from Bower's core more or less randomly, which forced us to release version 1.7.6 quickly after 1.7.5 so builds didn’t break. In general there is only one correct way to use Bower programmatically and that is require('bower'). Relying on any specific file from Bower that is subject to change is never a great idea!
 
 Apart from those changes there were many more bugfixes, small changes and documentation updates throughout the past months. Check the [changelog](https://github.com/bower/bower/blob/master/CHANGELOG.md) for a more detailed overview. 
-**You can get all those updates and bugfixes by updating Bower via `npm install -g bower`.   
+**You can get all those updates and bugfixes by updating Bower via `npm install -g bower`.**   
 
 We already have some great commits for the upcoming version and are always happy to see new people contributing. Step by in our [Discord channel](https://discord.gg/0fFM7QF0KpZRh2cY) or directly over at [GitHub](https://github.com/bower/bower).
