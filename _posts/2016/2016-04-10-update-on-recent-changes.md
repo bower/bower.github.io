@@ -13,7 +13,7 @@ Bower is now distributed with npm3. This was mainly needed due to a bug on Windo
 
 Paths in the .bowerrc configuration can now be absolute instead of only relative, which makes it easier and is what you might expect.  
 
-We also learned that people are requiring files from Bower's core more or less randomly, which forced us to release version 1.7.6 quickly after 1.7.5 so builds didn’t break. In general there is only one correct way to use Bower programmatically and that is require('bower'). Relying on any specific file from Bower that is subject to change is never a great idea!
+We also learned that people are requiring files from Bower's core more or less randomly, which forced us to release version 1.7.6 and 1.7.7 quickly after 1.7.5 so builds didn’t break. In general there is only one correct way to use Bower programmatically and that is require('bower'). Relying on any specific file from Bower that is subject to change is never a great idea!
 
 Apart from those changes there were many more bugfixes, small changes and documentation updates throughout the past months. Check the [changelog](https://github.com/bower/bower/blob/master/CHANGELOG.md) for a more detailed overview. 
 **You can get all those updates and bugfixes by updating Bower via `npm install -g bower`.**   
