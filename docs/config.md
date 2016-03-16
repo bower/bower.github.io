@@ -42,6 +42,11 @@ Example of valid environment variables:
 * `bower_endpoint_parser` is evaluated as `endpoint-parser`
 * `bower_storage__packages` is evaluated as `storage.packages`
 
+Example of valid enviroment variables with Array convention:
+
+* `export bower_registry__search='[http://localhost:8080, http://bower.herokuapp.com]'; bower install`
+
+
 ## .bowerrc specification
 
 Available configuration variables, in `.bowerrc` format:
