@@ -19,11 +19,11 @@ Like this:
 `Blah` can be installed through NPM:
 
   $ npm install blah
-  
+
 Install NPM through brew:
 
   $ brew install node
-  
+
 Install brew by visiting http://brew.sh or by running:
 
   $ brew install brew
@@ -42,7 +42,7 @@ When improving the design, keep this in mind:
 
 ## Bower Color Palette
 
-These are the same colors used in the [bower bird](http://bower.io/img/bower-logo.png):
+These are the same colors used in the [bower bird](http://bower.io/img/bower-logo.svg):
 
 Color | Hex | RGB
 ------|-----|----
