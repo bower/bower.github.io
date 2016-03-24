@@ -24,7 +24,6 @@ Command line reference
 * [search](#search)
 * [update](#update)
 * [uninstall](#uninstall)
-<!-- * [unregister](#unregister) -->
 * [version](#version)
 
 ### cache
@@ -264,7 +263,7 @@ Look up a package URL by name
 $ bower login
 {% endhighlight %}
 
-Authenticate with GitHub and store credentials.<!-- Required to unregister packages. -->
+Authenticate with GitHub and store credentials.
 
 #### login options
 
@@ -323,14 +322,6 @@ Uninstalls a package locally from your bower_components directory
 * `-S`, `--save`: Remove uninstalled packages from the project's bower.json dependencies
 * `-D`, `--save-dev`: Remove uninstalled packages from the project's bower.json devDependencies
 
-<!-- ### unregister
-
-{% highlight sh %}
-$ bower unregister <package>
-{% endhighlight %}
-
-Unregisters a package. -->
-
 ### version
 
 {% highlight sh %}
@@ -374,7 +365,7 @@ Makes various commands more forceful
 
 - `bower install --force` re-installs all installed components. It also forces installation even when there are non-bower directories with the same name in the components directory. Adding `--force` also bypasses the cache, and writes to the cache anyway.
 - `bower uninstall <package> --force` continues uninstallation even after a dependency conflict
-- `bower register <package> --force` <!-- and `bower unregister <package> --force` --> bypasses confirmation. Login is still needed.
+- `bower register <package> --force` bypasses confirmation. Login is still needed.
 
 ### json
 
@@ -525,7 +516,7 @@ Bower works by default in interactive mode. There are few ways of disabling it:
 When interactive mode is disabled:
 
 - `bower init` does not work
-- `bower register` <!-- and `bower unregister`--> bypass confirmation
+- `bower register` bypass confirmation
 - `bower login` fails unless `--token` parameter is provided
 - `bower install` fails on resolution conflicts, instead of asking for choice
 - `bower uninstall` doesn't ask for confirmation if dependency is to be removed
