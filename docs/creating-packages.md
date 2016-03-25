@@ -64,4 +64,4 @@ Please do not squat on package names. Register your package and claim your name 
 
 For package name transfers, intellectual property and other disputes, please try to resolve with the owner first. If no resolution, please submit a ticket in the [Bower Registry repo](https://github.com/bower/registry) and the Bower Core Team will assist.
 
-You'll likely want to [`bower cache clean`](/docs/api#cache-clean) after your change. By the moment the command `unregister` is disabled, check [#2210](https://github.com/bower/bower/issues/2210) issue for more information. However, you can [request a package to be unregistered manually](https://github.com/bower/bower/issues/120).
+You'll likely want to [`bower cache clean`](/docs/api#cache-clean) after your change. At the moment the  `unregister` command is temporarily disabled. You can check out this issue - [#2210](https://github.com/bower/bower/issues/2210), for more information. However, you can [request a package to be unregistered manually](https://github.com/bower/bower/issues/120).
