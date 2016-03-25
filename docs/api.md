@@ -405,7 +405,7 @@ Only output important information. It is an alias for `--loglevel=warn`.
 -s, --silent
 {% endhighlight %}
 
-Do not output anything, besides errors. It is an alias for `--loglevel=error`.
+Do not output anything, besides errors. It is an alias for `--loglevel=error`. Silent is also useful if you have private components that might leak credentials to your CI environment.
 
 ### verbose
 
