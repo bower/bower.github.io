@@ -11,7 +11,7 @@ For example, resolvers can be used for:
 * Handling [Mercurial](https://mercurial.selenic.com/) or [Bazaar](http://bazaar.canonical.com/en/) repositories
 * Speeding up checkouts of services like [GitLab](https://about.gitlab.com/) or [Bitbucket](https://bitbucket.org/)
 * Allowing to use packages from [npm](https://www.npmjs.com/) or [component.io](https://github.com/component/component.github.io)
-* Proxying downloads through 3rd party service like [Artifactory](http://www.jfrog.com/artifactory/)
+* Proxying downloads through 3rd party service like [Artifactory](http://www.jfrog.com/artifactory/) or [Nexus Repository](http://www.sonatype.com/nexus-repository-oss)
 * Implementing custom private registry (hosted on GitHub?)
 * Adding authentication support for private [GitHub Enterprise](https://enterprise.github.com/) instances
 
