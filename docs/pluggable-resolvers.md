@@ -145,7 +145,7 @@ var resolver = plugResolver({
 {% highlight javascript %}
 resolver.match()
 resolver.locate()
-resolver.sources()
+resolver.releases()
 resolver.fetch()
 {% endhighlight %}
 
