@@ -131,3 +131,6 @@ Bower extension for Brackets. It lets you manage your application's dependencies
 
 [**Django-bower**](https://github.com/nvbn/django-bower) <br>
 Easy way to use bower with your [Django](https://www.djangoproject.com/) project
+
+[**vsts-bower**](https://marketplace.visualstudio.com/items?itemName=touchify.vsts-bower) <br>
+Bower extension for [Visual Studio Team Services](https://www.visualstudio.com/en-us/products/visual-studio-team-services-vs.aspx) Continuous Integration builds - also on [Github](https://github.com/touchifyapp/vsts-bower).
