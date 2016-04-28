@@ -63,6 +63,8 @@ Available configuration variables, in `.bowerrc` format:
   "ca": "/var/certificate.pem",
   "color": true,
   "timeout": 60000,
+  "save": true,
+  "save-exact": true,
   "strict-ssl": true,
   "storage": {
     "packages" : "~/.bower/packages",
@@ -82,7 +84,7 @@ Available configuration variables, in `.bowerrc` format:
     "preuninstall": ""
   },
   "ignoredDependencies": [
-    "jquery"   
+    "jquery"
   ]
 }
 {% endhighlight %}
