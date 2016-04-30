@@ -17,3 +17,5 @@ defaults:
 
 github_avatars:
   desandro: "https://avatars.githubusercontent.com/u/85566?v=3"
+
+gems: [jekyll-paginate]
