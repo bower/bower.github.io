@@ -9,7 +9,6 @@ permalink: /docs/config/
 {% highlight json %}
 {
   "directory": "app/components/",
-  "analytics": false,
   "timeout": 120000,
   "registry": {
     "search": [
@@ -53,7 +52,6 @@ Available configuration variables, in `.bowerrc` format:
 
 {% highlight json %}
 {
-  "analytics": true,
   "cwd": "~/.my-project",
   "directory": "bower_components",
   "registry": "https://bower.herokuapp.com",
