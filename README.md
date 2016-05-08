@@ -13,6 +13,7 @@ npm install
 grunt
 # install jekyll (You may need sudo here)
 gem install jekyll
+gem install jekyll-paginate
 # serve site to view locally
 jekyll serve
 ```
