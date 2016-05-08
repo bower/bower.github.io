@@ -493,7 +493,7 @@ bower.commands
 
 ## Running on a continuous integration server
 
-Bower will skip some interactive and analytics operations if it finds a `CI` environmental variable set to `true`. You will find that the `CI` variable is already set for you on many continuous integration servers, e.g., [CircleCI](https://circleci.com/docs/environment-variables#basics) and [Travis-CI](http://docs.travis-ci.com/user/ci-environment/#Environment-variables).
+Bower will skip some interactive operations if it finds a `CI` environmental variable set to `true`. You will find that the `CI` variable is already set for you on many continuous integration servers, e.g., [CircleCI](https://circleci.com/docs/environment-variables#basics) and [Travis-CI](http://docs.travis-ci.com/user/ci-environment/#Environment-variables).
 
 You may try to set the `CI` variable manually before running your Bower commands. On Mac or Linux, `export CI=true` and on Windows `set CI=true`
 
@@ -520,7 +520,6 @@ When interactive mode is disabled:
 - `bower login` fails unless `--token` parameter is provided
 - `bower install` fails on resolution conflicts, instead of asking for choice
 - `bower uninstall` doesn't ask for confirmation if dependency is to be removed
-- Analytics is disabled by default (equivalent to passing `--config.analytics=false`)
 
 ## Using local cache
 
