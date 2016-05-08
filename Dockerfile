@@ -7,4 +7,5 @@ RUN npm install -g bower && \
     npm install -g grunt-cli && \
     apt-get update && \
     apt-get install -y ruby ruby-dev && \
-    gem install jekyll
+    gem install jekyll && \
+    gem install jekyll-paginate
