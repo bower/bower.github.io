@@ -2,6 +2,8 @@ var request = require('request');
 
 module.exports = function( grunt ) {
 
+  require('load-grunt-tasks')(grunt);
+
   grunt.initConfig({
     concat: {
       // build styles.css
@@ -15,22 +17,28 @@ module.exports = function( grunt ) {
           'css/blog-post.css',
           'css/medias.css'
         ],
-        dest: 'css/styles.css'
+        dest: 'dist/index.css'
       },
       js: {
         src: [
           'node_modules/d3/d3.js',
           'node_modules/whatwg-fetch/fetch.js',
+          'node_modules/mustache/mustache.js',
+          'node_modules/lodash/lodash.js',
           'js/plottable.js',
-          'js/scripts.js'
+          'js/index.js'
         ],
-        dest: 'js/scripts.min.js'
+        dest: 'dist/index.js'
+      }
+    },
+    uglify: {
+      target: {
+        files: {
+          'dist/index.min.js': 'dist/index.js'
+        }
       }
     }
   });
-
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
 
   grunt.registerTask( 'latest-release',
     'updates index.md with latest release from GitHub API',
@@ -68,6 +76,7 @@ module.exports = function( grunt ) {
 
   grunt.registerTask( 'default', [
     'concat',
+    'uglify',
     'latest-release'
   ]);
 

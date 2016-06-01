@@ -6,6 +6,9 @@
   "directories": {
     "doc": "docs"
   },
+  "scripts": {
+    "build": "grunt && browserify js/index.js -o dist/index.js -t [ babelify --presets [ es2015 ] ]"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/bower/bower.github.io.git"
@@ -21,14 +24,22 @@
   "homepage": "http://bower.io",
   "dependencies": {
     "d3": "^3.5.17",
+    "lodash": "^4.13.1",
+    "mustache": "^2.2.1",
     "normalize.css": "3.0.3",
     "plottable": "palantir/plottable#3038243c9",
+    "rx": "^4.1.0",
     "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
     "grunt": "^0.4.5",
     "grunt-contrib-concat": "^0.4.0",
-    "grunt-contrib-uglify": "^0.7.0",
-    "request": "^2.67.0"
+    "grunt-contrib-uglify": "^1.0.1",
+    "load-grunt-tasks": "^3.5.0",
+    "request": "^2.67.0",
+    "uglifyify": "^3.0.1"
   }
 }

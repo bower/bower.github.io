@@ -1,0 +1,56 @@
+---
+title: Bower Search
+layout: docs
+permalink: /search/
+---
+<div class="search-header" id="search">
+  <div class="row q-row">
+    <input id="q" autocomplete="off" type="search" results="5" autofocus="autofocus" class="form-control ng-pristine ng-valid" placeholder="Search...">
+  </div>
+</div>
+<section class="search-results">
+  <div class="container">
+    <div class="row" id="search-results">
+      <div class="col-md-12">
+      </div>
+    </div>
+  </div>
+</section>
+{% raw %}
+<script id="results-template" type="x-tmpl-mustache">
+  <div class="col-md-12">
+    <table class="table table-hover search-results">
+      <thead>
+        <tr>
+          <th width="70%"><a>Name</a></th>
+          <th width="15%" class="hidden-xs"><a>Owner</a></th>
+          <th width="15%" class="hidden-xs"><a>Stars</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--{{#results}}-->
+        <tr>
+          <td class="name">
+            <h4>
+              <a href="{{url}}">{{name}}</a>
+            </h4>
+            <p class="description" title="{{description}}">{{description}}</p>
+            <p class="visible-xs">
+              <span class="label">Owner: {{owner}}</span>
+              <span class="label">Stars: {{stars}}</span>
+            </p>
+          </td>
+          <td class="hidden-xs owner">{{owner}}</td>
+          <td class="hidden-xs stars">{{stars}}</td>
+        </tr>
+        <!--{{/results}}-->
+      </tbody>
+    </table>
+    {{#flash}}
+      <div class="alert alert-warning">
+        {{message}}
+      </div>
+    {{/flash}}
+  </div>
+</script>
+{% endraw %}

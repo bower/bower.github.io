@@ -830,6 +830,11 @@ code .nv {
   text-align: center;
   margin-bottom: 20px;
 }
+.search-results .alert {
+  display: block;
+  text-align: center;
+  padding: 20px 0 50px;
+}
 
 @media (max-width: 767px) {
   .hidden-xs {

@@ -3,9 +3,15 @@
 document.addEventListener( 'DOMContentLoaded', domReady, false );
 
 function domReady() {
-  addAnchors();
   addGlobalToc();
-  renderStats();
+
+  if(document.getElementById('users-chart')) {
+    renderStats();
+  } else if (document.getElementById('search')) {
+    renderSearch();
+  } else {
+    addAnchors();
+  }
 }
 
 // create anchor links for headers
@@ -97,21 +103,83 @@ var plot = function(npmData) {
 };
 
 function renderStats() {
-  if(document.getElementById('users-chart')) {
-    fetchData().then(function (data) {
-      var stats = [];
+  fetchData().then(function (data) {
+    var stats = [];
 
-      for (var i = 3, l = data.downloads.length - 3; i < l; i++) {
-        var sum = 0;
-        for (var j = -3; j < 4; j++) {
-          sum = sum + data.downloads[i+j].downloads;
-        }
-        var average = sum / 7;
+    for (var i = 3, l = data.downloads.length - 3; i < l; i++) {
+      var sum = 0;
+      for (var j = -3; j < 4; j++) {
+        sum = sum + data.downloads[i+j].downloads;
+      }
+      var average = sum / 7;
 
-        stats.push({ day: new Date(data.downloads[i].day), downloads: average });
+      stats.push({ day: new Date(data.downloads[i].day), downloads: average });
+    }
+
+    plot(stats);
+  });
+}
+
+function fetchResults(query, options) {
+  options = options || {};
+
+  options.page = options.page || 1;
+
+  return fetch('https://libraries.io/api/search?platforms=bower&q=' + query + '&page=' + options.page).then(function (results) {
+    return results.json();
+  });
+}
+
+function renderSearch() {
+  var template = document.getElementById('results-template').innerHTML;
+  console.log(template);
+
+  var state = {
+    flash: {
+      message: 'Loading popular repositories...'
+    },
+    results: []
+  };
+
+  function search() {
+    var query = document.getElementById('q').value;
+    fetchResults(query).then(function (results) {
+      state.results = [];
+
+      results.forEach(function (result) {
+        state.results.push({
+          name: result.name,
+          url: result.repository_url,
+          description: result.description,
+          owner: result.repository_url.split('/').splice(-2, 1),
+          stars: result.stars
+        });
+      });
+
+      if (results.length === 0) {
+        state.flash = { message: 'No results, please try different query' }
+      } else {
+        state.flash = undefined;
       }
 
-      plot(stats);
+      render();
     });
   }
+
+  search = _.debounce(search, 1000);
+
+  document.getElementById('q').addEventListener('keydown', function () {
+    state.results = [];
+    state.flash = { message: 'Loading search results...' };
+    render();
+    search();
+  });
+
+  function render() {
+    var rendered = Mustache.render(template, state);
+    document.getElementById('search-results').innerHTML = rendered;
+  }
+
+  render();
+  search('');
 }
