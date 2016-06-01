@@ -7,7 +7,7 @@ module.exports = function( grunt ) {
       // build styles.css
       css: {
         src: [
-          'bower_components/normalize.css/normalize.css',
+          'node_modules/normalize.css/normalize.css',
           'css/base.css',
           'css/masthead.css',
           'css/modules.css',
