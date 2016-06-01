@@ -8,20 +8,23 @@ module.exports = function( grunt ) {
       css: {
         src: [
           'node_modules/normalize.css/normalize.css',
+          'css/plottable.css',
           'css/base.css',
           'css/masthead.css',
           'css/modules.css',
           'css/blog-post.css',
-          'css/medias.css',
+          'css/medias.css'
         ],
         dest: 'css/styles.css'
-      }
-    },
-    uglify: {
-      target: {
-        files: {
-          'js/scripts.min.js': ['js/scripts.js']
-        }
+      },
+      js: {
+        src: [
+          'node_modules/d3/d3.js',
+          'node_modules/whatwg-fetch/fetch.js',
+          'js/plottable.js',
+          'js/scripts.js'
+        ],
+        dest: 'js/scripts.min.js'
       }
     }
   });
@@ -65,7 +68,6 @@ module.exports = function( grunt ) {
 
   grunt.registerTask( 'default', [
     'concat',
-    'uglify',
     'latest-release'
   ]);
 

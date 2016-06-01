@@ -20,7 +20,10 @@
   },
   "homepage": "http://bower.io",
   "dependencies": {
-    "normalize.css": "3.0.3"
+    "d3": "^3.5.17",
+    "normalize.css": "3.0.3",
+    "plottable": "palantir/plottable#3038243c9",
+    "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

@@ -162,3 +162,36 @@ code .nv {
     font-size: 0.65em;
   }
 }
+
+.b-chart.b-users {
+  height: 300px;
+  background: #fff8e2;
+  padding: 10px 10px 0px 10px;
+}
+.b-chart.b-users .area {
+  stroke: none;
+}
+.b-chart.b-users text {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 0.8em;
+  fill: #543729;
+}
+.b-chart.b-users .axis line {
+  stroke-width: 1px;
+}
+.b-chart.b-users .y-gridlines line {
+  stroke-width: 1px;
+  stroke: #cecece;
+}
+.b-chart.b-users .x-gridlines line {
+  opacity: 0;
+}
+.b-chart.b-users .npm-installs .line {
+  stroke: #EF5734;
+  stroke-width: 2px;
+  fill: none;
+}
+
