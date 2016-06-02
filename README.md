@@ -5,8 +5,6 @@ Documentation for [Bower](http://bower.io)
 Site is built with [Jekyll](http://jekyllrb.com) 2.x and served with GitHub Pages.
 
 ``` bash
-# install Bower packages
-bower install
 # install npm packages
 npm install
 # run any tasks
