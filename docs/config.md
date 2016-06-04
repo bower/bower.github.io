@@ -57,7 +57,7 @@ Available configuration variables, in `.bowerrc` format:
   "registry": "https://bower.herokuapp.com",
   "shorthand-resolver": "git://github.com/{{owner}}/{{package}}.git",
   "proxy": "http://proxy.local",
-  "https-proxy": "https://proxy.local",
+  "https-proxy": "http://proxy.local",
   "ca": "/var/certificate.pem",
   "color": true,
   "timeout": 60000,
