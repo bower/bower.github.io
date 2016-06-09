@@ -1,6 +1,6 @@
 # bower.io
 
-Documentation for [Bower](http://bower.io)
+Documentation for [Bower](https://bower.io)
 
 Site is built with [Jekyll](http://jekyllrb.com) 2.x and served with GitHub Pages.
 

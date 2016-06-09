@@ -55,7 +55,7 @@ $ bower install http://example.com/script.js
 
 ### Search packages
 
-[Search Bower packages](http://bower.io/search) and find the registered package names for your favorite projects.
+[Search Bower packages](/search) and find the registered package names for your favorite projects.
 
 ### Save packages
 

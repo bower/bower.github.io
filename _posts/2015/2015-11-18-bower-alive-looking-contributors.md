@@ -5,7 +5,7 @@ author: desandro
 
 Hello world!
 
-Bower turned three years old last September. That may sound old in JavaScript terms, but Bower is still kicking. 2015 has seen [9 releases](https://github.com/bower/bower/releases) already, included two minor releases, with v1.6 releases shipping last month. [Looking at the stats](http://bower.io/stats/), Bower usage continues to grow. Bower is more popular now than ever. That's why we're stepping up.
+Bower turned three years old last September. That may sound old in JavaScript terms, but Bower is still kicking. 2015 has seen [9 releases](https://github.com/bower/bower/releases) already, included two minor releases, with v1.6 releases shipping last month. [Looking at the stats](/stats), Bower usage continues to grow. Bower is more popular now than ever. That's why we're stepping up.
 
 I'll be real: We have not done a good job of managing the project. Ever since its release, Bower's management has always been one of its pain-points. There is an ideal that a great open-source project will create a healthy community around it. I've come to learn it's the other way around. In order to best support Bower, we need to foster its community. We want to fix this.
 
