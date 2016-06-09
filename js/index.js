@@ -132,7 +132,6 @@ function fetchResults(query, options) {
 
 function renderSearch() {
   var template = document.getElementById('results-template').innerHTML;
-  console.log(template);
 
   var state = {
     flash: {
