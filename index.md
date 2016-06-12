@@ -24,7 +24,7 @@ $ npm install -g bower
 
 Bower requires [node, npm](http://nodejs.org/) and [git](http://git-scm.org).
 
-Latest release: [**v1.7.9**](https://github.com/bower/bower/releases/tag/v1.7.9)
+Latest release: [![bower version](https://img.shields.io/npm/v/bower.svg?maxAge=2592000)]()
 
 For troubleshooting installation on different platforms, read the [troubleshooting](https://github.com/bower/bower/wiki/Troubleshooting) wiki page.
 
