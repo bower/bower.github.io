@@ -84,6 +84,9 @@ NPM and Bower package Intellisense directly in the Visual Studio JSON editor. [S
 [**alfred-workflows**](https://github.com/willfarrell/alfred-workflows) <br>
 A collection of Alfred workflows that includes Bower integration.
 
+[**bowerder**](https://github.com/tnga/bowerder) <br>
+The bower components loader for browsers. Easly import components main files to your project.
+
 [**bowcat**](https://www.npmjs.org/package/bowcat) <br>
 npm package. Quickly concatenate your project's bower dependencies. Like grunt-bower-concat but without the weight and complexity of grunt.
 
