@@ -1,5 +1,5 @@
 {% include html-head.html %}
-  <title>{% unless page.is_home %}{{ page.title }} &middot; {% endunless %}Bower</title>
+<title>{% unless page.is_home %}{{ page.title }} &middot; Bower{% endunless %}{% if page.is_home %}Bower — a package manager for the web{% endif %}</title>
   <meta property="og:title" content="{% unless page.is_home %}{{ page.title }} &middot; {% endunless %}Bower">
 </head>
 <body class="docs-page">
