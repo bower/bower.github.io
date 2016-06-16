@@ -136,11 +136,9 @@ a:hover img.logo {
 
 .brand h1 {
   display: inline-block;
-  font-size: 66px;
   margin: 0;
-  line-height: 80px;
   color: #EF5734;
-  font-size: 100px;
+  font-size: 115px;
   line-height: 1;
   padding-top: 60px;
 }
@@ -160,10 +158,10 @@ a:hover img.logo {
 
 .brand .tagline {
   margin: 0 0 30px;
-  font-size: 18px;
-  font-size: 48px;
+  font-size: 55px;
   line-height: 1;
   color: #543729;
+  padding-left: 5px;
 }
 
 .btn {
