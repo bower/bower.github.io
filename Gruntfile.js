@@ -25,6 +25,7 @@ module.exports = function( grunt ) {
           'node_modules/whatwg-fetch/fetch.js',
           'node_modules/mustache/mustache.js',
           'node_modules/lodash/lodash.js',
+          'node_modules/mark.js/dist/mark.js',
           'js/plottable.js',
           'js/index.js'
         ],

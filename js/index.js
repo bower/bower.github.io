@@ -132,16 +132,19 @@ function fetchResults(query, options) {
 
 function renderSearch() {
   var template = document.getElementById('results-template').innerHTML;
+  var queryInput = document.getElementById('q');
+  var searchResults = document.getElementById('search-results');
 
   var state = {
     flash: {
       message: 'Loading popular repositories...'
     },
-    results: []
+    results: [],
+    query: ''
   };
 
   function search() {
-    var query = document.getElementById('q').value;
+    var query = queryInput.value;
     fetchResults(query).then(function (results) {
       state.results = [];
 
@@ -156,9 +159,11 @@ function renderSearch() {
       });
 
       if (results.length === 0) {
-        state.flash = { message: 'No results, please try different query' }
+        state.flash = { message: 'No results, please try different query' };
+        state.query = '';
       } else {
         state.flash = undefined;
+        state.query = query;
       }
 
       render();
@@ -167,18 +172,23 @@ function renderSearch() {
 
   search = _.debounce(search, 1000);
 
-  document.getElementById('q').addEventListener('keydown', function () {
+  queryInput.addEventListener('keydown', function () {
     state.results = [];
     state.flash = { message: 'Loading search results...' };
+    state.query = '';
     render();
     search();
   });
 
   function render() {
-    var rendered = Mustache.render(template, state);
-    document.getElementById('search-results').innerHTML = rendered;
+    searchResults.innerHTML = Mustache.render(template, state);
+    if(state.query){
+        new Mark(searchResults).mark(state.query, {
+            "exclude": ["thead *", "span.label", ".alert"]
+        });
+    }
   }
 
   render();
-  search('');
+  search();
 }
