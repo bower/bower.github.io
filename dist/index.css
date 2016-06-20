@@ -780,11 +780,14 @@ code .nv {
   border: 0;
   box-shadow: 0 0px 1px #ccc;
   font-size: 18px;
-  padding: 12px 0px 12px 0px;
+  padding: 12px 10px;
   font-weight: 400;
   width: 100%;
   margin-bottom: 10px;
   outline-width: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 .search-results .container {
   background: #fff;
