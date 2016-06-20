@@ -25,6 +25,7 @@
   "dependencies": {
     "d3": "^3.5.17",
     "lodash": "^4.13.1",
+    "mark.js": "github:julmot/mark.js#649fdcd",
     "mustache": "^2.2.1",
     "normalize.css": "3.0.3",
     "plottable": "palantir/plottable#3038243c9",

@@ -731,6 +731,10 @@ code .nv {
   border-top: 1px solid #f2f2f2;
   padding-right: 5px;
 }
+.search-results mark{
+    background: #FFCC2F;
+    color: inherit;
+}
 .search-header {
 
 }
