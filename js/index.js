@@ -120,6 +120,15 @@ function renderStats() {
   });
 }
 
+function renderEmoji(code) {
+  var template = document.getElementById('emoji-template').innerHTML;
+  return Mustache.render(template, {code: code});
+}
+
+function filterEmoji(str) {
+  return str.replace(/\:([a-z_+\-0-9]*)\:/g, renderEmoji('$1'));
+}
+
 function fetchResults(query, options) {
   options = options || {};
 
@@ -181,8 +190,7 @@ function renderSearch() {
   });
 
   function render() {
-    searchResults.innerHTML = Mustache.render(template, state);
-    searchResults.innerHTML = searchResults.innerHTML.replace(/\>.*\:([a-z_+-]*)\:/, '><img class="emoji" title=":$1:" alt=":$1:" src="https://assets-cdn.github.com/images/icons/emoji/$1.png" height="20" width="20" align="absmiddle"/>');
+    searchResults.innerHTML = filterEmoji(Mustache.render(template, state));
     if(state.query){
         new Mark(searchResults).mark(state.query, {
             "exclude": ["thead *", "span.label", ".alert"]
