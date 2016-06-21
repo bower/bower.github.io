@@ -125,7 +125,7 @@ function fetchResults(query, options) {
 
   options.page = options.page || 1;
 
-  return fetch('https://libraries.io/api/search?platforms=bower&q=' + query + '&page=' + options.page).then(function (results) {
+  return fetch('https://libraries.io/api/bower-search?q=' + query).then(function (results) {
     return results.json();
   });
 }
