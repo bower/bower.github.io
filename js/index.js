@@ -182,6 +182,7 @@ function renderSearch() {
 
   function render() {
     searchResults.innerHTML = Mustache.render(template, state);
+    searchResults.innerHTML = searchResults.innerHTML.replace(/\>.*\:([a-z_+-]*)\:/, '><img class="emoji" title=":$1:" alt=":$1:" src="https://assets-cdn.github.com/images/icons/emoji/$1.png" height="20" width="20" align="absmiddle"/>');
     if(state.query){
         new Mark(searchResults).mark(state.query, {
             "exclude": ["thead *", "span.label", ".alert"]
