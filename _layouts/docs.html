@@ -37,7 +37,13 @@
           <img class="logo" src="/img/bower-logo.svg" alt="Bower logo" />
         </a>
 
+        {% unless page.subtitle %}
         <h1 class="page-title">{{ page.title }}</h1>
+        {% endunless %}
+        {% if page.subtitle %}
+        <h1 class="page-title">{{ page.title }}</h1>
+        <h4 style="margin: -20px 0 0 223px">{{ page.subtitle | markdownify | remove: '<p>' | remove: '</p>' }}</h4>
+        {% endif %}
       {% endif %}
 
     </div>
