@@ -131,7 +131,7 @@ a:hover img.logo {
 .brand {
   position: relative;
   padding-left: 360px;
-  min-height: 310px;
+  min-height: 319px; /* ~299px logo height + 20px top */
 }
 
 .brand h1 {
@@ -151,7 +151,7 @@ a:hover img.logo {
 .brand .logo {
   display: block;
   position: absolute;
-  left: -20px;
+  left: 0;
   top: 20px;
   width: 340px;
 }
