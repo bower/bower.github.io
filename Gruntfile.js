@@ -6,7 +6,6 @@ module.exports = function( grunt ) {
 
   grunt.initConfig({
     concat: {
-      // build styles.css
       css: {
         src: [
           'node_modules/normalize.css/normalize.css',
@@ -31,19 +30,11 @@ module.exports = function( grunt ) {
         ],
         dest: 'dist/index.js'
       }
-    },
-    uglify: {
-      target: {
-        files: {
-          'dist/index.min.js': 'dist/index.js'
-        }
-      }
     }
   });
 
   grunt.registerTask( 'default', [
-    'concat',
-    'uglify'
+    'concat'
   ]);
 
 };
