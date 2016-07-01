@@ -36759,7 +36759,12 @@ function renderSearch() {
 
   search = _.debounce(search, 1000);
 
-  queryInput.addEventListener('keydown', function() {
+  queryInput.addEventListener('keydown', function(evt) {
+    if (evt.code && (['ControlLeft', 'ControlRight',
+                      'AltLeft', 'AltRight',
+                      'OSLeft', 'OSRight',
+                      'ShiftLeft', 'ShiftRight', ]).indexOf(evt.code) != -1)
+      return;
     state.results = [];
     state.flash = {
       message: 'Loading search results...'
