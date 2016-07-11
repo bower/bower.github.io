@@ -5,6 +5,7 @@ paginate_path: /blog/page:num/
 exclude:
   - package.json
   - Gruntfile.js
+  - node_modules
 
 defaults:
   -
