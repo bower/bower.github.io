@@ -120,15 +120,6 @@ function renderStats() {
   });
 }
 
-function renderEmoji(code) {
-  var template = document.getElementById('emoji-template').innerHTML;
-  return Mustache.render(template, {code: code});
-}
-
-function filterEmoji(str) {
-  return str.replace(/\:([a-z_+\-0-9]*)\:/g, renderEmoji('$1'));
-}
-
 function fetchResults(query, options) {
   options = options || {};
 
@@ -141,6 +132,7 @@ function fetchResults(query, options) {
 
 function renderSearch() {
   var template = document.getElementById('results-template').innerHTML;
+  var emojiTemplate = document.getElementById('emoji-template').innerHTML;
   var queryInput = document.getElementById('q');
   var searchResults = document.getElementById('search-results');
 
@@ -188,6 +180,14 @@ function renderSearch() {
     render();
     search();
   });
+
+  function renderEmoji(code) {
+    return Mustache.render(emojiTemplate, {code: code});
+  }
+
+  function filterEmoji(str) {
+    return str.replace(/\:([a-z_+\-0-9]*)\:/g, renderEmoji('$1'));
+  }
 
   function render() {
     searchResults.innerHTML = filterEmoji(Mustache.render(template, state));
