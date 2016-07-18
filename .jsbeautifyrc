@@ -1,0 +1,14 @@
+{
+    "js": {
+        "indent_char": " ",
+        "indent_level": 0,
+        "indent_with_tabs": false,
+        "wrap_line_length": 120,
+        "indent_size": 2,
+        "keep_array_indentation": false,
+        "jslint_happy": true,
+        "end_with_newline": true,
+        "preserve_newlines": true,
+        "space_before_conditional": true
+    }
+}

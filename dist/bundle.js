@@ -36577,6 +36577,9 @@ var Plottable;
     var Dispatcher = Plottable.Dispatcher;
 })(Plottable || (Plottable = {}));
 
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+'use strict';
+
 /* jshint browser: true, undef: true, unused: true */
 
 document.addEventListener('DOMContentLoaded', domReady, false);
@@ -36614,7 +36617,7 @@ function addGlobalToc() {
     return;
   }
   var headers = document.querySelectorAll('.main h2');
-  var currentNav = docsNav.querySelector('a[href="' + window.location.pathname + '"]')
+  var currentNav = docsNav.querySelector('a[href="' + window.location.pathname + '"]');
 
   if (currentNav) {
     var ul = document.createElement('ul');
@@ -36641,21 +36644,19 @@ document.getElementsByClassName('menu-btn')[0].addEventListener('click', functio
   }
 });
 
-var fetchData = function () {
+var fetchData = function fetchData() {
   var today = new Date();
   var yesterday = new Date(today.getFullYear(), today.getMonth(), today.getDate() - 1);
   var yearago = new Date(today.getFullYear() - 2, today.getMonth(), today.getDate());
   yesterday = yesterday.toISOString().slice(0, 10);
   yearago = yearago.toISOString().slice(0, 10);
-  return fetch('https://api.npmjs.org/downloads/range/' + yearago + ':' + yesterday + '/bower').then(function (
-    response) {
+  return fetch('https://api.npmjs.org/downloads/range/' + yearago + ':' + yesterday + '/bower').then(function (response) {
     return response.json();
   });
-}
+};
 
-var plot = function (npmData) {
-  var center, chart, colorScale, domainer, format, gridlines, installsLabel, legend, line_installs, npmData, stack,
-    xAxis, xScale, yAxisInstalls, yAxisInstallsLeft, yScaleInstalls;
+var plot = function plot(npmData) {
+  var center, chart, colorScale, domainer, format, gridlines, installsLabel, legend, line_installs, npmData, stack, xAxis, xScale, yAxisInstalls, yAxisInstallsLeft, yScaleInstalls;
   stack = d3.layout.stack().values(function (d) {
     return d;
   }).x(function (d) {
@@ -36668,23 +36669,19 @@ var plot = function (npmData) {
   xScale.domainer(new Plottable.Domainer().pad(0));
   domainer = new Plottable.Domainer().addIncludedValue(0).pad(0.2).addPaddingException(0);
   yScaleInstalls.domainer(domainer).ticks(5);
-  colorScale = (new Plottable.Scale.Color()).domain(["daily bower installs"]).range(["#EF5734"]);
+  colorScale = new Plottable.Scale.Color().domain(["daily bower installs"]).range(["#EF5734"]);
   gridlines = new Plottable.Component.Gridlines(xScale, yScaleInstalls);
   xAxis = new Plottable.Axis.Time(xScale, "bottom");
-  format = function (n) {
+  format = function format(n) {
     return Math.round(n / 1000).toString() + "k";
   };
   yAxisInstalls = new Plottable.Axis.Numeric(yScaleInstalls, "right", format);
   yAxisInstallsLeft = new Plottable.Axis.Numeric(yScaleInstalls, "left", format);
   legend = new Plottable.Component.Legend(colorScale).xAlign("left");
   installsLabel = new Plottable.Component.AxisLabel("Daily npm Installs", "left");
-  line_installs = (new Plottable.Plot.Line(npmData, xScale, yScaleInstalls)).project("x", "day", xScale).project("y",
-    "downloads", yScaleInstalls).classed("npm-installs", true);
+  line_installs = new Plottable.Plot.Line(npmData, xScale, yScaleInstalls).project("x", "day", xScale).project("y", "downloads", yScaleInstalls).classed("npm-installs", true);
   center = line_installs.merge(gridlines).merge(legend);
-  chart = new Plottable.Component.Table([
-    [yAxisInstallsLeft, center, yAxisInstalls],
-    [null, xAxis, null]
-  ]).renderTo("#users-chart");
+  chart = new Plottable.Component.Table([[yAxisInstallsLeft, center, yAxisInstalls], [null, xAxis, null]]).renderTo("#users-chart");
 };
 
 function renderStats() {
@@ -36698,10 +36695,7 @@ function renderStats() {
       }
       var average = sum / 7;
 
-      stats.push({
-        day: new Date(data.downloads[i].day),
-        downloads: average
-      });
+      stats.push({ day: new Date(data.downloads[i].day), downloads: average });
     }
 
     plot(stats);
@@ -36720,21 +36714,24 @@ function fetchResults(query, options) {
 
 function renderSearch() {
   var template = document.getElementById('results-template').innerHTML;
-  var emojiTemplate = document.getElementById('emoji-template').innerHTML;
   var queryInput = document.getElementById('q');
   var searchResults = document.getElementById('search-results');
-  var msg = {
-    nothingFound: 'No results, please try different query',
-    loadingPopular: 'Loading popular repositories...',
-    loading: 'Loading search results...'
+
+  var state = {
+    flash: {
+      message: 'Loading popular repositories...'
+    },
+    results: [],
+    query: ''
   };
 
-  function search(query) {
-    fetchResults(query).then(function (resultsData) {
-      var results = [];
+  function search() {
+    var query = queryInput.value;
+    fetchResults(query).then(function (results) {
+      state.results = [];
 
-      resultsData.forEach(function (result) {
-        results.push({
+      results.forEach(function (result) {
+        state.results.push({
           name: result.name,
           url: result.repository_url,
           description: result.description,
@@ -36744,66 +36741,38 @@ function renderSearch() {
       });
 
       if (results.length === 0) {
-        results = msg.nothingFound;
+        state.flash = { message: 'No results, please try different query' };
+        state.query = '';
+      } else {
+        state.flash = undefined;
+        state.query = query;
       }
-      render(query, results);
+
+      render();
     });
   }
+
   search = _.debounce(search, 1000);
 
-  function renderEmoji(code) {
-    return Mustache.render(emojiTemplate, {code: code});
-  }
+  queryInput.addEventListener('keydown', function () {
+    state.results = [];
+    state.flash = { message: 'Loading search results...' };
+    state.query = '';
+    render();
+    search();
+  });
 
-  function filterEmoji(str) {
-    return str.replace(/\:([a-z_+\-0-9]*)\:/g, renderEmoji('$1'));
-  }
-
-  function render(query, data) {
-    var state = {
-      query: query,
-      flash: {
-        message: ''
-      },
-      results: []
-    };
-    if (Array.isArray(data)) {
-      state.results = data;
-    } else {
-      state.flash.message = data;
-    }
-    searchResults.innerHTML = filterEmoji(Mustache.render(template, state));
-    if (query) {
-      new Mark(searchResults).mark(query, {
+  function render() {
+    searchResults.innerHTML = Mustache.render(template, state);
+    if (state.query) {
+      new Mark(searchResults).mark(state.query, {
         "exclude": ["thead *", "span.label", ".alert"]
       });
     }
   }
 
-  function getQueryVariable(variable) {
-    var query = window.location.search.substring(1);
-    var vars = query.split("&");
-    for (var i = 0; i < vars.length; i++) {
-      var pair = vars[i].split("=");
-      if (pair[0] == variable) {
-        return pair[1];
-      }
-    }
-    return (false);
-  }
-
-  queryInput.addEventListener('input', function () {
-    render('', msg.loading);
-    search(queryInput.value);
-  });
-
-  var urlVar = getQueryVariable('q');
-  if (urlVar) {
-    render('', msg.loading);
-    search(urlVar);
-    queryInput.value = urlVar;
-  } else {
-    render('', msg.loadingPopular);
-    search('');
-  }
+  render();
+  search();
 }
+
+},{}]},{},[1]);
