@@ -173,7 +173,9 @@ function renderSearch() {
   search = _.debounce(search, 1000);
 
   function renderEmoji(code) {
-    return Mustache.render(emojiTemplate, {code: code});
+    return Mustache.render(emojiTemplate, {
+      code: code
+    });
   }
 
   function filterEmoji(str) {
