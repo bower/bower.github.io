@@ -147,7 +147,8 @@ function renderSearch() {
   var msg = {
     nothingFound: 'No results, please try different query',
     loadingPopular: 'Loading popular repositories...',
-    loading: 'Loading search results...'
+    loading: 'Loading search results...',
+    networkError: 'Sorry, there was an error while fetching repositories'
   };
 
   function search(query) {
@@ -168,6 +169,8 @@ function renderSearch() {
         results = msg.nothingFound;
       }
       render(query, results);
+    }).catch(function (err) {
+      render('', msg.networkError);
     });
   }
   search = _.debounce(search, 1000);
@@ -198,7 +201,7 @@ function renderSearch() {
     searchResults.innerHTML = filterEmoji(Mustache.render(template, state));
     if (query) {
       new Mark(searchResults).mark(query, {
-        "exclude": ["thead *", "span.label", ".alert"]
+        'exclude': ['thead *', 'span.label', '.alert']
       });
     }
   }
