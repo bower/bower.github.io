@@ -36720,6 +36720,7 @@ function fetchResults(query, options) {
 
 function renderSearch() {
   var template = document.getElementById('results-template').innerHTML;
+  var emojiTemplate = document.getElementById('emoji-template').innerHTML;
   var queryInput = document.getElementById('q');
   var searchResults = document.getElementById('search-results');
   var msg = {
@@ -36750,6 +36751,16 @@ function renderSearch() {
   }
   search = _.debounce(search, 1000);
 
+  function renderEmoji(code) {
+    return Mustache.render(emojiTemplate, {
+      code: code
+    });
+  }
+
+  function filterEmoji(str) {
+    return str.replace(/\:([a-z_+\-0-9]*)\:/g, renderEmoji('$1'));
+  }
+
   function render(query, data) {
     var state = {
       query: query,
@@ -36763,7 +36774,7 @@ function renderSearch() {
     } else {
       state.flash.message = data;
     }
-    searchResults.innerHTML = Mustache.render(template, state);
+    searchResults.innerHTML = filterEmoji(Mustache.render(template, state));
     if (query) {
       new Mark(searchResults).mark(query, {
         "exclude": ["thead *", "span.label", ".alert"]
