@@ -24,6 +24,7 @@
   "homepage": "http://bower.io",
   "dependencies": {
     "d3": "^3.5.17",
+    "es6-promise": "^3.2.1",
     "lodash": "^4.13.1",
     "mark.js": "github:julmot/mark.js#649fdcd",
     "mustache": "^2.2.1",

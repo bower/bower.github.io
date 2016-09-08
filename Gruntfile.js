@@ -21,6 +21,7 @@ module.exports = function( grunt ) {
       js: {
         src: [
           'node_modules/d3/d3.js',
+          'node_modules/es6-promise/dist/es6-promise.js',
           'node_modules/whatwg-fetch/fetch.js',
           'node_modules/mustache/mustache.js',
           'node_modules/lodash/lodash.js',
