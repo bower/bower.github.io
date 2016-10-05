@@ -114,9 +114,6 @@ Google Chrome Extension which links dependencies listed bower.json on GitHub to 
 [**sublime-bower**](https://github.com/benschwarz/sublime-bower) <br>
 A Sublime text-editor plugin for Bower.
 
-[**atom-bower-install**](https://github.com/gdi2290/atom-bower-install) <br>
-Automatically install and save any missing bower components being used in the current bower.json file.
-
 [**broccoli-bower**](https://github.com/joliss/broccoli-bower) <br>
 Load Bower packages into Broccoli.
 
