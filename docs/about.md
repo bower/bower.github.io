@@ -40,7 +40,7 @@ The Bower logo [was designed](https://gist.github.com/desandro/1c50118441f703f3f
 
 <p><a href="https://cottonbureau.com/products/bower"><img class="content-img" src="/img/bower-shirts.jpg" alt="Bower shirts"></a></p>
 
-[Bower stickers are available on Sticker Mule](https://www.stickermule.com/marketplace/3758-bower) and [Unixstickers](http://www.unixstickers.com/stickers/coding_stickers/bower-web-package-manager-shaped-sticker).
+[Bower stickers are available on Unixstickers](http://www.unixstickers.com/stickers/coding_stickers/bower-web-package-manager-shaped-sticker).
 
 <p><a href="https://www.stickermule.com/marketplace/3758-bower"><img class="content-img" src="/img/bower-stickers.jpg" alt="Bower shirts"></a></p>
 
