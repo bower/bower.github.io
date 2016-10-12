@@ -11,7 +11,7 @@ As Yarn already supports multiple package formats and ecosystems, we secretly ho
 
 Yarn adverises itself as a drop-in replacement for both npm and Bower. This means you will be able to continue using your existing `bower.json` just like before. Yarn installs bower components to `bower_components`, npm components to `node_modules`, and supports dependency flattening!
 
-**Important note**: As it stands right now there still seem to be [some issues](https://github.com/yarnpkg/yarn/pull/896) regarding Bower support. We are however confident that with the help of the community, these issues will be solved quickly as Yarn will steadly step towards 1.0 in upcoming months.
+**Important note**: As it stands right now there still seem to be [some issues](https://github.com/yarnpkg/yarn/pull/896) regarding Bower support. We are however confident that with the help of the community, these issues will be solved quickly as Yarn steps towards 1.0 in upcoming months.
 
 It is important to keep in mind that just like npm, Bower consists of more than just the CLI component and switching between the npm and Bower ecosystem can still be improved in a number of ways.
 
