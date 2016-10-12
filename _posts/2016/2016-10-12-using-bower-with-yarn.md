@@ -7,7 +7,7 @@ Yesterday's official release of [Yarn](https://yarnpkg.com/)  adds an interestin
 
 Yarn looks like a great improvement compared to the current Bower client in a number of ways we'll describe. It could help you to transition to npm if that is something you've been looking for recently.
 
-As Yarn already supports multiple package formats and ecosystems, we secretly hope it will empower JavaScript developers develop ES6 modules ecosystem, as compared to CommonJS used by npm community, and AMD/globals used by Bower community. Browsers and [node](https://github.com/bmeck/UnambiguousJavaScriptGrammar/blob/master/README.md).
+As Yarn already supports multiple package formats and ecosystems, we secretly hope it will empower JavaScript developers develop ES6 modules ecosystem, as compared to CommonJS used by npm community, and AMD/globals used by Bower community. Browsers and [node](https://github.com/bmeck/UnambiguousJavaScriptGrammar/blob/master/README.md) agree.
 
 Yarn adverises itself as a drop-in replacement for both npm and Bower. This means you will be able to continue using your existing `bower.json` just like before. Yarn installs bower components to `bower_components`, npm components to `node_modules`, and supports dependency flattening!
 
