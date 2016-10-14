@@ -59,6 +59,15 @@ h4:hover .header-anchor {
   line-height: 1.25;
 }
 
+.notification {
+  font-size: 1.6em;
+  line-height: 1.25;
+  color: #FFFFFF;
+  background: #EF5734;
+  padding: 1.0em;
+  border-radius: 5px;
+}
+
 /* ---- about imgs ---- */
 
 .download-logo {

@@ -4,6 +4,8 @@ layout: docs
 is_home: true
 ---
 
+<p class="notification">Bower is no longer actively maintained. Please, use alternatives like npm or Yarn.</p>
+
 <p class="lead">Web sites are made of lots of things — frameworks, libraries, assets, and utilities. Bower manages all these things for you.</p>
 
 Keeping track of all these packages and making sure they are up to date (or set to the specific versions you need) is tricky. Bower to the rescue!
