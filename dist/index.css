@@ -809,6 +809,9 @@ code .nv {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+.search-results .name h4 {
+  margin-bottom: 0.3em;
+}
 .search-results .container .label {
   background: #CECECE;
   color: #543729;
@@ -1012,6 +1015,15 @@ a:hover img.logo {
   height: 1.4em;
   fill: #008ec4;
   vertical-align: middle;
+}
+
+.icon-home {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: black;
+  fill: black;
 }
 
 /* ---- page-title ---- */

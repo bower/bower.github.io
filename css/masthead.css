@@ -113,6 +113,15 @@ a:hover img.logo {
   vertical-align: middle;
 }
 
+.icon-home {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: black;
+  fill: black;
+}
+
 /* ---- page-title ---- */
 
 .page-title {

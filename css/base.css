@@ -284,6 +284,9 @@ code .nv {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
 }
+.search-results .name h4 {
+  margin-bottom: 0.3em;
+}
 .search-results .container .label {
   background: #CECECE;
   color: #543729;
