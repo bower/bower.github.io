@@ -138,7 +138,7 @@ var resolver = plugResolver({
   * `resolver`: `Resolver` - instance of the resolver.
   * `version`: `String` - Bower's version that instantiates resolver. You can validate it.
   * `config`: `Object` - Bower's [config](/docs/config/). You can ask authors to put extra configuration in it.
-  * `logger`: `Object` - Bower's [logger](https://github.com/bower/logger). Use it to output important warnings / information.
+  * `logger`: `Object` - Bower's [logger](https://github.com/bower/bower/tree/master/packages/bower-logger). Use it to output important warnings / information.
 
 `plugResolver()` returns an instance of the resolver with the API described below.
 
