@@ -3,6 +3,8 @@ title: "Using Bower with Yarn"
 author: benmann
 ---
 
+UPDATE: Yarn decided to drop Bower support for now. We recommend to try it anyway as an alternative to npm!
+
 Yesterday's official release of [Yarn](https://yarnpkg.com/)  adds an interesting new tool to the world of package managers, bridging the gap between Bower and npm, and adding the most requested features to both.
 
 Yarn looks like a great improvement compared to the current Bower client in a number of ways we'll describe. It could help you to transition to npm if that is something you've been looking for recently.
