@@ -196,6 +196,9 @@ a:hover img.logo {
 /* ---- Responsive styles ---- */
 
 @media screen and (max-width: 680px) {
+  .small-hidden {
+    display: none;
+  }
   #masthead {
     margin-bottom: 10px;
     min-height: auto;
