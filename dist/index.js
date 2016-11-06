@@ -37700,7 +37700,8 @@ function renderSearch() {
           url: result.repository_url,
           description: result.description,
           owner: result.repository_url.split('/').splice(-2, 1),
-          stars: result.stars
+          stars: result.stars,
+          homepage: checkHomepageURL(result.homepage),
         });
       });
 
@@ -37712,6 +37713,7 @@ function renderSearch() {
       render('', msg.networkError);
     });
   }
+
   search = _.debounce(search, 1000);
 
   function renderEmoji(code) {
@@ -37755,6 +37757,15 @@ function renderSearch() {
       }
     }
     return (false);
+  }
+
+  function checkHomepageURL(url) {
+    if (!url) return false;
+
+    if (!/^(f|ht)tps?:\/\//i.test(url)) {
+      url = "http://" + url;
+    }
+    return url;
   }
 
   queryInput.addEventListener('input', function () {

@@ -33,8 +33,16 @@ permalink: /search/
         <tr>
           <td class="name">
             <h4>
-              <a href="{{url}}">{{name}}</a>
+              <a href="{{url}}" rel="noopener noreferrer">{{name}}</a>
             </h4>
+            {{#homepage}}
+              <small>
+                <a href="{{homepage}}" rel="noopener noreferrer">
+                  <svg class="icon-home"><use xlink:href="#icon-home"></use></svg>
+                  {{homepage}}
+                </a>
+              </small>
+            {{/homepage}}
             <p class="description">{{description}}</p>
             <p class="visible-xs">
               <span class="label">Owner: <span>{{owner}}</span></span>
