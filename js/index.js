@@ -221,10 +221,12 @@ function renderSearch() {
   }
 
   function checkHomepageURL(url) {
+    if (!url) return false;
+
     if (!/^(f|ht)tps?:\/\//i.test(url)) {
       url = "http://" + url;
-   }
-   return url;
+    }
+    return url;
   }
 
   queryInput.addEventListener('input', function () {
