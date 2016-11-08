@@ -34,6 +34,8 @@ Download [**PNG**](/img/bower-logo.png) · [**SVG**](/img/bower-logo.svg) · [**
 
 The Bower logo [was designed](https://gist.github.com/desandro/1c50118441f703f3f6e1) by [Dave DeSandro](http://desandro.com) and [Isaac Durazo](http://www.isaacdurazo.com/). It illustrates a [flame bowerbird performing its sultry mating dance](https://www.youtube.com/watch?v=wCzZj21Gs4U&t=24s).
 
+The Bower logo may be used on websites, apps, or printed materials to indicate use of Bower technologies. The logo may not be used as the primary icon, avatar, or logo of your project. The logo may not be used to imply official status or endorsement by the Bower team. The logo may not be manipulated in any way (changing colors, adding shapes). The logo may not be incorporated with other logos.
+
 ### Swag
 
 [Bower t-shirts are available on Cotton Bureau](https://cottonbureau.com/products/bower). T-shirts get printed every couple of months.
