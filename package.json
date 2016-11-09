@@ -23,20 +23,22 @@
   },
   "homepage": "http://bower.io",
   "dependencies": {
-    "d3": "^3.5.17",
-    "es6-promise": "^3.2.1",
+    "d3": "^4.3.0",
+    "es6-promise": "^4.0.5",
     "lodash": "^4.13.1",
     "mark.js": "github:julmot/mark.js#649fdcd",
     "mustache": "^2.2.1",
-    "normalize.css": "3.0.3",
+    "normalize.css": "5.0.0",
     "plottable": "palantir/plottable#3038243c9",
     "rx": "^4.1.0",
     "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-concat": "^0.4.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-replace": "^1.0.1",
     "load-grunt-tasks": "^3.5.0",
-    "request": "^2.67.0"
+    "uglify-save-license": "^0.4.1"
   }
 }
