@@ -196,6 +196,9 @@ code .nv {
 }
 
 
+.search-results .table {
+    table-layout: fixed;
+}
 .search-results .table > thead > tr > th {
   border-bottom: 1px solid #eee;
   padding: 5px 0px 15px 0px;
