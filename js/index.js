@@ -7,7 +7,7 @@ function domReady() {
 
   if (document.getElementById('users-chart')) {
     renderStats();
-  } else if (document.getElementById('search')) {
+  } else if (document.querySelector('input[type="search"]')) {
     renderSearch();
   } else {
     addAnchors();
