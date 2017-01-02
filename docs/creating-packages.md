@@ -64,4 +64,17 @@ Please do not squat on package names. Register your package and claim your name 
 
 For package name transfers, intellectual property and other disputes, please try to resolve with the owner first. If no resolution, please submit a ticket in the [Bower Registry repo](https://github.com/bower/registry) and the Bower Core Team will assist.
 
-You'll likely want to [`bower cache clean`](/docs/api#cache-clean) after your change. At the moment the  `unregister` command is temporarily disabled. You can check out this issue - [#2210](https://github.com/bower/bower/issues/2210), for more information. However, you can [request a package to be unregistered manually](https://github.com/bower/bower/issues/120).
+### Unregister
+
+You can unregister packages with [`bower unregister`](/docs/api/#unregister). You first need to authenticate with GitHub with [`bower login`](/docs/api/#login) to confirm you are a contributor to the package repo.
+
+{% highlight bash %}
+bower login
+# enter username and password
+? Username:
+? Password:
+# unregister packages after successful login
+bower unregister <package>
+{% endhighlight %}
+
+You'll likely want to [`bower cache clean`](/docs/api#cache-clean) after your change. Please remember it is generally considered bad behavior to remove versions of a library that others are depending on. Think twice :) If the above doesn't work for you, you can [request a package be unregistered manually](https://github.com/bower/bower/issues/120).
