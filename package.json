@@ -23,12 +23,12 @@
   },
   "homepage": "http://bower.io",
   "dependencies": {
-    "d3": "^4.3.0",
-    "es6-promise": "^4.0.5",
+    "d3": "^3.5.17",
+    "es6-promise": "^3.2.1",
     "lodash": "^4.13.1",
     "mark.js": "github:julmot/mark.js#8.6.0",
     "mustache": "^2.2.1",
-    "normalize.css": "5.0.0",
+    "normalize.css": "3.0.3",
     "plottable": "palantir/plottable#3038243c9",
     "rx": "^4.1.0",
     "whatwg-fetch": "^1.0.0"
