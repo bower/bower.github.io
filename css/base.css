@@ -388,3 +388,18 @@ code .nv {
   margin: 0 0 10px 0;
   padding: 0;
 }
+
+.notification {
+  width: 100%;
+  text-align: center;
+  background-color: #2188b6;
+  color: white;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  padding: 4px;
+}
+
+.notification a {
+  color: white;
+  text-decoration: underline;
+}

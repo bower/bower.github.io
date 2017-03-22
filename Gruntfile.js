@@ -7,7 +7,7 @@ module.exports = grunt => {
     cssmin: {
       dist: {
         files: {
-          'dist/index.css': [
+          'dist/index2.css': [
             'node_modules/normalize.css/normalize.css',
             'css/plottable.css',
             'css/base.css',
