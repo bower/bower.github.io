@@ -22,7 +22,7 @@ Bower is a command line utility. Install it with npm.
 $ npm install -g bower
 {% endhighlight %}
 
-Bower requires [node, npm](http://nodejs.org/) and [git](http://git-scm.org).
+Bower requires [nodejs, npm](http://nodejs.org/) and [git](http://git-scm.org).
 
 Latest release: [![bower version](https://img.shields.io/npm/v/bower.svg?maxAge=2592000)]()
 
