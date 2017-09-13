@@ -52,7 +52,7 @@ module.exports = grunt => {
         },
         files: [{
           src: ['dist/index2.js'],
-          dest: 'dist/index.js'
+          dest: 'dist/index2.js'
         }]
       }
     }
