@@ -26,7 +26,7 @@ module.exports = grunt => {
           screwIE8: true
         },
         files: {
-          'dist/index2.js': [
+          'dist/index3.js': [
             'node_modules/d3/d3.min.js',
             'node_modules/es6-promise/dist/es6-promise.min.js',
             'node_modules/whatwg-fetch/fetch.js',
@@ -51,8 +51,8 @@ module.exports = grunt => {
           }]
         },
         files: [{
-          src: ['dist/index2.js'],
-          dest: 'dist/index2.js'
+          src: ['dist/index3.js'],
+          dest: 'dist/index3.js'
         }]
       }
     }
