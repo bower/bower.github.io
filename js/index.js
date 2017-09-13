@@ -75,7 +75,7 @@ var fetchData = function () {
 }
 
 var plot = function (npmData) {
-  var center, chart, colorScale, domainer, format, gridlines, installsLabel, legend, line_installs, npmData, stack,
+  var center, chart, colorScale, domainer, format, gridlines, installsLabel, legend, line_installs, stack,
     xAxis, xScale, yAxisInstalls, yAxisInstallsLeft, yScaleInstalls;
   stack = d3.layout.stack().values(function (d) {
     return d;
