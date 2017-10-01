@@ -32,7 +32,7 @@ If someone reasonably specified `"yourpackage": "^2.3.5"` as a dependency, remov
 
 ### Why step 1?
 
-Removing `bower.json` and distribution files breaks all installations that specify in dependcies `"yourpackage": "*"` (more likely, resolves to latest semver tag) or `"yourpackage": "master"` (less likely, resolver to latest change on master branch). In such case Bower will resolve versions of your package that don't support Bower. Honestly this is a fault of these developers for not properly using semver ranges for dependencies, but **be considerate and notify them to update dependencies in their packages few weeks before dropping Bower support**.
+Removing `bower.json` and distribution files breaks all installations that specify in dependcies `"yourpackage": "*"` (more likely, resolves to latest semver tag) or `"yourpackage": "master"` (less likely, resolves to latest change on master branch). In such case Bower will resolve versions of your package that don't support Bower. Honestly this is a fault of these developers for not properly using semver ranges for dependencies, but **be considerate and notify them to update dependencies in their packages few weeks before dropping Bower support**.
 
 Thanks to [libraries.io](https://libraries.io) you can fairly easy discover these developers at:
 
