@@ -9,8 +9,8 @@ This procedure is as follows:
 
 1. **Before**, notify all users of your module who might be affected by this change (see below)
 2. Remove all distribution files and `bower.json` from repository
-3. Tagging repository with new **major** semver version (e.g from 3.5.6 to 4.0.0)
-4. **Not** removing your component from Bower registry (via `bower unregister`)
+3. Tag repository with new **major** semver version (e.g from 3.5.6 to 4.0.0)
+4. **Don't** remove your component from Bower registry (via `bower unregister`)
 
 To understand why these steps are necessary you need to know how Bower resolves components.
 
