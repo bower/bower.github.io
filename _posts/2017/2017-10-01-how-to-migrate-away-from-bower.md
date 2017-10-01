@@ -5,8 +5,8 @@ author: sheerun
 
 As you might have noticed, we started recommending [Yarn](https://yarnpkg.com) as an alternative to Bower for **new** front-end projects. Main reasons are straightforward and written on its home page:
 
-1. Yarn uses checksums to verify the integrity of every installed package
-2. Yarn uses lockfile to exactly reproduce installed packages each time
+1. Yarn uses checksums to verify the integrity of every installed package (like npm@5)
+2. Yarn uses lockfile to exactly reproduce installed packages each time (like npm@5)
 3. Yarn supports most features npm supports, and is able to force flattening of dependencies
 
 So far it just wasn't obious how one could use Yarn for **legacy** Bower projects. Indeed, until recently Yarn neither could install Bower packages (i.e. GitHub repositories without `package.json`) nor resolve semver ranges on git tags. I focused on this [for](https://github.com/yarnpkg/yarn/pull/3624) [a](https://github.com/yarnpkg/yarn/pull/3701) [while](https://github.com/yarnpkg/yarn/pull/3855) and the result is pleasing: **Yarn 1.x is able to install most of Bower packages**. But there's a catch: it cannot resolve Bower dependencies.
