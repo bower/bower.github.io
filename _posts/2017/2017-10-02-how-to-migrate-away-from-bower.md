@@ -33,7 +33,7 @@ The result is something as follows:
 
 Now, if you install this `package.json` with Yarn, `node_modules/@bower_components` will contain all components in exactly the same way they would be installed by Bower (sans generated `.bower.json`).
 
-And not only that, if some component does support CommonJS interface, you can employ [Webpack](https://webpack.js.org/) for precompiling and require it as so: `const almond = require('@bower_components/almond')`.
+And not only that, if some component supports CommonJS interface, you can employ [Webpack](https://webpack.js.org/) for precompiling and require it as so: `const almond = require('@bower_components/almond')`.
 
 For components that don't support CommonJS, you can find their CommonJS equivalents and add them to project: `yarn add d3@~3.3.10`, then require as usual `const d3 = require('d3')`
 
