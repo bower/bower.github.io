@@ -36,7 +36,8 @@ Removing `bower.json` and distribution files breaks all installations that speci
 
 Thanks to [libraries.io](https://libraries.io) you can fairly easy discover these developers at:
 
-[https://libraries.io/bower/mocha/usage?requirements=%2A](https://libraries.io/bower/mocha/usage?requirements=%2A)
+- [https://libraries.io/bower/mocha/usage?requirements=%2A](https://libraries.io/bower/mocha/usage?requirements=%2A)
+- [https://libraries.io/bower/mocha/usage?requirements=latest](https://libraries.io/bower/mocha/usage?requirements=latest)
 
 (please replace mocha with your module name)
 
