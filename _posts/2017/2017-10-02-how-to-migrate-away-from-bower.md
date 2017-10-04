@@ -9,7 +9,7 @@ As you might have noticed, we started recommending [Yarn](https://yarnpkg.com) a
 2. Yarn uses lockfile to exactly reproduce installed packages each time (like npm@5)
 3. Yarn supports most features npm supports, and is able to force flattening of dependencies
 
-So far it just wasn't obious how one could use Yarn for **legacy** Bower projects. Indeed, until recently Yarn neither could install Bower packages (i.e. GitHub repositories without `package.json`) nor resolve semver ranges on git tags. I focused on this [for](https://github.com/yarnpkg/yarn/pull/3624) [a](https://github.com/yarnpkg/yarn/pull/3701) [while](https://github.com/yarnpkg/yarn/pull/3855) and the result is pleasing: **Yarn 1.x is able to install most of Bower packages**. But there's a catch: it cannot resolve Bower dependencies.
+So far it just wasn't obvious how one could use Yarn for **legacy** Bower projects. Indeed, until recently Yarn neither could install Bower packages (i.e. GitHub repositories without `package.json`) nor resolve semver ranges on git tags. I focused on this [for](https://github.com/yarnpkg/yarn/pull/3624) [a](https://github.com/yarnpkg/yarn/pull/3701) [while](https://github.com/yarnpkg/yarn/pull/3855) and the result is pleasing: **Yarn 1.x is able to install most of Bower packages**. But there's a catch: it cannot resolve Bower dependencies.
 
 But this is probably for the best as a) Yarn is meant as npm's replacement b) one must admit npm's CommonJS module ecosystem is [better integrated](https://medium.com/@trek/last-week-i-had-a-small-meltdown-on-twitter-about-npms-future-plans-around-front-end-packaging-b424dd8d367a) than Bower's globals/AMD modules c) Module authors currently suffer from supporting two module ecosystems (and dist files in repositories).
 
