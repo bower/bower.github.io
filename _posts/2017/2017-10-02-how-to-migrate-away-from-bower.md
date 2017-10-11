@@ -15,7 +15,7 @@ So far it just wasn't obvious how one could use Yarn for **legacy** Bower projec
 
 But this is probably for the best as a) Yarn is meant as npm's replacement b) one must admit npm's CommonJS module ecosystem is [better integrated](https://medium.com/@trek/last-week-i-had-a-small-meltdown-on-twitter-about-npms-future-plans-around-front-end-packaging-b424dd8d367a) than Bower's globals/AMD modules c) Module authors currently suffer from supporting two module ecosystems (and dist files in repositories).
 
-Admitting this doesn't change the fact that it's difficult to migrate a project that uses globals/AMD components to CommonJS all at once. Ideally you'd be able to install such project with Yarn as-is, and only then gradually replace AMD modules with CommonJS/ES6 equivalents. That's why I've created [**bower-away**](https://github.com/sheerun/bower-away).
+Admitting this doesn't change the fact that it's difficult to migrate a project that uses globals/AMD components to CommonJS all at once. Ideally you'd be able to install such project with Yarn as-is, and only then gradually replace AMD modules with CommonJS/ES6 equivalents. Solution: [**bower-away**](https://github.com/sheerun/bower-away).
 
 ### How it works?
 
