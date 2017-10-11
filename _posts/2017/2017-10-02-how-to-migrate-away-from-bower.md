@@ -3,7 +3,7 @@ title: "How to migrate away from Bower?"
 author: sheerun
 ---
 
-> If you came here because of "Request to xxx failed with 410" error, it's enough to [upgrade Bower](https://twitter.com/bower/status/918073147789889536)
+> If you came here because of "Request to xxx failed with 410" error, it's enough to [upgrade](https://twitter.com/bower/status/918073147789889536)
 
 As you might have noticed, we started recommending [Yarn](https://yarnpkg.com) as an alternative to Bower for **new** front-end projects. Main reasons are straightforward and written on its home page:
 
