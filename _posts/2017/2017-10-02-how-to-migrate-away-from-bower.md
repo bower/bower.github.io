@@ -19,7 +19,7 @@ Admitting this doesn't change the fact that it's difficult to migrate a project 
 
 ### How it works?
 
-Yarn not only is unable to resolve dependencies of Bower components (i.e. dependencies defined in `bower.json`, it looks just for ones in `package.json`), it also cannot translate names of Bower components to URLs of repositories as [described in previous blogpost](https://bower.io/blog/2017/how-to-drop-bower-support/#why-step-4). `bower-away` gets away with this by resolving all dependencies with Bower, and adding all of them **flattened** to `package.json`.
+Yarn is not only unable to resolve dependencies of Bower components (i.e. dependencies defined in `bower.json`, it looks just for ones in `package.json`), it also cannot translate names of Bower components to URLs of repositories as [described in previous blogpost](https://bower.io/blog/2017/how-to-drop-bower-support/#why-step-4). `bower-away` gets away with this by resolving all dependencies with Bower, and adding all of them **flattened** to `package.json`.
 
 The result is something as follows:
 
