@@ -13,7 +13,7 @@ permalink: /docs/config/
   "registry": {
     "search": [
       "http://localhost:8000",
-      "https://bower.herokuapp.com"
+      "https://registry.bower.io"
     ]
   }
 }
@@ -43,7 +43,7 @@ Example of valid environment variables:
 
 Example of valid enviroment variables with Array convention:
 
-* `export bower_registry__search='[http://localhost:8080, http://bower.herokuapp.com]'; bower install`
+* `export bower_registry__search='[http://localhost:8080, http://registry.bower.io]'; bower install`
 
 
 ## .bowerrc specification
@@ -54,7 +54,7 @@ Available configuration variables, in `.bowerrc` format:
 {
   "cwd": "~/.my-project",
   "directory": "bower_components",
-  "registry": "https://bower.herokuapp.com",
+  "registry": "https://registry.bower.io",
   "shorthand-resolver": "git://github.com/{{owner}}/{{package}}.git",
   "proxy": "http://proxy.local",
   "https-proxy": "http://proxy.local",
