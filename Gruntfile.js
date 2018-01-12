@@ -27,12 +27,12 @@ module.exports = grunt => {
         },
         files: {
           'dist/index3.js': [
-            'node_modules/d3/d3.min.js',
-            'node_modules/es6-promise/dist/es6-promise.min.js',
+            'node_modules/d3/d3.js',
+            'node_modules/es6-promise/dist/es6-promise.js',
             'node_modules/whatwg-fetch/fetch.js',
-            'node_modules/mustache/mustache.min.js',
-            'node_modules/mark.js/dist/mark.min.js',
-            'node_modules/lodash/lodash.min.js',
+            'node_modules/mustache/mustache.js',
+            'node_modules/mark.js/dist/mark.js',
+            'node_modules/lodash/lodash.js',
             'js/plottable.js',
             'js/index.js'
           ]
