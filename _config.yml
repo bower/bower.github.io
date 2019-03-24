@@ -16,4 +16,6 @@ defaults:
     values:
       layout: blog
       categories: blog
-gems: [jekyll-paginate, jekyll_asset_pipeline, yui-compressor]
+plugins:
+  - jekyll-paginate
+  - jekyll_asset_pipeline
