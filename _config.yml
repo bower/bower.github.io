@@ -4,9 +4,11 @@ paginate: 5
 paginate_path: /blog/page:num/
 exclude:
   - package.json
-  - Gruntfile.js
   - node_modules
-
+sass:
+  load_paths:
+    - _sass
+    - node_modules
 defaults:
   -
     scope:
@@ -14,8 +16,4 @@ defaults:
     values:
       layout: blog
       categories: blog
-
-github_avatars:
-  desandro: "https://avatars.githubusercontent.com/u/85566?v=3"
-
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, jekyll_asset_pipeline, yui-compressor]

@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "grunt"
+    "dev": "bundle exec jekyll serve",
+    "build": "bundle exec jekyll build"
   },
   "repository": {
     "type": "git",
@@ -32,13 +33,5 @@
     "plottable": "palantir/plottable#3038243c9",
     "rx": "^4.1.0",
     "whatwg-fetch": "^1.0.0"
-  },
-  "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-cssmin": "^1.0.2",
-    "grunt-contrib-uglify": "^2.0.0",
-    "grunt-replace": "^1.0.1",
-    "load-grunt-tasks": "^3.5.0",
-    "uglify-save-license": "^0.4.1"
   }
 }
