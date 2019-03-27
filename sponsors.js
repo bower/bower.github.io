@@ -36,7 +36,7 @@ const data = [
   {
     name: 'icons8',
     href: 'https://icons8.com/web-app/category/all/Very-Basic',
-    src: 'https://i.imgur.com/RzeOnsu.png',
+    src: 'https://i.imgur.com/QlUE6Wj.png',
     alt: 'Icons8'
   },
   {

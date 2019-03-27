@@ -7,3 +7,4 @@ _site/
 .jekyll-metadata
 # Old generated css/styles.css is now dist/index.css
 css/styles.css
+.asset-pipeline
