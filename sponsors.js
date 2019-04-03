@@ -152,6 +152,18 @@ const data = [
     href: 'https://www.xn--forbruksln-95a.com/',
     src: 'https://i.imgur.com/cxkV6Ve.png',
     alt: 'Forbrukslån'
+  },
+  {
+    name: 'best-shark-tank-products',
+    href: 'https://www.bestsharktankproducts.com',
+    alt: 'Best Shark Tank Products',
+    src: 'https://i.imgur.com/XSaZ4Hy.jpg'
+  },
+  {
+    name: 'jonas-cederholm',
+    href: 'https://www.lainat.fi',
+    alt: 'lainat.fi',
+    src: 'https://i.imgur.com/5ObBbYs.png'
   }
 ]
 
@@ -192,7 +204,11 @@ async function main() {
   })).sort((a, b) => b.total - a.total).forEach(t => {
     const sponsor = data.find(d => d.name === t.name)
     if (!sponsor) {
-      throw new Error('Unknown sponsor: ' + t.name)
+      if (['meubelpartner'].includes(t.name)) {
+        return
+      } else {
+        throw new Error('Unknown sponsor: ' + t.name)
+      }
     }
     console.log(`<a href="${sponsor.href}"><img width="200" class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>`)
   })
