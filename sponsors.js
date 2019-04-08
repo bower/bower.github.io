@@ -164,6 +164,24 @@ const data = [
     href: 'https://www.lainat.fi',
     alt: 'lainat.fi',
     src: 'https://i.imgur.com/5ObBbYs.png'
+  },
+  {
+    name: 'meubelpartner',
+    href: 'https://www.meubelpartner.nl/tafels/eettafels.html',
+    alt: 'Dining room table - Meubelpartner logo - proud Bower sponsor',
+    src: 'https://i.imgur.com/ubhPYsn.png'
+  },
+  {
+    name: 'lead-supply',
+    href: 'https://lainaa-helposti.fi/',
+    alt: 'Lainaa Helposti',
+    src: 'https://i.imgur.com/Pl628R5.png',
+  },
+  {
+    name: 'customessaymeister-com',
+    src: 'https://i.imgur.com/Id7g8vY.png',
+    alt: 'Custom Essay Eister',
+    href: 'https://www.customessaymeister.com/',
   }
 ]
 
