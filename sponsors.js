@@ -182,6 +182,30 @@ const data = [
     src: 'https://i.imgur.com/Id7g8vY.png',
     alt: 'Custom Essay Eister',
     href: 'https://www.customessaymeister.com/',
+  },
+  {
+    name: 'bloktprivacy',
+    src: 'https://i.imgur.com/eD0j2VN.png',
+    href: 'https://blokt.com/guides/best-vpn',
+    alt: 'The Best VPN Services 2019'
+  },
+  {
+    name: 'usave',
+    src: 'https://i.imgur.com/u82oGMc.png',
+    href: 'https://usave.co.uk/utilities/broadband/',
+    alt: 'Compare broadband deals with usave.co.uk'
+  },
+  {
+    name: 'fire-stick-tricks',
+    src: 'https://i.imgur.com/d6J9fq1.png',
+    href: 'https://www.firesticktricks.com/',
+    alt: 'Fire Stick Tricks'
+  },
+  {
+    name: 'tekhattan',
+    src: 'https://i.imgur.com/ng10vwa.png',
+    href: 'https://tekhattan.com/',
+    alt: 'IT SUPPORT, MANAGED SERVICES, AND TECH SUPPORT'
   }
 ]
 
