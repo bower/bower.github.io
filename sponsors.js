@@ -206,6 +206,12 @@ const data = [
     src: 'https://i.imgur.com/ng10vwa.png',
     href: 'https://tekhattan.com/',
     alt: 'IT SUPPORT, MANAGED SERVICES, AND TECH SUPPORT'
+  },
+  {
+    name: 'devilsblood2',
+    href: "https://www.onecompare.com/",
+    src: "https://i.imgur.com/D29xf3x.png",
+    alt: "Onecompare"
   }
 ]
 
