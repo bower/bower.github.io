@@ -209,9 +209,9 @@ const data = [
   },
   {
     name: 'devilsblood2',
-    href: "https://www.onecompare.com/",
-    src: "https://i.imgur.com/D29xf3x.png",
-    alt: "Onecompare"
+    href: "https://www.onecompare.com/apple/iphone-deals",
+    src: "https://i.imgur.com/053ayaj.png",
+    alt: "OneCompare"
   }
 ]
 
