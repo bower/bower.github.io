@@ -212,6 +212,12 @@ const data = [
     href: "https://www.onecompare.com/apple/iphone-deals",
     src: "https://i.imgur.com/053ayaj.png",
     alt: "OneCompare"
+  },
+  {
+    name: 'utilitysavingexpert',
+    src: 'https://i.imgur.com/Hwa8g6o.png',
+    href: 'https://www.utilitysavingexpert.com/energy/',
+    alt: 'energy comparison'
   }
 ]
 
