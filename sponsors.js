@@ -218,6 +218,18 @@ const data = [
     src: 'https://i.imgur.com/Hwa8g6o.png',
     href: 'https://www.utilitysavingexpert.com/energy/',
     alt: 'energy comparison'
+  },
+  {
+    name: 'codefirst',
+    src: 'https://images.opencollective.com/proxy/images?src=https%3A%2F%2Fopencollective-production.s3-us-west-1.amazonaws.com%2Fdde88120-e914-11e8-a662-278259d35390.png&height=100',
+    href: 'https://www.codefirst.co.uk/',
+    alt: 'Code First'
+  },
+  {
+    name: 'routerhosting',
+    src: 'https://i.imgur.com/yccgOkJ.png',
+    href: 'https://www.routerhosting.com/',
+    alt: 'Router Hosting'
   }
 ]
 
@@ -230,6 +242,9 @@ async function main() {
   const supporters = {}
 
   allTransactions.forEach(t => {
+    if (t.fromAccount.slug === 'monovm') {
+      console.log(t)
+    }
     if (t.amount.value >= 100) {
       sponsors[t.fromAccount.slug] = Math.max(
         sponsors[t.fromAccount.slug] || 0,
