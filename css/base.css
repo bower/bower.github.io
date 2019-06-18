@@ -382,6 +382,7 @@ code .nv {
 
 .sidebar-logo {
   max-height: 100px;
+  max-width: 200px;
   display: block;
   margin: 0 auto;
 }
