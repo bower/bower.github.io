@@ -285,7 +285,7 @@ async function main() {
         throw new Error('Unknown sponsor: ' + t.name)
       }
     }
-    console.log(`<a href="${sponsor.href}"><img width="200" class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>`)
+    console.log(`<a href="${sponsor.href}"><img class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>`)
   })
 
   Object.keys(supporters).forEach(k => {
