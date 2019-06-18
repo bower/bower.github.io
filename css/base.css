@@ -384,7 +384,7 @@ code .nv {
   max-height: 100px;
   max-width: 200px;
   display: block;
-  margin: 0 auto;
+  margin: 2px auto;
 }
 
 .sidebar h5 {
