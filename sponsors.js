@@ -233,9 +233,9 @@ const data = [
   },
   {
     name: 'vpn-review-com',
-    src: 'https://i.imgur.com/1KoFaWc.jpg',
+    src: 'https://i.imgur.com/INf1G7H.png',
     href: 'https://vpn-review.com/',
-    alt: 'vpn-review.com'
+    alt: 'VPN reviews 2019'
   }
 ]
 
