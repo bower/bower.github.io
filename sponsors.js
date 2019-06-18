@@ -230,6 +230,12 @@ const data = [
     src: 'https://i.imgur.com/yccgOkJ.png',
     href: 'https://www.routerhosting.com/',
     alt: 'Router Hosting'
+  },
+  {
+    name: 'vpn-review-com',
+    src: 'https://i.imgur.com/1KoFaWc.jpg',
+    href: 'https://vpn-review.com/',
+    alt: 'vpn-review.com'
   }
 ]
 
