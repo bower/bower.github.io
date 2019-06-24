@@ -236,6 +236,12 @@ const data = [
     src: 'https://i.imgur.com/INf1G7H.png',
     href: 'https://vpn-review.com/',
     alt: 'VPN reviews 2019'
+  },
+  {
+    name: 'traders-insurance-com',
+    src: 'https://i.imgur.com/xlkR3fb.png',
+    href: 'https://www.traders-insurance.com',
+    alt: 'Traders Insurance'
   }
 ]
 
