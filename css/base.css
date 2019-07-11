@@ -406,3 +406,7 @@ code .nv {
   color: white;
   text-decoration: underline;
 }
+
+.site-footer a {
+  white-space: nowrap;
+}
