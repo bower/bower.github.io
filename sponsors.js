@@ -242,6 +242,18 @@ const data = [
     src: 'https://i.imgur.com/xlkR3fb.png',
     href: 'https://www.traders-insurance.com',
     alt: 'Traders Insurance'
+  },
+  {
+    name: 'asoboofficial',
+    href: 'https://asobo-design.com/nex/',
+    alt: 'デザイン作成のASOBO DESIGN',
+    src: 'https://i.imgur.com/kIU9679.png'
+  },
+  {
+    name: 'lemon-law',
+    src: 'https://i.imgur.com/vJUzTyq.png',
+    alt: 'Lemon Law.site',
+    href: 'https://lemonlaw.site/'
   }
 ]
 
