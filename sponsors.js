@@ -254,6 +254,12 @@ const data = [
     src: 'https://i.imgur.com/vJUzTyq.png',
     alt: 'Lemon Law.site',
     href: 'https://lemonlaw.site/'
+  },
+  {
+    name: 'loadview',
+    href: 'https://www.loadview-testing.com/',
+    alt: 'LoadView-Testing',
+    src: 'https://i.imgur.com/iHdPKSV.png'
   }
 ]
 
