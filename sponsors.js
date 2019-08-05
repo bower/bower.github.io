@@ -11,7 +11,7 @@ async function query() {
       query: `
 {
   account(slug: "bower") {
-    transactions(limit: 2000, type: CREDIT) {
+    transactions(limit: 2000) {
       nodes {
         type
         amount {
@@ -23,6 +23,10 @@ async function query() {
           name
           slug
         }
+        toAccount {
+          name
+          slug
+        }
       }
     }
   }
@@ -31,6 +35,109 @@ async function query() {
     })
   })
 }
+
+const datasup = [
+  {
+    name: 'fire-stick-how',
+    href: 'https://www.firestickhow.com/',
+    text: 'Fire Stick How'
+  },
+  {
+    name: 'finance-media-aps',
+    href: 'https://superkredit.net/',
+    text: 'SuperKredit'
+  },
+  {
+    name: 'your-online-presence',
+    href: 'https://www.youronlinepresence.co.uk/',
+    text: 'Your Online Presence'
+  },
+  {
+    name: 'cryptonewsz',
+    href: 'https://www.cryptonewsz.com',
+    text: 'CryptoNewsZ'
+  },
+  {
+    name: 'gorilla-sports-as',
+    href: 'https://gorillasports.no/',
+    text: 'Gorilla Sports'
+  },
+  {
+    name: 'kredittkrt-no',
+    href: 'https://kredittkrt.no/',
+    text: 'Kredittkrt'
+  },
+  {
+    name: 'brillz',
+    href: 'https://brillz.no/',
+    text: 'Brillz'
+  },
+  {
+    name: 'dirgeobiz',
+    href: 'https://swiindex.com/',
+    text: 'swiindex.com'
+  },
+  {
+    name: 'kassekredittendk',
+    href: 'https://kassekreditten.dk/',
+    text: 'Kassekreditten'
+  },
+  {
+    name: 'canada1',
+    href: 'https://www.canadadrugsdirect.com',
+    text: 'Canadadrugsdirect'
+  },
+  {
+    name: 'kryptoportal',
+    href: 'https://www.kryptoportal.pl',
+    text: 'KryptoPortal.pl'
+  },
+  {
+    name: 'minitool-software-ltd',
+    href: 'https://www.minitool.com',
+    text: 'MiniTool'
+  },
+  {
+    name: 'dawid-seo',
+    href: 'https://ktmh.pl',
+    text: 'KTMH'
+  },
+  {
+    name: 'dcsl-software',
+    href: 'https://www.dcslsoftware.com/',
+    text: 'DCSL software'
+  },
+  {
+    name: 'nenciu-valentin-vmn-marketing-srl',
+    href: 'https://handyortenapp.de/', // ???
+    text: 'handyortenapp.de'
+  },
+  {
+    name: 'ip2location',
+    href: 'https://www.ip2location.com',
+    text: 'IP2Location'
+  },
+  {
+    name: 'upendra-rathore',
+    href: 'https://spartanpestcontrol.com/',
+    text: 'Calgary Pest Control'
+  },
+  {
+    name: 'upendra-rathore',
+    href: 'https://www.avenue-south-residence.com.sg/',
+    text: 'Avenue South Residence'
+  },
+  {
+    name: 'switchvpn',
+    href: 'https://switchvpn.net',
+    text: 'SwitchVPN'
+  },
+  {
+    name: 'best-shark-tank-products',
+    href: 'https://www.bestsharktankproducts.com',
+    text: 'Best Shark Tank Products'
+  }
+]
 
 const data = [
   {
@@ -260,31 +367,52 @@ const data = [
     href: 'https://www.loadview-testing.com/',
     alt: 'LoadView-Testing',
     src: 'https://i.imgur.com/iHdPKSV.png'
+  },
+  {
+    name: 'ux-top-5',
+    href: 'https://uxplanet.org/top-ui-ux-design-agencies-user-experience-firms-8c54697e290',
+    src: 'https://i.imgur.com/H1PtPJh.png',
+    alt: 'UX Planet'
   }
 ]
 
 async function main() {
   const response = await query()
-  const allTransactions = (await response.json()).data.account.transactions.nodes
+  const allTransactions = (await response.json()).data.account.transactions.nodes.reverse()
   const transactions = allTransactions.filter(t => (+new Date() - +Date.parse(t.createdAt))/3600000/24 < 30 && t.amount.value)
 
   const sponsors = {}
   const supporters = {}
 
+  allTransactions.forEach(t => { if (t.type === 'DEBIT') { t.fromAccount = t.toAccount } })
+  transactions.forEach(t => { if (t.type === 'DEBIT') { t.fromAccount = t.toAccount } })
+
   allTransactions.forEach(t => {
-    if (t.fromAccount.slug === 'monovm') {
+    if (t.fromAccount.slug === 'moneezy') {
       console.log(t)
     }
-    if (t.amount.value >= 100) {
-      sponsors[t.fromAccount.slug] = Math.max(
-        sponsors[t.fromAccount.slug] || 0,
-        Date.parse(t.createdAt) + Math.floor(t.amount.value / 100) * 1000 * 3600 * 24 * 31
-      )
-    } else if (t.amount.value >= 50) {
-      supporters[t.fromAccount.slug] = Math.max(
-        supporters[t.fromAccount.slug] || 0,
-        Date.parse(t.createdAt) + Math.floor(t.amount.value / 50) * 1000 * 3600 * 24 * 31
-      )
+    if (t.amount.value > 0) {
+      if (t.amount.value >= 100) {
+        sponsors[t.fromAccount.slug] = Math.max(
+          sponsors[t.fromAccount.slug] || 0,
+          Date.parse(t.createdAt) + Math.floor(t.amount.value / 100) * 1000 * 3600 * 24 * 31
+        )
+      } else if (t.amount.value >= 50) {
+        supporters[t.fromAccount.slug] = Math.max(
+          supporters[t.fromAccount.slug] || 0,
+          Date.parse(t.createdAt) + Math.floor(t.amount.value / 50) * 1000 * 3600 * 24 * 31
+        )
+      }
+    } else {
+      console.log('Refund from sponsor ' + t.fromAccount.slug)
+      if (sponsors[t.fromAccount.slug]) {
+        sponsors[t.fromAccount.slug] -= Math.floor(Math.abs(t.amount.value) / 100) * 1000 * 3600 * 24 * 31
+      }
+
+      if (supporters[t.fromAccount.slug]) {
+        console.log('Refund from supporter ' + t.fromAccount.slug)
+        supporters[t.fromAccount.slug] -= Math.floor(Math.abs(t.amount.value) / 100) * 1000 * 3600 * 24 * 31
+      }
     }
   })
 
@@ -296,6 +424,14 @@ async function main() {
       delete sponsors[k]
     }
   })
+
+  Object.keys(supporters).forEach(k => {
+    if (supporters[k] < Date.now()) {
+      console.log('Expired supporter: ' + k + ' at ' + new Date(supporters[k]).toString().slice(4, 16))
+      delete supporters[k]
+    }
+  })
+
 
   Object.keys(sponsors).map(t => ({
     name: t,
@@ -312,14 +448,20 @@ async function main() {
     console.log(`<a href="${sponsor.href}"><img class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>`)
   })
 
-  Object.keys(supporters).forEach(k => {
-    if (supporters[k] < Date.now()) {
-      console.log('Expired supporter: ' + k + ' at ' + new Date(supporters[k]).toString().slice(4, 16))
-      delete supporters[k]
-    } else {
-      console.log('Supporting ' + k)
+  console.log("\nSUPPORTERS\n")
+  Object.keys(supporters).map(t => ({
+    name: t,
+    total: allTransactions.filter(t2 => t2.fromAccount.slug == t).reduce((sum, t) => sum += t.amount.value, 0)
+  })).sort((a, b) => b.total - a.total).forEach(t => {
+    const sups = datasup.filter(d => d.name === t.name)
+    if (!sups.length) {
+      throw new Error('Unknown supporter: ' + t.name)
     }
+    sups.forEach(sup => {
+      console.log(`<a href="${sup.href}">${sup.text}</a> | `)
+    })
   })
+
 
   // transactions.filter(t => t.amount.value >= 100).map(t => ({
   //   name: t.fromAccount.slug,
