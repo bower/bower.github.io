@@ -369,10 +369,16 @@ const data = [
     src: 'https://i.imgur.com/iHdPKSV.png'
   },
   {
-    name: 'ux-top-5',
+    name: 'ui-ux-design-agencies',
     href: 'https://uxplanet.org/top-ui-ux-design-agencies-user-experience-firms-8c54697e290',
     src: 'https://i.imgur.com/H1PtPJh.png',
     alt: 'UX Planet'
+  },
+  {
+    name: 'bonuslan',
+    href: 'https://bonuslaan.dk/',
+    src: 'https://i.imgur.com/GSRW8gK.png',
+    alt: 'Bonuslån'
   }
 ]
 
