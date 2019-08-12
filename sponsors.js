@@ -136,6 +136,16 @@ const datasup = [
     name: 'best-shark-tank-products',
     href: 'https://www.bestsharktankproducts.com',
     text: 'Best Shark Tank Products'
+  },
+  {
+    name: 'piratebay',
+    href: 'https://piratebay.ink',
+    text: 'Pirate Bay Proxy List'
+  },
+  {
+    name: 'coffee-corner',
+    href: 'https://coffeecorner.com',
+    text: 'Coffee Corner'
   }
 ]
 
