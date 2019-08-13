@@ -146,6 +146,11 @@ const datasup = [
     name: 'coffee-corner',
     href: 'https://coffeecorner.com',
     text: 'Coffee Corner'
+  },
+  {
+    name: 'baby-jumper-hub',
+    href: 'https://www.bestbabyjumperhub.com/',
+    text: 'Best Baby Jumper Hub'
   }
 ]
 
