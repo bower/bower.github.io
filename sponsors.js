@@ -156,6 +156,16 @@ const datasup = [
     name: 'baby-jumper-hub',
     href: 'https://www.bestbabyjumperhub.com/',
     text: 'Best Baby Jumper Hub'
+  },
+  {
+    name: 'moneezy',
+    href: 'https://moneezy.com/',
+    text: 'Moneezy'
+  },
+  {
+    name: 'steffen-boskma',
+    href: 'https://www.energie-vergelijken.net/',
+    text: 'Energie vergelijken'
   }
 ]
 
