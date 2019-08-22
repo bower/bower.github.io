@@ -36,6 +36,8 @@ async function query() {
   })
 }
 
+const forcedsupporters = ['upendra-rathore']
+
 const datasup = [
   {
     name: 'fire-stick-how',
@@ -166,6 +168,16 @@ const datasup = [
     name: 'steffen-boskma',
     href: 'https://www.energie-vergelijken.net/',
     text: 'Energie vergelijken'
+  },
+  {
+    name: 'lan-penge',
+    href: 'https://moneybanker.dk/laan-penge/',
+    text: 'Lån penge'
+  },
+  {
+    name: 'geraldine-oxenham',
+    href: 'https://opencollective.com/geraldine-oxenham',
+    text: 'Geraldine Oxenham'
   }
 ]
 
@@ -409,6 +421,12 @@ const data = [
     href: 'https://bonuslaan.dk/',
     src: 'https://i.imgur.com/GSRW8gK.png',
     alt: 'Bonuslån'
+  },
+  {
+    name: 'official-top-5-review',
+    href: 'https://www.officialtop5review.com',
+    src: 'https://i.imgur.com/A4YRujZ.png',
+    alt: 'The best reviews'
   }
 ]
 
@@ -428,7 +446,7 @@ async function main() {
       console.log(t)
     }
     if (t.amount.value > 0) {
-      if (t.amount.value >= 100) {
+      if (t.amount.value >= 100 && !forcedsupporters.includes(t.fromAccount.slug)) {
         sponsors[t.fromAccount.slug] = Math.max(
           sponsors[t.fromAccount.slug] || 0,
           Date.parse(t.createdAt) + Math.floor(t.amount.value / 100) * 1000 * 3600 * 24 * 31
