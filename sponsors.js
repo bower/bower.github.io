@@ -121,8 +121,8 @@ const datasup = [
   },
   {
     name: 'upendra-rathore',
-    href: 'https://www.piermont-grand-ec.com.sg/',
-    text: 'Piermont Grand'
+    href: 'https://www.parc-canberra.com.sg/',
+    text: 'Parc Canberra'
   },
   {
     name: 'upendra-rathore',
