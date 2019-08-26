@@ -178,6 +178,11 @@ const datasup = [
     name: 'geraldine-oxenham',
     href: 'https://opencollective.com/geraldine-oxenham',
     text: 'Geraldine Oxenham'
+  },
+  {
+    name: 'hypnoswellbeing',
+    href: 'https://www.hypnoswellbeing.com/',
+    text: 'Hypnos Wellbeing'
   }
 ]
 
@@ -427,6 +432,12 @@ const data = [
     href: 'https://www.officialtop5review.com',
     src: 'https://i.imgur.com/A4YRujZ.png',
     alt: 'The best reviews'
+  },
+  {
+    name: 'vpngorilla-com',
+    href: 'https://vpngorilla.com',
+    src: 'https://i.imgur.com/y1gF5dl.png',
+    alt: 'VPN Gorilla'
   }
 ]
 
