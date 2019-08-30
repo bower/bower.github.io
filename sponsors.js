@@ -183,6 +183,11 @@ const datasup = [
     name: 'hypnoswellbeing',
     href: 'https://www.hypnoswellbeing.com/',
     text: 'Hypnos Wellbeing'
+  },
+  {
+    name: 'collectiveray',
+    href: 'https://www.collectiveray.com',
+    text: 'CollectiveRay'
   }
 ]
 
