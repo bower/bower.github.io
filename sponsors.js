@@ -188,6 +188,11 @@ const datasup = [
     name: 'collectiveray',
     href: 'https://www.collectiveray.com',
     text: 'CollectiveRay'
+  },
+  {
+    name: 'banksecrets',
+    href: 'https://www.banksecrets.eu/da/laan-penge/kviklaan/',
+    text: 'Kviklån'
   }
 ]
 
