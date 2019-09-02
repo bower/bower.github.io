@@ -448,6 +448,12 @@ const data = [
     href: 'https://vpngorilla.com',
     src: 'https://i.imgur.com/y1gF5dl.png',
     alt: 'VPN Gorilla'
+  },
+  {
+    name: 'yiannakis-ttafounas-ttafounas',
+    href: 'https://bid4papers.com/write-my-essay.html',
+    src: 'https://i.imgur.com/hVE7Ea3.png',
+    alt: 'Bid4Papers'
   }
 ]
 
