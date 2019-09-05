@@ -40,6 +40,16 @@ const forcedsupporters = ['upendra-rathore']
 
 const datasup = [
   {
+    name: 'worthwagon',
+    href: 'https://www.worthwagon.com/',
+    text: 'worthwagon'
+  },
+  {
+    name: 'folkelaanetdk',
+    href: 'https://folkelaanet.dk/',
+    text: 'folkelaanet.dk'
+  },
+  {
     name: 'fire-stick-how',
     href: 'https://www.firestickhow.com/',
     text: 'Fire Stick How'
