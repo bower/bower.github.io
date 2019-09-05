@@ -479,7 +479,7 @@ async function main() {
   transactions.forEach(t => { if (t.type === 'DEBIT') { t.fromAccount = t.toAccount } })
 
   allTransactions.forEach(t => {
-    if (t.fromAccount.slug === 'upendra-rathore') {
+    if (t.fromAccount.slug === 'fire-stick-how') {
       console.log(t)
     }
     if (t.amount.value > 0) {
@@ -508,6 +508,7 @@ async function main() {
   })
 
   sponsors['monovm'] += 1000 * 3600 * 24 * 31
+  sponsors['fire-stick-how'] += 1000 * 3600 * 24 * 31
 
   Object.keys(sponsors).forEach(k => {
     if (sponsors[k] < Date.now()) {
