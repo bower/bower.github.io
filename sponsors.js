@@ -203,6 +203,11 @@ const datasup = [
     name: 'banksecrets',
     href: 'https://www.banksecrets.eu/da/laan-penge/kviklaan/',
     text: 'Kviklån'
+  },
+  {
+    name: 'moneyarcher',
+    href: 'https://moneyarcher.com/de/',
+    text: 'Money Archer'
   }
 ]
 
