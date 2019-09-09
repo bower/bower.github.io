@@ -39,6 +39,22 @@ async function query() {
 const forcedsupporters = ['upendra-rathore']
 
 const datasup = [
+
+  {
+    name: 'sokbillan-no',
+    href: 'https://xn--skbilln-jxa9n.no/',
+    text: 'Søkbillån.no'
+  },
+  {
+    name: 'billigproteinpulver-com',
+    href: 'https://billigproteinpulver.com/',
+    text: 'Billigproteinpulver'
+  },
+  {
+    name: 'moneypug',
+    href: 'https://moneypug.co.uk/',
+    text: 'Money Pug'
+  },
   {
     name: 'worthwagon',
     href: 'https://www.worthwagon.com/',
