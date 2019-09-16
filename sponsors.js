@@ -224,6 +224,16 @@ const datasup = [
     name: 'moneyarcher',
     href: 'https://moneyarcher.com/de/',
     text: 'Money Archer'
+  },
+  {
+    name: 'writersperhour',
+    href: "https://writersperhour.com/",
+    text: "Writers per Hour"
+  },
+  {
+    name: 'namecoinnews',
+    href: 'https://www.namecoinnews.com/',
+    text: "NameCoinNews"
   }
 ]
 
@@ -485,6 +495,18 @@ const data = [
     href: 'https://bid4papers.com/write-my-essay.html',
     src: 'https://i.imgur.com/hVE7Ea3.png',
     alt: 'Bid4Papers'
+  },
+  {
+    name: "writersperhour",
+    href: "https://writersperhour.com/",
+    src: "https://i.imgur.com/L8fWitE.png",
+    alt: "Writers per Hour"
+  },
+  {
+    name: "mind-doodle-ltd",
+    href: "https://www.minddoodle.com/",
+    src: "https://i.imgur.com/QzdhhSJ.png",
+    alt: "Mind Doodle",
   }
 ]
 
