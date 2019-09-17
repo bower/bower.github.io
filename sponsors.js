@@ -72,8 +72,8 @@ const datasup = [
   },
   {
     name: 'finance-media-aps',
-    href: 'https://superkredit.net/',
-    text: 'SuperKredit'
+    href: 'https://kikster.com/',
+    text: 'Kikster'
   },
   {
     name: 'your-online-presence',
@@ -234,6 +234,11 @@ const datasup = [
     name: 'namecoinnews',
     href: 'https://www.namecoinnews.com/',
     text: "NameCoinNews"
+  },
+  {
+    name: 'link-directory',
+    href: 'https://www.directory.net',
+    text: 'Link Directory'
   }
 ]
 
