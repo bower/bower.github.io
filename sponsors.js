@@ -37,6 +37,7 @@ async function query() {
 }
 
 const forcedsupporters = ['upendra-rathore']
+const ignoredsupporters = ['rocketpayz']
 
 const datasup = [
 
@@ -239,6 +240,16 @@ const datasup = [
     name: 'link-directory',
     href: 'https://www.directory.net',
     text: 'Link Directory'
+  },
+  {
+    name: 'himanshu-ojha',
+    href: 'https://opencollective.com/himanshu-ojha',
+    text: 'Himanshu Ojha'
+  },
+  {
+    name: 'purvik-shah',
+    href: 'https://opencollective.com/purvik-shah',
+    text: 'Purvik Shah'
   }
 ]
 
@@ -512,6 +523,13 @@ const data = [
     href: "https://www.minddoodle.com/",
     src: "https://i.imgur.com/QzdhhSJ.png",
     alt: "Mind Doodle",
+  },
+  // soloaff
+  {
+    name: "ruffhero1",
+    href: "https://www.ruffhero.com",
+    src: "https://i.imgur.com/GEaYK3g.png",
+    alt: "Ruff Hero"
   }
 ]
 
@@ -527,6 +545,9 @@ async function main() {
   transactions.forEach(t => { if (t.type === 'DEBIT') { t.fromAccount = t.toAccount } })
 
   allTransactions.forEach(t => {
+    if (ignoredsupporters.includes(t.fromAccount.slug)) {
+      return
+    }
     if (t.fromAccount.slug === 'fire-stick-how') {
       console.log(t)
     }
