@@ -37,7 +37,7 @@ async function query() {
 }
 
 const forcedsupporters = ['upendra-rathore']
-const ignoredsupporters = ['rocketpayz']
+const ignoredsupporters = ['rocketpayz', 'webton-bv']
 
 const datasup = [
 
@@ -250,6 +250,16 @@ const datasup = [
     name: 'purvik-shah',
     href: 'https://opencollective.com/purvik-shah',
     text: 'Purvik Shah'
+  },
+  {
+    name: 'instalguru',
+    href: 'https://instalguru.com/pl',
+    text: 'Instalguru'
+  },
+  {
+    name: 'divi',
+    href: 'http://wptheme.fr/theme-wordpress-divi/',
+    text: 'Divi'
   }
 ]
 
