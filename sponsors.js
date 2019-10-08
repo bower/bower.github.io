@@ -1,3 +1,5 @@
+// TODO: lead supply is charged for 2x logos since Oct 2019
+
 const fetch = require('cross-fetch')
 
 async function query() {
@@ -416,6 +418,11 @@ const data = [
     href: 'https://lainaa-helposti.fi/',
     alt: 'Lainaa Helposti',
     src: 'https://i.imgur.com/Pl628R5.png',
+    second: {
+      href: 'https://superkredit.net/',
+      alt: 'superkredit.net',
+      src: 'https://i.imgur.com/5KivATo.jpg',
+    }
   },
   {
     name: 'customessaymeister-com',
@@ -567,9 +574,6 @@ async function main() {
     if (ignoredsupporters.includes(t.fromAccount.slug)) {
       return
     }
-    if (t.fromAccount.slug === 'fire-stick-how') {
-      console.log(t)
-    }
     if (t.amount.value > 0) {
       if (t.amount.value >= 100 && !forcedsupporters.includes(t.fromAccount.slug)) {
         sponsors[t.fromAccount.slug] = Math.max(
@@ -626,6 +630,9 @@ async function main() {
       }
     }
     console.log(`<a href="${sponsor.href}"><img class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>`)
+    if (sponsor.second) {
+      console.log(`<a href="${sponsor.second.href}"><img class="sidebar-logo" src="${sponsor.second.src}" alt="${sponsor.second.alt}" /></a>`)
+    }
   })
 
   console.log("\nSUPPORTERS\n")
