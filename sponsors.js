@@ -40,7 +40,16 @@ const forcedsupporters = ['upendra-rathore']
 const ignoredsupporters = ['rocketpayz', 'webton-bv']
 
 const datasup = [
-
+  {
+    name: 'theme-divi',
+    href: 'http://wptheme.fr/theme-wordpress-divi/',
+    text: 'Theme Divi'
+  },
+  {
+    name: 'top-web-design-agencies',
+    href: 'https://medium.com/@niksundin/best-web-design-companies-1872e445775f',
+    text: 'Top Web Design Agencies'
+  },
   {
     name: 'sokbillan-no',
     href: 'https://xn--skbilln-jxa9n.no/',
