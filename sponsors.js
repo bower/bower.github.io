@@ -39,9 +39,14 @@ async function query() {
 }
 
 const forcedsupporters = ['upendra-rathore']
-const ignoredsupporters = ['rocketpayz', 'webton-bv']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com']
 
 const datasup = [
+  {
+    name: 'varlam-ahekian',
+    href: 'https://opencollective.com/varlam-ahekian',
+    text: 'Varlam Ahekian'
+  },
   {
     name: 'theme-divi',
     href: 'http://wptheme.fr/theme-wordpress-divi/',
@@ -275,6 +280,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'nordic-meal-company',
+    src: 'https://i.imgur.com/wbNaael.png',
+    href: 'https://maaltidskasser-online.dk/',
+    alt: 'maaltidskasser-online.dk'
+  },
   {
     name: 'icons8',
     href: 'https://icons8.com/web-app/category/all/Very-Basic',
