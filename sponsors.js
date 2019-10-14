@@ -1,4 +1,4 @@
-// TODO: lead supply is charged for 2x logos since Oct 2019
+// TODO: lead supply is charged for 3x logos since Oct 2019
 
 const fetch = require('cross-fetch')
 
@@ -429,11 +429,20 @@ const data = [
     href: 'https://lainaa-helposti.fi/',
     alt: 'Lainaa Helposti',
     src: 'https://i.imgur.com/Pl628R5.png',
-    second: {
-      href: 'https://superkredit.net/',
-      alt: 'superkredit.net',
-      src: 'https://i.imgur.com/5KivATo.jpg',
-    }
+    second: [
+      {
+        href: 'https://superkredit.net/',
+        alt: 'superkredit.net',
+        src: 'https://i.imgur.com/5KivATo.jpg',
+        since: '2019-10-10'
+      },
+      {
+        href: 'https://loanscouter.com/',
+        alt: 'LoanScouter',
+        src: 'https://i.imgur.com/jqRy0WW.jpg',
+        since: '2019-10-14'
+      }
+    ]
   },
   {
     name: 'customessaymeister-com',
@@ -642,7 +651,9 @@ async function main() {
     }
     console.log(`<a href="${sponsor.href}"><img class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>`)
     if (sponsor.second) {
-      console.log(`<a href="${sponsor.second.href}"><img class="sidebar-logo" src="${sponsor.second.src}" alt="${sponsor.second.alt}" /></a>`)
+      for (const s of sponsor.second) {
+        console.log(`<a href="${s.href}"><img class="sidebar-logo" src="${s.src}" alt="${s.alt}" /></a>`)
+      }
     }
   })
 
