@@ -173,11 +173,6 @@ const datasup = [
     text: 'Calgary Pest Control'
   },
   {
-    name: 'upendra-rathore',
-    href: 'https://www.avenue-south-residence.com.sg/',
-    text: 'Avenue South Residence'
-  },
-  {
     name: 'switchvpn',
     href: 'https://switchvpn.net',
     text: 'SwitchVPN'
