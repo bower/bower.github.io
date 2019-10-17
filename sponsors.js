@@ -1,6 +1,10 @@
 // TODO: lead supply is charged for 3x logos since Oct 2019
 
 const fetch = require('cross-fetch')
+const fs = require('fs')
+
+let SPONSORS = ''
+let SUPPORTERS = ''
 
 async function query() {
   const url = 'https://api.opencollective.com/graphql/v2/' + process.env.API_KEY
@@ -271,10 +275,21 @@ const datasup = [
     name: 'divi',
     href: 'http://wptheme.fr/theme-wordpress-divi/',
     text: 'Divi'
+  },
+  {
+    name: 'alex-owner',
+    href: 'http://hillside-primary.co.uk',
+    text: 'Hillside-Primary.co.uk'
   }
 ]
 
 const data = [
+  {
+    name: 'fair-laan-se',
+    href: 'http://fair-laan.se',
+    alt: 'fair-laan.se',
+    src: 'https://i.imgur.com/8mczs3O.png'
+  },
   {
     name: 'nordic-meal-company',
     src: 'https://i.imgur.com/wbNaael.png',
@@ -644,10 +659,10 @@ async function main() {
         throw new Error('Unknown sponsor: ' + t.name)
       }
     }
-    console.log(`<a href="${sponsor.href}"><img class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>`)
+    SPONSORS += `<a href="${sponsor.href}"><img class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>\n`
     if (sponsor.second) {
       for (const s of sponsor.second) {
-        console.log(`<a href="${s.href}"><img class="sidebar-logo" src="${s.src}" alt="${s.alt}" /></a>`)
+        SPONSORS += `<a href="${s.href}"><img class="sidebar-logo" src="${s.src}" alt="${s.alt}" /></a>\n`
       }
     }
   })
@@ -656,16 +671,22 @@ async function main() {
   Object.keys(supporters).map(t => ({
     name: t,
     total: allTransactions.filter(t2 => t2.fromAccount.slug == t).reduce((sum, t) => sum += t.amount.value, 0)
-  })).sort((a, b) => b.total - a.total).forEach(t => {
+  })).sort((a, b) => [b.total - a.total, a.text,b.text]).forEach(t => {
     const sups = datasup.filter(d => d.name === t.name)
     if (!sups.length) {
       throw new Error('Unknown supporter: ' + t.name)
     }
     sups.forEach(sup => {
-      console.log(`<a href="${sup.href}">${sup.text}</a> | `)
+      SUPPORTERS += `<a href="${sup.href}">${sup.text}</a> |\n`
     })
   })
 
+  SUPPORTERS = SUPPORTERS.slice(0, -3)
+
+  let tmpl = fs.readFileSync('_layouts/docs.template.html', 'utf-8')
+  tmpl = tmpl.replace('<Sponsors>', SPONSORS)
+  tmpl = tmpl.replace('<Supporters>', SUPPORTERS)
+  fs.writeFileSync('_layouts/docs.html', tmpl)
 
   // transactions.filter(t => t.amount.value >= 100).map(t => ({
   //   name: t.fromAccount.slug,
