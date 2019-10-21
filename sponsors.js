@@ -280,6 +280,11 @@ const datasup = [
     name: 'alex-owner',
     href: 'http://hillside-primary.co.uk',
     text: 'Hillside-Primary.co.uk'
+  },
+  {
+    name: 'thepiratebay',
+    href: 'https://thepiratebayproxylist.se',
+    text: 'The Pirate Bay Proxy List',
   }
 ]
 
@@ -493,8 +498,8 @@ const data = [
   {
     name: 'utilitysavingexpert',
     src: 'https://i.imgur.com/Hwa8g6o.png',
-    href: 'https://www.utilitysavingexpert.com/energy/',
-    alt: 'energy comparison'
+    href: 'https://www.utilitysavingexpert.com/car-insurance/',
+    alt: 'car insurance'
   },
   {
     name: 'codefirst',
@@ -589,6 +594,8 @@ const data = [
   }
 ]
 
+let total = 0
+
 async function main() {
   const response = await query()
   const allTransactions = (await response.json()).data.account.transactions.nodes.reverse()
@@ -605,6 +612,9 @@ async function main() {
       return
     }
     if (t.amount.value > 0) {
+      if (t.createdAt >= "2019-10") {
+        total += t.amount.value
+      }
       if (t.amount.value >= 100 && !forcedsupporters.includes(t.fromAccount.slug)) {
         sponsors[t.fromAccount.slug] = Math.max(
           sponsors[t.fromAccount.slug] || 0,
@@ -697,6 +707,7 @@ async function main() {
   //   name: t.fromAccount.slug,
   //   total: allTransactions.filter(t2 => t2.fromAccount.slug == t.fromAccount.slug).reduce((sum, t) => sum += t.amount.value, 0)
   // })).sort((a, b) => b.total - a.total)
+  console.log('TOTAL this month: ' + total)
 }
 
 main()
