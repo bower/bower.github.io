@@ -47,6 +47,11 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com']
 
 const datasup = [
   {
+    name: 'pinkelephant',
+    href: 'https://akasse-fagforening.dk/',
+    text: 'a-kasse'
+  },
+  {
     name: 'varlam-ahekian',
     href: 'https://opencollective.com/varlam-ahekian',
     text: 'Varlam Ahekian'
