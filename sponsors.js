@@ -295,6 +295,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'wpsetup',
+    src: 'https://i.imgur.com/7wlB7Uv.jpg',
+    href: 'https://wpsetup.org',
+    alt: 'wpsetup.org'
+  },
+  {
     name: 'fair-laan-se',
     href: 'http://fair-laan.se',
     alt: 'fair-laan.se',
