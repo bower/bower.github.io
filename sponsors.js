@@ -277,7 +277,7 @@ const datasup = [
     text: 'Instalguru'
   },
   {
-    name: 'divi',
+    name: 'divi-theme',
     href: 'http://wptheme.fr/theme-wordpress-divi/',
     text: 'Divi'
   },
@@ -602,6 +602,12 @@ const data = [
     href: "https://www.ruffhero.com",
     src: "https://i.imgur.com/GEaYK3g.png",
     alt: "Ruff Hero"
+  },
+  {
+    name: 'digital-logic',
+    src: 'https://i.imgur.com/4HmKudj.jpg',
+    href: 'https://www.digitallogic.co/blog/dental-marketing/',
+    alt: 'Digital Logic'
   }
 ]
 
