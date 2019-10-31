@@ -42,6 +42,13 @@ async function query() {
   })
 }
 
+const forcedsponsors = {
+  '1gbits': {
+      price: 300,
+      date: '2019-10-30'
+  }
+}
+
 const forcedsupporters = ['upendra-rathore']
 const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com']
 
@@ -294,6 +301,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: '1gbits',
+    src: 'https://i.imgur.com/KvKV1Tj.png',
+    alt: '1gbits',
+    href: 'https://1gbits.com/'
+  },
   {
     name: 'wpsetup',
     src: 'https://i.imgur.com/7wlB7Uv.jpg',
@@ -612,6 +625,7 @@ const data = [
 ]
 
 let total = 0
+let totalmonth = "2019-10"
 
 async function main() {
   const response = await query()
@@ -621,6 +635,31 @@ async function main() {
   const sponsors = {}
   const supporters = {}
 
+  for (const name in forcedsponsors) {
+    const months = Math.ceil((new Date() - new Date(forcedsponsors[name].date)) / 1000 / 3600 / 24 / 30)
+    const virtualtotal = months * forcedsponsors[name].price
+    const transaction = {
+      type: 'CREDIT',
+      kind: 'VIRTUAL',
+      createdAt: forcedsponsors[name].date,
+      amount: {
+        value: virtualtotal,
+        currency: 'USD'
+      },
+      fromAccount: {
+        slug: name,
+        name: name
+      },
+      toAccount: {
+        slug: 'bower',
+        name: 'Bower'
+      }
+    }
+    transactions.push(transaction)
+    allTransactions.push(transaction)
+  }
+  console.log(transactions)
+
   allTransactions.forEach(t => { if (t.type === 'DEBIT') { t.fromAccount = t.toAccount } })
   transactions.forEach(t => { if (t.type === 'DEBIT') { t.fromAccount = t.toAccount } })
 
@@ -629,7 +668,7 @@ async function main() {
       return
     }
     if (t.amount.value > 0) {
-      if (t.createdAt >= "2019-10") {
+      if (t.createdAt.slice(0, 7) == totalmonth && t.kind !== 'VIRTUAL') {
         total += t.amount.value
       }
       if (t.amount.value >= 100 && !forcedsupporters.includes(t.fromAccount.slug)) {
@@ -644,13 +683,20 @@ async function main() {
         )
       }
     } else {
-      console.log('Refund from sponsor ' + t.fromAccount.slug)
       if (sponsors[t.fromAccount.slug]) {
+        if (sponsors[t.fromAccount.slug] > 0) {
+          console.log('Refund from sponsor ' + t.fromAccount.slug + ": " + t.amount.value)
+          if (t.createdAt.slice(0, 7) == totalmonth && t.kind !== 'VIRTUAL') {
+            total += t.amount.value
+          }
+        }
         sponsors[t.fromAccount.slug] -= Math.floor(Math.abs(t.amount.value) / 100) * 1000 * 3600 * 24 * 31
       }
 
       if (supporters[t.fromAccount.slug]) {
-        console.log('Refund from supporter ' + t.fromAccount.slug)
+        if (supporters[t.fromAccount.slug] > 0) {
+          console.log('Refund from supporter ' + t.fromAccount.slug + ": " + t.amount.value)
+        }
         supporters[t.fromAccount.slug] -= Math.floor(Math.abs(t.amount.value) / 100) * 1000 * 3600 * 24 * 31
       }
     }
@@ -694,6 +740,7 @@ async function main() {
     }
   })
 
+  console.log(sponsors)
   console.log("\nSUPPORTERS\n")
   Object.keys(supporters).map(t => ({
     name: t,
