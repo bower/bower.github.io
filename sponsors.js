@@ -621,6 +621,12 @@ const data = [
     src: 'https://i.imgur.com/4HmKudj.jpg',
     href: 'https://www.digitallogic.co/blog/dental-marketing/',
     alt: 'Digital Logic'
+  },
+  {
+    name: 'crosswordsolver',
+    src: 'https://i.imgur.com/JfmcXNf.png',
+    href: 'https://www.crosswordsolver.com',
+    alt: 'crosswordsolver.com'
   }
 ]
 
