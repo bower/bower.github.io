@@ -54,6 +54,16 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com']
 
 const datasup = [
   {
+    name: 'vpn-black-friday',
+    href: 'https://vpnblackfriday.com/',
+    text: 'VPN Black Friday'
+  },
+  {
+    name: 'antoine-reveillon',
+    href: 'https://opencollective.com/antoine-reveillon',
+    text: 'Antoine Réveillon'
+  },
+  {
     name: 'pinkelephant',
     href: 'https://akasse-fagforening.dk/',
     text: 'a-kasse'
@@ -302,6 +312,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'virtual-receptionist-london',
+    href: 'http://www.virtualreceptionist.london/',
+    src: 'https://i.imgur.com/pR2FWUY.png',
+    alt: 'virtualreceptionist.london'
+  },
+  {
     name: 'matchbanker-fi1',
     href: 'https://matchbanker.fi/',
     src: 'https://i.imgur.com/PFH9D9k.png',
@@ -329,6 +345,12 @@ const data = [
     name: 'fair-laan-se',
     href: 'http://fair-laan.se',
     alt: 'fair-laan.se',
+    src: 'https://i.imgur.com/8mczs3O.png'
+  },
+  {
+    name: 'fair-laan-dk',
+    href: 'http://fair-laan.dk',
+    alt: 'fair-laan.dk',
     src: 'https://i.imgur.com/8mczs3O.png'
   },
   {
@@ -643,7 +665,7 @@ const data = [
 ]
 
 let total = 0
-let totalmonth = "2019-10"
+let totalmonth = "2019-11"
 
 async function main() {
   const response = await query()
