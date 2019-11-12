@@ -54,6 +54,11 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com']
 
 const datasup = [
   {
+    name: 'partition-wizard',
+    href: 'https://www.partitionwizard.com',
+    text: 'Partition Wizard'
+  },
+  {
     name: 'vpn-black-friday',
     href: 'https://vpnblackfriday.com/',
     text: 'VPN Black Friday'
