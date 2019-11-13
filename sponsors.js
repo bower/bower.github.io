@@ -44,7 +44,7 @@ async function query() {
 
 const forcedsponsors = {
   '1gbits': {
-      price: 300,
+      price: 150,
       date: '2019-10-30'
   }
 }
@@ -338,7 +338,15 @@ const data = [
     name: '1gbits',
     src: 'https://i.imgur.com/KvKV1Tj.png',
     alt: '1gbits',
-    href: 'https://1gbits.com/'
+    href: 'https://1gbits.com/',
+    second: [
+      {
+        name: 'monovm',
+        href: 'https://monovm.com',
+        src: 'https://i.imgur.com/v9RLvQ7.jpg',
+        alt: 'vps hosting'
+      }
+    ]
   },
   {
     name: 'wpsetup',
