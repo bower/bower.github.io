@@ -54,6 +54,36 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com']
 
 const datasup = [
   {
+    name: 'snabblan',
+    href: 'https://fair-laan.se/',
+    text: 'Fair Lån SE'
+  },
+  {
+    name: 'lan-penge1',
+    href: 'https://superkredit.net/',
+    text: 'Super Kredit'
+  },
+  {
+    name: 'lan',
+    href: 'https://fair-laan.dk/laan-penge/',
+    text: 'Fair Lån DK'
+  },
+  {
+    name: 'moneylender-dk-lan-penge',
+    href: 'https://moneylender.dk/',
+    text: 'Moneylender.dk'
+  },
+  {
+    name: 'withnellcarsales',
+    href: 'https://www.withnellcarsales.com',
+    text: 'Withnell Car Sales',
+  },
+  {
+    name: 'ebook-digesters',
+    href: 'http://www.ebdigest.org/',
+    text: 'ebdigest.org'
+  },
+  {
     name: 'partition-wizard',
     href: 'https://www.partitionwizard.com',
     text: 'Partition Wizard'
@@ -316,6 +346,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'jesper-jensen',
+    href: 'https://www.xn--ln-yia.dk/',
+    src: 'https://i.imgur.com/ijP6bcQ.png',
+    alt: 'lån.dk'
+  },
   {
     name: 'virtual-receptionist-london',
     href: 'http://www.virtualreceptionist.london/',
