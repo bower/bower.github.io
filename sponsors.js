@@ -71,7 +71,7 @@ const datasup = [
   {
     name: 'moneylender-dk-lan-penge',
     href: 'https://moneylender.dk/',
-    text: 'Moneylender.dk - Lån penge'
+    text: 'Lån'
   },
   {
     name: 'withnellcarsales',
@@ -271,7 +271,7 @@ const datasup = [
   {
     name: 'lan-penge',
     href: 'https://moneybanker.dk/laan-penge/',
-    text: 'Lån'
+    text: 'Lån penge'
   },
   {
     name: 'geraldine-oxenham',
