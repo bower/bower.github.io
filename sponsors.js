@@ -56,12 +56,12 @@ const datasup = [
   {
     name: 'snabblan',
     href: 'https://fair-laan.se/',
-    text: 'Fair Lån SE'
+    text: 'Snabblån'
   },
   {
     name: 'lan-penge1',
     href: 'https://superkredit.net/',
-    text: 'Super Kredit'
+    text: 'Lån penge'
   },
   {
     name: 'lan',
@@ -71,7 +71,7 @@ const datasup = [
   {
     name: 'moneylender-dk-lan-penge',
     href: 'https://moneylender.dk/',
-    text: 'Moneylender.dk'
+    text: 'Moneylender.dk - Lån penge'
   },
   {
     name: 'withnellcarsales',
@@ -271,7 +271,7 @@ const datasup = [
   {
     name: 'lan-penge',
     href: 'https://moneybanker.dk/laan-penge/',
-    text: 'Lån penge'
+    text: 'Lån'
   },
   {
     name: 'geraldine-oxenham',
