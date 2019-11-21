@@ -66,12 +66,12 @@ const datasup = [
   {
     name: 'lan',
     href: 'https://fair-laan.dk/laan-penge/',
-    text: 'Fair Lån DK'
+    text: 'Lån'
   },
   {
     name: 'moneylender-dk-lan-penge',
     href: 'https://moneylender.dk/',
-    text: 'Lån'
+    text: 'Moneylender.dk - Lån penge'
   },
   {
     name: 'withnellcarsales',
