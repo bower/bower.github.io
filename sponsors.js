@@ -54,6 +54,16 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com']
 
 const datasup = [
   {
+    name: 'unitconverter',
+    href: 'https://converter.net',
+    text: 'Unit Converter'
+  },
+  {
+    name: 'crossword-king',
+    href: 'https://crosswordking.com',
+    text: 'Crossword Kind'
+  },
+  {
     name: 'snabblan',
     href: 'https://fair-laan.se/',
     text: 'Snabblån'
@@ -346,6 +356,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'calgary-pest-control',
+    href: 'https://spartanpestcontrol.com/',
+    src: 'https://i.imgur.com/obikCqJ.png',
+    alt: 'CALGARY PEST CONTROL'
+  },
   {
     name: 'jesper-jensen',
     href: 'https://www.xn--ln-yia.dk/',
