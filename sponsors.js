@@ -50,7 +50,7 @@ const forcedsponsors = {
 }
 
 const forcedsupporters = ['upendra-rathore']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'timesofcasino']
 
 const datasup = [
   {
