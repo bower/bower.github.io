@@ -50,9 +50,14 @@ const forcedsponsors = {
 }
 
 const forcedsupporters = ['upendra-rathore']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'timesofcasino']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com']
 
 const datasup = [
+  {
+    name: 'timesofcasino',
+    href: 'https://www.coinnewsspan.com/',
+    text: 'coinnewsspan'
+  },
   {
     name: 'unitconverter',
     href: 'https://converter.net',
@@ -356,6 +361,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'vertaalainaa-fi',
+    href: 'https://www.vertaalainaa.fi/',
+    src: 'https://i.imgur.com/IAtsRZ9.png',
+    alt: 'VertaaLainaa.fi'
+  },
   {
     name: 'calgary-pest-control',
     href: 'https://spartanpestcontrol.com/',
