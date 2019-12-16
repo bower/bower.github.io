@@ -54,6 +54,11 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com']
 
 const datasup = [
   {
+    name: 'allan-stolc',
+    href: 'https://nanofinans.no/',
+    text: 'Forbrukslån'
+  },
+  {
     name: 'timesofcasino',
     href: 'https://www.coinnewsspan.com/',
     text: 'coinnewsspan'
