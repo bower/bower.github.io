@@ -71,7 +71,7 @@ const datasup = [
   {
     name: 'crossword-king',
     href: 'https://crosswordking.com',
-    text: 'Crossword Kind'
+    text: 'Crossword King'
   },
   {
     name: 'snabblan',
@@ -366,6 +366,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'top5credits-com-fi',
+    src: 'https://i.imgur.com/K2EU3HD.png',
+    href: 'https://www.top5credits.com/',
+    alt: 'top5credits.com'
+  },
   {
     name: 'vertaalainaa-fi',
     href: 'https://www.vertaalainaa.fi/',
