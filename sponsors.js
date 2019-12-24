@@ -367,6 +367,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'digital-bank-guide',
+    src: 'https://i.imgur.com/fdzFdru.png',
+    href: 'https://digitalbankguide.com/',
+    alt: 'digitalbankguide.com'
+  },
+  {
     name: 'top5credits-com-fi',
     src: 'https://i.imgur.com/K2EU3HD.png',
     href: 'https://www.top5credits.com/',
