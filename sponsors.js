@@ -51,6 +51,7 @@ const forcedsponsors = {
 
 const forcedsupporters = ['upendra-rathore']
 const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com']
+const exceptions = ['ebook-digesters']
 
 const datasup = [
   {
@@ -839,14 +840,14 @@ async function main() {
   sponsors['fire-stick-how'] += 1000 * 3600 * 24 * 31
 
   Object.keys(sponsors).forEach(k => {
-    if (sponsors[k] < Date.now()) {
+    if (sponsors[k] < Date.now() && !exceptions.includes(k)) {
       console.log('Expired sponsor: ' + k + ' at ' + new Date(sponsors[k]).toString().slice(4, 16))
       delete sponsors[k]
     }
   })
 
   Object.keys(supporters).forEach(k => {
-    if (supporters[k] < Date.now()) {
+    if (supporters[k] < Date.now() && !exceptions.includes(k)) {
       console.log('Expired supporter: ' + k + ' at ' + new Date(supporters[k]).toString().slice(4, 16))
       delete supporters[k]
     }
