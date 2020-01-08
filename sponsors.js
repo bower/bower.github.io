@@ -51,9 +51,19 @@ const forcedsponsors = {
 
 const forcedsupporters = ['upendra-rathore']
 const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com']
-const exceptions = ['ebook-digesters']
+const exceptions = []
 
 const datasup = [
+  {
+    name: 'lendme',
+    href: 'https://lendme.dk',
+    text: 'LendMe'
+  },
+  {
+    name: 'calgary-pest-control',
+    href: 'https://spartanpestcontrol.com/',
+    text: 'Calgary Pest Control'
+  },
   {
     name: 'allan-stolc',
     href: 'https://nanofinans.no/',
@@ -98,11 +108,6 @@ const datasup = [
     name: 'withnellcarsales',
     href: 'https://www.withnellcarsales.com',
     text: 'Withnell Car Sales',
-  },
-  {
-    name: 'ebook-digesters',
-    href: 'http://www.ebdigest.org/',
-    text: 'ebdigest.org'
   },
   {
     name: 'partition-wizard',
@@ -356,8 +361,8 @@ const datasup = [
   },
   {
     name: 'alex-owner',
-    href: 'http://hillside-primary.co.uk',
-    text: 'Hillside-Primary.co.uk'
+    href: 'http://www.ebdigest.org/',
+    text: 'ebdigest.org'
   },
   {
     name: 'thepiratebay',
@@ -367,6 +372,24 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'forbrugermagasinet',
+    src: 'https://i.imgur.com/6iKoQjf.jpg',
+    href: 'https://www.forbrugermagasinet.dk/',
+    alt: 'forbrugermagasinet'
+  },
+  {
+    name: 'tradie-training',
+    src: 'https://i.imgur.com/fj0szKk.png',
+    href: 'https://tt.edu.au/',
+    alt: 'tt.edu.au'
+  },
+  {
+    name: '10-reviews',
+    href: 'https://www.10reviews.com/review/10-vpns/',
+    src: 'https://i.imgur.com/ep5ANQ5.png',
+    alt: '10reviews.com'
+  },
   {
     name: 'digital-bank-guide',
     src: 'https://i.imgur.com/fdzFdru.png',
