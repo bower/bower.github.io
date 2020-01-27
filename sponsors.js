@@ -560,9 +560,9 @@ const data = [
   },
   {
     name: 'truevendor',
-    href: 'https://uiuxagencies.top',
+    href: 'https://www.ramotion.com/agency/web-design/',
     src: 'https://i.imgur.com/mQxmvRm.png',
-    alt: 'ux design companies'
+    alt: 'web design agency'
   },
   {
     name: 'smalanutensikkerhet',
