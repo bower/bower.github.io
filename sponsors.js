@@ -51,7 +51,7 @@ const forcedsponsors = {
 
 const forcedsupporters = ['upendra-rathore']
 const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com']
-const exceptions = []
+const exceptions = ['digital-bank-guide']
 
 const datasup = [
   {
