@@ -55,6 +55,16 @@ const exceptions = []
 
 const datasup = [
   {
+    name: 'seowebsitetraffic-net',
+    href: 'https://seowebsitetraffic.net/',
+    text: 'SEO Website Traffic'
+  },
+  {
+    name: 'intlum',
+    href: 'https://www.intlum.com/',
+    text: 'Intlum Technology'
+  },
+  {
     name: 'lendme',
     href: 'https://lendme.dk',
     text: 'LendMe'
@@ -372,6 +382,24 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'luottopalvelut',
+    src: 'https://i.imgur.com/1jaPeJk.png',
+    href: 'https://luottopalvelut.fi/',
+    alt: 'Luottopalvelut'
+  },
+  {
+    name: '420couponcodes',
+    src: 'https://i.imgur.com/IbhCD2k.png',
+    href: 'https://420couponcodes.com/',
+    alt: '420couponcodes.com'
+  },
+  {
+    name: 'exporthub',
+    src: 'https://i.imgur.com/nDXLYzE.png',
+    href: 'https://www.exporthub.com/',
+    alt: 'www.exporthub.com'
+  },
   {
     name: 'forbrugermagasinet',
     src: 'https://i.imgur.com/6iKoQjf.jpg',
