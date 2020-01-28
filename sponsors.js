@@ -55,6 +55,11 @@ const exceptions = ['digital-bank-guide']
 
 const datasup = [
   {
+    name: 'manwoman',
+    href: 'https://manwoman.co/pl/search/sukienki',
+    text: 'sukienki'
+  },
+  {
     name: 'seowebsitetraffic-net',
     href: 'https://seowebsitetraffic.net/',
     text: 'SEO Website Traffic'
