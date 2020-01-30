@@ -393,6 +393,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'mobilunity',
+    href: 'https://mobilunity.com/',
+    src: 'https://i.imgur.com/BqDzi36.png',
+    alt: 'mobilunity.com'
+  },
+  {
     name: 'luottopalvelut',
     src: 'https://i.imgur.com/1jaPeJk.png',
     href: 'https://luottopalvelut.fi/',
