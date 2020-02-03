@@ -6,9 +6,9 @@ const fs = require('fs')
 let SPONSORS = ''
 let SUPPORTERS = ''
 
-async function query() {
+async function query(page) {
   const url = 'https://api.opencollective.com/graphql/v2/' + process.env.API_KEY
-  return fetch(url, {
+  const response = await fetch(url, {
     method: 'POST',
     headers: {
       'content-type': 'application/json'
@@ -17,7 +17,7 @@ async function query() {
       query: `
 {
   account(slug: "bower") {
-    transactions(limit: 2000) {
+    transactions(limit: 100, offset: ${100*(page-1)}) {
       nodes {
         type
         amount {
@@ -40,6 +40,10 @@ async function query() {
       `
     })
   })
+
+  const json = await response.json()
+
+  return json.data.account.transactions.nodes
 }
 
 const forcedsponsors = {
@@ -54,6 +58,11 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com']
 const exceptions = ['digital-bank-guide']
 
 const datasup = [
+  {
+    name: 'forbrugslan',
+    href: 'https://xn--billigeforbrugsln-orb.dk/',
+    text: 'Forbrugslån'
+  },
   {
     name: 'overhemden-com-overhemden-online',
     href: 'https://overhemden.com/',
@@ -381,8 +390,8 @@ const datasup = [
   },
   {
     name: 'alex-owner',
-    href: 'http://www.ebdigest.org/',
-    text: 'ebdigest.org'
+    href: 'https://www.pdfcrops.com/',
+    text: 'PdfCrops.com'
   },
   {
     name: 'thepiratebay',
@@ -392,6 +401,23 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'fire-stick-how',
+    href: 'https://www.firestickhow.com/',
+    text: 'Fire Stick How'
+  },
+  {
+    name: 'web-impact',
+    href: 'https://unscramblex.com/',
+    alt: 'unscramblex.com',
+    src: 'https://i.imgur.com/uiFa9h5.png'
+  },
+  {
+    name: 'justremoteco',
+    src: 'https://i.imgur.com/kn4uWKL.png',
+    href: 'https://justremote.co/',
+    alt: 'justremote.co'
+  },
   {
     name: 'mobilunity',
     href: 'https://mobilunity.com/',
@@ -826,12 +852,27 @@ const data = [
 ]
 
 let total = 0
-let totalmonth = "2019-11"
+var d = new Date(); d.setMonth(d.getMonth() - 1);
+
+let totalmonth = d.toISOString().slice(0, 7)
 
 async function main() {
-  const response = await query()
-  const allTransactions = (await response.json()).data.account.transactions.nodes.reverse()
-  const transactions = allTransactions.filter(t => (+new Date() - +Date.parse(t.createdAt))/3600000/24 < 30 && t.amount.value)
+  const result = await Promise.all([
+    query(1),
+    query(2),
+    query(3),
+    query(4),
+    query(5),
+    query(6),
+    query(7),
+    query(9),
+    query(10)
+  ])
+
+  const allTransactions = [].concat(...result).reverse()
+  const transactions = allTransactions.filter(t => {
+    return (+new Date() - +Date.parse(t.createdAt))/3600000/24 < 30 && t.amount.value
+  })
 
   const sponsors = {}
   const supporters = {}
@@ -859,7 +900,6 @@ async function main() {
     transactions.push(transaction)
     allTransactions.push(transaction)
   }
-  console.log(transactions)
 
   allTransactions.forEach(t => { if (t.type === 'DEBIT') { t.fromAccount = t.toAccount } })
   transactions.forEach(t => { if (t.type === 'DEBIT') { t.fromAccount = t.toAccount } })
@@ -903,19 +943,25 @@ async function main() {
     }
   })
 
-  sponsors['monovm'] += 1000 * 3600 * 24 * 31
-  sponsors['fire-stick-how'] += 1000 * 3600 * 24 * 31
+  // sponsors['fire-stick-how'] += 1000 * 3600 * 24 * 31
 
   Object.keys(sponsors).forEach(k => {
-    if (sponsors[k] < Date.now() && !exceptions.includes(k)) {
-      console.log('Expired sponsor: ' + k + ' at ' + new Date(sponsors[k]).toString().slice(4, 16))
+    if (sponsors[k]+1000*3600*24*6 < Date.now() && !exceptions.includes(k)) {
+      const lastTransaction = allTransactions.reverse().find(t => t.fromAccount.slug === k).createdAt
+      if (lastTransaction >= '2019-10') {
+        console.log('Expired sponsor: ' + k + ' at ' + new Date(sponsors[k]).toString().slice(4, 16) + ' ' + lastTransaction.slice(0, 10) )
+      }
       delete sponsors[k]
     }
   })
 
+  console.log('')
   Object.keys(supporters).forEach(k => {
-    if (supporters[k] < Date.now() && !exceptions.includes(k)) {
-      console.log('Expired supporter: ' + k + ' at ' + new Date(supporters[k]).toString().slice(4, 16))
+    if (supporters[k]+1000*3600*24*6 < Date.now() && !exceptions.includes(k)) {
+      const lastTransaction = allTransactions.reverse().find(t => t.fromAccount.slug === k).createdAt
+      if (lastTransaction >= '2019-10') {
+        console.log('Expired supporter: ' + k + ' at ' + new Date(supporters[k]).toString().slice(4, 16) + ' ' + lastTransaction.slice(0, 10) )
+      }
       delete supporters[k]
     }
   })
@@ -941,7 +987,6 @@ async function main() {
     }
   })
 
-  console.log(sponsors)
   console.log("\nSUPPORTERS\n")
   Object.keys(supporters).map(t => ({
     name: t,
