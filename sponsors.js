@@ -402,6 +402,12 @@ const datasup = [
 
 const data = [
   {
+    src: 'https://i.imgur.com/NvN22Eu.png',
+    href: 'https://kvintblendex.no/',
+    text: 'Kvint | Blendex',
+    name: 'kvintblendex'
+  },
+  {
     name: 'fire-stick-how',
     href: 'https://www.firestickhow.com/',
     text: 'Fire Stick How'
@@ -943,7 +949,7 @@ async function main() {
     }
   })
 
-  // sponsors['fire-stick-how'] += 1000 * 3600 * 24 * 31
+  sponsors['top5credits-com-fi'] += 1000 * 3600 * 24 * 31
 
   Object.keys(sponsors).forEach(k => {
     if (sponsors[k]+1000*3600*24*6 < Date.now() && !exceptions.includes(k)) {
