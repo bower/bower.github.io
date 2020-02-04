@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide']
 
 const datasup = [
   {
+    name: 'vpnranks',
+    href: 'https://www.vpnranks.com/',
+    text: 'VPNRanks'
+  },
+  {
     name: 'forbrugslan',
     href: 'https://xn--billigeforbrugsln-orb.dk/',
     text: 'Forbrugslån'
