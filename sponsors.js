@@ -412,6 +412,11 @@ const datasup = [
     name: 'kviklaan-nu',
     text: 'kviklån',
     href: 'https://kviklaan.nu/kviklaan/'
+  },
+  {
+    name: 'dinero_no',
+    href: 'https://dinero.no/forbrukslan/',
+    text: 'Dinero Forbrukslån'
   }
 ]
 
