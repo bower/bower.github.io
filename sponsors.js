@@ -402,10 +402,26 @@ const datasup = [
     name: 'thepiratebay',
     href: 'https://thepiratebayproxylist.se',
     text: 'The Pirate Bay Proxy List',
+  },
+  {
+    name: 'best-guitar-under',
+    text: 'Best Guitar Under',
+    href: 'https://bestguitarunder.com/'
+  },
+  {
+    name: 'kviklaan-nu',
+    text: 'kviklån',
+    href: 'https://kviklaan.nu/kviklaan/'
   }
 ]
 
 const data = [
+  {
+    name: 'emailmarketingservices-io',
+    href: 'https://emailmarketingservices.io',
+    text: 'Email Marketing Services',
+    src: 'https://i.imgur.com/IRd8oHi.png'
+  },
   {
     src: 'https://i.imgur.com/NvN22Eu.png',
     href: 'https://kvintblendex.no/',
