@@ -417,26 +417,30 @@ const datasup = [
     name: 'dinero_no',
     href: 'https://dinero.no/forbrukslan/',
     text: 'Dinero Forbrukslån'
+  },
+  {
+    name: 'incognito-2aad9379'
   }
 ]
 
 const data = [
   {
+    name: 'searchpromocodes',
+    href: 'https://searchpromocodes.com',
+    src: 'https://i.imgur.com/P095N2M.png',
+    alt: 'Search Promo Codes',
+  },
+  {
     name: 'emailmarketingservices-io',
     href: 'https://emailmarketingservices.io',
-    text: 'Email Marketing Services',
+    alt: 'Email Marketing Services',
     src: 'https://i.imgur.com/IRd8oHi.png'
   },
   {
     src: 'https://i.imgur.com/NvN22Eu.png',
     href: 'https://kvintblendex.no/',
-    text: 'Kvint | Blendex',
+    alt: 'Kvint | Blendex',
     name: 'kvintblendex'
-  },
-  {
-    name: 'fire-stick-how',
-    href: 'https://www.firestickhow.com/',
-    text: 'Fire Stick How'
   },
   {
     name: 'web-impact',
@@ -1014,7 +1018,9 @@ async function main() {
     SPONSORS += `<a href="${sponsor.href}"><img class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>\n`
     if (sponsor.second) {
       for (const s of sponsor.second) {
-        SPONSORS += `<a href="${s.href}"><img class="sidebar-logo" src="${s.src}" alt="${s.alt}" /></a>\n`
+        if (sponsor.href) {
+          SPONSORS += `<a href="${s.href}"><img class="sidebar-logo" src="${s.src}" alt="${s.alt}" /></a>\n`
+        }
       }
     }
   })
@@ -1029,7 +1035,9 @@ async function main() {
       throw new Error('Unknown supporter: ' + t.name)
     }
     sups.forEach(sup => {
-      SUPPORTERS += `<a href="${sup.href}">${sup.text}</a> |\n`
+      if (sup.href) {
+        SUPPORTERS += `<a href="${sup.href}">${sup.text}</a> |\n`
+      }
     })
   })
 
