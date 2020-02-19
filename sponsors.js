@@ -55,7 +55,7 @@ const forcedsponsors = {
 
 const forcedsupporters = ['upendra-rathore']
 const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com']
-const exceptions = ['digital-bank-guide']
+const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
@@ -419,7 +419,14 @@ const datasup = [
     text: 'Dinero Forbrukslån'
   },
   {
-    name: 'incognito-2aad9379'
+    name: 'incognito-2aad9379',
+    href: 'https://www.sahkotyotespoo.fi',
+    text: 'Sähkömies Espoo'
+  },
+  {
+    name: 'sammenlignforbrukslan-no',
+    href: 'https://xn--sammenlignforbruksln-f0b.no/',
+    text: 'Sammenlign Forbrukslån'
   }
 ]
 
@@ -992,6 +999,7 @@ async function main() {
   })
 
   console.log('')
+  console.log(Object.keys(supporters))
   Object.keys(supporters).forEach(k => {
     if (supporters[k]+1000*3600*24*6 < Date.now() && !exceptions.includes(k)) {
       const lastTransaction = allTransactions.reverse().find(t => t.fromAccount.slug === k).createdAt
@@ -1034,6 +1042,7 @@ async function main() {
     if (!sups.length) {
       throw new Error('Unknown supporter: ' + t.name)
     }
+    console.log(sups)
     sups.forEach(sup => {
       if (sup.href) {
         SUPPORTERS += `<a href="${sup.href}">${sup.text}</a> |\n`

@@ -1,17 +1,17 @@
 require 'set'
 
-result = `git diff --cached _layouts | grep -e '^[-+]<' | sort`
+result = `git diff --cached _layouts | grep -e '^[-+]\\s*<' | sort`
 
 added = Set.new
 removed = Set.new
 
 result.strip.split("\n").each do |p|
-  if p[0] == "+"
-    added.add(p[1..-1].strip)
+  if p.strip[0] == "+"
+    added.add(p[1..-1].tr('|', '').strip)
   end
 
-  if p[0] == "-"
-    removed.add(p[1..-1].strip)
+  if p.strip[0] == "-"
+    removed.add(p[1..-1].tr('|', '').strip)
   end
 end
 
