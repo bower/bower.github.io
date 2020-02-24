@@ -53,8 +53,8 @@ const forcedsponsors = {
   }
 }
 
-const forcedsupporters = ['upendra-rathore']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com']
+const forcedsupporters = []
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'calgary-pest-control', 'upendra-rathore']
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
@@ -431,6 +431,18 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'fastwordunscrambler',
+    src: 'https://i.imgur.com/yj8EnMP.png',
+    alt: 'FastWordUnscrambler.com',
+    href: 'https://fastwordunscrambler.com/',
+  },
+  {
+    name: 'unscramblex',
+    href: 'https://unscramblex.com/',
+    alt: 'unscramblex.com',
+    src: 'https://i.imgur.com/uiFa9h5.png'
+  },
   {
     name: 'searchpromocodes',
     href: 'https://searchpromocodes.com',
@@ -999,7 +1011,6 @@ async function main() {
   })
 
   console.log('')
-  console.log(Object.keys(supporters))
   Object.keys(supporters).forEach(k => {
     if (supporters[k]+1000*3600*24*6 < Date.now() && !exceptions.includes(k)) {
       const lastTransaction = allTransactions.reverse().find(t => t.fromAccount.slug === k).createdAt
@@ -1042,7 +1053,6 @@ async function main() {
     if (!sups.length) {
       throw new Error('Unknown supporter: ' + t.name)
     }
-    console.log(sups)
     sups.forEach(sup => {
       if (sup.href) {
         SUPPORTERS += `<a href="${sup.href}">${sup.text}</a> |\n`
