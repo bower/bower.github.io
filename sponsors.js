@@ -54,10 +54,15 @@ const forcedsponsors = {
 }
 
 const forcedsupporters = []
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'calgary-pest-control', 'upendra-rathore']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore']
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+  {
+    name: 'laina-org',
+    href: 'https://www.laina.org/',
+    text: 'Laina.org'
+  },
   {
     name: 'vpnranks',
     href: 'https://www.vpnranks.com/',
