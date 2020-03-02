@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'topvpnservice',
+    href: 'https://www.topvpnservice.com/',
+    text: 'Top VPN Service'
+  },
+  {
     name: 'laina-org',
     href: 'https://www.laina.org/',
     text: 'Laina.org'
