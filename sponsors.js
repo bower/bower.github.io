@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'chwilowki-online',
+    href: 'https://chwilowkiok.pl',
+    text: 'chwilówki online'
+  },
+  {
     name: 'vpn_fastest',
     href: 'https://fastestvpn.com/',
     text: 'Fastest VPN'
@@ -446,6 +451,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'credimaxx-r-gmbh',
+    src: 'https://i.imgur.com/sf5e7KT.png',
+    alt: 'credimaxx.de',
+    href: 'https://www.credimaxx.de/'
+  },
   {
     name: 'fastwordunscrambler',
     src: 'https://i.imgur.com/yj8EnMP.png',
