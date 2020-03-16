@@ -59,6 +59,21 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'reach-digital-agency',
+    href: 'https://www.reachdigital.nl/',
+    text: 'Reach Digital agency'
+  },
+  {
+    name: 'bestvpnco',
+    href: 'https://www.bestvpn.co',
+    text: 'BestVPN.co'
+  },
+  {
+    name: 'loginlockdown',
+    href: 'https://loginlockdown.com/',
+    text: 'Login Lockdown'
+  },
+  {
     name: 'chwilowki-online',
     href: 'https://chwilowkiok.pl',
     text: 'chwilówki online'
@@ -946,12 +961,26 @@ async function main() {
     query(5),
     query(6),
     query(7),
+    query(8),
     query(9),
-    query(10)
+    query(10),
+    query(11),
+    query(12),
+    query(13),
+    query(14),
+    query(15),
+    query(16),
+    query(17),
+    query(18),
+    query(19),
+    query(20)
   ])
 
   const allTransactions = [].concat(...result).reverse()
   const transactions = allTransactions.filter(t => {
+    if (t.amount.value === 1000) {
+      console.log(t)
+    }
     return (+new Date() - +Date.parse(t.createdAt))/3600000/24 < 30 && t.amount.value
   })
 
