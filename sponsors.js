@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'seed-cash-advance1',
+    href: 'https://useed.net',
+    text: 'Seed Cash Advance'
+  },
+  {
     name: 'reach-digital-agency',
     href: 'https://www.reachdigital.nl/',
     text: 'Reach Digital agency'
@@ -466,6 +471,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'lainahakemus',
+    src: 'https://i.imgur.com/Mqb22QZ.png',
+    href: 'https://www.lainahakemus.fi/',
+    alt: 'lainahakemus.fi'
+  },
   {
     name: 'credimaxx-r-gmbh',
     src: 'https://i.imgur.com/sf5e7KT.png',
