@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'infatica',
+    href: 'https://infatica.io',
+    text: 'Infatica'
+  },
+  {
     name: 'seed-cash-advance1',
     href: 'https://useed.net',
     text: 'Seed Cash Advance'
