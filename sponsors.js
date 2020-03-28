@@ -61,7 +61,7 @@ const datasup = [
   {
     name: 'vpnalert',
     href: 'https://vpnalert.com',
-    text: 'vpnalert.com'
+    text: 'vpnAlert'
   },
   {
     name: 'infatica',
