@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'vpnalert',
+    href: 'https://vpnalert.com',
+    text: 'vpnalert.com'
+  },
+  {
     name: 'infatica',
     href: 'https://infatica.io',
     text: 'Infatica'
@@ -440,8 +445,8 @@ const datasup = [
   },
   {
     name: 'alex-owner',
-    href: 'https://www.pdfcrops.com/',
-    text: 'PdfCrops.com'
+    href: 'https://www.w5recruitment.co.uk',
+    text: 'W5Recruitment.co.uk'
   },
   {
     name: 'thepiratebay',
@@ -476,6 +481,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'nitrovpn',
+    src: 'https://i.imgur.com/pGnlGOV.png',
+    href: 'https://nitrovpn.com/',
+    alt: 'nitrovpn.com'
+  },
   {
     name: 'lainahakemus',
     src: 'https://i.imgur.com/Mqb22QZ.png',
