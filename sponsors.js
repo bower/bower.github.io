@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'nopeustesti-fi',
+    href: 'https://www.nopeustesti.fi',
+    text: 'nopeustesti.fi'
+  },
+  {
     name: 'vpnalert',
     href: 'https://vpnalert.com',
     text: 'vpnAlert'
