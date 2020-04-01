@@ -487,6 +487,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'best-vpn-for-kodi',
+    src: 'https://i.imgur.com/hn5rbtL.png',
+    href: 'https://cooltechzone.com/free-trial-vpn',
+    alt: 'free trial VPN'
+  },
+  {
     name: 'nitrovpn',
     src: 'https://i.imgur.com/pGnlGOV.png',
     href: 'https://nitrovpn.com/',
