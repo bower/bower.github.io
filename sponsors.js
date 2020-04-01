@@ -489,8 +489,8 @@ const data = [
   {
     name: 'best-vpn-for-kodi',
     src: 'https://i.imgur.com/hn5rbtL.png',
-    href: 'https://cooltechzone.com/free-trial-vpn',
-    alt: 'free trial VPN'
+    href: 'https://cooltechzone.com/vpn-for-kodi',
+    alt: 'Best vpn for Kodi'
   },
   {
     name: 'nitrovpn',
