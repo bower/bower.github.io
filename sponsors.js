@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'forexnews-world',
+    href: 'https://www.forexnews.world/forex-brokers/',
+    text: 'Forex Brokers'
+  },
+  {
     name: 'nopeustesti-fi',
     href: 'https://www.nopeustesti.fi',
     text: 'nopeustesti.fi'
@@ -1014,7 +1019,10 @@ async function main() {
     query(20)
   ])
 
-  const allTransactions = [].concat(...result).reverse()
+  let allTransactions = [].concat(...result).reverse()
+  allTransactions = allTransactions.filter(t => {
+    return t.fromAccount && t.toAccount
+  })
   const transactions = allTransactions.filter(t => {
     return (+new Date() - +Date.parse(t.createdAt))/3600000/24 < 30 && t.amount.value
   })
