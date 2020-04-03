@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'forbrukslan',
+    href: 'https://www.forbrukslån.com/',
+    text: 'forbrukslån.com'
+  },
+  {
     name: 'portablebeasts',
     href: 'https://portablebeasts.com/',
     text: 'PortableBeasts'
@@ -501,6 +506,18 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'vpnyhteys',
+    href: 'https://www.vpnyhteys.fi/',
+    src: 'https://i.imgur.com/bmkNZfZ.png',
+    alt: 'vpnyhteys.fi'
+  },
+  {
+    name: 'nopeustesti-fi',
+    src: 'https://i.imgur.com/Bb3PdNj.png',
+    href: 'https://www.nopeustesti.fi',
+    alt: 'Nopeustesti.fi'
+  },
   {
     name: 'best-vpn-for-kodi',
     src: 'https://i.imgur.com/hn5rbtL.png',
