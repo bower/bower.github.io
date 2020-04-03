@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'thebeastreviews',
+    href: 'https://thebeastreviews.com/',
+    text: 'TheBeastReviews'
+  },
+  {
     name: 'forexnews-world',
     href: 'https://www.forexnews.world/forex-brokers/',
     text: 'Forex Brokers'
