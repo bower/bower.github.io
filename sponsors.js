@@ -515,7 +515,7 @@ const data = [
     name: 'best-vpn-services',
     src: 'https://i.imgur.com/wL2Xdpg.png',
     href: 'https://www.bestvpnrating.com/',
-    alt: 'bestvpnrating.com'
+    alt: 'Best VPN Services'
   },
   {
     name: 'vpnyhteys',
