@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'bestekredittkort',
+    href: 'https://www.bestekredittkortet.com/',
+    text: 'bestekredittkortet.com'
+  },
+  {
     name: 'all-time-list',
     href: 'https://alltimelist.com',
     text: 'alltimelist.com'
