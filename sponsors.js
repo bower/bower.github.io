@@ -512,6 +512,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'best-vpn-services',
+    src: 'https://i.imgur.com/wL2Xdpg.png',
+    href: 'https://www.bestvpnrating.com/',
+    alt: 'bestvpnrating.com'
+  },
+  {
     name: 'vpnyhteys',
     href: 'https://www.vpnyhteys.fi/',
     src: 'https://i.imgur.com/bmkNZfZ.png',
