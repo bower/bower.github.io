@@ -527,6 +527,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'betacalendars',
+    src: 'https://i.imgur.com/wBKloLa.png',
+    href: 'https://www.betacalendars.com/',
+    alt: 'Beta Calendars'
+  },
+  {
     name: 'best-vpn-services',
     src: 'https://i.imgur.com/wL2Xdpg.png',
     href: 'https://www.bestvpnrating.com/',
