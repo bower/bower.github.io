@@ -59,6 +59,16 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'bellwether-capital',
+    href: 'https://www.bellwethercap.io/',
+    text: 'bellwethercap.io'
+  },
+  {
+    name: 'reviewedpapa',
+    href: 'https://reviewedpapa.com/',
+    text: 'reviewedpapa.com'
+  },
+  {
     name: 'bestekredittkort',
     href: 'https://www.bestekredittkortet.com/',
     text: 'bestekredittkortet.com'
