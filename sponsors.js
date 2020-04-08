@@ -1038,7 +1038,7 @@ const data = [
   {
     name: 'digital-logic',
     src: 'https://i.imgur.com/4HmKudj.jpg',
-    href: 'https://www.digitallogic.co/blog/dental-marketing/',
+    href: 'https://www.digitallogic.co',
     alt: 'Digital Logic'
   },
   {
