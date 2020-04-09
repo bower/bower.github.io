@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'trivaltech',
+    href: 'https://trivaltech.com/',
+    text: 'trivaltech.com'
+  },
+  {
     name: 'bellwether-capital',
     href: 'https://www.bellwethercap.io/',
     text: 'bellwethercap.io'
