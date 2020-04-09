@@ -61,7 +61,7 @@ const datasup = [
   {
     name: 'trivaltech',
     href: 'https://trivaltech.com/',
-    text: 'trivaltech.com'
+    text: 'TrivalTech'
   },
   {
     name: 'bellwether-capital',
