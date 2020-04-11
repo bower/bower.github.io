@@ -61,7 +61,17 @@ const datasup = [
   {
     name: 'royal-tech-ab',
     href: 'https://www.fundfirstcapital.com',
-    text: 'fundfirstcapital.com'
+    text: 'FundFirst Capital',
+    second: [
+      {
+        href: 'https://settle4cash.com',
+        text: 'Settle4Cash'
+      },
+      {
+        href: 'https://dieting.org',
+        text: 'Dieting.org'
+      }
+    ]
   },
   {
     name: 'alvenda',
@@ -1234,6 +1244,13 @@ async function main() {
     sups.forEach(sup => {
       if (sup.href) {
         SUPPORTERS += `<a href="${sup.href}">${sup.text}</a> |\n`
+      }
+      if (sup.second) {
+        for (const s of sup.second) {
+          if (s.href) {
+            SUPPORTERS += `<a href="${s.href}">${s.text}</a> |\n`
+          }
+        }
       }
     })
   })
