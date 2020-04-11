@@ -59,6 +59,21 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'royal-tech-ab',
+    href: 'https://www.fundfirstcapital.com',
+    text: 'fundfirstcapital.com'
+  },
+  {
+    name: 'alvenda',
+    href: 'https://alvenda.com',
+    text: 'alvenda.com'
+  },
+  {
+    name: 'grammar-gang',
+    href: 'https://grammargang.com/',
+    text: 'grammargang.com'
+  },
+  {
     name: 'trivaltech',
     href: 'https://trivaltech.com/',
     text: 'TrivalTech'
