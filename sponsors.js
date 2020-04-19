@@ -552,10 +552,27 @@ const datasup = [
     name: 'sammenlignforbrukslan-no',
     href: 'https://xn--sammenlignforbruksln-f0b.no/',
     text: 'Sammenlign Forbrukslån'
+  },
+  {
+    name: 'zipcodes',
+    href: 'https://zipcodes.org',
+    text: 'ZipCodes.org'
   }
 ]
 
 const data = [
+  {
+    name: 'instapromote1',
+    src: 'https://i.imgur.com/BRNfVvM.png',
+    href: 'https://instapromote.me/',
+    alt: 'instapromote.me'
+  },
+  {
+    name: 'vpncompare',
+    src: 'https://i.imgur.com/Z3gcqKZ.jpg',
+    href: 'https://www.vpncompare.co.uk',
+    alt: 'vpncompare.co.uk'
+  },
   {
     name: 'betacalendars',
     src: 'https://i.imgur.com/wBKloLa.png',
