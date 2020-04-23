@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'lemon-law',
+    href: 'https://lemonlaw.site',
+    text: 'Lemon Law.Site'
+  },
+  {
     name: 'royal-tech-ab',
     href: 'https://www.fundfirstcapital.com',
     text: 'FundFirst Capital',
@@ -219,9 +224,9 @@ const datasup = [
     text: 'LendMe'
   },
   {
-    name: 'calgary-pest-control',
+    name: 'spartan-pest-control',
     href: 'https://spartanpestcontrol.com/',
-    text: 'Calgary Pest Control'
+    text: 'Spartan Pest Control'
   },
   {
     name: 'allan-stolc',
