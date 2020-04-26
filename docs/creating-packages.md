@@ -4,6 +4,8 @@ layout: docs
 permalink: /docs/creating-packages/
 ---
 
+## Deprecated
+
 As Bower is deprecated, registering new Bower packages is not supported anymore. Neverthless you can install any GitHub repository as Bower package by putting full name in `bower.json`:
 
 ```
