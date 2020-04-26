@@ -284,7 +284,7 @@ Uninstalls local extraneous packages
 $ bower register <name> <url>
 {% endhighlight %}
 
-Register a package
+Register a package (deprecated)
 
 ### search
 
@@ -293,7 +293,7 @@ $ bower search
 $ bower search <name>
 {% endhighlight %}
 
-Finds all packages or a specific package.
+Finds all packages or a specific package (deprecated)
 
 ### update
 
@@ -301,7 +301,7 @@ Finds all packages or a specific package.
 $ bower update <name> [<name> ..] [<options>]
 {% endhighlight %}
 
-Updates installed packages to their newest version according to bower.json.
+Updates installed packages to their newest version according to bower.json (deprecated)
 
 #### update options
 
@@ -329,7 +329,7 @@ Uninstalls a package locally from your bower_components directory
 $ bower unregister <package>
 {% endhighlight %}
 
-Unregisters a package.
+Unregisters a package (deprecated)
 
 ### version
 
@@ -374,7 +374,6 @@ Makes various commands more forceful
 
 - `bower install --force` re-installs all installed components. It also forces installation even when there are non-bower directories with the same name in the components directory. Adding `--force` also bypasses the cache, and writes to the cache anyway.
 - `bower uninstall <package> --force` continues uninstallation even after a dependency conflict
-- `bower register <package> --force` and `bower unregister <package> --force` bypasses confirmation. Login is still needed.
 
 ### json
 
