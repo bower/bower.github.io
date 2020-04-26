@@ -8,7 +8,7 @@ permalink: /docs/creating-packages/
 
 As Bower is deprecated, registering new Bower packages is not supported anymore. Neverthless you can install any GitHub repository as Bower package by putting full name in `bower.json`:
 
-```
+```json
 {
   "dependencies": {
     "angular-cli": "angular/angular-cli#^9.1.3"
