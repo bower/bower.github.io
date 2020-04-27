@@ -54,10 +54,15 @@ const forcedsponsors = {
 }
 
 const forcedsupporters = []
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'casinomatcher-com']
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+  {
+    name: 'norlan-no-refinansiering',
+    href: 'https://www.xn--norln-pra.no/refinansiering/',
+    text: 'Norlån.no'
+  },
   {
     name: 'lemon-law',
     href: 'https://lemonlaw.site',
