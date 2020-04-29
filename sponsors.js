@@ -54,10 +54,25 @@ const forcedsponsors = {
 }
 
 const forcedsupporters = []
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'casinomatcher-com']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'casinomatcher-com', 'world-of-the-casinos']
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+  {
+    name: 'nordic-creative-life',
+    href: 'https://parenthood.dk/',
+    text: 'parenthood.dk'
+  },
+  {
+    name: 'evohostin',
+    href: 'https://evolution-host.com/',
+    text: 'evolution-host.com'
+  },
+  {
+    name: 'nordic-meal-company',
+    href: 'https://maaltidskasser-online.dk/',
+    text: 'maaltidskasser-online.dk'
+  },
   {
     name: 'norlan-no-refinansiering',
     href: 'https://www.xn--norln-pra.no/refinansiering/',
