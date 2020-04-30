@@ -59,6 +59,16 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'outdooranalysis',
+    href: 'https://www.outdooranalysis.com/',
+    text: 'www.outdooranalysis.com'
+  },
+  {
+    name: 'cool-things-to-buy',
+    href: 'https://coolestthingstobuy.com/',
+    text: 'coolestthingstobuy.com'
+  },
+  {
     name: 'allofvacuums1',
     href: 'https://allofvacuums.com/',
     text: 'allofvacuums.com'
