@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'allofvacuums1',
+    href: 'https://allofvacuums.com/',
+    text: 'allofvacuums.com'
+  },
+  {
     name: 'casinomatcher-com',
     href: 'https://www.xn--lnasmart-9za.com/',
     text: 'Lånasmart.com'
