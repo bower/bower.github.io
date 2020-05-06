@@ -78,7 +78,8 @@ Available configuration variables, in `.bowerrc` format:
   "scripts": {
     "preinstall": "",
     "postinstall": "",
-    "preuninstall": ""
+    "preuninstall": "",
+    "postuninstall": ""
   },
   "ignoredDependencies": [
     "jquery"
@@ -110,7 +111,8 @@ In `.bowerrc` do:
   "scripts": {
     "preinstall": "<your command here>",
     "postinstall": "<your command here>",
-    "preuninstall": "<your command here>"
+    "preuninstall": "<your command here>",
+    "postuninstall": "<your command here>"
   }
 }
 {% endhighlight %}
