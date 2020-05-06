@@ -209,7 +209,7 @@ const datasup = [
     text: 'Login Lockdown'
   },
   {
-    name: 'chwilowki-online',
+    name: 'chwilowki-online-1587473460664',
     href: 'https://chwilowkiok.pl',
     text: 'chwilówki online'
   },
@@ -606,6 +606,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'thebigphonestore',
+    src: 'https://i.imgur.com/2NBJr2b.png',
+    href: 'https://www.thebigphonestore.co.uk/',
+    alt: 'The Big Phone Store'
+  },
   {
     name: 'instapromote1',
     src: 'https://i.imgur.com/BRNfVvM.png',
