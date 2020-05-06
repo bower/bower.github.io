@@ -21,8 +21,7 @@ permalink: /docs/config/
 
 ## Placement & Order
 
-The config is obtained by merging multiple configurations by this order of
-importance:
+The config is obtained by merging multiple configurations in following order (higher on list, higher priority):
 
 * CLI arguments via `--config`
 * Environment variables
