@@ -607,6 +607,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'zadluzenia-com',
+    href: 'https://www.zadluzenia.com/',
+    src: 'https://i.imgur.com/NLC1TOn.png',
+    alt: 'zadluzenia.com'
+  },
+  {
     name: 'thebigphonestore',
     src: 'https://i.imgur.com/2NBJr2b.png',
     href: 'https://www.thebigphonestore.co.uk/',
