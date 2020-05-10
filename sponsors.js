@@ -612,6 +612,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'top-web-design-agencies',
+    src: 'https://i.imgur.com/oQYK4B9.png',
+    href: 'https://medium.com/@niksundin/best-web-design-companies-1872e445775f',
+    alt: 'Top Web Design Agencies'
+  },
+  {
     name: 'zadluzenia-com',
     href: 'https://www.zadluzenia.com/',
     src: 'https://i.imgur.com/NLC1TOn.png',
