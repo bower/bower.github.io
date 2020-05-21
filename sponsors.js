@@ -115,9 +115,13 @@ const datasup = [
   },
   {
     name: 'royal-tech-ab',
-    href: 'https://settle4cash.com',
-    text: 'Settle4Cash',
+    href: 'https://www.fundfirstcapital.com',
+    text: 'FundFirst Capital',
     second: [
+      {
+        href: 'https://settle4cash.com',
+        text: 'Settle4Cash'
+      },
       {
         href: 'https://dieting.org',
         text: 'Dieting.org'
