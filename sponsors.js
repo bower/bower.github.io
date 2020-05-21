@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'rahoitustalo',
+    href: 'https://www.rahoitustalo.fi',
+    text: 'rahoitustalo.fi'
+  },
+  {
     name: 'metro-detroit-review',
     text: 'metrodetroitreview.com',
     href: 'http://www.metrodetroitreview.com'
@@ -110,13 +115,9 @@ const datasup = [
   },
   {
     name: 'royal-tech-ab',
-    href: 'https://www.fundfirstcapital.com',
-    text: 'FundFirst Capital',
+    href: 'https://settle4cash.com',
+    text: 'Settle4Cash',
     second: [
-      {
-        href: 'https://settle4cash.com',
-        text: 'Settle4Cash'
-      },
       {
         href: 'https://dieting.org',
         text: 'Dieting.org'
