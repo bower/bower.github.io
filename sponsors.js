@@ -53,11 +53,16 @@ const forcedsponsors = {
   }
 }
 
-const forcedsupporters = []
+const forcedsupporters = ['royal-tech-ab']
 const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos']
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+  {
+    name: "tankpenge-dk",
+    href: "https://tankpenge.dk",
+    text: "Tankpenge.dk - Lån penge"
+  },
   {
     name: 'rahoitustalo',
     href: 'https://www.rahoitustalo.fi',
