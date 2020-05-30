@@ -1284,7 +1284,7 @@ async function main() {
   sponsors['vpn-review-com'] += 1000 * 3600 * 24 * 31
 
   Object.keys(sponsors).forEach(k => {
-    if (sponsors[k]+1000*3600*24*6 < Date.now() && !exceptions.includes(k)) {
+    if (sponsors[k]+1000*3600*24*16 < Date.now() && !exceptions.includes(k)) {
       const lastTransaction = allTransactions.reverse().find(t => t.fromAccount.slug === k).createdAt
       if (lastTransaction >= '2019-10') {
         console.log('Expired sponsor: ' + k + ' at ' + new Date(sponsors[k]).toString().slice(4, 16) + ' ' + lastTransaction.slice(0, 10) )
@@ -1295,7 +1295,7 @@ async function main() {
 
   console.log('')
   Object.keys(supporters).forEach(k => {
-    if (supporters[k]+1000*3600*24*6 < Date.now() && !exceptions.includes(k)) {
+    if (supporters[k]+1000*3600*24*16 < Date.now() && !exceptions.includes(k)) {
       const lastTransaction = allTransactions.reverse().find(t => t.fromAccount.slug === k).createdAt
       if (lastTransaction >= '2019-10') {
         console.log('Expired supporter: ' + k + ' at ' + new Date(supporters[k]).toString().slice(4, 16) + ' ' + lastTransaction.slice(0, 10) )
