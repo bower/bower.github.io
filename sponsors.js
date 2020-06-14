@@ -59,6 +59,21 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'sanyo-digital1',
+    href: 'https://sanyodigital.com/',
+    text: 'Sanyo Digital'
+  },
+  {
+    name: 'capitalbaynews',
+    href: 'https://www.capitalbay.news/',
+    text: 'Capitalbay News'
+  },
+  {
+    name: 'wongagames',
+    href: 'https://google.com',
+    text: 'Wonga Games'
+  },
+  {
     name: "tankpenge-dk",
     href: "https://tankpenge.dk",
     text: "Tankpenge.dk - Lån penge"
