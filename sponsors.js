@@ -637,6 +637,12 @@ const datasup = [
 
 const data = [
   {
+    name: "varmalaina-fi",
+    href: "https://www.varmalaina.fi/",
+    src: "https://i.imgur.com/lbkpxKf.png",
+    alt: "VarmaLaina.fi"
+  },
+  {
     name: 'top-web-design-agencies',
     src: 'https://i.imgur.com/oQYK4B9.png',
     href: 'https://medium.com/@niksundin/best-web-design-companies-1872e445775f',
