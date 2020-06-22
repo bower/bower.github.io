@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'pillarwm',
+    href: 'https://pillarwm.com',
+    text: 'Pillar Wealth Management'
+  },
+  {
     name: 'sanyo-digital1',
     href: 'https://sanyodigital.com/',
     text: 'Sanyo Digital'
