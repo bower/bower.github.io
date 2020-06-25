@@ -642,6 +642,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'mosttrust-com',
+    href: 'https://mosttrust.com/',
+    src: 'https://i.imgur.com/TGzM7H2.png',
+    alt: 'MostTrust.com'
+  },
+  {
     name: "varmalaina-fi",
     href: "https://www.varmalaina.fi/",
     src: "https://i.imgur.com/lbkpxKf.png",
