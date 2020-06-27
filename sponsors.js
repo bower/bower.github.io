@@ -642,6 +642,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'clipartlove',
+    href: 'https://www.clipartlove.com/',
+    src: 'https://i.imgur.com/W37UlyE.png',
+    alt: 'Clipartlove'
+  },
+  {
     name: 'mosttrust-com',
     href: 'https://mosttrust.com/',
     src: 'https://i.imgur.com/TGzM7H2.png',
