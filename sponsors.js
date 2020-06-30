@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'esquire-client-solutions',
+    href: 'https://esquireclientsolutions.com/west-palm-beach-seo/',
+    text: 'West Palm Beach SEO'
+  },
+  {
     name: 'pillarwm',
     href: 'https://pillarwm.com',
     text: 'Pillar Wealth Management'
@@ -170,8 +175,8 @@ const datasup = [
   },
   {
     name: 'bellwether-capital',
-    href: 'https://www.bellwethercap.io/',
-    text: 'bellwethercap.io'
+    href: 'https://esquireclientsolutions.com/west-palm-beach-seo/',
+    text: 'West Palm Beach SEO'
   },
   {
     name: 'reviewedpapa',
