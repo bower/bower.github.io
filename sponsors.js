@@ -59,6 +59,16 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'cryptomoonpress',
+    href: 'https://cryptomoonpress.com/',
+    text: 'CryptoMoonPress'
+  },
+  {
+    name: 'open-apk-file',
+    href: 'https://openapkfilez.com/',
+    text: 'Open APK File'
+  },
+  {
     name: 'esquire-client-solutions',
     href: 'https://esquireclientsolutions.com/west-palm-beach-seo/',
     text: 'West Palm Beach SEO'
