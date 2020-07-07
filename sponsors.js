@@ -56,8 +56,13 @@ const forcedsponsors = {
 const forcedsupporters = ['royal-tech-ab']
 const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos']
 const exceptions = ['digital-bank-guide', 'alex-owner']
-
+  
 const datasup = [
+  {
+    name: 'couponupto-com',
+    href: 'https://www.couponupto.com',
+    text: 'CouponUpTo'
+  },
   {
     name: 'cryptomoonpress',
     href: 'https://cryptomoonpress.com/',
