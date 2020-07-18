@@ -26,7 +26,7 @@
   "dependencies": {
     "d3": "^3.5.17",
     "es6-promise": "^3.2.1",
-    "lodash": "^4.13.1",
+    "lodash": "^4.17.19",
     "mark.js": "^8.11.1",
     "mustache": "^2.2.1",
     "normalize.css": "3.0.3",
