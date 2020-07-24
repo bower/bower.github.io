@@ -54,10 +54,15 @@ const forcedsponsors = {
 }
 
 const forcedsupporters = ['royal-tech-ab']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino']
 const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
+  {
+    name: 'five-guys-plumbing-dearborn',
+    href: 'http://www.fiveguysplumbingdearborn.com',
+    text: 'Five Guys Plumbing Dearborn'
+  },
   {
     name: 'negativeseoexpert',
     href: 'https://negativeseoexpert.com/',
@@ -195,8 +200,8 @@ const datasup = [
   },
   {
     name: 'trivaltech',
-    href: 'https://trivaltech.com/',
-    text: 'TrivalTech'
+    href: 'https://topsellersreview.com/',
+    text: 'TopSellersReview'
   },
   {
     name: 'bellwether-capital',
