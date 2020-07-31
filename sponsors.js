@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'wohnungsreinigung',
+    href: 'https://wohnungsreinigung24.ch/',
+    text: 'Wohnungsreinigung'
+  },
+  {
     name: 'five-guys-plumbing-dearborn',
     href: 'http://www.fiveguysplumbingdearborn.com',
     text: 'Five Guys Plumbing Dearborn'
