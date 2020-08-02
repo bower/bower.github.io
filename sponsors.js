@@ -58,6 +58,12 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
+
+  {
+    name: 'troniczone',
+    text: 'circuit design',
+    href: 'https://www.tronicszone.com/'
+  },
   {
     name: 'wohnungsreinigung',
     href: 'https://wohnungsreinigung24.ch/',
