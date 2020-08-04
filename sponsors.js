@@ -58,7 +58,11 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
-
+  {
+    name: 'mobil-paa-afbetaling',
+    href: 'https://mobilafbetaling.dk/',
+    text: 'Mobil på afbetaling'
+  },
   {
     name: 'troniczone',
     text: 'circuit design',
