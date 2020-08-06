@@ -692,6 +692,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'netflix-vpn',
+    href: 'https://vpn-review.com/netflix-vpn',
+    src: 'https://i.imgur.com/fZ5uNm4.png',
+    alt: 'Best Netflix VPN'
+  },
+  {
     name: 'clipartlove',
     href: 'https://www.clipartlove.com/',
     src: 'https://i.imgur.com/W37UlyE.png',
