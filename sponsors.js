@@ -694,7 +694,7 @@ const data = [
   {
     name: 'netflix-vpn',
     href: 'https://vpn-review.com/netflix-vpn',
-    src: 'https://i.imgur.com/fZ5uNm4.png',
+    src: 'https://i.imgur.com/nfew8Na.png',
     alt: 'Best Netflix VPN'
   },
   {
