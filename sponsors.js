@@ -697,6 +697,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'blufvpn',
+    href: 'https://blufvpn.com',
+    src: 'https://i.imgur.com/kHYrANI.png',
+    alt: 'BlufVPN - Supercharged Privacy'
+  },
+  {
     name: 'netflix-vpn',
     href: 'https://vpn-review.com/netflix-vpn',
     src: 'https://i.imgur.com/nfew8Na.png',
