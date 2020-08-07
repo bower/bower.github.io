@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'lazy-sg',
+    href: 'https://www.lazy.com.sg/cleaning-services',
+    text: 'Cleaning Services'
+  },
+  {
     name: 'mobil-paa-afbetaling',
     href: 'https://mobilafbetaling.dk/',
     text: 'Mobil på afbetaling'
