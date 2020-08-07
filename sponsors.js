@@ -66,7 +66,7 @@ const datasup = [
   {
     name: 'troniczone',
     text: 'circuit design',
-    href: 'https://www.tronicszone.com/'
+    href: 'https://www.tronicszone.com/electronic-circuit-design/'
   },
   {
     name: 'wohnungsreinigung',
