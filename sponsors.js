@@ -58,6 +58,17 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
+
+  {
+    name: 'tierlists',
+    href: 'https://tierlists.com/',
+    text: 'Free Tier List Maker'
+  },
+  {
+    name: 'credit-cards-in-norway',
+    href: 'https://scandinavia.life/credit-cards-norway/',
+    text: 'Credit Cards in Norway'
+  },
   {
     name: 'lazy-sg',
     href: 'https://www.lazy.com.sg/cleaning-services',
