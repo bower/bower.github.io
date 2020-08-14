@@ -54,11 +54,10 @@ const forcedsponsors = {
 }
 
 const forcedsupporters = ['royal-tech-ab']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1']
 const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
-
   {
     name: 'tierlists',
     href: 'https://tierlists.com/',
@@ -1316,7 +1315,13 @@ async function main() {
     query(17),
     query(18),
     query(19),
-    query(20)
+    query(20),
+    query(21),
+    query(22),
+    query(23),
+    query(24),
+    query(25),
+    query(26)
   ])
 
   let allTransactions = [].concat(...result).reverse()
