@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'butikkene-no',
+    href: 'https://www.butikkene.no/',
+    text: 'Butikkene.no'
+  },
+  {
     name: 'tierlists',
     href: 'https://tierlists.com/',
     text: 'Free Tier List Maker'
