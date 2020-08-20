@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'paraphrase-tool',
+    href: 'https://paraphrasetools.com',
+    text: 'Paraphrase tools'
+  },
+  {
     name: 'butikkene-no',
     href: 'https://www.butikkene.no/',
     text: 'Butikkene.no'
