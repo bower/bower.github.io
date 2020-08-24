@@ -54,7 +54,7 @@ const forcedsponsors = {
 }
 
 const forcedsupporters = ['royal-tech-ab']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions']
 const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
