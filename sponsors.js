@@ -59,6 +59,16 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'ponfish',
+    href: 'https://www.ponfish.com',
+    text: 'PonFish'
+  },
+  {
+    name: 'zenscrape',
+    href: 'https://zenscrape.com/',
+    text: 'Zenscrape - Web Scraping API'
+  },
+  {
     name: 'paraphrase-tool',
     href: 'https://paraphrasetools.com',
     text: 'Paraphrase tools'
@@ -716,6 +726,18 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'zenscrape',
+    href: 'https://zenscrape.com/',
+    src: 'https://i.imgur.com/WQf4Lxi.png',
+    text: 'Zenscrape - Web Scraping API'
+  },
+  {
+    name: 'zenserp',
+    href: 'https://zenserp.com',
+    src: 'https://i.imgur.com/mj9YocC.png',
+    alt: 'Zenserp - Google Search API'
+  },
   {
     name: 'blufvpn',
     href: 'https://blufvpn.com',
