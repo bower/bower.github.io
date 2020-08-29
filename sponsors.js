@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'talousapu',
+    href: 'https://talousapu.fi/',
+    text: 'Talousapu.fi'
+  },
+  {
     name: 'ponfish',
     href: 'https://www.ponfish.com',
     text: 'PonFish'
@@ -726,6 +731,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'masterbundles',
+    href: 'https://masterbundles.com/',
+    src: 'https://i.imgur.com/FS7VYwp.png',
+    text: 'masterbundles.com'
+  },
   {
     name: 'zenscrape',
     href: 'https://zenscrape.com/',
