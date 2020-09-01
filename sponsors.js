@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'coinnewsspan',
+    href: 'https://www.coinnewsspan.com',
+    text: 'CoinNewsSpan'
+  },
+  {
     name: 'talousapu',
     href: 'https://talousapu.fi/',
     text: 'Talousapu.fi'
