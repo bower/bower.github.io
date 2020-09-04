@@ -59,6 +59,16 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: '123calendars',
+    href: 'https://www.123calendars.com/',
+    text: '123Calendars'
+  },
+  {
+    name: 'laina-pro',
+    href: 'https://laina.pro/',
+    text: 'Laina.pro'
+  },
+  {
     name: 'coinnewsspan',
     href: 'https://www.coinnewsspan.com',
     text: 'CoinNewsSpan'
