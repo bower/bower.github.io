@@ -747,6 +747,12 @@ const datasup = [
 
 const data = [
   {
+   name: 'buy-fineproxy-org',
+    href: 'https://buy.fineproxy.org/eng/',
+    src: 'https://i.imgur.com/MCMrOiw.png',
+    alt: 'FinePROXY'
+  },
+  {
     name: 'masterbundles',
     href: 'https://masterbundles.com/',
     src: 'https://i.imgur.com/FS7VYwp.png',
