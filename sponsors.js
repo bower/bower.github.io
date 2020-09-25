@@ -59,6 +59,21 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'tjek-dating-sider',
+    href: 'https://www.tjekdatingsider.dk/',
+    text: 'Tjek Dating Sider'
+  },
+  {
+    name: 'current-bitcoin-news',
+    href: 'https://currentbitcoinnews.com/',
+    text: 'Current Bitcoin News'
+  },
+  {
+    name: 'argeweb1',
+    href: 'https://www.argeweb.nl/',
+    text: 'argeweb'
+  },
+  {
     name: '123calendars',
     href: 'https://www.123calendars.com/',
     text: '123Calendars'
@@ -747,7 +762,13 @@ const datasup = [
 
 const data = [
   {
-   name: 'buy-fineproxy-org',
+    name: 'faveable',
+    href: 'https://buy.fineproxy.org/eng/',
+    src: 'https://faveable.com/',
+    alt: 'Faveable'
+  },
+  {
+    name: 'buy-fineproxy-org',
     href: 'https://buy.fineproxy.org/eng/',
     src: 'https://i.imgur.com/MCMrOiw.png',
     alt: 'FinePROXY'
