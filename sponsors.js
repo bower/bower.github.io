@@ -763,8 +763,8 @@ const datasup = [
 const data = [
   {
     name: 'faveable',
-    href: 'https://buy.fineproxy.org/eng/',
-    src: 'https://faveable.com/',
+    href: 'https://faveable.com/',
+    src: 'https://i.imgur.com/PMqdGyT.png',
     alt: 'Faveable'
   },
   {
@@ -1488,6 +1488,7 @@ async function main() {
 
   sponsors['top5credits-com-fi'] += 1000 * 3600 * 24 * 31
   sponsors['vpn-review-com'] += 1000 * 3600 * 24 * 31
+  sponsors['faveable'] += 1000 * 3600 * 24 * 7
 
   Object.keys(sponsors).forEach(k => {
     if (sponsors[k]+1000*3600*24*16 < Date.now() && !exceptions.includes(k)) {
