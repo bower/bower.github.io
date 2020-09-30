@@ -54,10 +54,15 @@ const forcedsponsors = {
 }
 
 const forcedsupporters = ['royal-tech-ab']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world']
 const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
+  {
+    name: 'scalp-micropigmentation-clinics',
+    href: 'https://www.scalpmicropigmentationclinics.com',
+    text: 'Scalp Micropigmentation Clinics'
+  },
   {
     name: 'tjek-dating-sider',
     href: 'https://www.tjekdatingsider.dk/',
