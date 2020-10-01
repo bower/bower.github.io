@@ -6,7 +6,7 @@ The site is built with [Jekyll](http://jekyllrb.com) and served with GitHub Page
 
 ## Development
 
-You need to install recent Node.js and Ruby
+You need to install latest  Node.js and Ruby
 
 ``` bash
 npm install
