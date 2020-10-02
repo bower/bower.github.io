@@ -54,10 +54,15 @@ const forcedsponsors = {
 }
 
 const forcedsupporters = ['royal-tech-ab']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy']
 const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
+  {
+    name: 'ministry-of-freedom',
+    href: 'https://www.theministryoffreedomreview.com',
+    text: 'Ministry Of Freedom'
+  },
   {
     name: 'scalp-micropigmentation-clinics',
     href: 'https://www.scalpmicropigmentationclinics.com',
@@ -766,6 +771,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'buycheaprdp',
+    href: 'https://buycheaprdp.com/',
+    src: 'https://i.imgur.com/mQkLkbs.png',
+    alt: 'Buy Cheap Remote Desktop Services'
+  },
   {
     name: 'faveable',
     href: 'https://faveable.com/',
