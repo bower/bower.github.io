@@ -59,6 +59,21 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'real-time-communications-world',
+    href: 'https://www.realtimecommunicationsworld.com',
+    text: 'Real Time Communications World'
+  },
+  {
+    name: 'dpcoupon',
+    href: 'https://www.dpcoupon.com',
+    text: 'DPCoupon.com'
+  },
+  {
+    name: 'gjeldsproblemer-com',
+    href: 'https://gjeldsproblemer.com/',
+    text: 'Gjeldsproblemer'
+  },
+  {
     name: 'ministry-of-freedom',
     href: 'https://www.theministryoffreedomreview.com',
     text: 'Ministry Of Freedom'
@@ -771,6 +786,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'aandelen-kopen1',
+    href: 'https://www.aandelenkopen.com/',
+    src: 'https://i.imgur.com/tB0Kg9v.png',
+    alt: 'Aandelen kopen tips'
+  },
   {
     name: 'buycheaprdp',
     href: 'https://buycheaprdp.com/',
