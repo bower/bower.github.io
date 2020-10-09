@@ -787,6 +787,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'proven',
+    href: 'https://www.discovermagazine.com/sponsored/proven-reviews-nutravesta-proven-weight-loss-pills-really-work',
+    src: 'https://i.imgur.com/W70tuoL.png',
+    alt: 'ProVen Reviews'
+  },
+  {
     name: 'aandelen-kopen1',
     href: 'https://www.aandelenkopen.com/',
     src: 'https://i.imgur.com/tB0Kg9v.png',
