@@ -792,6 +792,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'bank-finans',
+    href: 'https://bankfinans.se/',
+    src: 'https://i.imgur.com/VtnZTO7.png',
+    alt: 'Bank Finans'
+  },
+  {
     name: 'proven',
     href: 'https://www.discovermagazine.com/sponsored/proven-reviews-nutravesta-proven-weight-loss-pills-really-work',
     src: 'https://i.imgur.com/W70tuoL.png',
