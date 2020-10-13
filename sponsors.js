@@ -1151,7 +1151,7 @@ const data = [
     name: 'vpsservercom',
     href: 'https://www.vpsserver.com',
     src: 'https://i.imgur.com/uybwrjU.png',
-    alt: 'VPS Server'
+    alt: 'https://www.vpsserver.com'
   },
   {
     name: 'hostednl',
