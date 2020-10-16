@@ -59,6 +59,21 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'coupons4printing',
+    href: 'https://www.coupons4printing.com/',
+    text: 'Coupons4Printing'
+  },
+  {
+    name: 'steel-bite-pro6',
+    href: 'https://www.globenewswire.com/news-release/2020/09/16/2094882/0/en/Steel-Bite-Pro-Reviews-Groundbreaking-New-Report-on-Oral-Health-Industry.html',
+    text: 'steel bite pro'
+  },
+  {
+    name: 'meticore3',
+    href: 'https://www.discovermagazine.com/sponsored/meticore-reviews-does-meticore-supplement-really-work',
+    text: 'meticore'
+  },
+  {
     name: 'real-time-communications-world',
     href: 'https://www.realtimecommunicationsworld.com',
     text: 'Real Time Communications World'
