@@ -59,6 +59,21 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'solcellepaneler-com',
+    href: 'https://solcellepaneler.com/',
+    text: 'Solcellepaneler.com'
+  },
+  {
+    name: 'web-pundits',
+    href: 'https://webpundits.in/',
+    text: 'Buy RDP'
+  },
+  {
+    name: 'thepiratebay-proxy-list',
+    href: 'https://thepiratebayproxylist.se/',
+    text: 'ThePirateBay Proxy List'
+  },
+  {
     name: 'coupons4printing',
     href: 'https://www.coupons4printing.com/',
     text: 'Coupons4Printing'
@@ -806,6 +821,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'bank24-nu',
+    src: 'https://i.imgur.com/2efEU47.png',
+    href: 'https://www.bank24.nu/',
+    alt: 'bank24.nu'
+  },
   {
     name: 'bank-finans',
     href: 'https://bankfinans.se/',
