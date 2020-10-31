@@ -54,10 +54,20 @@ const forcedsponsors = {
 }
 
 const forcedsupporters = ['royal-tech-ab']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io']
 const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
+  {
+    name: 'y-106fm',
+    href: 'https://www.y-106.com/',
+    text: 'Y-106FM',
+  },
+  {
+    name: 'weight-loss-promotion-codes',
+    href: 'https://www.weightlosspromotioncodes.com/',
+    text: 'Weight Loss Promotion Codes'
+  },
   {
     name: 'solcellepaneler-com',
     href: 'https://solcellepaneler.com/',
@@ -815,7 +825,7 @@ const datasup = [
   },
   {
     name: 'proven1',
-    href: 'https://apnews.com/press-release/wired-release/2b9faf69b5bab5132d4f1f34a503e6f4',
+    href: 'https://apnews.com/2b9faf69b5bab5132d4f1f34a503e6f4',
     text: 'ProVen'
   }
 ]
