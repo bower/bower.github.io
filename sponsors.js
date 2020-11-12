@@ -837,6 +837,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'solarplus',
+    href: 'https://solarplus.es/',
+    alt: 'solarplus.es',
+    src: 'https://i.imgur.com/wfJLQHP.png'
+  },
+  {
     name: 'bank24-nu',
     src: 'https://i.imgur.com/2efEU47.png',
     href: 'https://www.bank24.nu/',
@@ -1232,7 +1238,7 @@ const data = [
     name: 'truevendor',
     href: 'https://www.ramotion.com/agency/web-design/',
     src: 'https://i.imgur.com/mQxmvRm.png',
-    alt: 'web design agency'
+    alt: 'Ramotion'
   },
   {
     name: 'smalanutensikkerhet',
