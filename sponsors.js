@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'julegenser-no',
+    href: 'https://julegenser.no/',
+    text: 'julegenser.no'
+  },
+  {
     name: 'idgod',
     href: 'https://www.idgod.dev/',
     text: 'IDGOD'
@@ -836,6 +841,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'knowing-spirit-portal',
+    href: 'https://knowing-portal.com/',
+    src: 'https://i.imgur.com/y1t4VKt.png',
+    alt: 'Knowing Spirit Portal'
+  },
   {
     name: 'solarplus',
     href: 'https://solarplus.es/',
