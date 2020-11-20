@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'kapil-anand',
+    href: 'https://www.discovermagazine.com/sponsored/top-best-dating-sites-of-2020-dating-sites-apps-are-best-way-to-find',
+    text: 'Dating Sites'
+  },
+  {
     name: 'julegenser-no',
     href: 'https://julegenser.no/',
     text: 'julegenser.no'
