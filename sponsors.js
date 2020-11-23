@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'sokbillan-com',
+    href: 'https://xn--skbilln-jxa9n.com/',
+    text: 'Søkbillån.com'
+  },
+  {
     name: 'kapil-anand',
     href: 'https://www.discovermagazine.com/sponsored/top-best-dating-sites-of-2020-dating-sites-apps-are-best-way-to-find',
     text: 'Dating Sites'
@@ -846,6 +851,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'halvin-laina',
+    src: 'https://i.imgur.com/N5K50qT.png',
+    href: 'https://www.halvinlaina.fi/',
+    alt: 'Halvin Laina'
+  },
   {
     name: 'knowing-spirit-portal',
     href: 'https://knowing-portal.com/',
