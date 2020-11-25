@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'grammar-check',
+    href: 'http://grammarcheck.biz/',
+    text: 'Grammar Check'
+  },
+  {
     name: 'sokbillan-com',
     href: 'https://xn--skbilln-jxa9n.com/',
     text: 'Søkbillån.com'
@@ -851,6 +856,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'xoo',
+    src: 'https://i.imgur.com/0hknMf1.png',
+    href: 'https://www.xoo.nl',
+    alt: 'Xoo.nl'
+  },
   {
     name: 'halvin-laina',
     src: 'https://i.imgur.com/N5K50qT.png',
