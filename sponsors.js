@@ -59,6 +59,21 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'reducer',
+    href: 'http://reducer.co.uk/',
+    alt: 'Reducer'
+  },
+  {
+    name: 'sammenlignforbrukslan-com',
+    href: 'https://xn--sammenlignforbruksln-f0b.com/',
+    alt: 'Sammenlignforbrukslån.com'
+  },
+  {
+    name: 'kredittkrt-com',
+    href: 'https://kredittkrt.com',
+    text: 'Kredittkrt.com'
+  },
+  {
     name: 'grammar-check',
     href: 'http://grammarcheck.biz/',
     text: 'Grammar Check'
@@ -852,6 +867,11 @@ const datasup = [
     name: 'proven1',
     href: 'https://apnews.com/2b9faf69b5bab5132d4f1f34a503e6f4',
     text: 'ProVen'
+  },
+  {
+    name: 'norske-kredittkort-com',
+    href: 'https://norske-kredittkort.com/',
+    text: 'Norske-kredittkort.com'
   }
 ]
 
