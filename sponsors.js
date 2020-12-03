@@ -54,19 +54,19 @@ const forcedsponsors = {
 }
 
 const forcedsupporters = ['royal-tech-ab']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com']
 const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
     name: 'reducer',
     href: 'http://reducer.co.uk/',
-    alt: 'Reducer'
+    text: 'Reducer'
   },
   {
     name: 'sammenlignforbrukslan-com',
     href: 'https://xn--sammenlignforbruksln-f0b.com/',
-    alt: 'Sammenlignforbrukslån.com'
+    text: 'Sammenlignforbrukslån.com'
   },
   {
     name: 'kredittkrt-com',
