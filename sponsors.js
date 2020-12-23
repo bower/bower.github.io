@@ -54,7 +54,7 @@ const forcedsponsors = {
 }
 
 const forcedsupporters = ['royal-tech-ab']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com']
 const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
@@ -886,6 +886,18 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'forex-in-thai',
+    href: 'https://twitter.com/forexinthai',
+    alt: 'Forex in Thai',
+    src: 'https://i.imgur.com/Va2Utqh.png'
+  },
+  {
+    name: 'nfl-sunday',
+    src: 'https://i.imgur.com/3QpWhNG.jpg',
+    href: 'https://nfl-sunday.com',
+    alt: 'NFL Sunday'
+  },
   {
     name: 'nfl-thursday',
     src: 'https://i.imgur.com/Bikortt.png',
