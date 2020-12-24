@@ -59,6 +59,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'florian-studio',
+    href: 'https://www.ceodata.com',
+    text: 'Florian Studio'
+  },
+  {
     name: 'reducer',
     href: 'http://reducer.co.uk/',
     text: 'Reducer'
@@ -886,6 +891,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'nysj',
+    href: 'https://nysportsjournal.com',
+    alt: 'NY Sports Journal',
+    src: 'https://i.imgur.com/n6dgqy8.png'
+  },
   {
     name: 'forex-in-thai',
     href: 'https://twitter.com/forexinthai',
