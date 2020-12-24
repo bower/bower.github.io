@@ -892,6 +892,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'njsj1',
+    href: 'https://njsportsjournal.com/',
+    alt: 'NJ Sports Journal',
+    src: 'https://i.imgur.com/r1AtvPe.png'
+  },
+  {
     name: 'nysj',
     href: 'https://nysportsjournal.com',
     alt: 'NY Sports Journal',
