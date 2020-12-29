@@ -59,6 +59,16 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'eric-watson',
+    href: 'https://thestandarddaily.com/',
+    text: 'The Standard Daily'
+  },
+  {
+    name: 'all-smart-surveillance-for-home-and-business',
+    href: 'https://allsmartcam.com/',
+    text: 'Smart Surveillance'
+  },
+  {
     name: 'florian-studio',
     href: 'https://www.ceodata.com',
     text: 'Florian Studio'
