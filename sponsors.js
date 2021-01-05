@@ -53,6 +53,7 @@ const forcedsponsors = {
   }
 }
 
+const nofollow = ['faveable']
 const forcedsupporters = ['royal-tech-ab']
 const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1']
 const exceptions = ['digital-bank-guide', 'alex-owner']
@@ -1748,7 +1749,7 @@ async function main() {
         throw new Error('Unknown sponsor: ' + t.name)
       }
     }
-    SPONSORS += `<a href="${sponsor.href}"><img class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>\n`
+    SPONSORS += `<a href="${sponsor.href}"${nofollow.indexOf(sponsor.name) >= 0 ? ' rel="nofollow"' : ""}><img class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>\n`
     if (sponsor.second) {
       for (const s of sponsor.second) {
         if (sponsor.href) {
@@ -1769,7 +1770,7 @@ async function main() {
     }
     sups.forEach(sup => {
       if (sup.href) {
-        SUPPORTERS += `<a href="${sup.href}">${sup.text}</a> |\n`
+        SUPPORTERS += `<a href="${sup.href}"${nofollow.indexOf(sup.name) >= 0 ? ' rel="nofollow"' : ""}>${sup.text}</a> |\n`
       }
       if (sup.second) {
         for (const s of sup.second) {
