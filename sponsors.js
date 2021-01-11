@@ -903,6 +903,30 @@ const datasup = [
 
 const data = [
   {
+    name: 'quarterless',
+    href: 'https://quarterless.com/',
+    alt: 'Quarterless',
+    src: 'https://i.imgur.com/va4ERjc.png'
+  },
+  {
+    name: 'filmen',
+    href: 'https://filmen.nu/',
+    alt: 'Filmen.nu',
+    src: 'https://i.imgur.com/VNxKJd8.png'
+  },
+  {
+    name: 'streamat',
+    src: 'https://i.imgur.com/mgql2fW.png',
+    href: 'https://streamat.se/',
+    alt: 'Streamat.se'
+  },
+  {
+    name: 'streamet',
+    src: 'https://i.imgur.com/eNFurtn.png',
+    href: 'https://streamet.dk/',
+    alt: 'Streamet.dk'
+  },
+  {
     name: 'njsj1',
     href: 'https://njsportsjournal.com/',
     alt: 'NJ Sports Journal',
