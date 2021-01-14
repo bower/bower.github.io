@@ -60,6 +60,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'hurtiglaan-nu',
+    text: 'Hurtig lån',
+    href: 'https://hurtiglaan.nu/'
+  },
+  {
     name: 'eric-watson',
     href: 'https://thestandarddaily.com/',
     text: 'The Standard Daily'
