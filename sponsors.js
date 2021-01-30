@@ -60,6 +60,17 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'fortunegames',
+    href: 'https://fortunegames.com/',
+    text: 'Fortune Games'
+  },
+  {
+    name: 'quickbooks-tool-hub',
+    href: 'https://quickbookstoolhub.com/',
+    text: 'Quickbooks Tool Hub'
+
+  },
+  {
     name: 'hurtiglaan-nu',
     text: 'Hurtig lån',
     href: 'https://hurtiglaan.nu/'
