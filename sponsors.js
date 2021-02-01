@@ -1649,6 +1649,10 @@ var d = new Date(); d.setMonth(d.getMonth() - 1);
 
 let totalmonth = d.toISOString().slice(0, 7)
 
+let totals = {
+
+}
+
 async function main() {
   const result = await Promise.all([
     query(1),
@@ -1721,10 +1725,17 @@ async function main() {
     if (ignoredsupporters.includes(t.fromAccount.slug)) {
       return
     }
-    if (t.amount.value > 0) {
+    if (t.amount.value > -500 && t.amount.value % 50 == 0) {
+      let dateTotal = t.createdAt.slice(0, 7)
+      if (!totals[dateTotal]) {
+        totals[dateTotal]  = 0
+      }
+      totals[dateTotal] += t.amount.value
       if (t.createdAt.slice(0, 7) == totalmonth && t.kind !== 'VIRTUAL') {
         total += t.amount.value
       }
+    }
+    if (t.amount.value > 0) {
       if (t.amount.value >= 100 && !forcedsupporters.includes(t.fromAccount.slug)) {
         sponsors[t.fromAccount.slug] = Math.max(
           sponsors[t.fromAccount.slug] || 0,
@@ -1844,6 +1855,9 @@ async function main() {
   //   total: allTransactions.filter(t2 => t2.fromAccount.slug == t.fromAccount.slug).reduce((sum, t) => sum += t.amount.value, 0)
   // })).sort((a, b) => b.total - a.total)
   console.log('TOTAL this month: ' + total)
+  console.log(totals)
 }
 
+
 main()
+
