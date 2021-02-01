@@ -60,6 +60,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'thevpnbyte',
+    href: 'https://s3.amazonaws.com/nordvpn-3-year-deal-plan/index.html',
+    text: 'NordVpn Coupon'
+  },
+  {
     name: 'fortunegames',
     href: 'https://fortunegames.com/',
     text: 'Fortune Games'
