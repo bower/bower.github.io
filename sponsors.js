@@ -60,6 +60,22 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'filmer',
+    href: 'https://filmer.nu',
+    text: 'Filmer.nu'
+
+  },
+  {
+    name: 'boekonomi-se',
+    href: 'https://boekonomi.se',
+    text: 'boekonomi.se'
+  },
+  {
+    name: 'pngio',
+    href: 'https://pngio.com/png',
+    text: 'pngio.con'
+  },
+  {
     name: 'thevpnbyte',
     href: 'https://s3.amazonaws.com/nordvpn-3-year-deal-plan/index.html',
     text: 'NordVpn Coupon'
@@ -1855,6 +1871,11 @@ async function main() {
   //   total: allTransactions.filter(t2 => t2.fromAccount.slug == t.fromAccount.slug).reduce((sum, t) => sum += t.amount.value, 0)
   // })).sort((a, b) => b.total - a.total)
   console.log('TOTAL this month: ' + total)
+  for (let month in totals) {
+    if (month >= '2019-10') {
+      process.stdout.write(totals[month] + '\t')
+    }
+  }
   console.log(totals)
 }
 
