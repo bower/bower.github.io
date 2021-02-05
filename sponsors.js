@@ -73,7 +73,7 @@ const datasup = [
   {
     name: 'pngio',
     href: 'https://pngio.com/png',
-    text: 'pngio.con'
+    text: 'PNGio'
   },
   {
     name: 'thevpnbyte',
