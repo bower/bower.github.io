@@ -60,10 +60,24 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'vpn-service3',
+    href: 'https://www.vpnservice.com/free-vpn/',
+    text: 'Best Free VPN'
+  },
+  {
+    name: 'conexion-vpn',
+    href: 'https://vpnconexion.es',
+    text: 'Mejor VPN'
+  },
+  {
+    name: 'vpn-connexion',
+    href: 'https://vpnconnexion.fr',
+    text: 'VPN Connexion'
+  },
+  {
     name: 'filmer',
     href: 'https://filmer.nu',
     text: 'Filmer.nu'
-
   },
   {
     name: 'boekonomi-se',
