@@ -55,10 +55,20 @@ const forcedsponsors = {
 
 const nofollow = ['faveable']
 const forcedsupporters = ['royal-tech-ab']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1']
 const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
+  {
+    name: 'ann-arbor-carpet-and-floors',
+    href: 'http://www.aacarpetandfloors.com/',
+    text: 'Ann Arbor Carpet and Floors'
+  },
+  {
+    name: 'awiseads',
+    href: 'https://awisee.com/',
+    text: 'Awisee'
+  },
   {
     name: 'vpn-service3',
     href: 'https://www.vpnservice.com/free-vpn/',
