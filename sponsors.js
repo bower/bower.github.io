@@ -1606,8 +1606,8 @@ const data = [
   {
     name: 'asoboofficial',
     href: 'https://asobo-design.com/nex/',
-    alt: 'デザイン作成のASOBO DESIGN',
-    src: 'https://i.imgur.com/kIU9679.png'
+    alt: 'デザイン作成のASOBOAD',
+    src: 'https://i.imgur.com/DVPV7Km.png'
   },
   {
     name: 'lemon-law',
