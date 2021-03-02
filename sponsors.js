@@ -60,6 +60,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'appdrawn',
+    href: 'https://www.appdrawn.com/',
+    text: 'AppDrawn'
+  },
+  {
     name: 'ann-arbor-carpet-and-floors',
     href: 'http://www.aacarpetandfloors.com/',
     text: 'Ann Arbor Carpet and Floors'
@@ -1720,7 +1725,11 @@ async function main() {
     query(23),
     query(24),
     query(25),
-    query(26)
+    query(26),
+    query(27),
+    query(28),
+    query(29),
+    query(30)
   ])
 
   let allTransactions = [].concat(...result).reverse()
