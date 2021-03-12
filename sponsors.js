@@ -60,6 +60,21 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'privacy-end',
+    href: 'https://www.privacyend.com/',
+    text: 'Privacyend'
+  },
+  {
+    name: 'firestick-blog',
+    href: 'https://firestickblog.com/',
+    text: 'Firestick blog'
+  },
+  {
+    name: 'betacalendars',
+    href: 'https://www.betacalendars.com/march-calendar.html',
+    text: 'Beta Calendars'
+  },
+  {
     name: 'appdrawn',
     href: 'https://www.appdrawn.com/',
     text: 'AppDrawn'
@@ -968,6 +983,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'incognito-12674050',
+    href: 'https://bitlaunch.io/',
+    alt: 'Bitcoin VPS',
+    src: 'https://i.imgur.com/pJ8u9sq.png'
+  },
   {
     name: 'quarterless',
     href: 'https://quarterless.com/',
