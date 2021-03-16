@@ -60,6 +60,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'howtohostingguide',
+    href: 'https://howtohosting.guide/',
+    text: 'HowToHostingGuide'
+  },
+  {
     name: 'privacy-end',
     href: 'https://www.privacyend.com/',
     text: 'Privacyend'
