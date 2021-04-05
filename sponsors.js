@@ -55,10 +55,20 @@ const forcedsponsors = {
 
 const nofollow = ['faveable']
 const forcedsupporters = ['royal-tech-ab']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir']
 const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
+  {
+    name: 'clouddevs',
+    href: 'https://clouddevs.com',
+    text: 'CloudDevs'
+  },
+  {
+    name: 'delistproduct',
+    href: 'https://delistproduct.com/',
+    text: 'DeListProduct'
+  },
   {
     name: 'howtohostingguide',
     href: 'https://howtohosting.guide/',
