@@ -426,6 +426,11 @@ const datasup = [
     text: "Tankpenge.dk - Lån penge"
   },
   {
+    name: 'billigzonen-dk',
+    href: 'https://billigzonen.dk',
+    text: 'Billigzonen.dk'
+  },
+  {
     name: 'rahoitustalo',
     href: 'https://www.rahoitustalo.fi',
     text: 'rahoitustalo.fi'
