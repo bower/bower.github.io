@@ -1009,6 +1009,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'nupepshrooms',
+    href: 'https://nupepshrooms.com/',
+    alt: 'Learn about Psilocybin, LSD, & DMT',
+    src: 'https://i.imgur.com/Iyf1vDp.jpg'
+  },
+  {
     name: 'incognito-12674050',
     href: 'https://bitlaunch.io/',
     alt: 'Bitcoin VPS',
