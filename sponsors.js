@@ -1009,6 +1009,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'stored-enterprises-limited1',
+    href: 'https://www.bystored.com/',
+    alt: 'STORED Enterprises Limited',
+    src: 'https://i.imgur.com/rcViSMc.png'
+  },
+  {
     name: 'nupepshrooms',
     href: 'https://nupepshrooms.com/',
     alt: 'Learn about Psilocybin, LSD, & DMT',
