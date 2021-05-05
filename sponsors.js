@@ -60,6 +60,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'bitvape',
+    href: 'https://bitvape.com.au/',
+    text: 'Bitvape',
+  },
+  {
     name: 'storiesdown',
     href: 'https://storiesdown.com/',
     text: 'StoriesDown'
@@ -822,8 +827,8 @@ const datasup = [
   },
   {
     name: 'dcsl-software',
-    href: 'https://www.dcslsoftware.com/',
-    text: 'DCSL software'
+    href: 'https://www.dcsl.com/',
+    text: 'DCSL Guidesmiths'
   },
   {
     name: 'nenciu-valentin-vmn-marketing-srl',
