@@ -60,6 +60,16 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'joe-kizlauskas',
+    href: 'https://www.wallaceperformance.co.uk/',
+    text: 'Wallace Performance'
+  },
+  {
+    name: 'cyberogism',
+    href: 'https://cyberogism.com/',
+    text: 'Cyberogism'
+  },
+  {
     name: 'bitvape',
     href: 'https://bitvape.com.au/',
     text: 'Bitvape',
