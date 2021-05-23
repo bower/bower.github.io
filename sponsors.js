@@ -60,6 +60,12 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+
+    name: 'martinijan-trajkovski',
+    href: 'https://wordscapesmate.com/',
+    text: 'Wordscapes Mate'
+  },
+  {
     name: 'emmanuel-orta',
     href: 'https://www.theworldwidedirectory.com/',
     text: 'The Worldwide Directory'
