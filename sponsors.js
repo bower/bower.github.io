@@ -60,6 +60,16 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'webwhip',
+    href: 'https://medium.com/webwhip/reliable-registrars-to-buy-domain-name-from-833dcda09df8',
+    text: 'WebWhip'
+  },
+  {
+    name: 'mohammad-ali1',
+    href: 'https://hostnoc.com/',
+    text: 'Cheap Dedicated Servers'
+  },
+  {
 
     name: 'martinijan-trajkovski',
     href: 'https://wordscapesmate.com/',
