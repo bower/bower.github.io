@@ -60,6 +60,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
   
 const datasup = [
   {
+    name: 'ghostbed-reviews',
+    href: 'https://apnews.com/article/business-furniture-and-home-furnishings-manufacturing-corporate-news-household-product-manufacturing-industrial-products-and-services-2177fc8237a457d51e6bc72bb76bb2f1',
+    text: 'Ghostbed Reviews'
+  },
+  {
     name: 'webwhip',
     href: 'https://medium.com/webwhip/reliable-registrars-to-buy-domain-name-from-833dcda09df8',
     text: 'WebWhip'
