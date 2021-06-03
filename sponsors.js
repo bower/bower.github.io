@@ -1050,6 +1050,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'softwaredevelopmentuk',
+    href: 'https://www.softwaredevelopment.co.uk/',
+    alt: 'SoftwareDevelopmentUK',
+    src: 'https://i.imgur.com/HoU15ep.png'
+  },
+  {
     name: 'stored-enterprises-limited1',
     href: 'https://www.bystored.com/',
     alt: 'STORED Enterprises Limited',
