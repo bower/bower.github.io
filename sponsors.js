@@ -2,6 +2,7 @@
 
 const fetch = require('cross-fetch')
 const fs = require('fs')
+const { groupBy } = require('lodash')
 
 let SPONSORS = ''
 let SUPPORTERS = ''
@@ -57,7 +58,7 @@ const nofollow = ['faveable']
 const forcedsupporters = ['royal-tech-ab']
 const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn']
 const exceptions = ['digital-bank-guide', 'alex-owner']
-  
+
 const datasup = [
   {
     name: 'ghostbed-reviews',
@@ -1553,7 +1554,8 @@ const data = [
     name: 'truevendor',
     href: 'https://www.ramotion.com/agency/web-design/',
     src: 'https://i.imgur.com/mQxmvRm.png',
-    alt: 'Ramotion'
+    alt: 'Ramotion',
+    group: ['tmdesign']
   },
   {
     name: 'smalanutensikkerhet',
@@ -1851,8 +1853,8 @@ async function main() {
     return (+new Date() - +Date.parse(t.createdAt))/3600000/24 < 30 && t.amount.value
   })
 
-  const sponsors = {}
-  const supporters = {}
+  let sponsors = {}
+  let supporters = {}
 
   for (const name in forcedsponsors) {
     const months = Math.ceil((new Date() - new Date(forcedsponsors[name].date)) / 1000 / 3600 / 24 / 30)
@@ -1934,7 +1936,7 @@ async function main() {
   Object.keys(sponsors).forEach(k => {
     if (sponsors[k]+1000*3600*24*16 < Date.now() && !exceptions.includes(k)) {
       const lastTransaction = allTransactions.reverse().find(t => t.fromAccount.slug === k).createdAt
-      if (lastTransaction >= '2019-10') {
+      if (lastTransaction >= '2021-01') {
         console.log('Expired sponsor: ' + k + ' at ' + new Date(sponsors[k]).toString().slice(4, 16) + ' ' + lastTransaction.slice(0, 10) )
       }
       delete sponsors[k]
@@ -1945,26 +1947,48 @@ async function main() {
   Object.keys(supporters).forEach(k => {
     if (supporters[k]+1000*3600*24*16 < Date.now() && !exceptions.includes(k)) {
       const lastTransaction = allTransactions.reverse().find(t => t.fromAccount.slug === k).createdAt
-      if (lastTransaction >= '2019-10') {
+      if (lastTransaction >= '2021-01') {
         console.log('Expired supporter: ' + k + ' at ' + new Date(supporters[k]).toString().slice(4, 16) + ' ' + lastTransaction.slice(0, 10) )
       }
       delete supporters[k]
     }
   })
 
+  function reorder(records) {
+    const byName = groupBy(records, r => r.name)
+    const results = []
 
-  Object.keys(sponsors).map(t => ({
+    for (let record of records) {
+      if (!result.skip) {
+        results.push(record)
+      }
+      if (record.group) {
+        for (let related of record.group) {
+          if (related in byName) {
+            results.push(byName[related][0])
+            byName[related][0].skip = true
+          }
+        }
+      }
+    }
+    return results
+  }
+
+
+  reorder(Object.keys(sponsors).map(t => ({
     name: t,
     total: allTransactions.filter(t2 => t2.fromAccount.slug == t).reduce((sum, t) => sum += t.amount.value, 0)
-  })).sort((a, b) => b.total - a.total).forEach(t => {
+  })).sort((a, b) => b.total - a.total).flatMap(t => {
     const sponsor = data.find(d => d.name === t.name)
     if (!sponsor) {
       if (['meubelpartner'].includes(t.name)) {
-        return
+        return []
       } else {
         throw new Error('Unknown sponsor: ' + t.name)
       }
     }
+    return [sponsor]
+  })).forEach(sponsor => {
     SPONSORS += `<a href="${sponsor.href}"${nofollow.indexOf(sponsor.name) >= 0 ? ' rel="nofollow"' : ""}><img class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>\n`
     if (sponsor.second) {
       for (const s of sponsor.second) {
@@ -1976,26 +2000,26 @@ async function main() {
   })
 
   console.log("\nSUPPORTERS\n")
-  Object.keys(supporters).map(t => ({
+  reorder(Object.keys(supporters).map(t => ({
     name: t,
     total: allTransactions.filter(t2 => t2.fromAccount.slug == t).reduce((sum, t) => sum += t.amount.value, 0)
-  })).sort((a, b) => [b.total - a.total, a.text,b.text]).forEach(t => {
+  })).sort((a, b) => [b.total - a.total, a.text,b.text]).flatMap(t => {
     const sups = datasup.filter(d => d.name === t.name)
     if (!sups.length) {
       throw new Error('Unknown supporter: ' + t.name)
     }
-    sups.forEach(sup => {
-      if (sup.href) {
-        SUPPORTERS += `<a href="${sup.href}"${nofollow.indexOf(sup.name) >= 0 ? ' rel="nofollow"' : ""}>${sup.text}</a> |\n`
-      }
-      if (sup.second) {
-        for (const s of sup.second) {
-          if (s.href) {
-            SUPPORTERS += `<a href="${s.href}">${s.text}</a> |\n`
-          }
+    return sups
+  })).forEach(sup => {
+    if (sup.href) {
+      SUPPORTERS += `<a href="${sup.href}"${nofollow.indexOf(sup.name) >= 0 ? ' rel="nofollow"' : ""}>${sup.text}</a> |\n`
+    }
+    if (sup.second) {
+      for (const s of sup.second) {
+        if (s.href) {
+          SUPPORTERS += `<a href="${s.href}">${s.text}</a> |\n`
         }
       }
-    })
+    }
   })
 
   SUPPORTERS = SUPPORTERS.slice(0, -3)
