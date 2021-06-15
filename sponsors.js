@@ -61,6 +61,16 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'fresno-landscapers',
+    href: 'https://www.fresnolandscapers.org/',
+    text: 'Fresno Landscapers'
+  },
+  {
+    name: 'denis14',
+    href: 'https://vpntesting.com',
+    text: 'VPN Testing'
+  },
+  {
     name: 'ghostbed-reviews',
     href: 'https://apnews.com/article/business-furniture-and-home-furnishings-manufacturing-corporate-news-household-product-manufacturing-industrial-products-and-services-2177fc8237a457d51e6bc72bb76bb2f1',
     text: 'Ghostbed Reviews'
