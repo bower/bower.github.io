@@ -1061,6 +1061,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'vpn-norge',
+    href: 'https://www.vpntopp.no/',
+    src: 'https://i.imgur.com/HFlTr5N.png',
+    alt: 'VPNtopp.no is Norways biggest VPN information site'
+  },
+  {
     name: 'tmdesign',
     href: 'https://medium.com/theymakedesign/best-web-design-companies-3ecc85b32071',
     alt: 'best web design company',
