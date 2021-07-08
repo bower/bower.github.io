@@ -1074,7 +1074,7 @@ const data = [
   {
     name: 'tmdesign',
     href: 'https://medium.com/theymakedesign/best-web-design-companies-3ecc85b32071',
-    alt: 'best web design company',
+    alt: 'website designers',
     src: 'https://i.imgur.com/kfA0vQE.png'
   },
   {
