@@ -61,6 +61,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'veepn-vpn',
+    href: 'https://veepn.com/',
+    text: 'VeePN VPN'
+  },
+  {
     name: 'nasrullah-amir-ali1',
     href: 'https://besturate.com/unblock-netflix-vpns/',
     text: 'Netflix VPN'
