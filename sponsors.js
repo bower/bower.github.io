@@ -62,7 +62,7 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 const datasup = [
   {
     name: 'veepn-vpn',
-    href: 'https://veepn.com/',
+    href: 'https://veepn.com/vpn-apps/vpn-for-chrome/',
     text: 'VeePN VPN'
   },
   {
@@ -1070,6 +1070,24 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'troypoint',
+    href: 'https://troypoint.com/',
+    src: 'https://i.imgur.com/52h3YKS.png',
+    alt: 'Cord-cutting tutorials & news'
+  },
+  {
+    name: 'mobilen',
+    href: 'https://mobilen.nu/',
+    src: 'https://i.imgur.com/boZA1QE.png',
+    alt: 'Mobilen'
+  },
+  {
+    name: 'nbanu',
+    href: 'https://nba.nu/',
+    src: 'https://i.imgur.com/GGZGpTZ.png',
+    alt: 'Följ NBA säsongen från Sverige. Vi ger dig allt du behöver för att uppleva NBA som svensk.'
+  },
   {
     name: 'vpn-norge',
     href: 'https://www.vpntopp.no/',
