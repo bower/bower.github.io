@@ -56,10 +56,21 @@ const forcedsponsors = {
 
 const nofollow = ['faveable']
 const forcedsupporters = ['royal-tech-ab']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn', 'slotoking']
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+  {
+    name: 'security-gladiators',
+    href: 'https://securitygladiators.com/',
+    text: 'Security Gladiators'
+
+  },
+  {
+    name: 'lifedigitalwiki',
+    href: 'https://lifedigitalwiki.org/ja/vpn/',
+    text: 'LifeDigital'
+  },
   {
     name: 'veepn-vpn',
     href: 'https://veepn.com/vpn-apps/vpn-for-chrome/',
@@ -1070,6 +1081,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'elternkompass',
+    href: 'https://www.elternkompass.de/ratgeber/',
+    src: 'https://i.imgur.com/zhFVB0V.png',
+    alt: 'Elternkompass'
+  },
   {
     name: 'troypoint',
     href: 'https://troypoint.com/',
