@@ -2,7 +2,7 @@
 
 const fetch = require('cross-fetch')
 const fs = require('fs')
-const { groupBy } = require('lodash')
+const {groupBy} = require('lodash')
 
 let SPONSORS = ''
 let SUPPORTERS = ''
@@ -18,7 +18,7 @@ async function query(page) {
       query: `
 {
   account(slug: "bower") {
-    transactions(limit: 100, offset: ${100*(page-1)}) {
+    transactions(limit: 100, offset: ${100 * (page - 1)}) {
       nodes {
         type
         amount {
@@ -49,8 +49,8 @@ async function query(page) {
 
 const forcedsponsors = {
   '1gbits': {
-      price: 150,
-      date: '2019-10-30'
+    price: 150,
+    date: '2019-10-30'
   }
 }
 
@@ -60,6 +60,11 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+  {
+    name: 'quickbooks-file-doctor',
+    href: 'https://quickbooksfiledoctor.co/',
+    text: 'Quickbooks File Doctor'
+  },
   {
     name: 'security-gladiators',
     href: 'https://securitygladiators.com/',
@@ -1082,6 +1087,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'carhpus2',
+    src: 'https://i.imgur.com/OeRXcoh.png',
+    alt: 'Carhp',
+    href: 'https://www.carhp.com/'
+  },
+  {
     name: 'elternkompass',
     href: 'https://www.elternkompass.de/ratgeber/',
     src: 'https://i.imgur.com/zhFVB0V.png',
@@ -1911,7 +1922,7 @@ async function main() {
     return t.fromAccount && t.toAccount
   })
   const transactions = allTransactions.filter(t => {
-    return (+new Date() - +Date.parse(t.createdAt))/3600000/24 < 30 && t.amount.value
+    return (+new Date() - +Date.parse(t.createdAt)) / 3600000 / 24 < 30 && t.amount.value
   })
 
   let sponsors = {}
@@ -1941,8 +1952,8 @@ async function main() {
     allTransactions.push(transaction)
   }
 
-  allTransactions.forEach(t => { if (t.type === 'DEBIT') { t.fromAccount = t.toAccount } })
-  transactions.forEach(t => { if (t.type === 'DEBIT') { t.fromAccount = t.toAccount } })
+  allTransactions.forEach(t => {if (t.type === 'DEBIT') {t.fromAccount = t.toAccount} })
+  transactions.forEach(t => {if (t.type === 'DEBIT') {t.fromAccount = t.toAccount} })
 
   allTransactions.forEach(t => {
     if (ignoredsupporters.includes(t.fromAccount.slug)) {
@@ -1951,7 +1962,7 @@ async function main() {
     if (t.amount.value > -500 && t.amount.value % 50 == 0) {
       let dateTotal = t.createdAt.slice(0, 7)
       if (!totals[dateTotal]) {
-        totals[dateTotal]  = 0
+        totals[dateTotal] = 0
       }
       totals[dateTotal] += t.amount.value
       if (t.createdAt.slice(0, 7) == totalmonth && t.kind !== 'VIRTUAL') {
@@ -1995,10 +2006,10 @@ async function main() {
   sponsors['faveable'] += 1000 * 3600 * 24 * 7
 
   Object.keys(sponsors).forEach(k => {
-    if (sponsors[k]+1000*3600*24*16 < Date.now() && !exceptions.includes(k)) {
+    if (sponsors[k] + 1000 * 3600 * 24 * 16 < Date.now() && !exceptions.includes(k)) {
       const lastTransaction = allTransactions.reverse().find(t => t.fromAccount.slug === k).createdAt
       if (lastTransaction >= '2021-01') {
-        console.log('Expired sponsor: ' + k + ' at ' + new Date(sponsors[k]).toString().slice(4, 16) + ' ' + lastTransaction.slice(0, 10) )
+        console.log('Expired sponsor: ' + k + ' at ' + new Date(sponsors[k]).toString().slice(4, 16) + ' ' + lastTransaction.slice(0, 10))
       }
       delete sponsors[k]
     }
@@ -2006,10 +2017,10 @@ async function main() {
 
   console.log('')
   Object.keys(supporters).forEach(k => {
-    if (supporters[k]+1000*3600*24*16 < Date.now() && !exceptions.includes(k)) {
+    if (supporters[k] + 1000 * 3600 * 24 * 16 < Date.now() && !exceptions.includes(k)) {
       const lastTransaction = allTransactions.reverse().find(t => t.fromAccount.slug === k).createdAt
       if (lastTransaction >= '2021-01') {
-        console.log('Expired supporter: ' + k + ' at ' + new Date(supporters[k]).toString().slice(4, 16) + ' ' + lastTransaction.slice(0, 10) )
+        console.log('Expired supporter: ' + k + ' at ' + new Date(supporters[k]).toString().slice(4, 16) + ' ' + lastTransaction.slice(0, 10))
       }
       delete supporters[k]
     }
@@ -2064,7 +2075,7 @@ async function main() {
   reorder(Object.keys(supporters).map(t => ({
     name: t,
     total: allTransactions.filter(t2 => t2.fromAccount.slug == t).reduce((sum, t) => sum += t.amount.value, 0)
-  })).sort((a, b) => [b.total - a.total, a.text,b.text]).flatMap(t => {
+  })).sort((a, b) => [b.total - a.total, a.text, b.text]).flatMap(t => {
     const sups = datasup.filter(d => d.name === t.name)
     if (!sups.length) {
       throw new Error('Unknown supporter: ' + t.name)
