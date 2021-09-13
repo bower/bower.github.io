@@ -846,7 +846,7 @@ const datasup = [
   {
     name: 'your-online-presence',
     href: 'https://www.youronlinepresence.co.uk/estate-agent-web-design/',
-    text: 'Estate Agent Web Design'
+    text: 'Your Online Presence'
   },
   {
     name: 'cryptonewsz',
