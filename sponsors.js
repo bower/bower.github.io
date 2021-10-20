@@ -61,6 +61,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'java-burn',
+    href: 'https://www.dallasobserver.com/storyhub/java-burn-reviews',
+    text: 'java burn'
+  },
+  {
     name: 'quickbooks-file-doctor',
     href: 'https://quickbooksfiledoctor.co/',
     text: 'Quickbooks File Doctor'
@@ -1081,6 +1086,24 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'aapeli',
+    alt: 'HTML5 Games Arcade',
+    href: 'https://aapeli.net/',
+    src: 'https://i.imgur.com/HJSI2c9.png'
+  },
+  {
+    name: 'targeted-web-traffic1',
+    href: 'https://www.targetedwebtraffic.com/',
+    src: 'https://i.imgur.com/xmUd27v.png',
+    alt: 'Targeted Web Traffic'
+  },
+  {
+    name: 'relc',
+    src: 'https://i.imgur.com/rQbUKwt.png',
+    href: 'https://www.realestatelc.com/',
+    alt: 'Real Estate Learning Center'
+  },
   {
     name: 'carhpus2',
     src: 'https://i.imgur.com/OeRXcoh.png',
