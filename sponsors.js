@@ -61,6 +61,16 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'coupontoaster',
+    href: 'https://coupontoaster.com/',
+    text: 'Coupontoaster'
+  },
+  {
+    name: 'qualityonesie',
+    href: 'https://www.qualityonesie.com',
+    text: 'Quality Onesie'
+  },
+  {
     name: 'java-burn',
     href: 'https://www.dallasobserver.com/storyhub/java-burn-reviews',
     text: 'java burn'
