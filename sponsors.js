@@ -61,6 +61,21 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'door-design-lab',
+    href: 'https://doordesignlab.com/',
+    text: 'Door Design Lab'
+  },
+  {
+    name: 'plumbing-news-and-more',
+    href: 'https://www.plumbingnewsandmore.com/',
+    text: 'Plumbing News and More'
+  },
+  {
+    name: 'belldinni-inc',
+    href: 'https://belldinni.com/',
+    text: 'Belldinni Inc'
+  },
+  {
     name: 'jessica-shee',
     href: 'https://iboysoft.com/',
     text: 'iBoysoft'
@@ -1102,6 +1117,18 @@ const datasup = [
 
 const data = [
   {
+    name: 'techreviewerco',
+    alt: 'Top 100+ Software Development Companies in 2021',
+    href: 'https://techreviewer.co/top-software-development-companies',
+    src: 'https://i.imgur.com/rNWNm8Z.png'
+  },
+  {
+    name: 'sumatosoft',
+    alt: 'The SumatoSoft software development company delivers IT solutions and services.',
+    href: 'https://sumatosoft.com/services',
+    src: 'https://i.imgur.com/jVKAL9j.png'
+  },
+  {
     name: 'aapeli',
     alt: 'HTML5 Games Arcade',
     href: 'https://aapeli.net/',
@@ -1157,8 +1184,8 @@ const data = [
   },
   {
     name: 'tmdesign',
-    href: 'https://medium.com/theymakedesign/best-web-design-companies-3ecc85b32071',
-    alt: 'website designers',
+    href: 'https://theymakedesign.com/best-web-design-companies-3ecc85b32071',
+    alt: 'web design agencies',
     src: 'https://i.imgur.com/kfA0vQE.png'
   },
   {
@@ -1659,7 +1686,7 @@ const data = [
     name: 'truevendor',
     href: 'https://www.ramotion.com/agency/web-design/',
     src: 'https://i.imgur.com/mQxmvRm.png',
-    alt: 'Ramotion',
+    alt: 'website design agency',
     group: ['tmdesign']
   },
   {
