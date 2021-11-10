@@ -61,6 +61,16 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'messaged',
+    text: 'Messaged',
+    href: 'https://messaged.com/'
+  },
+  {
+    name: 'celltrackingapps',
+    href: 'https://celltrackingapps.com/',
+    text: 'celltrackingapps.com'
+  },
+  {
     name: 'door-design-lab',
     href: 'https://doordesignlab.com/',
     text: 'Door Design Lab'
