@@ -61,6 +61,16 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'guest-2fbff284',
+    text: 'JLT Law & Mediation',
+    href: 'https://jltlawoffice.com/'
+  },
+  {
+    name: 'glassesonweb',
+    href: 'https://www.glassesonweb.com/',
+    text: 'GlassesOnWeb.com'
+  },
+  {
     name: 'messaged',
     text: 'Messaged',
     href: 'https://messaged.com/'
