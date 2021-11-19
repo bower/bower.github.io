@@ -62,7 +62,7 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 const datasup = [
   {
     name: 'guest-2fbff284',
-    text: 'JLT Law & Mediation',
+    text: 'Minnesota Child Protection Attorney',
     href: 'https://jltlawoffice.com/'
   },
   {
