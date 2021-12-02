@@ -61,6 +61,26 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'bejamas',
+    text: 'Bejamas',
+    href: 'https://bejamas.io/'
+  },
+  {
+    name: 'qulixsystems',
+    text: 'Qulix Systems',
+    href: 'https://www.qulix.com/'
+  },
+  {
+    name: 'quickbooks-error-codes',
+    text: 'Quickbooks Error Codes',
+    href: 'https://qberror.com/'
+  },
+  {
+    name: 'techbuy1',
+    text: 'TechBuy',
+    href: 'https://www.techbuy.in/'
+  },
+  {
     name: 'guest-2fbff284',
     text: 'Minnesota Child Protection Attorney',
     href: 'https://jltlawoffice.com/'
