@@ -61,6 +61,21 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'shipthedeal',
+    href: 'https://shipthedeal.com/',
+    text: 'ShipTheDeal'
+  },
+  {
+    name: 'guest-0b57b3c8',
+    href: 'https://www.richmondconcretepros.com/',
+    text: 'Richmond Concrete'
+  },
+  {
+    name: 'leading-edge-marketing',
+    text: 'Leading Edge Marketing',
+    href: 'https://securitygladiators.com/'
+  },
+  {
     name: 'bejamas',
     text: 'Bejamas',
     href: 'https://bejamas.io/'
@@ -1156,6 +1171,12 @@ const datasup = [
 ]
 
 const data = [
+  {
+    name: 'mister-auto',
+    href: 'https://www.mister-auto.com/',
+    src: 'https://i.imgur.com/MMWQUZm.png',
+    alt: 'Mister Auto'
+  },
   {
     name: 'techreviewerco',
     alt: 'Top 100+ Software Development Companies in 2021',
