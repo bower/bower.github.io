@@ -61,6 +61,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'kafidoff-vasy',
+    href: 'https://kafidoff.com/',
+    text: 'Vasyl Kafidov'
+  },
+  {
     name: 'fortnite-mod-apk',
     href: 'https://modapksource.com/game/fortnite-mod-apk/',
     text: 'Fortnite Mod Apk'
