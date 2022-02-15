@@ -1192,6 +1192,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'primesound',
+    href: 'https://primesound.org',
+    src: 'https://i.imgur.com/nqZQvTP.png',
+    alt: 'Prime Sound'
+  },
+  {
     name: 'mister-auto',
     href: 'https://www.mister-auto.com/',
     src: 'https://i.imgur.com/MMWQUZm.png',
