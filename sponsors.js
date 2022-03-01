@@ -61,6 +61,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'graphcommerce',
+    href: 'https://www.graphcommerce.org/',
+    text: 'GraphCommerce'
+  },
+  {
     name: 'kafidoff-vasy',
     href: 'https://kafidoff.com/',
     text: 'Vasyl Kafidov'
