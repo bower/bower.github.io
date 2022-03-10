@@ -64,7 +64,7 @@ const datasup = [
     name: 'my-sports-injury-ltd',
     href: 'https://www.mysportsinjury.co.uk/',
     text: 'MYSportsInjury'
-  }
+  },
   {
     name: 'graphcommerce',
     href: 'https://www.graphcommerce.org/',
