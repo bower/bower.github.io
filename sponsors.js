@@ -61,6 +61,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'iboysoftsoftware',
+    href: 'https://iboysoft.com/',
+    text: 'iBoysoft'
+  },
+  {
     name: 'my-sports-injury-ltd',
     href: 'https://www.mysportsinjury.co.uk/',
     text: 'My Sports Injury Ltd'
