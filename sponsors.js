@@ -61,6 +61,21 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'bestforandroid',
+    href: 'https://bestforandroid.com/',
+    text: 'BestForAndroid'
+  },
+  {
+    name: '420-hubs',
+    href: 'https://420hubs.com/',
+    text: '420HUBS.COM'
+  },
+  {
+    name: 'global-gsm-control',
+    href: 'https://www.global-gsm-control.com/',
+    text: 'Global GSM Control'
+  },
+  {
     name: 'iboysoftsoftware',
     href: 'https://iboysoft.com/',
     text: 'iBoysoft'
