@@ -1814,7 +1814,7 @@ const data = [
     name: 'truevendor',
     href: 'https://www.ramotion.com/agency/web-design/',
     src: 'https://i.imgur.com/mQxmvRm.png',
-    alt: 'website design agency',
+    alt: 'Ramotion',
     group: ['tmdesign']
   },
   {
@@ -2001,7 +2001,7 @@ const data = [
   },
   {
     name: 'ui-ux-design-agencies',
-    href: 'https://uxplanet.org/top-ui-ux-design-agencies-user-experience-firms-8c54697e290',
+    href: 'https://uxplanet.org/top-user-experience-ui-ux-design-agencies-3696f3daed4e',
     src: 'https://i.imgur.com/H1PtPJh.png',
     alt: 'UX Planet'
   },
