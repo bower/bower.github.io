@@ -7,7 +7,7 @@ const {groupBy} = require('lodash')
 let SPONSORS = ''
 let SUPPORTERS = ''
 
-async function query(page) {
+async function query(query) {
   const url = 'https://api.opencollective.com/graphql/v2/' + process.env.API_KEY
   const response = await fetch(url, {
     method: 'POST',
@@ -15,36 +15,67 @@ async function query(page) {
       'content-type': 'application/json'
     },
     body: JSON.stringify({
-      query: `
-{
-  account(slug: "bower") {
-    transactions(limit: 100, offset: ${100 * (page - 1)}) {
-      nodes {
-        type
-        amount {
-          value
-          currency
-        }
-        createdAt
-        fromAccount {
-          name
-          slug
-        }
-        toAccount {
-          name
-          slug
-        }
-      }
-    }
-  }
-}
-      `
+      query: `{ ${query} }`
     })
   })
 
   const json = await response.json()
 
-  return json.data.account.transactions.nodes
+  return json.data
+}
+
+async function transactions(page) {
+  return (await query(`
+    account(slug: "bower") {
+      transactions(limit: 100, offset: ${100 * (page - 1)}) {
+        nodes {
+          type
+          amount {
+            value
+            currency
+          }
+          createdAt
+          fromAccount {
+            name
+            slug
+          }
+          toAccount {
+            name
+            slug
+          }
+        }
+      }
+    }
+  `)).account.transactions.nodes
+}
+
+async function account(slug) {
+  return (await query(`
+    account(slug: "${slug}") {
+      name
+      website
+      description
+    }
+  `)).account
+}
+
+async function unknown(type, name) {
+  const accountData = await account(name)
+  if (type === "sponsor") {
+    console.log({
+      name: name,
+      alt: accountData.name,
+      href: accountData.website,
+      src: ''
+    })
+  } else {
+    console.log({
+      name: name,
+      href: accountData.website,
+      text: accountData.name
+    })
+  }
+  throw new Error(`Unknown ${type}: ${name}`)
 }
 
 const forcedsponsors = {
@@ -60,6 +91,16 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+  {
+    name: 'ibeesoftsoftware',
+    href: 'https://www.ibeesoft.com/',
+    text: 'iBeesoft'
+  },
+  {
+    name: 'the-lock-pro',
+    href: 'https://thelockpro.com/',
+    text: 'The Lock Pro'
+  },
   {
     name: 'jltlawandmediation',
     href: 'https://www.jltlawoffice.com/',
@@ -1227,8 +1268,20 @@ const datasup = [
 
 const data = [
   {
+    name: 'cloud-specialists-instinctools',
+    alt: '*instinctools',
+    href: 'https://www.instinctools.com/cloud-computing/',
+    src: 'https://i.imgur.com/c56Di42.png'
+  },
+  {
+    name: 'keepsolid',
+    alt: 'VPN Unlimited',
+    href: 'https://www.vpnunlimited.com',
+    src: 'https://i.imgur.com/etMz9qy.png'
+  },
+  {
     name: 'xoonl',
-    alt: 'Ketting Met',
+    alt: 'Ketting met initialen',
     href: 'https://www.xoo.nl/collections/initialen-ketting',
     src: 'https://i.imgur.com/dfLFEdY.png'
   },
@@ -2079,43 +2132,43 @@ let totals = {
 
 async function main() {
   const result = await Promise.all([
-    query(1),
-    query(2),
-    query(3),
-    query(4),
-    query(5),
-    query(6),
-    query(7),
-    query(8),
-    query(9),
-    query(10),
-    query(11),
-    query(12),
-    query(13),
-    query(14),
-    query(15),
-    query(16),
-    query(17),
-    query(18),
-    query(19),
-    query(20),
-    query(21),
-    query(22),
-    query(23),
-    query(24),
-    query(25),
-    query(26),
-    query(27),
-    query(28),
-    query(29),
-    query(30)
+    transactions(1),
+    transactions(2),
+    transactions(3),
+    transactions(4),
+    transactions(5),
+    transactions(6),
+    transactions(7),
+    transactions(8),
+    transactions(9),
+    transactions(10),
+    transactions(11),
+    transactions(12),
+    transactions(13),
+    transactions(14),
+    transactions(15),
+    transactions(16),
+    transactions(17),
+    transactions(18),
+    transactions(19),
+    transactions(20),
+    transactions(21),
+    transactions(22),
+    transactions(23),
+    transactions(24),
+    transactions(25),
+    transactions(26),
+    transactions(27),
+    transactions(28),
+    transactions(29),
+    transactions(30)
   ])
 
   let allTransactions = [].concat(...result).reverse()
   allTransactions = allTransactions.filter(t => {
     return t.fromAccount && t.toAccount
   })
-  const transactions = allTransactions.filter(t => {
+  const validTransactions = allTransactions.filter(t => {
     return (+new Date() - +Date.parse(t.createdAt)) / 3600000 / 24 < 30 && t.amount.value
   })
 
@@ -2142,12 +2195,12 @@ async function main() {
         name: 'Bower'
       }
     }
-    transactions.push(transaction)
+    validTransactions.push(transaction)
     allTransactions.push(transaction)
   }
 
   allTransactions.forEach(t => {if (t.type === 'DEBIT') {t.fromAccount = t.toAccount} })
-  transactions.forEach(t => {if (t.type === 'DEBIT') {t.fromAccount = t.toAccount} })
+  validTransactions.forEach(t => {if (t.type === 'DEBIT') {t.fromAccount = t.toAccount} })
 
   allTransactions.forEach(t => {
     if (ignoredsupporters.includes(t.fromAccount.slug)) {
@@ -2241,20 +2294,20 @@ async function main() {
   }
 
 
-  reorder(Object.keys(sponsors).map(t => ({
+  ;(await Promise.all(reorder(Object.keys(sponsors).map(t => ({
     name: t,
     total: allTransactions.filter(t2 => t2.fromAccount.slug == t).reduce((sum, t) => sum += t.amount.value, 0)
-  })).sort((a, b) => b.total - a.total).flatMap(t => {
+  })).sort((a, b) => b.total - a.total).flatMap(async t => {
     const sponsor = data.find(d => d.name === t.name)
     if (!sponsor) {
       if (['meubelpartner'].includes(t.name)) {
         return []
       } else {
-        throw new Error('Unknown sponsor: ' + t.name)
+        await unknown('sponsor', t.name)
       }
     }
     return [sponsor]
-  })).forEach(sponsor => {
+  })))).forEach(sponsor => {
     SPONSORS += `<a href="${sponsor.href}"${nofollow.indexOf(sponsor.name) >= 0 ? ' rel="nofollow"' : ""}><img class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>\n`
     if (sponsor.second) {
       for (const s of sponsor.second) {
@@ -2266,16 +2319,16 @@ async function main() {
   })
 
   console.log("\nSUPPORTERS\n")
-  reorder(Object.keys(supporters).map(t => ({
+  ;(await Promise.all(reorder(Object.keys(supporters).map(t => ({
     name: t,
     total: allTransactions.filter(t2 => t2.fromAccount.slug == t).reduce((sum, t) => sum += t.amount.value, 0)
-  })).sort((a, b) => [b.total - a.total, a.text, b.text]).flatMap(t => {
+  })).sort((a, b) => [b.total - a.total, a.text, b.text]).flatMap(async t => {
     const sups = datasup.filter(d => d.name === t.name)
     if (!sups.length) {
-      throw new Error('Unknown supporter: ' + t.name)
+      await unknown('supporter', t.name)
     }
     return sups
-  })).forEach(sup => {
+  })))).forEach(sup => {
     if (sup.href) {
       SUPPORTERS += `<a href="${sup.href}"${nofollow.indexOf(sup.name) >= 0 ? ' rel="nofollow"' : ""}>${sup.text}</a> |\n`
     }
@@ -2315,4 +2368,3 @@ async function main() {
 
 
 main()
-
