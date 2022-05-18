@@ -2294,20 +2294,20 @@ async function main() {
   }
 
 
-  ;(await Promise.all(reorder(Object.keys(sponsors).map(t => ({
+  reorder(Object.keys(sponsors).map(t => ({
     name: t,
     total: allTransactions.filter(t2 => t2.fromAccount.slug == t).reduce((sum, t) => sum += t.amount.value, 0)
-  })).sort((a, b) => b.total - a.total).flatMap(async t => {
+  })).sort((a, b) => b.total - a.total).flatMap(t => {
     const sponsor = data.find(d => d.name === t.name)
     if (!sponsor) {
       if (['meubelpartner'].includes(t.name)) {
         return []
       } else {
-        await unknown('sponsor', t.name)
+        unknown('sponsor', t.name)
       }
     }
     return [sponsor]
-  })))).forEach(sponsor => {
+  })).forEach(sponsor => {
     SPONSORS += `<a href="${sponsor.href}"${nofollow.indexOf(sponsor.name) >= 0 ? ' rel="nofollow"' : ""}><img class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>\n`
     if (sponsor.second) {
       for (const s of sponsor.second) {
@@ -2319,16 +2319,16 @@ async function main() {
   })
 
   console.log("\nSUPPORTERS\n")
-  ;(await Promise.all(reorder(Object.keys(supporters).map(t => ({
+  reorder(Object.keys(supporters).map(t => ({
     name: t,
     total: allTransactions.filter(t2 => t2.fromAccount.slug == t).reduce((sum, t) => sum += t.amount.value, 0)
-  })).sort((a, b) => [b.total - a.total, a.text, b.text]).flatMap(async t => {
+  })).sort((a, b) => [b.total - a.total, a.text, b.text]).flatMap(t => {
     const sups = datasup.filter(d => d.name === t.name)
     if (!sups.length) {
-      await unknown('supporter', t.name)
+      unknown('supporter', t.name)
     }
     return sups
-  })))).forEach(sup => {
+  })).forEach(sup => {
     if (sup.href) {
       SUPPORTERS += `<a href="${sup.href}"${nofollow.indexOf(sup.name) >= 0 ? ' rel="nofollow"' : ""}>${sup.text}</a> |\n`
     }
