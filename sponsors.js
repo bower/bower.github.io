@@ -92,6 +92,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'user-ff71c9b7',
+    href: 'https://www.edwinsedibles.com',
+    text: 'CBD Gummies'
+  },
+  {
     name: 'ibeesoftsoftware',
     href: 'https://www.ibeesoft.com/',
     text: 'iBeesoft'
