@@ -2277,6 +2277,7 @@ async function main() {
   sponsors['top5credits-com-fi'] += 1000 * 3600 * 24 * 31
   sponsors['vpn-review-com'] += 1000 * 3600 * 24 * 31
   sponsors['faveable'] += 1000 * 3600 * 24 * 7
+  sponsors['iBoysoft'] += 1000 * 3600 * 24 * 31
 
   Object.keys(sponsors).forEach(k => {
     if (sponsors[k] + 1000 * 3600 * 24 * 16 < Date.now() && !exceptions.includes(k)) {
