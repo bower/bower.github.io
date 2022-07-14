@@ -2,7 +2,7 @@
 
 const fetch = require('cross-fetch')
 const fs = require('fs')
-const {groupBy} = require('lodash')
+const { groupBy } = require('lodash')
 
 let SPONSORS = ''
 let SUPPORTERS = ''
@@ -91,6 +91,21 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+  {
+    name: 'realspyapps',
+    href: 'https://realspyapps.com/',
+    text: 'RealSpyApps'
+  },
+  {
+    name: 'matthew-chalk1',
+    href: 'https://sprocketdigital.co.nz/',
+    text: 'Matthew Chalk'
+  },
+  {
+    name: 'central-va-insulation',
+    href: 'https://www.centralvainsulation.com',
+    text: 'Richmond Insulation'
+  },
   {
     name: 'user-ff71c9b7',
     href: 'https://www.edwinsedibles.com',
@@ -2123,6 +2138,12 @@ const data = [
     src: 'https://i.imgur.com/JfmcXNf.png',
     href: 'https://www.crosswordsolver.com',
     alt: 'crosswordsolver.com'
+  },
+  {
+    name: 'iboysoftsoftware',
+    alt: 'iBoysoft',
+    href: 'https://iboysoft.com',
+    src: 'https://i.imgur.com/eOWcxUr.png'
   }
 ]
 
@@ -2204,8 +2225,8 @@ async function main() {
     allTransactions.push(transaction)
   }
 
-  allTransactions.forEach(t => {if (t.type === 'DEBIT') {t.fromAccount = t.toAccount} })
-  validTransactions.forEach(t => {if (t.type === 'DEBIT') {t.fromAccount = t.toAccount} })
+  allTransactions.forEach(t => { if (t.type === 'DEBIT') { t.fromAccount = t.toAccount } })
+  validTransactions.forEach(t => { if (t.type === 'DEBIT') { t.fromAccount = t.toAccount } })
 
   allTransactions.forEach(t => {
     if (ignoredsupporters.includes(t.fromAccount.slug)) {
@@ -2309,6 +2330,7 @@ async function main() {
         return []
       } else {
         unknown('sponsor', t.name)
+        return []
       }
     }
     return [sponsor]
