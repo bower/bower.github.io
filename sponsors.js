@@ -142,7 +142,7 @@ const datasup = [
     text: 'Global GSM Control'
   },
   {
-    name: 'iboysoftsoftware',
+    name: 'iBoysoft',
     href: 'https://iboysoft.com/',
     text: 'iBoysoft'
   },
@@ -2141,6 +2141,18 @@ const data = [
   },
   {
     name: 'iboysoftsoftware',
+    alt: 'iBoysoft',
+    href: 'https://iboysoft.com',
+    src: 'https://i.imgur.com/eOWcxUr.png'
+  },
+  {
+    name: 'matthew-chalk1',
+    alt: 'Matthew Chalk',
+    href: 'https://sprocketdigital.co.nz/',
+    src: 'https://i.imgur.com/koJsb0d.png'
+  },
+  {
+    name: 'iBoysoft',
     alt: 'iBoysoft',
     href: 'https://iboysoft.com',
     src: 'https://i.imgur.com/eOWcxUr.png'
