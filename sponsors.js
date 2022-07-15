@@ -99,7 +99,7 @@ const datasup = [
   {
     name: 'matthew-chalk1',
     href: 'https://sprocketdigital.co.nz/',
-    text: 'Matthew Chalk'
+    text: 'Sprocket Digital'
   },
   {
     name: 'central-va-insulation',
