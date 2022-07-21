@@ -1,5 +1,3 @@
-// TODO: lead supply is charged for 3x logos since Oct 2019
-
 const fetch = require('cross-fetch')
 const fs = require('fs')
 const { groupBy } = require('lodash')
@@ -78,16 +76,11 @@ async function unknown(type, name) {
   throw new Error(`Unknown ${type}: ${name}`)
 }
 
-const forcedsponsors = {
-  '1gbits': {
-    price: 150,
-    date: '2019-10-30'
-  }
-}
+const forcedsponsors = {}
 
 const nofollow = ['faveable']
 const forcedsupporters = ['royal-tech-ab']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn', 'slotoking', 'your-online-presence', 'guest-901a02a2']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn', 'your-online-presence', 'guest-901a02a2']
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
@@ -1288,6 +1281,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'slon-media',
+    alt: 'SLON Media',
+    href: 'https://slonmedia.com/',
+    src: 'https://i.imgur.com/aTiT4xq.png'
+  },
+  {
     name: 'cloud-specialists-instinctools',
     alt: '*instinctools',
     href: 'https://www.instinctools.com/cloud-computing/',
@@ -2202,8 +2201,12 @@ async function main() {
     transactions(30)
   ])
 
+  const debitAccounts = new Set()
   let allTransactions = [].concat(...result).reverse()
   allTransactions = allTransactions.filter(t => {
+    if (t.amount.value < 0) {
+      ignoredsupporters.push(t.toAccount.slug)
+    }
     return t.fromAccount && t.toAccount
   })
   const validTransactions = allTransactions.filter(t => {
