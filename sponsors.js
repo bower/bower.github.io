@@ -1282,7 +1282,7 @@ const datasup = [
 const data = [
   {
     name: 'mindmappro',
-    alt: 'Spencer',
+    alt: 'Mind Map Pro',
     href: 'https://www.mindmappro.com',
     src: 'https://i.imgur.com/kHicc3h.png'
   },
