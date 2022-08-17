@@ -85,6 +85,16 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'arkiraha',
+    href: 'https://www.arkiraha.fi/',
+    text: 'Arkiraha'
+  },
+  {
+    name: 'christian-healthcare-ministries',
+    href: 'https://sharehealthcare.com',
+    text: 'Christian Healthcare Ministries'
+  },
+  {
     name: 'realspyapps',
     href: 'https://realspyapps.com/',
     text: 'RealSpyApps'
