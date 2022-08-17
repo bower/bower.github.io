@@ -85,6 +85,21 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'intexsoft-ecommerce-dev',
+    href: 'https://intexsoft.com/ecommerce-development-services/',
+    text: 'Intexsoft'
+  },
+  {
+    name: 'ror-consulting',
+    href: 'https://rubyroidlabs.com/services/consulting',
+    text: 'Ruby on Rails Consulting: Rubyroidlabs'
+  },
+  {
+    name: 'buglelab',
+    href: 'https://buglelab.io',
+    text: 'BugleLab'
+  },
+  {
     name: 'arkiraha',
     href: 'https://www.arkiraha.fi/',
     text: 'Arkiraha'
