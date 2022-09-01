@@ -2322,6 +2322,7 @@ async function main() {
   sponsors['faveable'] += 1000 * 3600 * 24 * 7
   sponsors['iBoysoft'] += 1000 * 3600 * 24 * 31
   sponsors['matthew-chalk1'] += 1000 * 3600 * 24 * 7
+  sponsors['primesound'] += 1000 * 3600 * 24 * 7
   
 
   Object.keys(sponsors).forEach(k => {
