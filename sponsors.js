@@ -80,7 +80,7 @@ const forcedsponsors = {}
 
 const nofollow = ['faveable']
 const forcedsupporters = ['royal-tech-ab']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn', 'your-online-presence', 'guest-901a02a2']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn', 'your-online-presence', 'guest-901a02a2', 'king10', 'riversweeps', 'igrovye-avtomaty']
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
@@ -2235,9 +2235,6 @@ async function main() {
   const debitAccounts = new Set()
   let allTransactions = [].concat(...result).reverse()
   allTransactions = allTransactions.filter(t => {
-    if (t.amount.value < 0) {
-      ignoredsupporters.push(t.toAccount.slug)
-    }
     return t.fromAccount && t.toAccount
   })
   const validTransactions = allTransactions.filter(t => {
