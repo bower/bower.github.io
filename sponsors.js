@@ -1321,6 +1321,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'tradingwolf1',
+    alt: 'Trading Wolf',
+    href: 'https://www.tradingwolf.com',
+    src: 'https://i.imgur.com/vsXnDlr.png'
+  },
+  {
     name: 'mindmappro',
     alt: 'Mind Map Pro',
     href: 'https://www.mindmappro.com',
