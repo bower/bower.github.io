@@ -85,6 +85,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'digital-solomo',
+    href: 'https://digitalsolomo.com/',
+    text: 'Digital SoLoMo'
+  },
+  {
     name: 'dreamtechstore',
     href: 'https://dreamtechstore.com/',
     text: 'DreamTechStore'
