@@ -1448,7 +1448,7 @@ const data = [
   {
     name: 'tmdesign',
     href: 'https://theymakedesign.com/best-web-design-companies-3ecc85b32071',
-    alt: 'web design agencies',
+    alt: 'theymakedesign.com',
     src: 'https://i.imgur.com/kfA0vQE.png'
   },
   {
@@ -1949,8 +1949,7 @@ const data = [
     name: 'truevendor',
     href: 'https://www.ramotion.com/agency/web-design/',
     src: 'https://i.imgur.com/mQxmvRm.png',
-    alt: 'Ramotion',
-    group: ['tmdesign']
+    alt: 'Ramotion'
   },
   {
     name: 'smalanutensikkerhet',
