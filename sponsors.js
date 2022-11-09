@@ -1336,6 +1336,12 @@ const datasup = [
 
 const data = [
   {
+    name: 'seolegalbet',
+    alt: 'Legalbet',
+    href: 'https://legalbet.uk/',
+    src: 'https://i.imgur.com/2qQ6Gxf.png'
+  },
+  {
     name: 'tradingwolf1',
     alt: 'Trading Wolf',
     href: 'https://www.tradingwolf.com',
@@ -2358,6 +2364,7 @@ async function main() {
   sponsors['iBoysoft'] += 1000 * 3600 * 24 * 31
   sponsors['matthew-chalk1'] += 1000 * 3600 * 24 * 7
   sponsors['primesound'] += 1000 * 3600 * 24 * 7
+  sponsors['seolegalbet'] += 1000 * 3600 * 24 * 9
   
 
   Object.keys(sponsors).forEach(k => {
