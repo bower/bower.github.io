@@ -84,6 +84,16 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+  { name: 'nfl', href: 'https://nfl.nu', text: 'NFL' },
+  { name: 'awisee', href: 'https://awisee.com', text: 'AWISEE' },
+  { name: 'awisee-agency', href: 'https://awisee.agency', text: 'AWISEE AGENCY' },
+  { name: 'hesgoal', href: 'https://HesGoal.nu', text: 'HesGoal' },
+  { name: 'fotbollen', href: 'https://fotbollen.nu', text: 'Fotbollen' },
+  { name: 'nba', href: 'https://nba.nu', text: 'NBA' },
+  { name: 'restipset', href: 'https://restips.nu', text: 'Restips' },
+  { name: 'mightch', href: 'https://might.ch', text: 'Might' },
+  { name: 'awise', href: 'https://awise.se', text: 'AWISE' },
+  { name: 'seolegalbet', href: 'https://legalbet.uk/', text: 'Legalbet' },
   {
     name: 'digital-solomo',
     href: 'https://digitalsolomo.com/',
