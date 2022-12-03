@@ -84,6 +84,9 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+  { name: 'windowstips', href: 'https://windowstips.nu', text: 'Windowstips' },
+  { name: 'pillarwm1', href: 'https://pillarwm.com/financial-advisor/top-financial-advisors-near-me/', text: 'Pillar Wealth Management' },
+  { name: 'mister-auto', href: 'https://www.mister-auto.com/', text: 'Mister Auto' },
   { name: 'nfl', href: 'https://nfl.nu', text: 'NFL' },
   { name: 'awisee', href: 'https://awisee.com', text: 'AWISEE' },
   { name: 'awisee-agency', href: 'https://awisee.agency', text: 'AWISEE AGENCY' },
