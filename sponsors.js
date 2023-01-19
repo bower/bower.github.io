@@ -85,6 +85,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
   {
+    name: 'lbmexico',
+    href: 'https://linkbuildingmexico.com',
+    text: 'lbmexico'
+  },
+  {
     name: 'tankpengedk',
     href: 'https://tankpenge.dk',
     text: 'Per Andersen'
@@ -693,9 +698,11 @@ async function main() {
     return [sponsor]
   })).forEach(sponsor => {
     SPONSORS += `<a href="${sponsor.href}"${nofollow.indexOf(sponsor.name) >= 0 ? ' rel="nofollow"' : ""}><img class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>\n`
+    console.log(sponsor.href)
     if (sponsor.second) {
       for (const s of sponsor.second) {
-        if (sponsor.href) {
+        if (s.href) {
+          console.log(s.href)
           SPONSORS += `<a href="${s.href}"><img class="sidebar-logo" src="${s.src}" alt="${s.alt}" /></a>\n`
         }
       }
@@ -715,11 +722,13 @@ async function main() {
   })).forEach(sup => {
     if (sup.href) {
       SUPPORTERS += `<a href="${sup.href}"${nofollow.indexOf(sup.name) >= 0 ? ' rel="nofollow"' : ""}>${sup.text}</a> |\n`
+      console.log(sup.href)
     }
     if (sup.second) {
       for (const s of sup.second) {
         if (s.href) {
           SUPPORTERS += `<a href="${s.href}">${s.text}</a> |\n`
+          console.log(s.href)
         }
       }
     }
