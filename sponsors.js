@@ -84,6 +84,11 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+{
+  name: 'good-core',
+  href: 'https://www.goodcore.co.uk/',
+  text: 'Good Core Software'
+},
   {
     name: 'lbmexico',
     href: 'https://linkbuildingmexico.com',
