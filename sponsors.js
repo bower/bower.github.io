@@ -84,6 +84,8 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+  { name: 'refermate-com', href: 'https://www.refermate.com', text: 'Refermate' },
+{ name: 'seo-tips', href: 'https://seotips.nu', text: 'SEO Tips' },
 {
   name: 'good-core',
   href: 'https://www.goodcore.co.uk/',
