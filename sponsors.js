@@ -84,6 +84,16 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+{
+  name: 'bathroom-remodeling-westerville',
+  href: 'https://www.bathroomremodelingwesterville.com',
+  text: 'Bathroom Remodeling Westerville'
+},
+{
+  name: 'digitbitz',
+  href: 'https://digitbitz.com/',
+  text: 'DigitBitz'
+},
   { name: 'refermate-com', href: 'https://www.refermate.com', text: 'Refermate' },
 { name: 'seo-tips', href: 'https://seotips.nu', text: 'SEO Tips' },
 {
