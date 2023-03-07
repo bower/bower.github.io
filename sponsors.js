@@ -85,6 +85,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
 {
+  name: 'snabblanutanuc',
+  href: 'https://www.snabblanutanuc.se/',
+  text: 'SnabbLånUtanUC'
+},
+{
   name: 'bathroom-remodeling-westerville',
   href: 'https://www.bathroomremodelingwesterville.com',
   text: 'Bathroom Remodeling Westerville'
