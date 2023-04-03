@@ -84,6 +84,16 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+{
+  name: 'technologypep',
+  href: 'https://technologypep.com/',
+  text: 'TechnologyPep'
+},
+{
+  name: 'bestvpndeals2',
+  href: 'https://bestvpndeals.com/',
+  text: 'BestVPNDeals'
+},
 { name: 'uclan', href: 'https://www.lanuc.se', text: 'UCLån' },
 { name: 'likvid', href: 'https://www.likvid.nu/', text: 'Likvid' },
 { name: 'telefonen', href: 'https://telefonen.nu/', text: 'Telefonen' },
