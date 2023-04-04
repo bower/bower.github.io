@@ -85,6 +85,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
 {
+  name: 'window-seal-west',
+  href: 'https://windows-west.ca/',
+  text: 'Window Seal West'
+},
+{
   name: 'technologypep',
   href: 'https://technologypep.com/',
   text: 'TechnologyPep'
