@@ -85,6 +85,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
 {
+  name: 'tank-coffee',
+  href: 'https://www.tankcoffee.com',
+  text: 'Tank Coffee'
+},
+{
   name: 'window-seal-west',
   href: 'https://windows-west.ca/',
   text: 'Window Seal West'
@@ -396,6 +401,7 @@ const datasup = [
 ]
 
 const data = [
+  { name: 'guest-5d8ab1af', href: 'https://bitlaunch.io/', alt: 'Bitcoin VPS', src: 'https://i.imgur.com/pJ8u9sq.png' },
   { name: 'seolegalbet', alt: 'Legalbet', href: 'https://legalbet.uk/', src: 'https://i.imgur.com/2qQ6Gxf.png' },
   { name: 'tradingwolf1', alt: 'Trading Wolf', href: 'https://www.tradingwolf.com', src: 'https://i.imgur.com/vsXnDlr.png' },
   { name: 'mindmappro', alt: 'Mind Map Pro', href: 'https://www.mindmappro.com', src: 'https://i.imgur.com/kHicc3h.png' },
