@@ -80,10 +80,15 @@ const forcedsponsors = {}
 
 const nofollow = ['faveable']
 const forcedsupporters = ['royal-tech-ab']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn', 'your-online-presence', 'guest-901a02a2', 'king10', 'riversweeps', 'igrovye-avtomaty', 'stayatcasinos', 'negativeseoexpert', 'king-billy-slots', 'vpsservercom', 'onlinecasinoua']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn', 'your-online-presence', 'guest-901a02a2', 'king10', 'riversweeps', 'igrovye-avtomaty', 'stayatcasinos', 'negativeseoexpert', 'king-billy-slots', 'vpsservercom', 'onlinecasinoua', 'probukmacher']
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+{
+  name: 'james-roy',
+  href: 'https://identor.com/',
+  text: 'People Search'
+},
 {
   name: 'tank-coffee',
   href: 'https://www.tankcoffee.com',
@@ -401,6 +406,18 @@ const datasup = [
 ]
 
 const data = [
+{
+  name: 'kayakstore',
+  alt: 'Kayakstore',
+  href: 'https://kayakstore.se',
+  src: 'https://i.imgur.com/KK5WCPt.png'
+},
+{
+  name: 'cryptonewsz',
+  alt: 'CryptoNewsZ',
+  href: 'https://www.cryptonewsz.com/',
+  src: 'https://i.imgur.com/sYNDuyj.png'
+},
   { name: 'guest-5d8ab1af', href: 'https://bitlaunch.io/', alt: 'Bitcoin VPS', src: 'https://i.imgur.com/pJ8u9sq.png' },
   { name: 'seolegalbet', alt: 'Legalbet', href: 'https://legalbet.uk/', src: 'https://i.imgur.com/2qQ6Gxf.png' },
   { name: 'tradingwolf1', alt: 'Trading Wolf', href: 'https://www.tradingwolf.com', src: 'https://i.imgur.com/vsXnDlr.png' },
