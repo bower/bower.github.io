@@ -707,6 +707,7 @@ async function main() {
   sponsors['matthew-chalk1'] += 1000 * 3600 * 24 * 7
   sponsors['primesound'] += 1000 * 3600 * 24 * 7
   sponsors['seolegalbet'] += 1000 * 3600 * 24 * 9
+  sponsors['webpundits'] += 1000 * 3600 * 24 * 10
   
 
   Object.keys(sponsors).forEach(k => {
