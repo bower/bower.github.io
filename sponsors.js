@@ -80,10 +80,16 @@ const forcedsponsors = {}
 
 const nofollow = ['faveable']
 const forcedsupporters = ['royal-tech-ab']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn', 'your-online-presence', 'guest-901a02a2', 'king10', 'riversweeps', 'igrovye-avtomaty', 'stayatcasinos', 'negativeseoexpert', 'king-billy-slots', 'vpsservercom', 'onlinecasinoua', 'probukmacher']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn', 'your-online-presence', 'guest-901a02a2', 'king10', 'riversweeps', 'igrovye-avtomaty', 'stayatcasinos', 'negativeseoexpert', 'king-billy-slots', 'vpsservercom', 'onlinecasinoua', 'probukmacher', 'kingbilly']
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+{ name: 'rantentcom', href: 'https://rantent.com/', text: 'Rantent' },
+{
+  name: 'easeus-sofware-german',
+  href: 'https://www.easeus.de/',
+  text: 'EaseUS Germany'
+},
 {
   name: 'james-roy',
   href: 'https://identor.com/',
