@@ -84,6 +84,22 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+{
+  name: 'ozturkismak',
+  href: 'https://www.ozturkismakinalari.com/en/komatsu/',
+  text: 'Spare Parts'
+},
+{
+  name: 'minneapolis-roofing-pros',
+  href: 'https://minneapolisroofingpros.com',
+  text: 'Minneapolis Roofing Contractor'
+},
+{
+  name: 'ic-designs-ca',
+  href: 'https://ic-designs.ca/windows-replacement-calgary/',
+  text: 'IC-Designs Canada'
+},
+{ name: 'mobilennu', href: 'https://mobilen.nu/', text: 'Mobilen.nu' },
 { name: 'rantentcom', href: 'https://rantent.com/', text: 'Rantent' },
 {
   name: 'easeus-sofware-german',
@@ -412,6 +428,12 @@ const datasup = [
 ]
 
 const data = [
+{
+  name: 'webpundits',
+  alt: 'Buy RDP online from Web Pundits',
+  href: 'https://webpundits.in',
+  src: 'https://i.imgur.com/IVgnquz.png'
+},
 {
   name: 'kayakstore',
   alt: 'Kayakstore',
