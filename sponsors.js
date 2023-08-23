@@ -91,7 +91,7 @@ const datasup = [
 },
 {
   name: 'minneapolis-roofing-pros',
-  href: 'https://minneapolisroofingpros.com',
+  href: 'https://www.minneapolisroofingpros.com',
   text: 'Minneapolis Roofing Contractor'
 },
 {
