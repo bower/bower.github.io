@@ -2,8 +2,8 @@
 
 set -eo pipefail
 
-podman build -f Dockerfile.node -t bowerio
+docker build -t bowerio -f Dockerfile.node .
 
-podman run -v "$PWD:/app" bowerio yarn 
+docker run -v "$PWD:/app" bowerio yarn 
 
-podman run --rm -it -v "$PWD:/app:z" --env-file .env bowerio bash
+docker run --rm -it -v "$PWD:/app:z" --env-file .env bowerio bash

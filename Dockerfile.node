@@ -2,4 +2,6 @@ FROM node
 
 WORKDIR /app
 
-ENTRYPOINT ["/bin/sh", "-c"]
+RUN apt-get update && apt-get install curl vim -y
+
+ENTRYPOINT ["/bin/bash", "-c"]
