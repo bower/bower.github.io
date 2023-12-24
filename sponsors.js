@@ -79,11 +79,27 @@ async function unknown(type, name) {
 const forcedsponsors = {}
 
 const nofollow = ['faveable']
-const forcedsupporters = ['royal-tech-ab']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn', 'your-online-presence', 'guest-901a02a2', 'king10', 'riversweeps', 'igrovye-avtomaty', 'stayatcasinos', 'negativeseoexpert', 'king-billy-slots', 'vpsservercom', 'onlinecasinoua', 'probukmacher', 'kingbilly', 'rekt-eddies', 'cryptocasinos360-com', '888starz']
+const forcedsupporters = ['royal-tech-ab', 'rekt-eddies-gummies']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn', 'your-online-presence', 'guest-901a02a2', 'king10', 'riversweeps', 'igrovye-avtomaty', 'stayatcasinos', 'negativeseoexpert', 'king-billy-slots', 'vpsservercom', 'onlinecasinoua', 'probukmacher', 'kingbilly', 'cryptocasinos360-com', '888starz']
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+{
+  name: 'fire-stick-tricks',
+  href: 'https://www.firesticktricks.com',
+  text: 'Fire Stick Tricks'
+},
+{ name: 'anony', href: 'https://iganony.net/', text: 'IgAnony' },
+{
+  name: 'ig-story-viewer',
+  href: 'https://anonstories.com/',
+  text: 'Instagram Story Viewer'
+},
+{
+  name: 'rekt-eddies-gummies',
+  href: 'https://rekteddies.com/',
+  text: "Rekt Eddie's"
+},
 {
   name: 'swap-eth-usdt',
   href: 'https://slex.io/es/trade/ethusdt',
@@ -444,6 +460,12 @@ const datasup = [
 
 const data = [
 {
+  name: 'wekrypto',
+  alt: 'WeKrypto',
+  href: 'https://wekrypto.co',
+  src: 'https://i.imgur.com/5I1aWa2.png'
+},
+{
   name: 'webpundits',
   alt: 'Buy RDP online from Web Pundits',
   href: 'https://webpundits.in',
@@ -711,7 +733,7 @@ async function main() {
           sponsors[t.fromAccount.slug] || 0,
           Date.parse(t.createdAt) + Math.floor(t.amount.value / 100) * 1000 * 3600 * 24 * 31
         )
-      } else if (t.amount.value >= 50) {
+      } else {
         supporters[t.fromAccount.slug] = Math.max(
           supporters[t.fromAccount.slug] || 0,
           Date.parse(t.createdAt) + Math.floor(t.amount.value / 50) * 1000 * 3600 * 24 * 31
@@ -745,6 +767,7 @@ async function main() {
   sponsors['primesound'] += 1000 * 3600 * 24 * 7
   sponsors['seolegalbet'] += 1000 * 3600 * 24 * 9
   sponsors['webpundits'] += 1000 * 3600 * 24 * 10
+  sponsors['rekt-eddies-gummies'] += 1000 * 3600 * 24 * 30
   
 
   Object.keys(sponsors).forEach(k => {
@@ -795,7 +818,7 @@ async function main() {
   })).sort((a, b) => b.total - a.total).flatMap(t => {
     const sponsor = data.find(d => d.name === t.name)
     if (!sponsor) {
-      if (['meubelpartner'].includes(t.name)) {
+      if (['meubelpartner', 'rekt-eddies-gummies'].includes(t.name)) {
         return []
       } else {
         unknown('sponsor', t.name)
