@@ -9,9 +9,7 @@ The site is built with [Jekyll](http://jekyllrb.com) and served with GitHub Page
 You need to install latest  Node.js and Ruby
 
 ``` bash
-npm install
-bundle install
-bundle exec jekyll serve
+curl -fsSL https://get.docker.com | sh
 ```
 
 ## Voice

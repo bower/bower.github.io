@@ -85,6 +85,38 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
 {
+  name: 'true-altitude',
+  href: 'https://truealtitude.shop/',
+  text: 'True Altitude'
+},
+{
+  name: 'richard-habulan',
+  href: 'https://github.com/brownman1',
+  text: 'inflation'
+},
+{
+  name: 'jamfor-forsakringar',
+  href: 'https://jamforforsakringar.se/',
+  text: 'Jämför försäkringar'
+},
+{ name: 'slex', href: 'https://slex.io/', text: 'SLEX' },
+{ name: 'upgrow', href: 'https://www.upgrow.com/', text: 'UpGrow' },
+{
+  name: 'vibelovely',
+  href: 'https://vibelovely.com/',
+  text: 'VibeLovely'
+},
+{
+  name: 'cloudsmith',
+  href: 'https://cloudsmith.com',
+  text: 'Cloudsmith'
+},
+{
+  name: 'basement-flood-helpers',
+  href: 'https://basementfloodhelpers.com',
+  text: 'Basement Flood Helpers'
+},
+{
   name: 'fire-stick-tricks',
   href: 'https://www.firesticktricks.com',
   text: 'Fire Stick Tricks'
