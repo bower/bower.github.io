@@ -84,6 +84,17 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+{ name: 'troupon', href: 'https://www.troupon.com', text: 'Troupon' },
+{
+  name: 'global-software-companies',
+  href: 'https://www.globalsoftwarecompanies.com/',
+  text: 'Global Software Companies'
+},
+{
+  name: 'opensource',
+  href: 'https://oscollective.org/',
+  text: 'Open Source Collective'
+},
 {
   name: 'true-altitude',
   href: 'https://truealtitude.shop/',
