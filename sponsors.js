@@ -85,6 +85,16 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
 {
+  name: 'best-crypto-futures-trading-platforms',
+  href: 'https://bestcryptofuturestradingplatform.com/',
+  text: 'Crypto Futures Trading Platforms'
+},
+{
+  name: 'private-flight',
+  href: 'https://www.mercuryjets.com',
+  text: 'Mercury Jets'
+},
+{
   name: 'minneapolis-towing',
   href: 'https://minneapolistowingmn.com/',
   text: 'Minneapolis Towing'
