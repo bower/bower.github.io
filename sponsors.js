@@ -84,6 +84,14 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+{ name: 'bountii', href: 'https://bountii.coupons/', text: 'Bountii' },
+{ name: 'earthweb1', href: 'https://earthweb.com/', text: 'EarthWeb' },
+{
+  name: 'socialfollowersuk',
+  href: 'https://www.socialfollowers.uk/',
+  text: 'Social followers'
+},
+
 {
   name: 'best-crypto-futures-trading-platforms',
   href: 'https://bestcryptofuturestradingplatform.com/',

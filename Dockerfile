@@ -9,3 +9,5 @@ RUN npm install -g bower && \
     apt-get install -y ruby ruby-dev && \
     gem install jekyll && \
     gem install jekyll-paginate
+
+USER 1000
