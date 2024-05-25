@@ -835,7 +835,8 @@ async function main() {
   sponsors['webpundits'] += 1000 * 3600 * 24 * 10
   supporters['rekt-eddies-gummies'] += 1000 * 3600 * 24 * 30
   supporters['minneapolis-towing'] += 1000 * 3600 * 24 * 30
-  
+  supporters['bountii'] += 1000 * 3600 * 24 * 30
+  supporters['earthweb1'] += 1000 * 3600 * 24 * 30
 
   Object.keys(sponsors).forEach(k => {
     if (sponsors[k] + 1000 * 3600 * 24 * 16 < Date.now() && !exceptions.includes(k)) {
