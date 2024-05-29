@@ -5,6 +5,10 @@ const { groupBy } = require('lodash')
 let SPONSORS = ''
 let SUPPORTERS = ''
 
+if (process.env.API_KEY == null) {
+  throw new Error('API_KEY for opencollective must be set');
+}
+
 async function query(query) {
   const url = 'https://api.opencollective.com/graphql/v2/' + process.env.API_KEY
   const response = await fetch(url, {
