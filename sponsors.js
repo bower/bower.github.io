@@ -82,7 +82,6 @@ async function unknown(type, name) {
 
 const forcedsponsors = {}
 
-const nofollow = ['faveable']
 const forcedsupporters = ['royal-tech-ab', 'rekt-eddies-gummies']
 const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn', 'your-online-presence', 'guest-901a02a2', 'king10', 'riversweeps', 'igrovye-avtomaty', 'stayatcasinos', 'negativeseoexpert', 'king-billy-slots', 'vpsservercom', 'onlinecasinoua', 'probukmacher', 'kingbilly', 'cryptocasinos360-com', '888starz', 'tiktok18', 'aviator-gamer']
 const exceptions = ['digital-bank-guide', 'alex-owner']
@@ -899,13 +898,13 @@ async function main() {
     }
     return [sponsor]
   })).forEach(sponsor => {
-    SPONSORS += `<a href="${sponsor.href}"${nofollow.indexOf(sponsor.name) >= 0 ? ' rel="nofollow"' : ""}><img class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>\n`
+    SPONSORS += `<a rel="sponsored" href="${sponsor.href}"><img class="sidebar-logo" src="${sponsor.src}" alt="${sponsor.alt}" /></a>\n`
     console.log(sponsor.href)
     if (sponsor.second) {
       for (const s of sponsor.second) {
         if (s.href) {
           console.log(s.href)
-          SPONSORS += `<a href="${s.href}"><img class="sidebar-logo" src="${s.src}" alt="${s.alt}" /></a>\n`
+          SPONSORS += `<a rel="sponsored" href="${s.href}"><img class="sidebar-logo" src="${s.src}" alt="${s.alt}" /></a>\n`
         }
       }
     }
@@ -923,7 +922,7 @@ async function main() {
     return sups
   })).forEach(sup => {
     if (sup.href) {
-      SUPPORTERS += `<a href="${sup.href}"${nofollow.indexOf(sup.name) >= 0 ? ' rel="nofollow"' : ""}>${sup.text}</a> |\n`
+      SUPPORTERS += `<a rel="sponsored" href="${sup.href}">${sup.text}</a> |\n`
       console.log(sup.href)
     }
     if (sup.second) {
