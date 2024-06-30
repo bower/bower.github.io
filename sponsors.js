@@ -83,7 +83,7 @@ async function unknown(type, name) {
 const forcedsponsors = {}
 
 const forcedsupporters = ['royal-tech-ab', 'rekt-eddies-gummies']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn', 'your-online-presence', 'guest-901a02a2', 'king10', 'riversweeps', 'igrovye-avtomaty', 'stayatcasinos', 'negativeseoexpert', 'king-billy-slots', 'vpsservercom', 'onlinecasinoua', 'probukmacher', 'kingbilly', 'cryptocasinos360-com', '888starz', 'tiktok18', 'aviator-gamer']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn', 'your-online-presence', 'guest-901a02a2', 'king10', 'riversweeps', 'igrovye-avtomaty', 'stayatcasinos', 'negativeseoexpert', 'king-billy-slots', 'vpsservercom', 'onlinecasinoua', 'probukmacher', 'kingbilly', 'cryptocasinos360-com', '888starz', 'sidesmedia', 'tiktok18', 'avaiator-gamer']
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
@@ -153,6 +153,41 @@ const datasup = [
   href: 'https://basementfloodhelpers.com',
   text: 'Basement Flood Helpers'
 },
+{
+  name: 'opensource',
+  href: 'https://oscollective.org/',
+  text: 'Open Source Collective'
+},
+{ name: 'bountii', href: 'https://bountii.coupons/', text: 'Bountii' },
+{ name: 'earthweb1', href: 'https://earthweb.com/', text: 'EarthWeb' },
+{
+  name: 'best-crypto-futures-trading-platforms',
+  href: 'https://bestcryptofuturestradingplatform.com/',
+  text: 'Crypto Futures Trading Platforms'
+},
+{
+  name: 'socialfollowersuk',
+  href: 'https://www.socialfollowers.uk/',
+  text: 'Social followers'
+},
+{
+  name: 'true-altitude',
+  href: 'https://truealtitude.shop/',
+  text: 'True Altitude'
+},
+{
+  name: 'minneapolis-towing',
+  href: 'https://minneapolistowingmn.com/',
+  text: 'Minneapolis Towing'
+},
+{ name: 'troupon', href: 'https://www.troupon.com', text: 'Troupon' },
+{
+  name: 'global-software-companies',
+  href: 'https://www.globalsoftwarecompanies.com/',
+  text: 'Global Software Companies'
+},
+{ name: 'upgrow', href: 'https://www.upgrow.com/', text: 'UpGrow' },
+{ name: 'slex', href: 'https://slex.io/', text: 'SLEX' },
 {
   name: 'fire-stick-tricks',
   href: 'https://www.firesticktricks.com',
