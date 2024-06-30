@@ -87,28 +87,15 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
-{ name: 'bountii', href: 'https://bountii.coupons/', text: 'Bountii' },
-{ name: 'earthweb1', href: 'https://earthweb.com/', text: 'EarthWeb' },
 {
   name: 'socialfollowersuk',
   href: 'https://www.socialfollowers.uk/',
   text: 'Social followers'
 },
-
-{
-  name: 'best-crypto-futures-trading-platforms',
-  href: 'https://bestcryptofuturestradingplatform.com/',
-  text: 'Crypto Futures Trading Platforms'
-},
 {
   name: 'private-flight',
   href: 'https://www.mercuryjets.com',
   text: 'Mercury Jets'
-},
-{
-  name: 'minneapolis-towing',
-  href: 'https://minneapolistowingmn.com/',
-  text: 'Minneapolis Towing'
 },
 { name: 'troupon', href: 'https://www.troupon.com', text: 'Troupon' },
 {
@@ -164,11 +151,6 @@ const datasup = [
   name: 'best-crypto-futures-trading-platforms',
   href: 'https://bestcryptofuturestradingplatform.com/',
   text: 'Crypto Futures Trading Platforms'
-},
-{
-  name: 'socialfollowersuk',
-  href: 'https://www.socialfollowers.uk/',
-  text: 'Social followers'
 },
 {
   name: 'true-altitude',
