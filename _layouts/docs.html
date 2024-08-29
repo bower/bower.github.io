@@ -1,171 +1,205 @@
 {% include html-head.html %}
-<title>{% unless page.is_home %}{{ page.title }} &middot; Bower{% endunless %}{% if page.is_home %}Bower — a package manager for the web{% endif %}</title>
+<title>{% unless page.is_home %}{{ page.title }} &middot; Bower{% endunless %}{% if page.is_home %}Bower — a package
+    manager for the web{% endif %}</title>
 <meta property="og:title" content="{% unless page.is_home %}{{ page.title }} &middot; {% endunless %}Bower">
 </head>
+
 <body class="docs-page">
 
-  {% comment %} SVG symbols for inline SVG icons {% endcomment %}
-  <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">
-    <symbol id="symbol-twitter-logo" viewBox="0 0 512 512">
-    <path d="M512 97c-19 8-39 14-60 16 22-13 38-34 46-58-20 12-43 21-67 25-19-19-46-32-77-32-58 0-117 52-102 129-87-4-165-46-216-110-24 40-19 107 32 140-17 0-33-5-48-13v1c0 51 36 93 84 103-15 4-34 5-47 2 13 42 52 72 98 73-47 36-96 49-155 44 46 30 102 47 161 47 197 0 306-168 299-312 20-15 38-34 52-55z"/>
-    </symbol>
-    <symbol id="symbol-github-logo" viewBox="0 0 512 512">
-    <path d="M256 0C115 0 0 115 0 256c0 113 73 209 175 243 13 2 18-5 18-12v-48c-64 12-81-16-86-30-3-7-15-30-26-36-9-5-22-17 0-17 20 0 35 19 39 26 23 39 60 28 75 21 2-17 9-28 16-34-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-33 3-68 0 0 21-7 70 26 20-6 42-9 64-9s43 3 64 9c49-33 70-26 70-26 14 35 5 61 3 68 16 18 26 41 26 69 0 98-60 120-117 126 9 8 17 23 17 47v70c0 7 5 15 18 12 100-33 173-129 173-242C512 115 397 0 256 0z"/>
-    </symbol>
-    <symbol id="symbol-bountysource-icon" viewBox="0 0 512 512">
-    <path d="M442 465h-371C58 464 48 454 48 442v-371C48 58 58 48 71 48h371c12 0 23 10 23 23v371c0 13-10 23-22 23zm-272-56c12 5 56 19 91 19 53 0 85-19 102-58 14-31 5-70-21-87-12-8-11-7 1-15 28-17 51-34 51-81 0-52-58-100-143-100-82 0-133 46-133 83 0 3 1 12 4 12 16 0 40-62 123-62 44 0 113 18 113 65 0 43-76 61-98 72-12 6-11 18 0 25 10 6 74 6 74 50 0 32-19 64-78 64-43 0-49-13-49-21 0-11-.5-48 6-85 6-36 17-69 26-90 4-9-2-19-20-19-13 0-17 9-26 26-17 33-32 76-32 179 0 12 3 21 8 23z"/>
-    </symbol>
-    <symbol id="symbol-discord-icon" viewBox="0 0 220 220">
-    <path d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zM140.9 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z"/><path class="st0" d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z"/>
-    </symbol>
-    <symbol id="icon-home" viewBox="0 0 32 32">
-    <title>home</title>
-    <path class="path1" d="M32 18.451l-16-12.42-16 12.42v-5.064l16-12.42 16 12.42zM28 18v12h-8v-8h-8v8h-8v-12l12-9z"></path>
-    </symbol>
-  </svg>
+    {% comment %} SVG symbols for inline SVG icons {% endcomment %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" display="none">
+        <symbol id="symbol-twitter-logo" viewBox="0 0 512 512">
+            <path
+                d="M512 97c-19 8-39 14-60 16 22-13 38-34 46-58-20 12-43 21-67 25-19-19-46-32-77-32-58 0-117 52-102 129-87-4-165-46-216-110-24 40-19 107 32 140-17 0-33-5-48-13v1c0 51 36 93 84 103-15 4-34 5-47 2 13 42 52 72 98 73-47 36-96 49-155 44 46 30 102 47 161 47 197 0 306-168 299-312 20-15 38-34 52-55z" />
+        </symbol>
+        <symbol id="symbol-github-logo" viewBox="0 0 512 512">
+            <path
+                d="M256 0C115 0 0 115 0 256c0 113 73 209 175 243 13 2 18-5 18-12v-48c-64 12-81-16-86-30-3-7-15-30-26-36-9-5-22-17 0-17 20 0 35 19 39 26 23 39 60 28 75 21 2-17 9-28 16-34-57-6-116-28-116-126 0-28 10-51 26-69-3-6-11-33 3-68 0 0 21-7 70 26 20-6 42-9 64-9s43 3 64 9c49-33 70-26 70-26 14 35 5 61 3 68 16 18 26 41 26 69 0 98-60 120-117 126 9 8 17 23 17 47v70c0 7 5 15 18 12 100-33 173-129 173-242C512 115 397 0 256 0z" />
+        </symbol>
+        <symbol id="symbol-bountysource-icon" viewBox="0 0 512 512">
+            <path
+                d="M442 465h-371C58 464 48 454 48 442v-371C48 58 58 48 71 48h371c12 0 23 10 23 23v371c0 13-10 23-22 23zm-272-56c12 5 56 19 91 19 53 0 85-19 102-58 14-31 5-70-21-87-12-8-11-7 1-15 28-17 51-34 51-81 0-52-58-100-143-100-82 0-133 46-133 83 0 3 1 12 4 12 16 0 40-62 123-62 44 0 113 18 113 65 0 43-76 61-98 72-12 6-11 18 0 25 10 6 74 6 74 50 0 32-19 64-78 64-43 0-49-13-49-21 0-11-.5-48 6-85 6-36 17-69 26-90 4-9-2-19-20-19-13 0-17 9-26 26-17 33-32 76-32 179 0 12 3 21 8 23z" />
+        </symbol>
+        <symbol id="symbol-discord-icon" viewBox="0 0 220 220">
+            <path
+                d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zM140.9 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z" />
+            <path class="st0"
+                d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z" />
+        </symbol>
+        <symbol id="icon-home" viewBox="0 0 32 32">
+            <title>home</title>
+            <path class="path1"
+                d="M32 18.451l-16-12.42-16 12.42v-5.064l16-12.42 16 12.42zM28 18v12h-8v-8h-8v8h-8v-12l12-9z"></path>
+        </symbol>
+    </svg>
 
 
-  <header id="masthead">
-    <div class="container">
+    <header id="masthead">
+        <div class="container">
 
-      {% include network-nav.html %}
+            {% include network-nav.html %}
 
-      {% if page.is_home %}
-        <div class="brand">
-          <img src="/img/bower-logo.svg" class="logo" alt="Bower logo" />
-          <h1>Bower</h1>
-          <h3 class="tagline">A package manager for&nbsp;the&nbsp;web</h3>
+            {% if page.is_home %}
+            <div class="brand">
+                <img src="/img/bower-logo.svg" class="logo" alt="Bower logo" />
+                <h1>Bower</h1>
+                <h3 class="tagline">A package manager for&nbsp;the&nbsp;web</h3>
+            </div>
+            {% else %}
+            <a href="/">
+                <img class="logo" src="/img/bower-logo.svg" alt="Bower logo" />
+            </a>
+
+            {% unless page.subtitle %}
+            <h1 class="page-title">{{ page.title }}</h1>
+            {% endunless %}
+            {% if page.subtitle %}
+            <h1 class="page-title">{{ page.title }}</h1>
+            <h4 class="small-hidden" style="margin: -20px 0 0 223px">{{ page.subtitle | markdownify | remove: '<p>' |
+                    remove: '</p>' }}</h4>
+            {% endif %}
+            {% endif %}
+
         </div>
-      {% else %}
-        <a href="/">
-          <img class="logo" src="/img/bower-logo.svg" alt="Bower logo" />
-        </a>
+    </header>
 
-        {% unless page.subtitle %}
-          <h1 class="page-title">{{ page.title }}</h1>
-        {% endunless %}
-        {% if page.subtitle %}
-          <h1 class="page-title">{{ page.title }}</h1>
-          <h4 class="small-hidden" style="margin: -20px 0 0 223px">{{ page.subtitle | markdownify | remove: '<p>' | remove: '</p>' }}</h4>
-        {% endif %}
-      {% endif %}
+    <div class="notification">
+        ...psst! While Bower is maintained, we recommend using <a href="https://yarnpkg.com/">Yarn</a> and <a
+            href="https://vitejs.dev/">Vite</a> for front-end projects. <a
+            href="https://bower.io/blog/2017/how-to-migrate-away-from-bower/">Read how to migrate</a>!
+    </div>
+    <div id="content">
+
+        <div class="container">
+
+            <div class="btn menu-btn">Menu</div>
+
+            <div class="sidebar">
+                <ul class="docs-nav nav">
+                    <li class="nav-home"><a href="/">Home</a></li>
+                    <li class="nav-creating"><a href="/docs/creating-packages/">Creating Packages</a></li>
+                    <li class="nav-api"><a href="/docs/api/">API</a></li>
+                    <li class="nav-config"><a href="/docs/config/">Configuration</a></li>
+                    <li class="nav-config"><a href="/docs/pluggable-resolvers/">Pluggable Resolvers</a></li>
+                    <li class="nav-tools"><a href="/docs/tools/">Tools</a></li>
+                    <li class="nav-about"><a href="/docs/about/">About</a></li>
+                </ul>
+                <h5>Sponsors (<a href="https://opencollective.com/bower">become one</a>):</h5>
+                <a rel="sponsored" href="https://www.loadview-testing.com/"><img class="sidebar-logo"
+                        src="https://i.imgur.com/iHdPKSV.png" alt="LoadView-Testing" /></a>
+                <a rel="sponsored" href="https://420couponcodes.com/"><img class="sidebar-logo"
+                        src="https://i.imgur.com/IbhCD2k.png" alt="420couponcodes.com" /></a>
+                <a rel="sponsored" href="https://www.credimaxx.de/"><img class="sidebar-logo"
+                        src="https://i.imgur.com/sf5e7KT.png" alt="credimaxx.de" /></a>
+                <a rel="sponsored" href="https://www.top5credits.com/"><img class="sidebar-logo"
+                        src="https://i.imgur.com/K2EU3HD.png" alt="top5credits.com" /></a>
+                <a rel="sponsored" href="https://www.ramotion.com/agency/web-design/"><img class="sidebar-logo"
+                        src="https://i.imgur.com/mQxmvRm.png" alt="Ramotion" /></a>
+                <a rel="sponsored" href="https://www.softwaredevelopment.co.uk/"><img class="sidebar-logo"
+                        src="https://i.imgur.com/HoU15ep.png" alt="SoftwareDevelopmentUK" /></a>
+                <a rel="sponsored" href="https://theymakedesign.com/best-web-design-companies-3ecc85b32071"><img
+                        class="sidebar-logo" src="https://i.imgur.com/kfA0vQE.png" alt="theymakedesign.com" /></a>
+                <a rel="sponsored" href="https://www.instinctools.com/cloud-computing/"><img class="sidebar-logo"
+                        src="https://i.imgur.com/c56Di42.png" alt="*instinctools" /></a>
+                <a rel="sponsored" href="https://www.cryptonewsz.com/"><img class="sidebar-logo"
+                        src="https://i.imgur.com/sYNDuyj.png" alt="CryptoNewsZ" /></a>
+                <a rel="sponsored" href="https://legalbet.uk/"><img class="sidebar-logo"
+                        src="https://i.imgur.com/2qQ6Gxf.png" alt="Legalbet" /></a>
+                <a rel="sponsored" href="https://vpn-review.com/"><img class="sidebar-logo"
+                        src="https://i.imgur.com/INf1G7H.png" alt="VPN reviews 2019" /></a>
+                <a rel="sponsored" href="https://faveable.com/"><img class="sidebar-logo"
+                        src="https://i.imgur.com/PMqdGyT.png" alt="Faveable" /></a>
+                <a rel="sponsored" href="https://iboysoft.com"><img class="sidebar-logo"
+                        src="https://i.imgur.com/eOWcxUr.png" alt="iBoysoft" /></a>
+                <a rel="sponsored" href="https://sprocketdigital.co.nz/"><img class="sidebar-logo"
+                        src="https://i.imgur.com/koJsb0d.png" alt="Matthew Chalk" /></a>
+                <a rel="sponsored" href="https://webpundits.in"><img class="sidebar-logo"
+                        src="https://i.imgur.com/IVgnquz.png" alt="Buy RDP online from Web Pundits" /></a>
+
+                <ul class="extra-nav nav">
+                    <li><a href="https://github.com/bower/bower">
+                            <svg class="extra-nav-icon">
+                                <use xlink:href="#symbol-github-logo"></use>
+                            </svg>
+                            Bower on GitHub
+                        </a></li>
+                    <li><a href="https://twitter.com/bower">
+                            <svg class="extra-nav-icon">
+                                <use xlink:href="#symbol-twitter-logo"></use>
+                            </svg>
+                            @bower
+                        </a></li>
+                </ul>
+            </div>
+
+            <div class="main">
+                {{ content }}
+
+
+                <footer class="site-footer">
+                    <p class="issue"><a href="https://github.com/bower/bower.github.io/issues">Help improve these docs.
+                            Open an issue or pull request.</a></p>
+                    <p>
+                        Our supporters:
+                        <a rel="sponsored" href="https://veepn.com/vpn-apps/vpn-for-chrome/">VeePN VPN</a> |
+                        <a rel="sponsored" href="https://www.partitionwizard.com">Partition Wizard</a> |
+                        <a rel="sponsored" href="https://www.minitool.com">MiniTool</a> |
+                        <a rel="sponsored" href="http://www.metrodetroitreview.com">metrodetroitreview.com</a> |
+                        <a rel="sponsored" href="https://kafidoff.com/">Vasyl Kafidov</a> |
+                        <a rel="sponsored" href="https://www.appdrawn.com/">AppDrawn</a> |
+                        <a rel="sponsored" href="https://www.butikkene.no/">Butikkene.no</a> |
+                        <a rel="sponsored" href="https://swiindex.com/">swiindex.com</a> |
+                        <a rel="sponsored" href="https://www.plumbingnewsandmore.com/">Plumbing News and More</a> |
+                        <a rel="sponsored" href="https://www.edwinsedibles.com">CBD Gummies</a> |
+                        <a rel="sponsored" href="https://cyberogism.com/">Cyberogism</a> |
+                        <a rel="sponsored" href="http://www.fiveguysplumbingdearborn.com">Five Guys Plumbing
+                            Dearborn</a> |
+                        <a rel="sponsored" href="https://talousapu.fi/">Talousapu.fi</a> |
+                        <a rel="sponsored" href="https://www.glassesonweb.com/">GlassesOnWeb.com</a> |
+                        <a rel="sponsored" href="https://www.arkiraha.fi/">Arkiraha</a> |
+                        <a rel="sponsored" href="https://quickbookstoolhub.com/">Quickbooks Tool Hub</a> |
+                        <a rel="sponsored" href="https://oscollective.org/">Open Source Collective</a> |
+                        <a rel="sponsored" href="https://oscollective.org/">Open Source Collective</a> |
+                        <a rel="sponsored" href="https://www.ibeesoft.com/">iBeesoft</a> |
+                        <a rel="sponsored" href="https://legalbet.uk/">Legalbet</a> |
+                        <a rel="sponsored" href="https://www.mister-auto.com/">Mister Auto</a> |
+                        <a rel="sponsored" href="https://www.richmondconcretepros.com/">Richmond Concrete</a> |
+                        <a rel="sponsored" href="https://tankpenge.dk">Per Andersen</a> |
+                        <a rel="sponsored" href="https://www.refermate.com">Refermate</a> |
+                        <a rel="sponsored" href="https://www.bathroomremodelingwesterville.com">Bathroom Remodeling
+                            Westerville</a> |
+                        <a rel="sponsored" href="https://www.tankcoffee.com">Tank Coffee</a> |
+                        <a rel="sponsored" href="https://www.easeus.de/">EaseUS Germany</a> |
+                        <a rel="sponsored" href="https://rantent.com/">Rantent</a> |
+                        <a rel="sponsored" href="https://rekteddies.com/">Rekt Eddie's</a> |
+                        <a rel="sponsored" href="https://www.firesticktricks.com">Fire Stick Tricks</a> |
+                        <a rel="sponsored" href="https://www.upgrow.com/">UpGrow</a> |
+                        <a rel="sponsored" href="https://www.upgrow.com/">UpGrow</a> |
+                        <a rel="sponsored" href="https://slex.io/">SLEX</a> |
+                        <a rel="sponsored" href="https://slex.io/">SLEX</a> |
+                        <a rel="sponsored" href="https://truealtitude.shop/">True Altitude</a> |
+                        <a rel="sponsored" href="https://truealtitude.shop/">True Altitude</a> |
+                        <a rel="sponsored" href="https://www.globalsoftwarecompanies.com/">Global Software Companies</a>
+                        |
+                        <a rel="sponsored" href="https://www.globalsoftwarecompanies.com/">Global Software Companies</a>
+                        |
+                        <a rel="sponsored" href="https://www.troupon.com">Troupon</a> |
+                        <a rel="sponsored" href="https://www.troupon.com">Troupon</a> |
+                        <a rel="sponsored" href="https://minneapolistowingmn.com/">Minneapolis Towing</a> |
+                        <a rel="sponsored" href="https://bestcryptofuturestradingplatform.com/">Crypto Futures Trading
+                            Platforms</a> |
+                        <a rel="sponsored" href="https://earthweb.com/">EarthWeb</a> |
+                        <a rel="sponsored" href="https://bountii.coupons/">Bountii</a> |
+                        <a rel="sponsored" href="https://www.socialfollowers.uk/">Social followers</a>
+                        <a rel="sponsored" href="https://route4me.com/">Route4Me Route Tracker</a>
+                    </p>
+                </footer>
+
+            </div>
+
+        </div>
+
 
     </div>
-  </header>
 
-  <div class="notification">
-    ...psst! While Bower is maintained, we recommend using <a href="https://yarnpkg.com/">Yarn</a> and <a href="https://vitejs.dev/">Vite</a> for front-end projects. <a href="https://bower.io/blog/2017/how-to-migrate-away-from-bower/">Read how to migrate</a>!
-  </div>
-  <div id="content">
-
-    <div class="container">
-
-      <div class="btn menu-btn">Menu</div>
-
-      <div class="sidebar">
-        <ul class="docs-nav nav">
-          <li class="nav-home"><a href="/">Home</a></li>
-          <li class="nav-creating"><a href="/docs/creating-packages/">Creating Packages</a></li>
-          <li class="nav-api"><a href="/docs/api/">API</a></li>
-          <li class="nav-config"><a href="/docs/config/">Configuration</a></li>
-          <li class="nav-config"><a href="/docs/pluggable-resolvers/">Pluggable Resolvers</a></li>
-          <li class="nav-tools"><a href="/docs/tools/">Tools</a></li>
-          <li class="nav-about"><a href="/docs/about/">About</a></li>
-        </ul>
-        <h5>Sponsors (<a href="https://opencollective.com/bower">become one</a>):</h5>
-        <a rel="sponsored" href="https://www.loadview-testing.com/"><img class="sidebar-logo" src="https://i.imgur.com/iHdPKSV.png" alt="LoadView-Testing" /></a>
-<a rel="sponsored" href="https://420couponcodes.com/"><img class="sidebar-logo" src="https://i.imgur.com/IbhCD2k.png" alt="420couponcodes.com" /></a>
-<a rel="sponsored" href="https://www.credimaxx.de/"><img class="sidebar-logo" src="https://i.imgur.com/sf5e7KT.png" alt="credimaxx.de" /></a>
-<a rel="sponsored" href="https://www.top5credits.com/"><img class="sidebar-logo" src="https://i.imgur.com/K2EU3HD.png" alt="top5credits.com" /></a>
-<a rel="sponsored" href="https://www.ramotion.com/agency/web-design/"><img class="sidebar-logo" src="https://i.imgur.com/mQxmvRm.png" alt="Ramotion" /></a>
-<a rel="sponsored" href="https://www.softwaredevelopment.co.uk/"><img class="sidebar-logo" src="https://i.imgur.com/HoU15ep.png" alt="SoftwareDevelopmentUK" /></a>
-<a rel="sponsored" href="https://theymakedesign.com/best-web-design-companies-3ecc85b32071"><img class="sidebar-logo" src="https://i.imgur.com/kfA0vQE.png" alt="theymakedesign.com" /></a>
-<a rel="sponsored" href="https://www.instinctools.com/cloud-computing/"><img class="sidebar-logo" src="https://i.imgur.com/c56Di42.png" alt="*instinctools" /></a>
-<a rel="sponsored" href="https://www.cryptonewsz.com/"><img class="sidebar-logo" src="https://i.imgur.com/sYNDuyj.png" alt="CryptoNewsZ" /></a>
-<a rel="sponsored" href="https://legalbet.uk/"><img class="sidebar-logo" src="https://i.imgur.com/2qQ6Gxf.png" alt="Legalbet" /></a>
-<a rel="sponsored" href="https://vpn-review.com/"><img class="sidebar-logo" src="https://i.imgur.com/INf1G7H.png" alt="VPN reviews 2019" /></a>
-<a rel="sponsored" href="https://faveable.com/"><img class="sidebar-logo" src="https://i.imgur.com/PMqdGyT.png" alt="Faveable" /></a>
-<a rel="sponsored" href="https://iboysoft.com"><img class="sidebar-logo" src="https://i.imgur.com/eOWcxUr.png" alt="iBoysoft" /></a>
-<a rel="sponsored" href="https://sprocketdigital.co.nz/"><img class="sidebar-logo" src="https://i.imgur.com/koJsb0d.png" alt="Matthew Chalk" /></a>
-<a rel="sponsored" href="https://webpundits.in"><img class="sidebar-logo" src="https://i.imgur.com/IVgnquz.png" alt="Buy RDP online from Web Pundits" /></a>
-
-        <ul class="extra-nav nav">
-          <li><a href="https://github.com/bower/bower">
-              <svg class="extra-nav-icon">
-                <use xlink:href="#symbol-github-logo"></use>
-              </svg>
-              Bower on GitHub
-            </a></li>
-            <li><a href="https://twitter.com/bower">
-                <svg class="extra-nav-icon">
-                  <use xlink:href="#symbol-twitter-logo"></use>
-                </svg>
-                @bower
-              </a></li>
-        </ul>
-      </div>
-
-      <div class="main">
-        {{ content }}
-
-
-        <footer class="site-footer">
-          <p class="issue"><a href="https://github.com/bower/bower.github.io/issues">Help improve these docs. Open an issue or pull request.</a></p>
-          <p>
-            Our supporters:
-        <a rel="sponsored" href="https://veepn.com/vpn-apps/vpn-for-chrome/">VeePN VPN</a> |
-<a rel="sponsored" href="https://www.partitionwizard.com">Partition Wizard</a> |
-<a rel="sponsored" href="https://www.minitool.com">MiniTool</a> |
-<a rel="sponsored" href="http://www.metrodetroitreview.com">metrodetroitreview.com</a> |
-<a rel="sponsored" href="https://kafidoff.com/">Vasyl Kafidov</a> |
-<a rel="sponsored" href="https://www.appdrawn.com/">AppDrawn</a> |
-<a rel="sponsored" href="https://www.butikkene.no/">Butikkene.no</a> |
-<a rel="sponsored" href="https://swiindex.com/">swiindex.com</a> |
-<a rel="sponsored" href="https://www.plumbingnewsandmore.com/">Plumbing News and More</a> |
-<a rel="sponsored" href="https://www.edwinsedibles.com">CBD Gummies</a> |
-<a rel="sponsored" href="https://cyberogism.com/">Cyberogism</a> |
-<a rel="sponsored" href="http://www.fiveguysplumbingdearborn.com">Five Guys Plumbing Dearborn</a> |
-<a rel="sponsored" href="https://talousapu.fi/">Talousapu.fi</a> |
-<a rel="sponsored" href="https://www.glassesonweb.com/">GlassesOnWeb.com</a> |
-<a rel="sponsored" href="https://www.arkiraha.fi/">Arkiraha</a> |
-<a rel="sponsored" href="https://quickbookstoolhub.com/">Quickbooks Tool Hub</a> |
-<a rel="sponsored" href="https://oscollective.org/">Open Source Collective</a> |
-<a rel="sponsored" href="https://oscollective.org/">Open Source Collective</a> |
-<a rel="sponsored" href="https://www.ibeesoft.com/">iBeesoft</a> |
-<a rel="sponsored" href="https://legalbet.uk/">Legalbet</a> |
-<a rel="sponsored" href="https://www.mister-auto.com/">Mister Auto</a> |
-<a rel="sponsored" href="https://www.richmondconcretepros.com/">Richmond Concrete</a> |
-<a rel="sponsored" href="https://tankpenge.dk">Per Andersen</a> |
-<a rel="sponsored" href="https://www.refermate.com">Refermate</a> |
-<a rel="sponsored" href="https://www.bathroomremodelingwesterville.com">Bathroom Remodeling Westerville</a> |
-<a rel="sponsored" href="https://www.tankcoffee.com">Tank Coffee</a> |
-<a rel="sponsored" href="https://www.easeus.de/">EaseUS Germany</a> |
-<a rel="sponsored" href="https://rantent.com/">Rantent</a> |
-<a rel="sponsored" href="https://rekteddies.com/">Rekt Eddie's</a> |
-<a rel="sponsored" href="https://www.firesticktricks.com">Fire Stick Tricks</a> |
-<a rel="sponsored" href="https://www.upgrow.com/">UpGrow</a> |
-<a rel="sponsored" href="https://www.upgrow.com/">UpGrow</a> |
-<a rel="sponsored" href="https://slex.io/">SLEX</a> |
-<a rel="sponsored" href="https://slex.io/">SLEX</a> |
-<a rel="sponsored" href="https://truealtitude.shop/">True Altitude</a> |
-<a rel="sponsored" href="https://truealtitude.shop/">True Altitude</a> |
-<a rel="sponsored" href="https://www.globalsoftwarecompanies.com/">Global Software Companies</a> |
-<a rel="sponsored" href="https://www.globalsoftwarecompanies.com/">Global Software Companies</a> |
-<a rel="sponsored" href="https://www.troupon.com">Troupon</a> |
-<a rel="sponsored" href="https://www.troupon.com">Troupon</a> |
-<a rel="sponsored" href="https://minneapolistowingmn.com/">Minneapolis Towing</a> |
-<a rel="sponsored" href="https://bestcryptofuturestradingplatform.com/">Crypto Futures Trading Platforms</a> |
-<a rel="sponsored" href="https://earthweb.com/">EarthWeb</a> |
-<a rel="sponsored" href="https://bountii.coupons/">Bountii</a> |
-<a rel="sponsored" href="https://www.socialfollowers.uk/">Social followers</a>
-          </p>
-        </footer>
-
-      </div>
-
-    </div>
-
-
-  </div>
-
-  {% include html-foot.html %}
+    {% include html-foot.html %}
