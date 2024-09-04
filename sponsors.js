@@ -87,6 +87,26 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+  {
+    name: 'instagram-follower-tracker',
+    href: 'https://igstan.com',
+    text: 'Instagram Follower Tracker'
+  },
+  {
+    name: 'creditcaptain',
+    href: 'https://www.creditcaptain.com/',
+    text: 'CreditCaptain – Leading AI Credit Repair Service'
+  },
+  {
+    name: 'famegear',
+    href: 'https://www.famegear.com',
+    text: 'Famegear'
+  },
+  {
+    name: 'private-jet-charter',
+    href: 'https://monarchairgroup.com',
+    text: 'Monarch Air Group'
+  },
 {
   name: 'socialfollowersuk',
   href: 'https://www.socialfollowers.uk/',
@@ -545,6 +565,31 @@ const datasup = [
 ]
 
 const data = [
+  
+  {
+    name: 'gymgrit-net',
+    alt: 'Gymgrit.Net',
+    href: 'https://gymgrit.net/',
+    src: 'https://i.imgur.com/9u0sKP2.png'
+  },
+  {
+    name: 'synetec',
+    alt: 'Synetec',
+    href: 'https://www.synetec.co.uk/',
+    src: 'https://i.imgur.com/FatvhBy.png'
+  },
+  {
+    name: 'route4me',
+    alt: 'Route4Me Route Planner',
+    href: 'https://route4me.com/',
+    src: 'https://i.imgur.com/g5LeC9Q.png'
+  },
+  {
+    name: 'rich-teddy',
+    alt: 'Rich Teddy',
+    href: 'https://richteddy.io/',
+    src: 'https://i.imgur.com/fwtrtxO.png'
+  },
 {
   name: 'wekrypto',
   alt: 'WeKrypto',
