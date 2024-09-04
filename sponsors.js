@@ -568,9 +568,9 @@ const data = [
   
   {
     name: 'gymgrit-net',
-    alt: 'Gymgrit.Net',
-    href: 'https://gymgrit.net/',
-    src: 'https://i.imgur.com/9u0sKP2.png'
+    alt: 'FitclubFinder',
+    href: 'https://fitclubfinder.com/',
+    src: 'https://i.imgur.com/wEp91FC.png'
   },
   {
     name: 'synetec',
