@@ -802,7 +802,12 @@ async function main() {
     transactions(27),
     transactions(28),
     transactions(29),
-    transactions(30)
+    transactions(30),
+    transactions(31),
+    transactions(32),
+    transactions(33),
+    transactions(34),
+    transactions(35)
   ])
 
   const debitAccounts = new Set()
@@ -904,6 +909,11 @@ async function main() {
   supporters['earthweb1'] += 1000 * 3600 * 24 * 30
   sponsors['synetec'] += 1000 * 3600 * 24 * 14
   supporters['creditcaptain'] += 1000 * 3600 * 24 * 21
+  sponsors['route4me'] += 1000 * 3600 * 24 * 30
+  sponsors['gymgrit-net'] += 1000 * 3600 * 24 * 30
+  supporters['famegear'] += 1000 * 3600 * 24 * 30
+  
+  
   
   Object.keys(sponsors).forEach(k => {
     if (sponsors[k] + 1000 * 3600 * 24 * 16 < Date.now() && !exceptions.includes(k)) {
