@@ -902,7 +902,9 @@ async function main() {
   supporters['minneapolis-towing'] += 1000 * 3600 * 24 * 30
   supporters['bountii'] += 1000 * 3600 * 24 * 30
   supporters['earthweb1'] += 1000 * 3600 * 24 * 30
-
+  sponsors['synetec'] += 1000 * 3600 * 24 * 14
+  supporters['creditcaptain'] += 1000 * 3600 * 24 * 21
+  
   Object.keys(sponsors).forEach(k => {
     if (sponsors[k] + 1000 * 3600 * 24 * 16 < Date.now() && !exceptions.includes(k)) {
       const lastTransaction = allTransactions.reverse().find(t => t.fromAccount.slug === k).createdAt
