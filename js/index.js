@@ -134,7 +134,7 @@ function fetchResults(query, options) {
 
   options.page = options.page || 1;
 
-  return fetch('https://libraries.io/api/bower-search?q=' + query).then(function (results) {
+  return fetch('https://libraries.io/api/search?platforms=Bower&api_key=782c0bcca2235968b49e9826e2f787da&q=' + query).then(function (results) {
     return results.json();
   });
 }
