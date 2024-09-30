@@ -2,7 +2,7 @@
 
 set -eo pipefail
 
-docker build -t bowerio -f Dockerfile.node .
+docker buildx build -t bowerio -f Dockerfile.node .
 
 docker run -v "$PWD:/app:z" bowerio yarn 
 
