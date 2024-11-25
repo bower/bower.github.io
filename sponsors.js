@@ -88,6 +88,18 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
 {
+  name: 'bloomingtoncarpetcleaning',
+  href: 'https://bloomingtoncarpetmn.com/',
+  text: 'Bloomington Carpet & Upholstery Cleaning'
+},
+
+{
+  name: 'uk-exchange',
+  href: 'https://uk-exchange.com/en/usdt-to-paypal.php',
+  text: 'UK-Exchange'
+},
+
+{
   name: 'pakstyle',
   href: 'https://www.pakstyle.pk/',
   text: 'PakStyle.pk'
