@@ -83,10 +83,11 @@ async function unknown(type, name) {
 const forcedsponsors = {}
 
 const forcedsupporters = ['royal-tech-ab', 'rekt-eddies-gummies']
-const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn', 'your-online-presence', 'guest-901a02a2', 'king10', 'riversweeps', 'igrovye-avtomaty', 'stayatcasinos', 'negativeseoexpert', 'king-billy-slots', 'vpsservercom', 'onlinecasinoua', 'probukmacher', 'kingbilly', 'cryptocasinos360-com', '888starz', 'sidesmedia', 'tiktok18', 'avaiator-gamer', 'buy-instagram-followers-twicsy']
+const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-rathore', 'world-of-the-casinos', 'baocasino', 'hollandsegokken-nl', 'nettcasinobonus-com1', 'bellwether-capital', 'esquire-client-solutions', 'college-paper-world', 'yevgen-yanovskyy', 'twojtyp', 'goread_io', 'nettmoro-com', 'megetnyttig-com', 'casinogaroocom', 'followerspromotion-com', 'instapromote1', 'leo-boost1', 'zenscrape', 'jean-mir', 'siwagorn', 'your-online-presence', 'guest-901a02a2', 'king10', 'riversweeps', 'igrovye-avtomaty', 'stayatcasinos', 'negativeseoexpert', 'king-billy-slots', 'vpsservercom', 'onlinecasinoua', 'probukmacher', 'kingbilly', 'cryptocasinos360-com', '888starz', 'sidesmedia', 'tiktok18', 'avaiator-gamer', 'buy-instagram-followers-twicsy', 'bulkviews']
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+{ name: 'qwertybro', href: 'https://qwertybro.com', text: 'QwertyBro' },
 {
   name: 'bloomingtoncarpetcleaning',
   href: 'https://bloomingtoncarpetmn.com/',
