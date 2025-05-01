@@ -51,9 +51,9 @@ normalize.css@3.0.3:
   resolved "https://registry.npmjs.org/normalize.css/-/normalize.css-3.0.3.tgz"
   integrity sha512-7OavvKXqPta8bgGhWzcUOnZ9KCkANYzbq4ytNKgNeFRTaz3KAm1eGUQ/vyAeVjlDXjolsbYREctuzyQytCDiBA==
 
-plottable@palantir/plottable#3038243c9:
+"plottable@https://github.com/palantir/plottable.git#3038243c9":
   version "0.29.1"
-  resolved "git+ssh://git@github.com/palantir/plottable.git#3038243c988c4c711ec3de2a7efed9a9997e675e"
+  resolved "https://github.com/palantir/plottable.git#3038243c988c4c711ec3de2a7efed9a9997e675e"
 
 rx@^4.1.0:
   version "4.1.0"

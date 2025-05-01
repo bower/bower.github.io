@@ -30,7 +30,7 @@
     "mark.js": "^8.11.1",
     "mustache": "^2.2.1",
     "normalize.css": "3.0.3",
-    "plottable": "palantir/plottable#3038243c9",
+    "plottable": "https://github.com/palantir/plottable.git#3038243c9",
     "rx": "^4.1.0",
     "whatwg-fetch": "^1.0.0"
   },
