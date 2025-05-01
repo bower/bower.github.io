@@ -1,6 +1,7 @@
 const fetch = require('cross-fetch')
 const fs = require('fs')
 const { groupBy } = require('lodash')
+require('dotenv').config()
 
 let SPONSORS = ''
 let SUPPORTERS = ''
@@ -87,34 +88,45 @@ const ignoredsupporters = ['rocketpayz', 'webton-bv', 'casinotop-com', 'upendra-
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
-{
-  name: 'synetec-ltd',
-  href: 'https://synetec.co.uk',
-  text: 'Synetec Ltd'
-},
-{
-  name: 'magicugc',
-  href: 'https://www.magicugc.com/',
-  text: 'MagicUGC - Best AI UGC Video Generator'
-},
-{ name: 'qwertybro', href: 'https://qwertybro.com', text: 'QwertyBro' },
-{
-  name: 'bloomingtoncarpetcleaning',
-  href: 'https://bloomingtoncarpetmn.com/',
-  text: 'Bloomington Carpet & Upholstery Cleaning'
-},
+  {
+    name: 'mypagerank',
+    href: 'https://www.mypagerank.com',
+    text: 'MyPageRank'
+  },
+  {
+    name: 'storyviewer',
+    href: 'https://storyviewer.com/',
+    text: 'Story Viewer'
+  },
+  { name: 'miramtech', href: 'https://miramtech.com', text: 'Miramtech' },
+  {
+    name: 'synetec-ltd',
+    href: 'https://synetec.co.uk',
+    text: 'Synetec Ltd'
+  },
+  {
+    name: 'magicugc',
+    href: 'https://www.magicugc.com/',
+    text: 'MagicUGC - Best AI UGC Video Generator'
+  },
+  { name: 'qwertybro', href: 'https://qwertybro.com', text: 'QwertyBro' },
+  {
+    name: 'bloomingtoncarpetcleaning',
+    href: 'https://bloomingtoncarpetmn.com/',
+    text: 'Bloomington Carpet & Upholstery Cleaning'
+  },
 
-{
-  name: 'uk-exchange',
-  href: 'https://uk-exchange.com/en/usdt-to-paypal.php',
-  text: 'UK-Exchange'
-},
+  {
+    name: 'uk-exchange',
+    href: 'https://uk-exchange.com/en/usdt-to-paypal.php',
+    text: 'UK-Exchange'
+  },
 
-{
-  name: 'pakstyle',
-  href: 'https://www.pakstyle.pk/',
-  text: 'PakStyle.pk'
-},
+  {
+    name: 'pakstyle',
+    href: 'https://www.pakstyle.pk/',
+    text: 'PakStyle.pk'
+  },
   {
     name: 'instagram-follower-tracker',
     href: 'https://igstan.com',
@@ -135,192 +147,192 @@ const datasup = [
     href: 'https://monarchairgroup.com',
     text: 'Monarch Air Group'
   },
-{
-  name: 'socialfollowersuk',
-  href: 'https://www.socialfollowers.uk/',
-  text: 'Social followers'
-},
-{
-  name: 'private-flight',
-  href: 'https://www.mercuryjets.com',
-  text: 'Mercury Jets'
-},
-{ name: 'troupon', href: 'https://www.troupon.com', text: 'Troupon' },
-{
-  name: 'global-software-companies',
-  href: 'https://www.globalsoftwarecompanies.com/',
-  text: 'Global Software Companies'
-},
-{
-  name: 'opensource',
-  href: 'https://oscollective.org/',
-  text: 'Open Source Collective'
-},
-{
-  name: 'true-altitude',
-  href: 'https://truealtitude.shop/',
-  text: 'True Altitude'
-},
-{
-  name: 'richard-habulan',
-  href: 'https://github.com/brownman1',
-  text: 'inflation'
-},
-{
-  name: 'jamfor-forsakringar',
-  href: 'https://jamforforsakringar.se/',
-  text: 'Jämför försäkringar'
-},
-{ name: 'slex', href: 'https://slex.io/', text: 'SLEX' },
-{ name: 'upgrow', href: 'https://www.upgrow.com/', text: 'UpGrow' },
-{
-  name: 'vibelovely',
-  href: 'https://vibelovely.com/',
-  text: 'VibeLovely'
-},
-{
-  name: 'cloudsmith',
-  href: 'https://cloudsmith.com',
-  text: 'Cloudsmith'
-},
-{
-  name: 'basement-flood-helpers',
-  href: 'https://basementfloodhelpers.com',
-  text: 'Basement Flood Helpers'
-},
-{
-  name: 'opensource',
-  href: 'https://oscollective.org/',
-  text: 'Open Source Collective'
-},
-{ name: 'bountii', href: 'https://bountii.coupons/', text: 'Bountii' },
-{ name: 'earthweb1', href: 'https://earthweb.com/', text: 'EarthWeb' },
-{
-  name: 'best-crypto-futures-trading-platforms',
-  href: 'https://bestcryptofuturestradingplatform.com/',
-  text: 'Crypto Futures Trading Platforms'
-},
-{
-  name: 'true-altitude',
-  href: 'https://truealtitude.shop/',
-  text: 'True Altitude'
-},
-{
-  name: 'minneapolis-towing',
-  href: 'https://minneapolistowingmn.com/',
-  text: 'Minneapolis Towing'
-},
-{ name: 'troupon', href: 'https://www.troupon.com', text: 'Troupon' },
-{
-  name: 'global-software-companies',
-  href: 'https://www.globalsoftwarecompanies.com/',
-  text: 'Global Software Companies'
-},
-{ name: 'upgrow', href: 'https://www.upgrow.com/', text: 'UpGrow' },
-{ name: 'slex', href: 'https://slex.io/', text: 'SLEX' },
-{
-  name: 'fire-stick-tricks',
-  href: 'https://www.firesticktricks.com',
-  text: 'Fire Stick Tricks'
-},
-{ name: 'anony', href: 'https://iganony.net/', text: 'IgAnony' },
-{
-  name: 'ig-story-viewer',
-  href: 'https://anonstories.com/',
-  text: 'Instagram Story Viewer'
-},
-{
-  name: 'rekt-eddies-gummies',
-  href: 'https://rekteddies.com/',
-  text: "Rekt Eddie's"
-},
-{
-  name: 'swap-eth-usdt',
-  href: 'https://slex.io/es/trade/ethusdt',
-  text: 'ETH/USDT'
-},
-{
-  name: 'crescitaly',
-  href: 'https://crescitaly.com',
-  text: 'Crescitaly'
-},
-{
-  name: 'self-starters',
-  href: 'https://self-starters.com/',
-  text: 'Self-Starters'
-},
-{
-  name: 'ozturkismak',
-  href: 'https://www.ozturkismakinalari.com/en/komatsu/',
-  text: 'Spare Parts'
-},
-{
-  name: 'minneapolis-roofing-pros',
-  href: 'https://www.minneapolisroofingpros.com',
-  text: 'Minneapolis Roofing Contractor'
-},
-{
-  name: 'ic-designs-ca',
-  href: 'https://ic-designs.ca/windows-replacement-calgary/',
-  text: 'IC-Designs Canada'
-},
-{ name: 'mobilennu', href: 'https://mobilen.nu/', text: 'Mobilen.nu' },
-{ name: 'rantentcom', href: 'https://rantent.com/', text: 'Rantent' },
-{
-  name: 'easeus-sofware-german',
-  href: 'https://www.easeus.de/',
-  text: 'EaseUS Germany'
-},
-{
-  name: 'james-roy',
-  href: 'https://identor.com/',
-  text: 'People Search'
-},
-{
-  name: 'tank-coffee',
-  href: 'https://www.tankcoffee.com',
-  text: 'Tank Coffee'
-},
-{
-  name: 'window-seal-west',
-  href: 'https://windows-west.ca/',
-  text: 'Window Seal West'
-},
-{
-  name: 'technologypep',
-  href: 'https://technologypep.com/',
-  text: 'TechnologyPep'
-},
-{
-  name: 'bestvpndeals2',
-  href: 'https://bestvpndeals.com/',
-  text: 'BestVPNDeals'
-},
-{ name: 'uclan', href: 'https://www.lanuc.se', text: 'UCLån' },
-{ name: 'likvid', href: 'https://www.likvid.nu/', text: 'Likvid' },
-{ name: 'telefonen', href: 'https://telefonen.nu/', text: 'Telefonen' },
-{
-  name: 'snabblanutanuc',
-  href: 'https://www.snabblanutanuc.se/',
-  text: 'SnabbLånUtanUC'
-},
-{
-  name: 'bathroom-remodeling-westerville',
-  href: 'https://www.bathroomremodelingwesterville.com',
-  text: 'Bathroom Remodeling Westerville'
-},
-{
-  name: 'digitbitz',
-  href: 'https://digitbitz.com/',
-  text: 'DigitBitz'
-},
+  {
+    name: 'socialfollowersuk',
+    href: 'https://www.socialfollowers.uk/',
+    text: 'Social followers'
+  },
+  {
+    name: 'private-flight',
+    href: 'https://www.mercuryjets.com',
+    text: 'Mercury Jets'
+  },
+  { name: 'troupon', href: 'https://www.troupon.com', text: 'Troupon' },
+  {
+    name: 'global-software-companies',
+    href: 'https://www.globalsoftwarecompanies.com/',
+    text: 'Global Software Companies'
+  },
+  {
+    name: 'opensource',
+    href: 'https://oscollective.org/',
+    text: 'Open Source Collective'
+  },
+  {
+    name: 'true-altitude',
+    href: 'https://truealtitude.shop/',
+    text: 'True Altitude'
+  },
+  {
+    name: 'richard-habulan',
+    href: 'https://github.com/brownman1',
+    text: 'inflation'
+  },
+  {
+    name: 'jamfor-forsakringar',
+    href: 'https://jamforforsakringar.se/',
+    text: 'Jämför försäkringar'
+  },
+  { name: 'slex', href: 'https://slex.io/', text: 'SLEX' },
+  { name: 'upgrow', href: 'https://www.upgrow.com/', text: 'UpGrow' },
+  {
+    name: 'vibelovely',
+    href: 'https://vibelovely.com/',
+    text: 'VibeLovely'
+  },
+  {
+    name: 'cloudsmith',
+    href: 'https://cloudsmith.com',
+    text: 'Cloudsmith'
+  },
+  {
+    name: 'basement-flood-helpers',
+    href: 'https://basementfloodhelpers.com',
+    text: 'Basement Flood Helpers'
+  },
+  {
+    name: 'opensource',
+    href: 'https://oscollective.org/',
+    text: 'Open Source Collective'
+  },
+  { name: 'bountii', href: 'https://bountii.coupons/', text: 'Bountii' },
+  { name: 'earthweb1', href: 'https://earthweb.com/', text: 'EarthWeb' },
+  {
+    name: 'best-crypto-futures-trading-platforms',
+    href: 'https://bestcryptofuturestradingplatform.com/',
+    text: 'Crypto Futures Trading Platforms'
+  },
+  {
+    name: 'true-altitude',
+    href: 'https://truealtitude.shop/',
+    text: 'True Altitude'
+  },
+  {
+    name: 'minneapolis-towing',
+    href: 'https://minneapolistowingmn.com/',
+    text: 'Minneapolis Towing'
+  },
+  { name: 'troupon', href: 'https://www.troupon.com', text: 'Troupon' },
+  {
+    name: 'global-software-companies',
+    href: 'https://www.globalsoftwarecompanies.com/',
+    text: 'Global Software Companies'
+  },
+  { name: 'upgrow', href: 'https://www.upgrow.com/', text: 'UpGrow' },
+  { name: 'slex', href: 'https://slex.io/', text: 'SLEX' },
+  {
+    name: 'fire-stick-tricks',
+    href: 'https://www.firesticktricks.com',
+    text: 'Fire Stick Tricks'
+  },
+  { name: 'anony', href: 'https://iganony.net/', text: 'IgAnony' },
+  {
+    name: 'ig-story-viewer',
+    href: 'https://anonstories.com/',
+    text: 'Instagram Story Viewer'
+  },
+  {
+    name: 'rekt-eddies-gummies',
+    href: 'https://rekteddies.com/',
+    text: "Rekt Eddie's"
+  },
+  {
+    name: 'swap-eth-usdt',
+    href: 'https://slex.io/es/trade/ethusdt',
+    text: 'ETH/USDT'
+  },
+  {
+    name: 'crescitaly',
+    href: 'https://crescitaly.com',
+    text: 'Crescitaly'
+  },
+  {
+    name: 'self-starters',
+    href: 'https://self-starters.com/',
+    text: 'Self-Starters'
+  },
+  {
+    name: 'ozturkismak',
+    href: 'https://www.ozturkismakinalari.com/en/komatsu/',
+    text: 'Spare Parts'
+  },
+  {
+    name: 'minneapolis-roofing-pros',
+    href: 'https://www.minneapolisroofingpros.com',
+    text: 'Minneapolis Roofing Contractor'
+  },
+  {
+    name: 'ic-designs-ca',
+    href: 'https://ic-designs.ca/windows-replacement-calgary/',
+    text: 'IC-Designs Canada'
+  },
+  { name: 'mobilennu', href: 'https://mobilen.nu/', text: 'Mobilen.nu' },
+  { name: 'rantentcom', href: 'https://rantent.com/', text: 'Rantent' },
+  {
+    name: 'easeus-sofware-german',
+    href: 'https://www.easeus.de/',
+    text: 'EaseUS Germany'
+  },
+  {
+    name: 'james-roy',
+    href: 'https://identor.com/',
+    text: 'People Search'
+  },
+  {
+    name: 'tank-coffee',
+    href: 'https://www.tankcoffee.com',
+    text: 'Tank Coffee'
+  },
+  {
+    name: 'window-seal-west',
+    href: 'https://windows-west.ca/',
+    text: 'Window Seal West'
+  },
+  {
+    name: 'technologypep',
+    href: 'https://technologypep.com/',
+    text: 'TechnologyPep'
+  },
+  {
+    name: 'bestvpndeals2',
+    href: 'https://bestvpndeals.com/',
+    text: 'BestVPNDeals'
+  },
+  { name: 'uclan', href: 'https://www.lanuc.se', text: 'UCLån' },
+  { name: 'likvid', href: 'https://www.likvid.nu/', text: 'Likvid' },
+  { name: 'telefonen', href: 'https://telefonen.nu/', text: 'Telefonen' },
+  {
+    name: 'snabblanutanuc',
+    href: 'https://www.snabblanutanuc.se/',
+    text: 'SnabbLånUtanUC'
+  },
+  {
+    name: 'bathroom-remodeling-westerville',
+    href: 'https://www.bathroomremodelingwesterville.com',
+    text: 'Bathroom Remodeling Westerville'
+  },
+  {
+    name: 'digitbitz',
+    href: 'https://digitbitz.com/',
+    text: 'DigitBitz'
+  },
   { name: 'refermate-com', href: 'https://www.refermate.com', text: 'Refermate' },
-{ name: 'seo-tips', href: 'https://seotips.nu', text: 'SEO Tips' },
-{
-  name: 'good-core',
-  href: 'https://www.goodcore.co.uk/',
-  text: 'Good Core Software'
-},
+  { name: 'seo-tips', href: 'https://seotips.nu', text: 'SEO Tips' },
+  {
+    name: 'good-core',
+    href: 'https://www.goodcore.co.uk/',
+    text: 'Good Core Software'
+  },
   {
     name: 'lbmexico',
     href: 'https://linkbuildingmexico.com',
@@ -390,7 +402,7 @@ const datasup = [
   { name: 'qualityonesie', href: 'https://www.qualityonesie.com', text: 'Quality Onesie' },
   { name: 'java-burn', href: 'https://www.dallasobserver.com/storyhub/java-burn-reviews', text: 'java burn' },
   { name: 'quickbooks-file-doctor', href: 'https://quickbooksfiledoctor.co/', text: 'Quickbooks File Doctor' },
-  { name: 'security-gladiators', href: 'https://securitygladiators.com/', text: 'Security Gladiators'  },
+  { name: 'security-gladiators', href: 'https://securitygladiators.com/', text: 'Security Gladiators' },
   { name: 'lifedigitalwiki', href: 'https://lifedigitalwiki.org/ja/vpn/', text: 'LifeDigital' },
   { name: 'veepn-vpn', href: 'https://veepn.com/vpn-apps/vpn-for-chrome/', text: 'VeePN VPN' },
   { name: 'nasrullah-amir-ali1', href: 'https://besturate.com/unblock-netflix-vpns/', text: 'Netflix VPN' },
@@ -422,7 +434,7 @@ const datasup = [
   { name: 'pngio', href: 'https://pngio.com/png', text: 'PNGio' },
   { name: 'thevpnbyte', href: 'https://s3.amazonaws.com/nordvpn-3-year-deal-plan/index.html', text: 'NordVpn Coupon' },
   { name: 'fortunegames', href: 'https://fortunegames.com/', text: 'Fortune Games' },
-  { name: 'quickbooks-tool-hub', href: 'https://quickbookstoolhub.com/', text: 'Quickbooks Tool Hub'  },
+  { name: 'quickbooks-tool-hub', href: 'https://quickbookstoolhub.com/', text: 'Quickbooks Tool Hub' },
   { name: 'hurtiglaan-nu', text: 'Hurtig lån', href: 'https://hurtiglaan.nu/' },
   { name: 'eric-watson', href: 'https://thestandarddaily.com/', text: 'The Standard Daily' },
   { name: 'all-smart-surveillance-for-home-and-business', href: 'https://allsmartcam.com/', text: 'Smart Surveillance' },
@@ -489,7 +501,7 @@ const datasup = [
   { name: 'nordic-meal-company', href: 'https://maaltidskasser-online.dk/', text: 'maaltidskasser-online.dk' },
   { name: 'norlan-no-refinansiering', href: 'https://www.xn--norln-pra.no/refinansiering/', text: 'Norlån.no' },
   { name: 'lemon-law', href: 'https://lemonlaw.site', text: 'Lemon Law.Site' },
-  { name: 'royal-tech-ab', href: 'https://www.fundfirstcapital.com', text: 'FundFirst Capital', second: [ { href: 'https://settle4cash.com', text: 'Settle4Cash' }, { href: 'https://dieting.org', text: 'Dieting.org' } ] },
+  { name: 'royal-tech-ab', href: 'https://www.fundfirstcapital.com', text: 'FundFirst Capital', second: [{ href: 'https://settle4cash.com', text: 'Settle4Cash' }, { href: 'https://dieting.org', text: 'Dieting.org' }] },
   { name: 'alvenda', href: 'https://alvenda.com', text: 'alvenda.com' },
   { name: 'grammar-gang', href: 'https://grammargang.com/', text: 'grammargang.com' },
   { name: 'trivaltech', href: 'https://topsellersreview.com/', text: 'TopSellersReview' },
@@ -593,7 +605,7 @@ const datasup = [
 ]
 
 const data = [
-  
+
   {
     name: 'gymgrit-net',
     alt: 'FitclubFinder',
@@ -618,30 +630,30 @@ const data = [
     href: 'https://richteddy.io/',
     src: 'https://i.imgur.com/fwtrtxO.png'
   },
-{
-  name: 'wekrypto',
-  alt: 'WeKrypto',
-  href: 'https://wekrypto.co',
-  src: 'https://i.imgur.com/5I1aWa2.png'
-},
-{
-  name: 'webpundits',
-  alt: 'Buy RDP online from Web Pundits',
-  href: 'https://webpundits.in',
-  src: 'https://i.imgur.com/IVgnquz.png'
-},
-{
-  name: 'kayakstore',
-  alt: 'Kayakstore',
-  href: 'https://kayakstore.se',
-  src: 'https://i.imgur.com/KK5WCPt.png'
-},
-{
-  name: 'cryptonewsz',
-  alt: 'CryptoNewsZ',
-  href: 'https://www.cryptonewsz.com/',
-  src: 'https://i.imgur.com/sYNDuyj.png'
-},
+  {
+    name: 'wekrypto',
+    alt: 'WeKrypto',
+    href: 'https://wekrypto.co',
+    src: 'https://i.imgur.com/5I1aWa2.png'
+  },
+  {
+    name: 'webpundits',
+    alt: 'Buy RDP online from Web Pundits',
+    href: 'https://webpundits.in',
+    src: 'https://i.imgur.com/IVgnquz.png'
+  },
+  {
+    name: 'kayakstore',
+    alt: 'Kayakstore',
+    href: 'https://kayakstore.se',
+    src: 'https://i.imgur.com/KK5WCPt.png'
+  },
+  {
+    name: 'cryptonewsz',
+    alt: 'CryptoNewsZ',
+    href: 'https://www.cryptonewsz.com/',
+    src: 'https://i.imgur.com/sYNDuyj.png'
+  },
   { name: 'guest-5d8ab1af', href: 'https://bitlaunch.io/', alt: 'Bitcoin VPS', src: 'https://i.imgur.com/pJ8u9sq.png' },
   { name: 'seolegalbet', alt: 'Legalbet', href: 'https://legalbet.uk/', src: 'https://i.imgur.com/2qQ6Gxf.png' },
   { name: 'tradingwolf1', alt: 'Trading Wolf', href: 'https://www.tradingwolf.com', src: 'https://i.imgur.com/vsXnDlr.png' },
@@ -732,7 +744,7 @@ const data = [
   { name: 'virtual-receptionist-london', href: 'http://www.virtualreceptionist.london/', src: 'https://i.imgur.com/pR2FWUY.png', alt: 'virtualreceptionist.london' },
   { name: 'matchbanker-fi1', href: 'https://matchbanker.fi/', src: 'https://i.imgur.com/PFH9D9k.png', alt: 'matchbanker.fi' },
   { name: 'matchbanker-pl', href: 'https://matchbanker.pl/', src: 'https://i.imgur.com/PFH9D9k.png', alt: 'matchbanker.pl' },
-  { name: '1gbits', src: 'https://i.imgur.com/KvKV1Tj.png', alt: '1gbits', href: 'https://1gbits.com/', second: [ { name: 'monovm', href: 'https://monovm.com', src: 'https://i.imgur.com/v9RLvQ7.jpg', alt: 'vps hosting' } ] },
+  { name: '1gbits', src: 'https://i.imgur.com/KvKV1Tj.png', alt: '1gbits', href: 'https://1gbits.com/', second: [{ name: 'monovm', href: 'https://monovm.com', src: 'https://i.imgur.com/v9RLvQ7.jpg', alt: 'vps hosting' }] },
   { name: 'wpsetup', src: 'https://i.imgur.com/7wlB7Uv.jpg', href: 'https://wpsetup.org', alt: 'wpsetup.org' },
   { name: 'fair-laan-se', href: 'http://fair-laan.se', alt: 'fair-laan.se', src: 'https://i.imgur.com/8mczs3O.png' },
   { name: 'fair-laan-dk', href: 'http://fair-laan.dk', alt: 'fair-laan.dk', src: 'https://i.imgur.com/8mczs3O.png' },
@@ -760,7 +772,7 @@ const data = [
   { name: 'best-shark-tank-products', href: 'https://www.bestsharktankproducts.com', alt: 'Best Shark Tank Products', src: 'https://i.imgur.com/XSaZ4Hy.jpg' },
   { name: 'jonas-cederholm', href: 'https://www.lainat.fi', alt: 'lainat.fi', src: 'https://i.imgur.com/5ObBbYs.png' },
   { name: 'meubelpartner', href: 'https://www.meubelpartner.nl/tafels/eettafels.html', alt: 'Dining room table - Meubelpartner logo - proud Bower sponsor', src: 'https://i.imgur.com/ubhPYsn.png' },
-  { name: 'lead-supply', href: 'https://lainaa-helposti.fi/', alt: 'Lainaa Helposti', src: 'https://i.imgur.com/Pl628R5.png', second: [ { href: 'https://superkredit.net/', alt: 'superkredit.net', src: 'https://i.imgur.com/5KivATo.jpg', since: '2019-10-10' }, { href: 'https://loanscouter.com/', alt: 'LoanScouter', src: 'https://i.imgur.com/jqRy0WW.jpg', since: '2019-10-14' } ] },
+  { name: 'lead-supply', href: 'https://lainaa-helposti.fi/', alt: 'Lainaa Helposti', src: 'https://i.imgur.com/Pl628R5.png', second: [{ href: 'https://superkredit.net/', alt: 'superkredit.net', src: 'https://i.imgur.com/5KivATo.jpg', since: '2019-10-10' }, { href: 'https://loanscouter.com/', alt: 'LoanScouter', src: 'https://i.imgur.com/jqRy0WW.jpg', since: '2019-10-14' }] },
   { name: 'customessaymeister-com', src: 'https://i.imgur.com/Id7g8vY.png', alt: 'Custom Essay Eister', href: 'https://www.customessaymeister.com/' },
   { name: 'bloktprivacy', src: 'https://i.imgur.com/eD0j2VN.png', href: 'https://blokt.com/guides/best-vpn', alt: 'The Best VPN Services 2019' },
   { name: 'usave', src: 'https://i.imgur.com/u82oGMc.png', href: 'https://usave.co.uk/utilities/broadband/', alt: 'Compare broadband deals with usave.co.uk' },
@@ -940,9 +952,9 @@ async function main() {
   sponsors['route4me'] += 1000 * 3600 * 24 * 30
   sponsors['gymgrit-net'] += 1000 * 3600 * 24 * 30
   supporters['famegear'] += 1000 * 3600 * 24 * 30
-  
-  
-  
+
+
+
   Object.keys(sponsors).forEach(k => {
     if (sponsors[k] + 1000 * 3600 * 24 * 16 < Date.now() && !exceptions.includes(k)) {
       const lastTransaction = allTransactions.reverse().find(t => t.fromAccount.slug === k).createdAt

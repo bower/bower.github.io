@@ -35,6 +35,7 @@
     "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
-    "cross-fetch": "^3.0.2"
+    "cross-fetch": "^3.0.2",
+    "dotenv": "^16.5.0"
   }
 }
