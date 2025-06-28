@@ -88,6 +88,11 @@ const ignoredsupporters = ['views4you-grows-followers', 'rocketpayz', 'webton-bv
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+{
+  name: 'bathroom-remodeling-columbus1',
+  href: 'https://bathroomremodelingcolumbus.com',
+  text: 'Bathroom Remodeling Columbus'
+},
   {
     name: 'mypagerank',
     href: 'https://www.mypagerank.com',
