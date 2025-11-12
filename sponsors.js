@@ -88,6 +88,7 @@ const ignoredsupporters = ['views4you-grows-followers', 'rocketpayz', 'webton-bv
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+{ name: 'softorbits', href: 'https://www.softorbits.net?ref=bower', text: 'SoftOrbits' },
 { name: 'beneve', href: 'https://beneve.com/', text: 'Beneve' },
 {
   name: 'bathroom-remodeling-columbus1',
