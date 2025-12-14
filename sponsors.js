@@ -88,6 +88,11 @@ const ignoredsupporters = ['views4you-grows-followers', 'rocketpayz', 'webton-bv
 const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
+{
+  name: '3-16-moving',
+  href: 'https://316moving.com/',
+  text: '3:16 Moving'
+},
 { name: 'softorbits', href: 'https://www.softorbits.net?ref=bower', text: 'SoftOrbits' },
 { name: 'beneve', href: 'https://beneve.com/', text: 'Beneve' },
 {
@@ -612,6 +617,12 @@ const datasup = [
 ]
 
 const data = [
+{
+  name: 'privatejetcom',
+  alt: 'Privatejet.com',
+  href: 'https://privatejet.com',
+  src: 'https://i.imgur.com/YzI2Oh4.png'
+},
 
   {
     name: 'gymgrit-net',
