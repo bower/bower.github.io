@@ -89,6 +89,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
 {
+  name: 'outfame',
+  href: 'https://www.outfame.com/',
+  text: 'Outfame - AI-powered Instagram growth'
+},
+{
   name: '3-16-moving',
   href: 'https://316moving.com/',
   text: '3:16 Moving'
