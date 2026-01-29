@@ -89,6 +89,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
 {
+  name: 'mosaic-vpn',
+  href: 'https://mosaicvpn.com/vpn-apps/download-vpn-for-chrome',
+  text: 'Mosaic VPN'
+},
+{
   name: 'outfame',
   href: 'https://www.outfame.com/',
   text: 'Outfame - AI-powered Instagram growth'
