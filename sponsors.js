@@ -628,6 +628,12 @@ const datasup = [
 
 const data = [
 {
+  name: 'releaf-medizinisches-cannabis-berlin',
+  alt: 'Releaf Medizinisches Cannabis Berlin',
+  href: 'https://releaf.com/de/staedte/berlin',
+  src: 'https://i.imgur.com/hDg4R8Z.png'
+},
+{
   name: 'privatejetcom',
   alt: 'Privatejet.com',
   href: 'https://privatejet.com',
