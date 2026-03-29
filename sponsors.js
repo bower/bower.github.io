@@ -89,6 +89,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
 {
+  name: 'buy-trustpilot-reviews-6bb02050',
+  href: 'https://www.reddit.com/r/WorkForSmartLife/comments/1rqq7zl/what_is_the_best_site_to_buy_trustpilot_reviews/',
+  text: 'Buy Trustpilot Reviews'
+},
+{
   name: 'mosaic-vpn',
   href: 'https://mosaicvpn.com/vpn-apps/download-vpn-for-chrome',
   text: 'Mosaic VPN'
