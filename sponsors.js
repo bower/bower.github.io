@@ -89,6 +89,16 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
 {
+  name: 'veepn-vpn-user',
+  href: 'https://veepn.com/vpn-apps/download-vpn-for-pc/',
+  text: 'VeePN VPN'
+},
+{
+  name: 'buy-instagram-followers-and-likes-2',
+  href: 'https://www.reddit.com/r/BuildToAttract/comments/1sro5qq/where_can_i_buy_instagram_followers_and_likes_to/',
+  text: 'Buy Instagram followers and likes'
+},
+{
   name: 'buy-trustpilot-reviews-6bb02050',
   href: 'https://www.reddit.com/r/WorkForSmartLife/comments/1rqq7zl/what_is_the_best_site_to_buy_trustpilot_reviews/',
   text: 'Buy Trustpilot Reviews'
