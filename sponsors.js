@@ -89,6 +89,11 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
 {
+  name: 'network-marketing-watch',
+  href: 'https://networkmarketingwatch.com/beneve-reviews/',
+  text: 'Network Marketing Watch'
+},
+{
   name: 'veepn-vpn-user',
   href: 'https://veepn.com/vpn-apps/download-vpn-for-pc/',
   text: 'VeePN VPN'
@@ -642,6 +647,12 @@ const datasup = [
 ]
 
 const data = [
+{
+  name: 'bairesdev',
+  alt: 'BairesDev',
+  href: 'https://www.bairesdev.com/sponsoring-open-source-projects/',
+  src: 'https://i.imgur.com/r9FEc13.png'
+},
 {
   name: 'releaf-medizinisches-cannabis-berlin',
   alt: 'Releaf Medizinisches Cannabis Berlin',
