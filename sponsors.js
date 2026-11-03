@@ -89,6 +89,16 @@ const exceptions = ['digital-bank-guide', 'alex-owner']
 
 const datasup = [
 {
+  name: 'superclonewatchescom',
+  href: 'https://superclonewatches.com/',
+  text: 'superclonewatches'
+},
+{
+  name: 'poprey-usa',
+  href: 'https://prime-digital.ca/poprey-review/',
+  text: 'Poprey reviews'
+},
+{
   name: 'network-marketing-watch',
   href: 'https://networkmarketingwatch.com/beneve-reviews/',
   text: 'Network Marketing Watch'
@@ -647,6 +657,12 @@ const datasup = [
 ]
 
 const data = [
+{
+  name: 'apkdoneofficial',
+  alt: 'Apkdone',
+  href: 'https://apkdone.com/',
+  src: 'https://i.imgur.com/6cE3k9D.png'
+},
 {
   name: 'bairesdev',
   alt: 'BairesDev',
